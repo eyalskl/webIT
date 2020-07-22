@@ -1,0 +1,25 @@
+.publish-page {
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+    background-color: #fff;
+    .smooth-dnd-container.horizontal>.smooth-dnd-draggable-wrapper {
+        height: 0;
+    }
+    * {
+        &:hover {
+            outline: none;
+        }
+    }
+    .site-section {
+        cursor: default;
+    }
+    button {
+        &:hover {
+            filter: brightness(105%) saturate(105%);
+        }
+    }
+    span {
+        cursor: text;
+    }
+}

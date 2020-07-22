@@ -1,0 +1,67 @@
+.site-section {
+    transition: width .8s, outline 0s, transform .7s;
+    background-size: cover !important;
+    &:hover {
+        outline: 2px #717171 dashed;
+        z-index: 1;
+        cursor: grab;
+    }
+    &:active {
+        cursor: grabbing;
+    }
+    .site-txt {
+        word-break: break-word;
+        z-index: 999;
+    }
+}
+
+.section-drag {
+    transform: scale(0.7);
+    border: 3px dashed $clr1;
+    opacity: 0.1;
+    border: none;
+    box-shadow: 2px 2px 10px black;
+    cursor: grabbing;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-div {
+    z-index: 1;
+}
+
+@media (max-width: 780px) {
+    .text-logo-text-section {
+        flex-direction: column !important;
+    }
+    .three-pics-section {
+        flex-direction: column;
+        height: 50vw !important;
+    }
+    .post-card-section {
+        height: auto !important;
+        >div:not(.element-controls) {
+            flex-direction: column !important;
+            >div {
+                height: 50vw !important;
+            }
+        }
+    }
+    .info-block-section {
+        * {
+            font-size: 0.7rem !important;
+        }
+    }
+    .text-on-photo {
+        height: auto;
+        * {
+            font-size: 0.8rem !important;
+        }
+        div {
+            align-items: 'center' !important;
+        }
+    }
+}

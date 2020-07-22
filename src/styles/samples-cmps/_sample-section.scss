@@ -1,0 +1,48 @@
+.sample-section {
+    margin-block-end: 10rem;
+    h3 {
+        font-size: 1rem;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: capitalize;
+        padding: .1rem 0;
+    }
+    .section-sample-img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .sample-section-preview {
+        border-radius: 5px 5px 0 0;
+        background-color: $clr6;
+        border: 1px solid $clr3;
+        box-shadow: 0px 0px 8px rgba(#000, .26);
+        margin: 1rem;
+        padding: 0;
+        &:hover {
+            cursor: grab;
+        }
+        &:active {
+            cursor: grabbing;
+        }
+    }
+}
+
+.sample-drag {
+    transform: scale(2) rotate(2.5deg);
+    box-shadow: 2px 2px 6px black;
+    cursor: grabbing;
+    h3 {
+        display: none;
+        .sample-drag {
+            transform: scale(2) rotate(1deg);
+            box-shadow: 2px 2px 6px black;
+            cursor: grabbing;
+            h3 {
+                display: none;
+            }
+        }
+    }
+}

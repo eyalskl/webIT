@@ -1,0 +1,39 @@
+.home-page {
+    margin-top: 3.5rem;
+    .hero {
+        background: url(~@/assets/imgs/hero-temp.jpg) no-repeat center center fixed;
+        background-size: cover;
+        height: calc(100vh - 3.5rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-container {
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    .tc-header {
+        text-shadow: 1px -1px 5px #000000;
+        color: #ffffff;
+        font-size: 3.5rem;
+        width: 60rem;
+        text-align: center;
+        cursor: default;
+        line-height: 5rem;
+    }
+    .start-btn {
+        font-family: 'Nunito Sans', sans-serif;
+        border-radius: 1000px;
+        padding: 1.05rem 2.5rem;
+        margin: 2.75rem;
+        font-size: 1.5rem;
+        background-color: $clr1;
+        color: white;
+        transition: .3s;
+        &:hover {
+            background-color: darken($clr1, 2.5);
+        }
+    }
+    & .publish {
+        display: none;
+    }
+}

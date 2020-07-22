@@ -1,0 +1,37 @@
+.element-controls {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #f8f8f8;
+    padding: 0.15rem;
+    width: 11rem;
+    border-left: 2px $clr1 solid;
+    border-bottom: 2px $clr1 solid;
+    z-index: 3;
+    >* {
+        font-size: .75rem;
+        width: 16.66%;
+        background-color: inherit;
+        color: #777;
+        transition: .3s;
+        border-radius: 50%;
+        &:hover {
+            color: #202204;
+            background-color: rgb(235, 235, 235);
+            outline: none;
+        }
+        >* {
+            &:hover {
+                outline: none;
+            }
+        }
+    }
+    &:hover {
+        outline: none;
+    }
+    .drag-btn {
+        &:hover {
+            cursor: move;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.edit-site-text {
+    .edit-text {
+        padding: 0 1rem;
+        font-size: 1rem;
+        >* {
+            margin-block-end: .75rem;
+        }
+        input {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #bbb;
+            padding: 0.75rem;
+        }
+        .el-select {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        .el-slider {
+            width: 65%;
+        }
+        .el-color-picker {
+            >* {
+                border: none;
+            }
+        }
+        .align-controls,
+        .font-style-controls {
+            width: 100%;
+            justify-content: center;
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.1rem;
+                padding: 1.15rem;
+                width: 1.75rem;
+                height: 1.75rem;
+                margin: .25rem .5rem;
+                border-radius: 10px;
+                background-color: inherit;
+                color: $clr3;
+                transition: .3s;
+                &.selected {
+                    background-color: $clr6;
+                }
+            }
+        }
+        .align-controls {
+            button {
+                &:hover {
+                    background-color: $clr6;
+                    font-weight: bold;
+                }
+            }
+        }
+        .font-style-controls {
+            button {
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+        .text-shadow {
+            >* {
+                width: 100%;
+            }
+        }
+    }
+}

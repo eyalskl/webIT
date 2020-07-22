@@ -1,0 +1,49 @@
+.site-container {
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 3.5rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include niceScrollBar(.75rem, lighten($clr3, 35%));
+}
+
+.site-workspace {
+    width: calc(100vw - 20.75rem);
+    margin-inline-start: 20rem;
+    padding: 1.5rem;
+    outline: none;
+    transition: .8s;
+    background-color: $siteBgc;
+    &.minimized {
+        width: calc(100vw - .75rem);
+        margin-inline-start: 0;
+    }
+    .site-section {
+        position: relative;
+    }
+}
+
+.drop-preview {
+    >* {
+        z-index: 5;
+    }
+    background-color: rgba(150, 150, 200, 0.1);
+    outline: 1px dashed #abc;
+    display: flex;
+    // align-content: stretch;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: calc(100vw - 23.75rem);
+    font-family: 'Oswald';
+    color: rgba(128, 128, 128, 0.397);
+    &::after {
+        content: "Place Section Here";
+        font-size: 5rem;
+    }
+}
+
+.minimized .drop-preview {
+    width: calc(100vw - 3.75rem);
+}
