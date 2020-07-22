@@ -2,7 +2,7 @@
   <section class="templates-page">
     <nav-bar />
     <div class="templates-preview">
-      <h2>Choose your Template</h2>
+      <h2>Our Templates</h2>
       <img
         v-if="isLoading"
         src="https://i.pinimg.com/originals/58/4b/60/584b607f5c2ff075429dc0e7b8d142ef.gif"

@@ -1,5 +1,6 @@
 .samples-list {
     height: calc(100vh - 5rem - 3rem);
     overflow-y: scroll;
-    @include niceScrollBar(.75rem, lighten($clr3, 35%))
+    @include niceScrollBar(.75rem, lighten($clr3, 35%));
+    direction: rtl;
 }

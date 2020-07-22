@@ -1,5 +1,11 @@
 .about-page {
     margin-block-start: 3.5rem;
+    h3 {
+        font-size: 5rem;
+        text-shadow: 2px 2px rgb(248, 115, 115), 2px -2px blue, -6px 0px green, -20px 20px yellow, -12px 3px cyan, 25px -7px purple;
+        text-align: center;
+        font-family: 'Oswald';
+    }
     & .publish {
         display: none;
     }

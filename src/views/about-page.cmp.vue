@@ -1,8 +1,7 @@
 <template>
-  <div class="about-page app-main">
+<div class="about-page app-main">
     <nav-bar />
-
-    <h1>This is an about page</h1>
+    <h3> This is an about page </h3>
   </div>
 </template>
 
