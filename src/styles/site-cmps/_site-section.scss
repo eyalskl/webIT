@@ -9,10 +9,10 @@
     &:active {
         cursor: grabbing;
     }
-    .site-txt {
-        word-break: break-word;
-        z-index: 999;
-    }
+}
+
+.site-text {
+    word-break: break-word;
 }
 
 .section-drag {
