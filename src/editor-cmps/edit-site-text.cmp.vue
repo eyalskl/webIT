@@ -25,7 +25,7 @@
           </div>
           <div class="flex column align-center">
               <label>Line height:</label>
-              <el-slider @input="setLineHeight" v-model="lineHeight" :min="5" :max="20"></el-slider>
+              <el-slider @input="setLineHeight" v-model="lineHeight" :min="1" :max="20"></el-slider>
           </div>
           <div class="flex column align-center">
             <label>Letter spacing:</label>
@@ -45,7 +45,7 @@ props: ['cmp'],
   data() {
     return {
       fontSize: 16,
-      lineHeight: 10,
+      lineHeight: 0,
       letterSpacing: 0,
       isBold: false,
       isItalic: false,
@@ -114,24 +114,26 @@ props: ['cmp'],
     selectBox
   },
   created() {
-      this.fontSize = (this.cmp.style.fontSize) ? parseFloat(this.cmp.style.fontSize) * 16 : 16;
-      this.lineHeight = (this.cmp.style.lineHeight) ? parseInt(this.cmp.style.lineHeight) : 1;
-      this.letterSpacing = (this.cmp.style.letterSpacing) ? parseFloat(this.cmp.style.letterSpacing) : 1;
+      if (this.cmp.style.fontSize) this.fontSize = parseFloat(this.cmp.style.fontSize) * 16;
+      if (this.cmp.style.lineHeight) this.lineHeight = parseFloat(this.cmp.style.lineHeight) * 4;
+      if (this.cmp.style.letterSpacing) this.letterSpacing = parseFloat(this.cmp.style.letterSpacing) * 4;
       this.textAlign = (this.cmp.style.textAlign) ? this.cmp.style.textAlign : '';
       this.isBold = (this.cmp.style.fontWeight === 'bold');
       this.isItalic = (this.cmp.style.fontStyle === 'italic');
       this.isUnderline = (this.cmp.style.textDecoration === 'underline');
   },
   watch: {
-    cmp(newVal , oldVal) {
+    cmp: {
       deep: true,
-      this.fontSize = (newVal.style.fontSize) ? parseFloat(newVal.style.fontSize) * 16 : 16;
-      this.lineHeight = (newVal.style.lineHeight) ? parseFloat(newVal.style.lineHeight) : 1;
-      this.letterSpacing = (newVal.style.letterSpacing) ? parseFloat(newVal.style.letterSpacing) : 1;
-      this.textAlign = (newVal.style.textAlign) ? newVal.style.textAlign : '';
-      this.isBold = (newVal.style.fontWeight === 'bold');
-      this.isItalic = (newVal.style.fontStyle === 'italic');
-      this.isUnderline = (newVal.style.textDecoration === 'underline');
+      handler(newVal , oldVal) {
+        if (newVal.style.fontSize) this.fontSize = parseFloat(newVal.style.fontSize) * 16;
+        if (newVal.style.lineHeight) this.lineHeight = parseFloat(newVal.style.lineHeight) * 4;
+        if (newVal.style.letterSpacing) this.letterSpacing = parseFloat(newVal.style.letterSpacing) * 4;
+        this.textAlign = (newVal.style.textAlign) ? newVal.style.textAlign : '';
+        this.isBold = (newVal.style.fontWeight === 'bold');
+        this.isItalic = (newVal.style.fontStyle === 'italic');
+        this.isUnderline = (newVal.style.textDecoration === 'underline');
+      }
     }
   }
 };

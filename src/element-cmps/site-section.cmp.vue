@@ -1,10 +1,8 @@
 <template>
     <draggable v-if="editMode">
-      <section @mouseover="displayControls" @mouseout="hideControls" @click.stop="openEditor">
-      <container  group-name="items" :orientation="getOrientation"  :drop-placeholder="placeHolderSection"  :get-child-payload="getCmp" class="site-section" :class="cmp.class" @drop="onDrop" :style="cmp.style"> 
+      <section @mouseover="displayControls" @mouseout="hideControls" @click.stop="openEditor" class="site-section" :class="cmp.class" :style="cmp.style">
         <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"> </component>
         <element-controls v-show="showControls" :element="cmp" />
-      </container>
       </section>
     </draggable>
     
@@ -63,13 +61,13 @@ export default {
       eventBus.$emit(OPEN_EDITOR, this.cmp.type);
       eventBus.$emit(EDIT_ELEMENT, this.cmp);
     },
-      onDrop(dropResult){
-      this.cmp.cmps = applyDrag(this.cmp.cmps,dropResult)
-      },
-          getCmp(index){
-      return this.cmp.cmps[index]
+    //   onDrop(dropResult){
+    //   this.cmp.cmps = applyDrag(this.cmp.cmps,dropResult)
+    //   },
+    //       getCmp(index){
+    //   return this.cmp.cmps[index]
       
-    },
+    // },
    
 
   },

@@ -6,9 +6,11 @@ export const applyDrag = (arr, dragResult) => {
 
     const result = [...arr]
     let itemToAdd = payload
-        // itemToAdd = _.cloneDeep(itemToAdd);
-        // itemToAdd.id = makeId();
-        // itemToAdd = addIds(itemToAdd);
+    if (!itemToAdd.id) {
+        itemToAdd = _.cloneDeep(itemToAdd);
+        itemToAdd.id = makeId();
+        itemToAdd = addIds(itemToAdd);
+    }
 
     if (removedIndex !== null) {
         itemToAdd = result.splice(removedIndex, 1)[0]

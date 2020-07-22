@@ -54,13 +54,6 @@ export default {
       eventBus.$emit(EDIT_ELEMENT, this.cmp);
       eventBus.$emit(OPEN_EDITOR, this.cmp.type);
     },
-    // onDrop(dropResult){
-    //   this.cmp.cmps = applyDrag(this.cmp.cmps,dropResult)
-    // },
-    // getCmp(index){
-    //   return this.cmp.cmps[index]
-    // },
-
   },
   components: {
     siteText,

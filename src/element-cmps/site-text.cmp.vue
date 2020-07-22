@@ -37,6 +37,7 @@ export default {
     onEdit(ev) {
       var txt = ev.target.innerText;
       this.content = txt;
+      this.cmp.content = txt
     },
     openEditor() {
         eventBus.$emit(EDIT_ELEMENT, this.cmp);

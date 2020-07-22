@@ -41,7 +41,7 @@ export default {
   methods:{
     onDrop(dropResult){
       this.siteToEdit.cmps = applyDrag(this.siteToEdit.cmps,dropResult)
-      this.$store.commit({type:'setSite', site:this.siteToEdit})
+      this.$store.commit({ type:'setSite', site: this.siteToEdit })
     },
     getCmp(index){
       return this.siteToEdit.cmps[index]
