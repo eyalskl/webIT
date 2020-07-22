@@ -7,6 +7,7 @@
     @blur="onEdit"
     @click.stop="openEditor"
     @dragover.prevent
+    class="site-button"
   ></button>
 </template>
 

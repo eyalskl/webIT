@@ -1,6 +1,6 @@
 <template>
   <container class="site-container" :class="minimized"> 
-    <container :get-child-payload="getCmp" :drop-placeholder="placeHolderOptions" drag-class="section-drag" auto-scroll-enabled  @drop="onDrop" group-name="1" lock-axis="y" class="site-workspace flex column" :class="minimized">
+    <container :get-child-payload="getCmp" :drop-placeholder="placeHolderOptions" non-drag-area-selector=".site-text , .site-button"  drag-class="section-drag" auto-scroll-enabled  @drop="onDrop" group-name="1" lock-axis="y" class="site-workspace flex column" :class="minimized">
       <component
         v-for="(cmp, idx) in siteToEdit.cmps"
         :is="cmp.type"
