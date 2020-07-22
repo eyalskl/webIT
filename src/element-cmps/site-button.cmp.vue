@@ -7,6 +7,8 @@
     @blur="onEdit"
     @click.stop="openEditor"
     @dragover.prevent
+    @drag.prevent
+    @dragstart.prevent
   ></button>
 </template>
 
