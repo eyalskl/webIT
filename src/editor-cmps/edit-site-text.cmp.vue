@@ -45,7 +45,7 @@ props: ['cmp'],
   data() {
     return {
       fontSize: 16,
-      lineHeight: 0,
+      lineHeight: 6,
       letterSpacing: 0,
       isBold: false,
       isItalic: false,

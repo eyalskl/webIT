@@ -6,6 +6,7 @@ export const applyDrag = (arr, dragResult) => {
 
     const result = [...arr]
     let itemToAdd = payload
+    console.log('itemToAdd:', itemToAdd)
     if (!itemToAdd.id) {
         itemToAdd = _.cloneDeep(itemToAdd);
         itemToAdd.id = makeId();
