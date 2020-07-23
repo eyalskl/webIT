@@ -9,6 +9,7 @@
 
 <script>
 import editSiteText from '@/editor-cmps/edit-site-text.cmp';
+import editSiteMap from '@/editor-cmps/edit-site-map.cmp';
 import editSiteButton from '@/editor-cmps/edit-site-text.cmp';
 import editSiteImage from '@/editor-cmps/edit-site-image.cmp';
 import editSiteVideo from '@/editor-cmps/edit-site-video.cmp';
@@ -46,6 +47,7 @@ export default {
     editSiteButton,
     editSiteSection,
     editSiteImage,
+    editSiteMap,
     editSiteVideo,
     editSiteDiv
   },

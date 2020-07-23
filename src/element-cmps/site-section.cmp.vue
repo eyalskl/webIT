@@ -8,7 +8,6 @@
     
     <section v-else class="site-section" :style="cmp.style" :class="cmp.class">
       <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"> </component>
-      <element-controls v-show="showControls" :element="cmp" />
     </section>
 </template>
 
@@ -39,7 +38,6 @@ export default {
     
     };
   },
-
   computed:{
     getOrientation(){
        return (this.cmp.style.flexDirection === 'column' ? 'vertical' : 'horizontal') 
@@ -73,7 +71,7 @@ export default {
     eventBus.$on(UPDATE_SITE, () => {
         this.$forceUpdate();
       })
-      
+    console.log(JSON.stringify())
   },
   components: {
     siteDiv,

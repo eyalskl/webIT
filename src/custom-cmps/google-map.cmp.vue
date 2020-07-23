@@ -1,17 +1,15 @@
 <template>
   <section>
     <GmapMap
-      :center="center"
-      :zoom="7"
+      :center="centerDisplay"
+      :zoom="zoom"
       map-type-id="terrain"
     >
       <GmapMarker
-        :key="index"
-        v-for="(m, index) in markers"
-        :position="m.position"
+        :position="centerDisplay"
         :clickable="true"
         :draggable="true"
-        @click="center=m.position"
+        @click="center = centerDisplay"
       />
     </GmapMap>
 
@@ -21,20 +19,17 @@
 <script>
 export default {
   name: 'google-map',
-  data() {
-    return {
-      markers: [
-        { position: { lat: 32.085300, lng: 34.781769 } },
-      ],
-      center: { lat: 32.085300, lng: 34.781769 }
-    };
-  },
-  methods: {
-      setTelAviv() {
-          this.center = { lat: 32.085300, lng: 34.781769 }
+  props: ['content'],
+  computed: {
+      centerDisplay() {
+        return ({ lat: this.content.center.lat, lng: this.content.center.lng })
       },
-  }
-};
+      zoom() {
+        return this.content.zoom;
+      }
+  },
+}
+
 </script>
 
 <style>
@@ -42,6 +37,4 @@ export default {
     width: 100%;
     height: 100%;
   }
-
-
 </style>

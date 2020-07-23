@@ -2,61 +2,588 @@ import httpService from './http.service'
 
 const _ = require("lodash");
 const samples = {
-    button: [{
-            tree: {
-                class: 'smp-btn-rect-border',
-                type: 'site-button',
-                style: {
-                    color: 'red',
-                    fontFamily: 'Oswald',
-                    fontSize: '1.1rem',
-                    width: '6rem',
-                    height: '',
-                    padding: '0',
-                    background: '#ffffff',
-                    borderColor: 'red',
-                    borderStyle: 'solid',
-                    borderWidth: '3px',
-                    borderRadius: '0px',
-                }
-            }
+    header:[{name: "Logo Horizon",
+    img:"https://i.ibb.co/D74M0wM/Screenshot-2020-07-23-18-40-58.png",
+    tree:{
+        "type" : "site-section",
+        "class" : "text-logo-text",
+        "style" : {
+            "background" : "#c5e0dc",
         },
-        {
-            tree: {
-                class: 'smp-btn-long-fill',
-                type: 'site-button',
-                style: {
-                    color: '#ffffff',
-                    fontFamily: 'Bitter',
-                    fontSize: '2rem',
-                    width: '10rem',
-                    background: 'rgb(237 187 22)',
-                    borderColor: '',
-                    borderStyle: 'solid',
-                    borderWidth: '0',
-                    borderRadius: '5px',
-                }
+        "cmps" : [ 
+            {
+                "type" : "site-div",
+                "style" : {
+                },
+                "cmps" : [ 
+                    {
+                        "type" : "site-text",
+                        "content" : "Change the text by clicking on me",
+                        "style" : {
+                            "fontFamily" : "Oswald",
+                            "fontSize" : "1.2rem",
+                            "color" : "#BA2204",
+                        },
+                        "id" : "ytM2W33h2R"
+                    }
+                ],
+                "id" : "pyadsGQW0p"
+            }, 
+            {
+                "type" : "site-div",
+                "class": "logo-text-div",
+                "style" : {
+                    
+                },
+                "cmps" : [ 
+                    {
+                        "type" : "site-image",
+                        "content" : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rechargewebs.com%2Fimages%2Ficon%2Fyour-logo.png&f=1&nofb=1",
+                        "style" : {
+                        },
+                        "id" : "BaBfPbEWrB"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "Change the text by clicking on me",
+                        "style" : {
+                            "fontFamily" : "Oswald",
+                            "fontSize" : "1.2rem",
+                            "fontColor" : "#000000",
+                        },
+                        "id" : "VCGgMGGyRv"
+                    }
+                ],
+                "id" : "xojjfdDbCr"
+            }, 
+            {
+                "type" : "site-div",
+                "style" : {
+                },
+                "cmps" : [ 
+                    {
+                        "type" : "site-text",
+                        "content" : "Change the text by clicking on me",
+                        "style" : {
+                            "color" : "#BA2204",
+                            "fontSize" : "1.2rem",
+                            "fontFamily" : "Oswald"
+                        },
+                        "id" : "ItZcSZGOG2"
+                    }
+                ],
+                "id" : "dDWe0Frr3S"
             }
-        },
-        {
-            tree: {
-                class: 'smp-btn-yellow-circle',
-                type: 'site-button',
-                style: {
-                    color: '#ffffff',
-                    fontFamily: 'Advent Pro',
-                    fontSize: '2rem',
-                    width: '7rem',
-                    height: '7rem',
-                    background: 'rgb(96 208 35)',
-                    borderColor: 'rgb(96 208 35)',
-                    borderStyle: 'solid',
-                    borderWidth: '3px',
-                    borderRadius: '50%',
-                }
-            }
-        },
-    ],
+        ],
+        "id" : "rEp6fCsC0P"
+    }},],
+    gallery:[{
+        name: "4 Pics Gallery",
+        img:"https://i.ibb.co/hXDGrmV/Screenshot-2020-07-23-16-52-46.png",
+        tree: {
+            type: 'site-section',
+            class: 'gallery-4-pics',
+            style: {
+              backgroundColor: 'white',
+            },
+            cmps: [
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.outdoorproject.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fcboxshow%2Fpublic%2F1471993417%2F_mg_1903-pano.jpg%3Fitok%3DLaAr2xO7&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.baltana.com%2Ffiles%2Fwallpapers-2%2FHills-HD-Wallpapers-04166.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flawanderlust.files.wordpress.com%2F2013%2F04%2Fimg_4028.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-HLZClXhQ-8w%2FULOMuubnx3I%2FAAAAAAAANz8%2Ff6c1Ajl31Ls%2Fs1600%2FNetherlands%2BFlower%2BFields%2BWallpapers%2Band%2BPhotos%2B03.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+            ],
+          },
+    },{
+        name: "10 Pics Gallery",
+        img:"https://i.ibb.co/x7cqGdM/Screenshot-2020-07-23-16-40-36.png",
+        tree: {
+            type: 'site-section',
+            class: 'gallery-10-pics',
+            style: {
+              backgroundColor: 'white',
+            },
+            cmps: [
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.outdoorproject.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fcboxshow%2Fpublic%2F1471993417%2F_mg_1903-pano.jpg%3Fitok%3DLaAr2xO7&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.baltana.com%2Ffiles%2Fwallpapers-2%2FHills-HD-Wallpapers-04166.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flawanderlust.files.wordpress.com%2F2013%2F04%2Fimg_4028.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-HLZClXhQ-8w%2FULOMuubnx3I%2FAAAAAAAANz8%2Ff6c1Ajl31Ls%2Fs1600%2FNetherlands%2BFlower%2BFields%2BWallpapers%2Band%2BPhotos%2B03.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.financialexpress.com%2F2017%2F11%2Fcats-156.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://scentertainer.net/wp-content/uploads/2020/06/italian-cypress-2b.jpg',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-0az-sKQWj0c%2FT7fy-H_LILI%2FAAAAAAAADRE%2F1ICXzTBkgEc%2Fs1600%2FFlamingo11.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://q-cf.bstatic.com/images/hotel/max1024x768/249/249219414.jpg',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQowocq0VgIUiNylCHJfCiXaO4EKNFTvPu8ow&usqp=CAU',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbeforeyougarden.files.wordpress.com%2F2015%2F03%2Fbeech-in-snow-march-21-2015.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+            ],
+          },
+
+    }
+        ,{
+        name: "25 Pics Gallery",
+        img:"https://i.ibb.co/m4VM47t/Screenshot-2020-07-23-15-47-31.png",
+        tree: {
+            type: 'site-section',
+            class: 'gallery-25-pics',
+            style: {
+              backgroundColor: 'white',
+            },
+            cmps: [
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.organicconsumers.org%2Fsites%2Fdefault%2Ffiles%2Fbigstock-old-oak-tree-on-meadows-a-fie-256109641.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'horizontal',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-84ZrGEHfHr0%2FUJtqvO07w-I%2FAAAAAAAAAv0%2FdMeI3WM5wWA%2Fs1600%2FNature-HD-Wallpaper1.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F_KU3zHcdckOE%2FTNg7UhPhuOI%2FAAAAAAAAAAw%2FZGZt9n2dhTA%2Fs1600%2FNice-Nature-wallpaper-9.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'big',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-gsFJIMzY1LM%2FUHOehvt_sjI%2FAAAAAAAAAsQ%2FItPARvV9QKA%2Fs1600%2F3dnaturewallpapers.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.suicidecallbackservice.org.au%2Fwp-content%2Fuploads%2F2018%2F03%2FNature-as-a-healer-header.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.virtualtelescope.eu%2Fwordpress%2Fwp-content%2Fuploads%2F2014%2F03%2Fmoon_16mar2014.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'big',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-YDEgYFluAwE%2FTp4jqVDwNsI%2FAAAAAAAAB3U%2FVgJL0rE4H9M%2Fs1600%2Flake-kucherlinskoe-altai-republic-russia-nature-wallpaper-1280x800-1351.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'horizontal',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.classic-collection.co.uk%2Fcontent%2FDataObjects%2FProductAttributeGroup%2FImage%2Fimage_13_v15.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.fo8EX62k9BZc5pAPlnaJhQHaFJ%26pid%3DApi&f=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fworldofsucculents.com%2Fwp-content%2Fuploads%2F2015%2F07%2FPachycereus-pringlei-Cardon.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'big',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F7RTDjO08kWw%2Fmaxresdefault.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.pexels.com%2Fphotos%2F21261%2Fpexels-photo.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.telegraph.co.uk%2Fcontent%2Fdam%2FTravel%2Fski%2FK2-mountain-Andrzej-Bargiel-first-ski-descent-by-Piotr-Pawlus-Red-Bull-Content-Pool-xlarge.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'horizontal',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-assets.alltrails.com%2Fuploads%2Fphoto%2Fimage%2F10720154%2Fextra_large_db2cf5bc3de3273d1a583153f23a85f2.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'vertical',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frickholliday.files.wordpress.com%2F2012%2F11%2Fnorth-cascades-highway-waterfall.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'vertical',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.outdoorproject.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fcboxshow%2Fpublic%2F1471993417%2F_mg_1903-pano.jpg%3Fitok%3DLaAr2xO7&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.baltana.com%2Ffiles%2Fwallpapers-2%2FHills-HD-Wallpapers-04166.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flawanderlust.files.wordpress.com%2F2013%2F04%2Fimg_4028.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-HLZClXhQ-8w%2FULOMuubnx3I%2FAAAAAAAANz8%2Ff6c1Ajl31Ls%2Fs1600%2FNetherlands%2BFlower%2BFields%2BWallpapers%2Band%2BPhotos%2B03.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'big',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.financialexpress.com%2F2017%2F11%2Fcats-156.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'horizontal',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://scentertainer.net/wp-content/uploads/2020/06/italian-cypress-2b.jpg',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-0az-sKQWj0c%2FT7fy-H_LILI%2FAAAAAAAADRE%2F1ICXzTBkgEc%2Fs1600%2FFlamingo11.jpg&f=1&nofb=1',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'horizontal',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://q-cf.bstatic.com/images/hotel/max1024x768/249/249219414.jpg',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: '',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQowocq0VgIUiNylCHJfCiXaO4EKNFTvPu8ow&usqp=CAU',
+                    style: {},
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                class: 'horizontal',
+                cmps: [
+                  {
+                    type: 'site-image',
+                    content:
+                      'data:image/jpeg;base64,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',
+                    style: {},
+                  },
+                ],
+              },
+            ],
+          },
+    }],
     section: [{
             name: "hero",
             img: "https://i.ibb.co/7KkcVG7/hero-sample-image.png",

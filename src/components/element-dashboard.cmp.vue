@@ -12,9 +12,9 @@
         <h4> Pick an Element</h4>
         <element-picker @showList="showList"/>
       </div>
-      <div v-else>
+      <div class="sample-section" v-else>
         <button class="back-btn" @click="showSamples = false"><i class="fas fa-arrow-left"></i> </button>
-        <samples-list :samples="samples" :type="currSampList"/>
+        <sample-list :samples="samples" />
       </div>
 
     </div>
@@ -34,8 +34,8 @@
 </template>
 
 <script>
+import sampleList from './sample-list.cmp.vue'
 import elementPicker from './element-picker.cmp.vue';
-import samplesList from './samples-list.cmp.vue';
 import elementEdit from './element-edit.cmp.vue';
 import { eventBus, MINIMIZE_DASHBOARD, OPEN_EDITOR } from "@/services/event-bus.service.js";
 
@@ -78,9 +78,9 @@ export default {
       });
   },
   components: {
-    samplesList,
+    sampleList,
     elementPicker,
-    elementEdit
+    elementEdit,
   }
 };
 </script>
