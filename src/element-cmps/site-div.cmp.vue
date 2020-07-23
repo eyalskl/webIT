@@ -20,7 +20,7 @@ import siteMap from '@/element-cmps/site-map.cmp.vue'
 import siteForm from '@/element-cmps/site-form.cmp.vue';
 import siteList from '@/element-cmps/site-list.cmp.vue';
 import elementControls from '@/components/element-controls.cmp.vue';
-import { eventBus, EDIT_ELEMENT, FORCE_UPDATE, OPEN_EDITOR } from "@/services/event-bus.service.js";
+import { eventBus, EDIT_ELEMENT, UPDATE_SITE, OPEN_EDITOR } from "@/services/event-bus.service.js";
 
 import { Container, Draggable } from "vue-smooth-dnd";
 import { applyDrag, generateItems } from "@/assets/drag-test.js";
@@ -34,7 +34,7 @@ export default {
     };
   },
   created() {
-      eventBus.$on(FORCE_UPDATE, () => {
+      eventBus.$on(UPDATE_SITE, () => {
         this.$forceUpdate();
       })
   },

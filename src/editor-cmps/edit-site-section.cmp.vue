@@ -27,7 +27,7 @@
 <script>
 import colorPicker from '@/custom-cmps/color-picker.cmp';
 import { uploadImg } from '@/services/img-upload.service.js';
-import { eventBus, FORCE_UPDATE } from '@/services/event-bus.service.js';
+import { eventBus, UPDATE_SITE } from '@/services/event-bus.service.js';
 
 export default {
   name: 'edit-site-section',
@@ -41,7 +41,7 @@ export default {
     setBgc(bgc) {
       this.cmp.style.background = bgc;
       this.$refs.bgcPreview.style.background = bgc;
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     },
     async onUploadImg(ev) {
       this.isUploading = true;
@@ -49,7 +49,7 @@ export default {
       let img = await res;
       this.cmp.style.background = `url(${img.url}) no-repeat center center scroll`;
       this.isUploading = false;
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     }
   },
   created() {

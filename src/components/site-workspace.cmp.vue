@@ -14,7 +14,7 @@
 
 <script>
 import siteSection from '@/element-cmps/site-section.cmp.vue';
-import { eventBus, MINIMIZE_DASHBOARD, FORCE_UPDATE, ADD_SAMPLE } from '@/services/event-bus.service.js';
+import { eventBus, MINIMIZE_DASHBOARD, UPDATE_SITE, ADD_SAMPLE } from '@/services/event-bus.service.js';
 import { Container, Draggable } from "vue-smooth-dnd";
 import { applyDrag, generateItems } from "@/assets/drag-test.js";
 const _ = require("lodash")
@@ -57,7 +57,7 @@ export default {
     eventBus.$on(MINIMIZE_DASHBOARD, isMinimized => {
       this.minimize = isMinimized
       })
-    eventBus.$on(FORCE_UPDATE, () => {
+    eventBus.$on(UPDATE_SITE, () => {
       this.$forceUpdate();
         this.$store.commit({type:'setSite', site: this.siteToEdit})
       })

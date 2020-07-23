@@ -13,7 +13,7 @@ export const REMOVE_ELEMENT = 'remove-element';
 
 export const MINIMIZE_DASHBOARD = 'minimize-dashboard';
 
-export const FORCE_UPDATE = 'force-update';
+export const UPDATE_SITE = 'update-site';
 
 export const OPEN_EDITOR = 'open-editor';
 
