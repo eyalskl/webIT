@@ -6,6 +6,7 @@
     v-text="cmp.content"
     @blur="onEdit"
     @click.stop="openEditor"
+    @keydown.enter="endEdit"
     @dragover.prevent
     @drag.prevent
     @dragstart.prevent
@@ -38,6 +39,9 @@ export default {
       var txt = ev.target.innerText;
       this.content = txt;
       this.cmp.content = txt
+    },
+    endEdit() {
+      this.$el.blur();
     },
     openEditor() {
         eventBus.$emit(EDIT_ELEMENT, this.cmp);
