@@ -12,7 +12,7 @@
         <h4> Pick an Element</h4>
         <element-picker @showList="showList"/>
       </div>
-      <div class="sample-section" v-else>
+      <div class="sample-section flex column" v-else>
         <button class="back-btn" @click="showSamples = false"><i class="fas fa-arrow-left"></i> </button>
         <sample-list :samples="samples" />
       </div>
