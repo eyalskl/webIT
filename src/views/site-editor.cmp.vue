@@ -1,10 +1,18 @@
 <template>
-  <container  class="editor flex column animate__animated animate__fadeIn">
+  <container class="editor flex column animate__animated animate__fadeIn">
     <nav-bar />
-  <div class="flex">
-      <element-dashboard :samples="samples" @getSamplesToShow="getSamplesToShow" @shouldAcceptDrop="false"/>
-      <site-workspace v-if="siteToEdit" :siteToEdit="siteToEdit" @shouldAcceptDrop="true" />
-  </div>
+    <div class="flex">
+      <element-dashboard
+        :samples="samples"
+        @getSamplesToShow="getSamplesToShow"
+        @shouldAcceptDrop="false"
+      />
+      <site-workspace
+        v-if="siteToEdit"
+        :siteToEdit="siteToEdit"
+        @shouldAcceptDrop="true"
+      />
+    </div>
   </container>
 </template>
 
@@ -22,7 +30,7 @@ import {
   EDIT_ELEMENT,
   CLONE_ELEMENT,
   REMOVE_ELEMENT,
-  MOVE_ELEMENT
+  MOVE_ELEMENT,
 } from '@/services/event-bus.service.js';
 
 const _ = require('lodash');
@@ -41,14 +49,14 @@ export default {
     }
   },
   async created() {
-    this.$store.commit({type: 'setEditMode', editMode: true});
+    this.$store.commit({ type: 'setEditMode', editMode: true });
     this.loadSite();
 
     this.samples = templateService.getSamplesOf('section');
 
-    eventBus.$on(ADD_SAMPLE, sample => this.addSample(sample));
-    eventBus.$on(CLONE_ELEMENT, element => this.clone(element));
-    eventBus.$on(REMOVE_ELEMENT, elementId => this.remove(elementId));
+    eventBus.$on(ADD_SAMPLE, (sample) => this.addSample(sample));
+    eventBus.$on(CLONE_ELEMENT, (element) => this.clone(element));
+    eventBus.$on(REMOVE_ELEMENT, (elementId) => this.remove(elementId));
     eventBus.$on(MOVE_ELEMENT, (elementId, direction) =>
       this.moveElement(elementId, direction)
     );
@@ -57,10 +65,10 @@ export default {
     async loadSite() {
       const site = await this.$store.dispatch({
         type: 'loadSite',
-        id: this.$route.params.id
+        id: this.$route.params.id,
       });
     },
-    getSamplesToShow(listName){
+    getSamplesToShow(listName) {
       this.samples = templateService.getSamplesOf(listName);
     },
     addSample(sample) {
@@ -72,7 +80,7 @@ export default {
     },
     moveElement(elementId, direction) {
       const cmps = this.siteToEdit.cmps;
-      const idx = cmps.findIndex(cmp => cmp.id === elementId);
+      const idx = cmps.findIndex((cmp) => cmp.id === elementId);
       if (direction === 'down' && idx + 1 < cmps.length) {
         const cmp = cmps[idx];
         cmps.splice(idx, 1, cmps[idx + 1]);
@@ -86,7 +94,7 @@ export default {
     },
     clone(element) {
       const cmps = this.siteToEdit.cmps;
-      const idx = cmps.findIndex(cmp => cmp.id === element.id);
+      const idx = cmps.findIndex((cmp) => cmp.id === element.id);
       let clone = _.cloneDeep(element);
       clone.id = templateService.makeId();
       clone = templateService.addIds(clone);
@@ -95,22 +103,22 @@ export default {
     },
     remove(elementId) {
       const cmps = this.siteToEdit.cmps;
-      const idx = cmps.findIndex(cmp => cmp.id === elementId);
+      const idx = cmps.findIndex((cmp) => cmp.id === elementId);
       cmps.splice(idx, 1);
       this.$store.commit({ type: 'setSite', site: this.siteToEdit });
-    }
+    },
   },
   watch: {
     '$route.params.id'() {
       this.loadSite();
-    }
+    },
   },
   components: {
     siteWorkspace,
     elementDashboard,
     Container,
     Draggable,
-    navBar
-  }
+    navBar,
+  },
 };
 </script>
