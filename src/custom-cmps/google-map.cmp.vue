@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name:'google-map',
+  name: 'google-map',
   data() {
     return {
       markers: [
