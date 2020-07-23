@@ -31,6 +31,10 @@
             <label>Letter spacing:</label>
             <el-slider @input="setLetterSpacing" v-model="letterSpacing" :max="50"></el-slider>
           </div>
+          <div class="flex column justify-center align-center">
+            <h4> Pick a background color </h4>
+            <color-picker @input="setBgc" />
+          </div>
         </section>
     </div>
 </template>
@@ -38,6 +42,7 @@
 <script>
 import selectBox from '../custom-cmps/select-box.cmp';
 import { eventBus, UPDATE_SITE } from "@/services/event-bus.service.js";
+import colorPicker from '@/custom-cmps/color-picker.cmp';
 
 export default {  
 name: 'edit-site-text',
@@ -108,10 +113,15 @@ props: ['cmp'],
       this.letterSpacing = spacing;
       this.cmp.style.letterSpacing = spacing / 4 + 'px';
       eventBus.$emit(UPDATE_SITE);
+    },
+    setBgc(bgc) {
+      this.cmp.style.background = bgc;
+      eventBus.$emit(UPDATE_SITE);
     }
   },
   components: {
-    selectBox
+    selectBox,
+    colorPicker
   },
   created() {
       if (this.cmp.style.fontSize) this.fontSize = parseFloat(this.cmp.style.fontSize) * 16;
