@@ -22,7 +22,7 @@
     <element-edit v-show="!pickerMode" :isType="type" />
 
     <button
-      :title="minimize ? 'Unfold toolbox' : 'Fold toolbox'"
+      :title="minimize ? 'Show Dashborad' : 'Hide Dashboard'"
       class="minimize"
       :class="minimized"
       @click="toggleMinimize"

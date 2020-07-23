@@ -16,7 +16,7 @@ import {
   eventBus,
   EDIT_ELEMENT,
   OPEN_EDITOR,
-  FORCE_UPDATE
+  UPDATE_SITE
 } from '@/services/event-bus.service.js';
 
 export default {
@@ -45,7 +45,7 @@ export default {
   },
   created() {
     this.content = this.cmp.content;
-    eventBus.$on(FORCE_UPDATE, () => this.$forceUpdate());
+    eventBus.$on(UPDATE_SITE, () => this.$forceUpdate());
   }
 }
 

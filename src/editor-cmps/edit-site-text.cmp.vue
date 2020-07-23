@@ -37,7 +37,7 @@
 
 <script>
 import selectBox from '../custom-cmps/select-box.cmp';
-import { eventBus, FORCE_UPDATE } from "@/services/event-bus.service.js";
+import { eventBus, UPDATE_SITE } from "@/services/event-bus.service.js";
 
 export default {  
 name: 'edit-site-text',
@@ -68,46 +68,46 @@ props: ['cmp'],
     setFontSize(fontSize) {
       this.fontSize = fontSize
       this.cmp.style.fontSize = (fontSize / 16) + 'rem';
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     },
     setColor(color) {
       this.cmp.style.color = color
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     },
     setAlign(align) {
       this.textAlign = align;
       this.cmp.style.textAlign = align
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     },
     toggleBold() {
       this.isBold = !this.isBold
       this.cmp.style.fontWeight = this.isBold ? 'bold' : 'normal';
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     },
     toggleItalic() {
       this.isItalic = !this.isItalic
       this.cmp.style.fontStyle = this.isItalic ? 'italic' : 'normal';
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     },
     toggleUnderline() {
       this.isUnderline = !this.isUnderline
       this.cmp.style.textDecoration = this.isUnderline ? 'underline' : 'none';
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     },
     setShadow(shadow) {
       this.shadow = shadow;
       this.cmp.style.textShadow = shadow === 'Light' ? '1px 1px 1px black' : shadow === 'Medium' ? '2px 2px 4px black' : '4px 4px 8px black';
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     },
     setLineHeight(height) {
       this.lineHeight = height;
       this.cmp.style.lineHeight = height / 4;
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     },
     setLetterSpacing(spacing) {
       this.letterSpacing = spacing;
       this.cmp.style.letterSpacing = spacing / 4 + 'px';
-      eventBus.$emit(FORCE_UPDATE);
+      eventBus.$emit(UPDATE_SITE);
     }
   },
   components: {
