@@ -1,15 +1,11 @@
 <template>
-
-  <div v-if="editMode" class="site-div"  :style="cmp.style" @mouseover="displayControls" @mouseout="hideControls" @click.stop="openEditor"  >
+  <div v-if="editMode" class="site-div"  :style="cmp.style" @click.stop="openEditor"  >
     <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"></component>
     <element-controls v-show="showControls" />
   </div>
-  
   <div v-else class="site-div" :style="cmp.style" :class="cmp.class">
     <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"> </component>
-    <element-controls v-show="showControls" />
   </div>
-
 </template>
 
 <script>
@@ -21,7 +17,6 @@ import siteForm from '@/element-cmps/site-form.cmp.vue';
 import siteList from '@/element-cmps/site-list.cmp.vue';
 import elementControls from '@/components/element-controls.cmp.vue';
 import { eventBus, EDIT_ELEMENT, UPDATE_SITE, OPEN_EDITOR } from "@/services/event-bus.service.js";
-
 import { Container, Draggable } from "vue-smooth-dnd";
 import { applyDrag, generateItems } from "@/assets/drag-test.js";
 
@@ -44,12 +39,6 @@ export default {
     }
   },
   methods: {
-    displayControls() {
-      this.showControls = true;
-    },
-    hideControls() {
-      this.showControls = false;
-    },
     openEditor() {
       eventBus.$emit(EDIT_ELEMENT, this.cmp);
       eventBus.$emit(OPEN_EDITOR, this.cmp.type);
