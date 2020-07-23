@@ -17,10 +17,13 @@
 @import './editor-cmps/edit-site-image';
 @import './editor-cmps/edit-site-section';
 @import './editor-cmps/edit-site-text';
+@import './editor-cmps/edit-site-video';
+@import './editor-cmps/edit-site-form';
 // SAMPLES CMPS
 @import './samples-cmps/sample-section';
 // SITE COMPONENTS
 @import './site-cmps/site-section';
+@import './site-cmps/site-div';
 // VIEWS
 @import './views/editor';
 @import './views/home-page';
