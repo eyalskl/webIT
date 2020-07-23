@@ -1,8 +1,500 @@
 import httpService from './http.service'
-
+// {name: "Logo Horizon",
+//     img:"https://i.ibb.co/D74M0wM/Screenshot-2020-07-23-18-40-58.png",
+//     tree:{}}
 const _ = require("lodash");
 const samples = {
-    header:[{name: "Logo Horizon",
+    cards:[
+        {name: "Cards Gallery",
+    img:"https://i.gyazo.com/a0cc9c311a000634c5fc18881b9765e7.jpg",
+    tree:{
+        "type" : "site-section",
+        "class" : "s-cards-container",
+        "style" : {
+            "background" : "url(https://images.unsplash.com/photo-1471955208393-a03a570b4c02?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)no-repeat center center fixed",
+            "backgroundSize" : "cover"
+        },
+        "cmps" : [ 
+            {
+                "type" : "site-div",
+                "class" : "card-div",
+                "style" : {
+                    "background" : "#ffffff"
+                },
+                "cmps" : [ 
+                    {
+                        "type" : "site-image",
+                        "content" : "https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80",
+                        "style" : {
+                            "height" : "260px",
+                            "borderRadius" : "12px 12px 0px 0px",
+                            "objectFit" : "cover",
+                            "width" : "100%"
+                        },
+                        "id" : "4FINA825D7"
+                    }, 
+                    {
+                        "type" : "site-image",
+                        "content" : "https://ca.slack-edge.com/TTSM5TLP5-U01244JFQ30-cdef3d127aa0-512",
+                        "style" : {
+                            "height" : "100px",
+                            "width" : "100px",
+                            "position" : "absolute",
+                            "border" : "6px white solid",
+                            "borderRadius" : "50%",
+                            "top" : "210px",
+                            "zIndex" : "1",
+                            "left" : "calc(50% - 50px)",
+                            "objectFit" : "cover"
+                        },
+                        "id" : "9YryChNg4Y"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "Dogs",
+                        "style" : {
+                            "marginBlockStart" : "5rem",
+                            "fontFamily" : "Oswald",
+                            "fontSize" : "2rem",
+                            "color" : "#5aa55e"
+                        },
+                        "id" : "FTg526zun4"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "Read All About The Man's Best Friend .",
+                        "style" : {
+                            "fontFamily" : "Oswald",
+                            "color" : "#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b"
+                        },
+                        "id" : "cR5cibruZT"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "READ MORE",
+                        "style" : {
+                            "fontFamily" : "Oswald",
+                            "color" : "#0000000",
+                            "marginBlockStart" : "2rem",
+                            "borderBlockStart" : "1px solid #e5e5e5",
+                            "width" : "100%",
+                            "textAlign" : "center"
+                        },
+                        "id" : "sS7JKPThTA"
+                    }
+                ],
+                "id" : "hwNp1jM1sQ"
+            }, 
+            {
+                "type" : "site-div",
+                "class" : "card-div",
+                "style" : {
+                    "background" : "#ffffff"
+                },
+                "cmps" : [ 
+                    {
+                        "type" : "site-image",
+                        "content" : "https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        "style" : {
+                            "height" : "260px",
+                            "objectFit" : "cover",
+                            "width" : "100%",
+                            "borderRadius" : "12px 12px 0px 0px"
+                        },
+                        "id" : "A0pMz1QA3m"
+                    }, 
+                    {
+                        "type" : "site-image",
+                        "content" : "https://ca.slack-edge.com/TTSM5TLP5-U01244K0L9L-60f6bffb36ed-512",
+                        "style" : {
+                            "height" : "100px",
+                            "width" : "100px",
+                            "position" : "absolute",
+                            "border" : "6px white solid",
+                            "borderRadius" : "50%",
+                            "top" : "210px",
+                            "zIndex" : "1",
+                            "left" : "calc(50% - 50px)",
+                            "objectFit" : "cover"
+                        },
+                        "id" : "SAtBaMsAwm"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "The King Of The Jungle",
+                        "style" : {
+                            "marginBlockStart" : "5rem",
+                            "fontFamily" : "Oswald",
+                            "fontSize" : "2rem",
+                            "color" : "#393330"
+                        },
+                        "id" : "P0h7QNh4iX"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "Read All About The Mighty Lion.",
+                        "style" : {
+                            "fontFamily" : "Oswald",
+                            "color" : "#3d3d3c"
+                        },
+                        "id" : "p8VTpFIQyl"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "READ MORE",
+                        "style" : {
+                            "fontFamily" : "Oswald",
+                            "color" : "#0000000",
+                            "marginBlockStart" : "2rem",
+                            "borderBlockStart" : "1px solid #e5e5e5",
+                            "width" : "100%",
+                            "textAlign" : "center"
+                        },
+                        "id" : "1kfQwfMQFk"
+                    }
+                ],
+                "id" : "D1aAi5Pn9v"
+            }, 
+            {
+                "type" : "site-div",
+                "class" : "card-div",
+                "style" : {
+                    "background" : "#ffffff"
+                },
+                "cmps" : [ 
+                    {
+                        "type" : "site-image",
+                        "content" : "https://images.unsplash.com/photo-1517837543704-3617ae61a835?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+                        "style" : {
+                            "height" : "260px",
+                            "objectFit" : "cover",
+                            "width" : "100%",
+                            "borderRadius" : "12px 12px 0px 0px"
+                        },
+                        "id" : "A0pMz1QA3m"
+                    }, 
+                    {
+                        "type" : "site-image",
+                        "content" : "https://scontent.ftlv2-1.fna.fbcdn.net/v/t1.0-9/74162499_410135086544527_8337365879062790144_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=YWTSjQCzx0sAX8MSMsn&_nc_ht=scontent.ftlv2-1.fna&oh=7f30faf7f2e045c2e398ebadc2105301&oe=5F406D87",
+                        "style" : {
+                            "height" : "100px",
+                            "width" : "100px",
+                            "position" : "absolute",
+                            "border" : "6px white solid",
+                            "borderRadius" : "50%",
+                            "top" : "210px",
+                            "zIndex" : "1",
+                            "left" : "calc(50% - 50px)",
+                            "objectFit" : "cover"
+                        },
+                        "id" : "SAtBaMsAwm"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "What Does The Fox Say?!",
+                        "style" : {
+                            "marginBlockStart" : "5rem",
+                            "fontFamily" : "Oswald",
+                            "fontSize" : "2rem",
+                            "color" : "#f1c647"
+                        },
+                        "id" : "P0h7QNh4iX"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "Read All About The Fox.",
+                        "style" : {
+                            "fontFamily" : "Oswald",
+                            "color" : "#3d3d3c"
+                        },
+                        "id" : "p8VTpFIQyl"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "READ MORE",
+                        "style" : {
+                            "fontFamily" : "Oswald",
+                            "color" : "#0000000",
+                            "marginBlockStart" : "2rem",
+                            "borderBlockStart" : "1px solid #e5e5e5",
+                            "width" : "100%",
+                            "textAlign" : "center"
+                        },
+                        "id" : "1kfQwfMQFk"
+                    }
+                ],
+                "id" : "D1aAi5Pn9v"
+            }, 
+            {
+                "type" : "site-div",
+                "class" : "card-div",
+                "style" : {
+                    "background" : "#ffffff"
+                },
+                "cmps" : [ 
+                    {
+                        "type" : "site-image",
+                        "content" : "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg",
+                        "style" : {
+                            "height" : "260px",
+                            "objectFit" : "cover",
+                            "width" : "100%",
+                            "borderRadius" : "12px 12px 0px 0px"
+                        },
+                        "id" : "kpcait65wW"
+                    }, 
+                    {
+                        "type" : "site-image",
+                        "content" : "https://ca.slack-edge.com/TTSM5TLP5-U012WTGCU77-ed72504d7912-512",
+                        "style" : {
+                            "height" : "100px",
+                            "width" : "100px",
+                            "position" : "absolute",
+                            "border" : "6px white solid",
+                            "borderRadius" : "50%",
+                            "top" : "210px",
+                            "zIndex" : "1",
+                            "left" : "calc(50% - 50px)",
+                            "objectFit" : "cover"
+                        },
+                        "id" : "WVVbR4xf5A"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "Cats",
+                        "style" : {
+                            "marginBlockStart" : "5rem",
+                            "fontFamily" : "Oswald",
+                            "fontSize" : "2rem",
+                            "color" : "#704a26"
+                        },
+                        "id" : "dA4i0cxJWq"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "Read All About Cats.",
+                        "style" : {
+                            "fontFamily" : "Oswald",
+                            "color" : "#434343"
+                        },
+                        "id" : "fOD3YADgwH"
+                    }, 
+                    {
+                        "type" : "site-text",
+                        "content" : "READ MORE",
+                        "style" : {
+                            "fontFamily" : "Oswald",
+                            "color" : "#0000000",
+                            "marginBlockStart" : "2rem",
+                            "borderBlockStart" : "1px solid #e5e5e5",
+                            "width" : "100%",
+                            "textAlign" : "center"
+                        },
+                        "id" : "IQOrC39PZa"
+                    }
+                ],
+                "id" : "lGfoBWxvIR"
+            }
+        ],
+        "id" : "n9zrfdBOSI"
+    },}
+    ],
+    divider:[
+        {name: "Tall Photo Divider",
+    img:"https://i.ibb.co/X8VpWWm/Screenshot-2020-07-23-22-01-10.png",
+    tree:{
+        "type" : "site-section",
+        "class" : "block-photo-tall",
+        "style" : {
+            "background" : "url(https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1057&q=80) no-repeat center",
+            "backgroundSize" : "cover",
+        },
+        "cmps" : [],
+        "id" : "cmEVW9661w"
+    }},
+        {name: "Short Photo Divider",
+    img:"https://i.ibb.co/Br13SGD/Screenshot-2020-07-23-22-00-08.png",
+    tree:{
+        "type" : "site-section",
+        "class" : "block-photo-short",
+        "style" : {
+            "background" : "url(https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center",
+            "backgroundSize" : "cover",
+        },
+        "cmps" : [],
+        "id" : "cmEVW70S1w"
+    }},
+        {name: "Tall Line Divider",
+    img:"https://i.ibb.co/tpKyq6T/Screenshot-2020-07-23-22-10-47.png",
+    tree:{
+        "type" : "site-section",
+        "class" : "color-line-tall",
+        "style" : {
+            "background" : "#9be0ab",
+        },
+        "cmps" : [],
+        "id" : "cmE9633S1w"
+    }},
+        {name: "Short Line Divider",
+    img:"https://i.ibb.co/m0TCfv7/Screenshot-2020-07-23-22-08-26.png",
+    tree:{
+        "type" : "site-section",
+        "class" : "color-line-short",
+        "style" : {
+            "background" : "#ff4762",
+        },
+        "cmps" : [],
+        "id" : "cmE9633S1w"
+    }},
+    ],
+    header:[{name: "Hero",
+        img:"https://i.ibb.co/F5zGjtR/header-lion-2.png",
+        tree:{
+            "type" : "site-section",
+            "style" : {
+                "background" : "url(https://images.unsplash.com/photo-1588878497864-24269ed778ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80) no-repeat center center scroll",
+                "backgroundSize" : "cover",
+                "height" : "100vh",
+                "padding" : "10px 10px 10px 10px",
+                "display" : "flex",
+                "flexDirection" : "column",
+                "alignItems" : "center"
+            },
+            "cmps" : [ 
+                {
+                    "type" : "site-div",
+                    "style" : {
+                        "height" : "6rem",
+                        "width" : "100%",
+                        "display" : "flex",
+                        "justifyContent" : "space-between",
+                        "backgroundColor" : "#d9ccc959",
+                        "alignItems" : "center"
+                    },
+                    "cmps" : [ 
+                        {
+                            "type" : "site-image",
+                            "content" : "https://pluspng.com/img-png/national-geographic-logo-png-logo-natgeo-png-pluspng-com-logo-national-geographic-png-1000.png",
+                            "style" : {
+                                "height" : "5rem",
+                                "paddingInlineStart" : "1.5rem"
+                            },
+                            "id" : "ZPEkMo7Jl9"
+                        }, 
+                        {
+                            "type" : "site-list",
+                            "cmps" : [ 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "HOME",
+                                    "style" : {
+                                        "marginInlineEnd" : "1rem",
+                                        "color" : "#000000"
+                                    },
+                                    "id" : "6C1WKOMviK"
+                                }, 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "ARTICLES",
+                                    "style" : {
+                                        "marginInlineEnd" : "1rem",
+                                        "color" : "#fff"
+                                    },
+                                    "id" : "ZnSDUfBnoc"
+                                }, 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "MEMBERS",
+                                    "style" : {
+                                        "marginInlineEnd" : "1rem",
+                                        "color" : "#fff"
+                                    },
+                                    "id" : "BI7mwzgJMY"
+                                }, 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "ABOUT",
+                                    "style" : {
+                                        "marginInlineEnd" : "1rem",
+                                        "color" : "#fff"
+                                    },
+                                    "id" : "apj9ziYJPr"
+                                }, 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "CONTACT US",
+                                    "style" : {
+                                        "marginInlineEnd" : "1rem",
+                                        "color" : "#fff"
+                                    },
+                                    "id" : "jV656FQjzv"
+                                }
+                            ],
+                            "style" : {
+                                "fontFamily" : "Oswald",
+                                "color" : "#FFF",
+                                "display" : "flex"
+                            },
+                            "id" : "LLyIOQEAlV"
+                        }
+                    ],
+                    "id" : "kQaLi6AH7K"
+                }, 
+                {
+                    "type" : "site-div",
+                    "style" : {
+                        "height" : "700px",
+                        "display" : "flex",
+                        "alignItems" : "center",
+                        "justifyContent" : "center",
+                        "flexDirection" : "column"
+                    },
+                    "cmps" : [ 
+                        {
+                            "type" : "site-text",
+                            "content" : "ANIMAL GEOGRAPHIC",
+                            "style" : {
+                                "fontSize" : "4rem",
+                                "fontFamily" : "Oswald",
+                                "color" : "white",
+                                "textShadow" : "0 0 2px black"
+                            },
+                            "id" : "KmQWFoH66n"
+                        }, 
+                        {
+                            "type" : "site-text",
+                            "content" : "We Bring You The Best Articles",
+                            "style" : {
+                                "fontSize" : "1.875rem",
+                                "fontFamily" : "Oswald",
+                                "color" : "white",
+                                "textShadow" : "0 0 1px black"
+                            },
+                            "id" : "6yZaTiUIRI"
+                        }, 
+                        {
+                            "type" : "site-button",
+                            "content" : {
+                                "text" : "SUBSCRIBE",
+                                "href" : ""
+                            },
+                            "style" : {
+                                "fontFamily" : "Oswald",
+                                "backgroundColor" : "#ffcc00",
+                                "padding" : ".75rem 2rem",
+                                "marginTop" : "1rem",
+                                "fontSize" : "1.5rem",
+                                "fontWeight" : "bold"
+                            },
+                            "id" : "fr176TWSCX"
+                        }
+                    ],
+                    "id" : "eXvBUW7jmc"
+                }
+            ],
+            "id" : "vfx3i1WSHW"
+        }},
+        {name: "Logo Horizon",
     img:"https://i.ibb.co/D74M0wM/Screenshot-2020-07-23-18-40-58.png",
     tree:{
         "type" : "site-section",

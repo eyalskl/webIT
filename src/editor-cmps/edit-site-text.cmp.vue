@@ -1,13 +1,13 @@
 <template>
     <div class="edit-site-text">
         <h3> {{ (cmp.type  === 'site-text') ? 'Text' : 'Button' }} editor </h3>
-        <section class="edit-text">
-          <div class="flex space-between align-center">
+        <section class="edit-text flex column justify-center">
+          <div class="fonts-n-colors flex align-center">
             <select-box :data="fonts" v-model="cmp.style.fontFamily" placeholder="Pick a font..."></select-box>
-            <el-color-picker show-alpha @active-change="setColor" v-model="cmp.style.color"></el-color-picker>
+            <label> <i class="fas fa-paint-brush" :style="{color: cmp.style.color}"> </i> <input type="color" v-model="cmp.style.color"> </label>
           </div>
-          <div class="flex space-between align-center">
-            <label> Font size: </label>
+          <div class="flex column justify-center align-center">
+            <label> Font Size </label>
             <el-slider @input="setFontSize" v-model="fontSize"> </el-slider>
           </div>
           <div class="align-controls flex">
@@ -20,16 +20,24 @@
             <button @click.stop="toggleItalic" :class="{selected: isItalic}"> <i class="fas fa-italic"></i> </button>
             <button @click.stop="toggleUnderline" :class="{selected: isUnderline}"> <i class="fas fa-underline"></i> </button>
           </div>
-          <div class="text-shadow">
-            <select-box @input="setShadow" :data="shadows" placeholder="Add text shadow...">  </select-box>
-          </div>
           <div class="flex column align-center">
-              <label>Line height:</label>
+              <label> Line Height </label>
               <el-slider @input="setLineHeight" v-model="lineHeight" :min="1" :max="20"></el-slider>
           </div>
           <div class="flex column align-center">
-            <label>Letter spacing:</label>
+            <label> Letter Spacing </label>
             <el-slider @input="setLetterSpacing" v-model="letterSpacing" :max="50"></el-slider>
+          </div>
+          <div class="text-shadow">
+            <select-box @input="setShadow" :data="shadows" placeholder="Add text shadow...">  </select-box>
+          </div>
+          <div class="flex column justify-center align-center">
+            <h4> Background Color </h4>
+            <color-picker @input="setBgc" />
+          </div>
+          <div v-if="cmp.type  === 'site-button'" class="flex column align-center">
+            <label> Round Edges </label>
+            <el-slider @input="setBorderRadius" v-model="borderRadius" :max="50"></el-slider>
           </div>
         </section>
     </div>
@@ -38,6 +46,7 @@
 <script>
 import selectBox from '../custom-cmps/select-box.cmp';
 import { eventBus, UPDATE_SITE } from "@/services/event-bus.service.js";
+import colorPicker from '@/custom-cmps/color-picker.cmp';
 
 export default {  
 name: 'edit-site-text',
@@ -47,6 +56,7 @@ props: ['cmp'],
       fontSize: 16,
       lineHeight: 6,
       letterSpacing: 0,
+      borderRadius: 0,
       isBold: false,
       isItalic: false,
       isUnderline: false,
@@ -104,19 +114,30 @@ props: ['cmp'],
       this.cmp.style.lineHeight = height / 4;
       eventBus.$emit(UPDATE_SITE);
     },
+    setBorderRadius(radius) {
+      this.borderRadius = radius;
+      this.cmp.style.borderRadius = radius + 'px';
+      eventBus.$emit(UPDATE_SITE);
+    },
     setLetterSpacing(spacing) {
       this.letterSpacing = spacing;
       this.cmp.style.letterSpacing = spacing / 4 + 'px';
       eventBus.$emit(UPDATE_SITE);
+    },
+    setBgc(bgc) {
+      this.cmp.style.background = bgc;
+      eventBus.$emit(UPDATE_SITE);
     }
   },
   components: {
-    selectBox
+    selectBox,
+    colorPicker
   },
   created() {
       if (this.cmp.style.fontSize) this.fontSize = parseFloat(this.cmp.style.fontSize) * 16;
       if (this.cmp.style.lineHeight) this.lineHeight = parseFloat(this.cmp.style.lineHeight) * 4;
       if (this.cmp.style.letterSpacing) this.letterSpacing = parseFloat(this.cmp.style.letterSpacing) * 4;
+      if (this.cmp.style.borderRadius) this.borderRadius = parseInt(this.cmp.style.borderRadius);
       this.textAlign = (this.cmp.style.textAlign) ? this.cmp.style.textAlign : '';
       this.isBold = (this.cmp.style.fontWeight === 'bold');
       this.isItalic = (this.cmp.style.fontStyle === 'italic');
@@ -129,6 +150,7 @@ props: ['cmp'],
         if (newVal.style.fontSize) this.fontSize = parseFloat(newVal.style.fontSize) * 16;
         if (newVal.style.lineHeight) this.lineHeight = parseFloat(newVal.style.lineHeight) * 4;
         if (newVal.style.letterSpacing) this.letterSpacing = parseFloat(newVal.style.letterSpacing) * 4;
+        if (newVal.style.borderRadius) this.borderRadius = parseInt(newVal.style.borderRadius);
         this.textAlign = (newVal.style.textAlign) ? newVal.style.textAlign : '';
         this.isBold = (newVal.style.fontWeight === 'bold');
         this.isItalic = (newVal.style.fontStyle === 'italic');

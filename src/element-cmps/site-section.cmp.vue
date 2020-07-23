@@ -57,21 +57,9 @@ export default {
       eventBus.$emit(OPEN_EDITOR, this.cmp.type);
       eventBus.$emit(EDIT_ELEMENT, this.cmp);
     },
-    //   onDrop(dropResult){
-    //   this.cmp.cmps = applyDrag(this.cmp.cmps,dropResult)
-    //   },
-    //       getCmp(index){
-    //   return this.cmp.cmps[index]
-      
-    // },
-   
-
   },
   created() {
-    eventBus.$on(UPDATE_SITE, () => {
-        this.$forceUpdate();
-      })
-    console.log(JSON.stringify())
+    eventBus.$on(UPDATE_SITE, () => { this.$forceUpdate() })
   },
   components: {
     siteDiv,
@@ -81,9 +69,7 @@ export default {
     siteMap,
     siteVideo,
     elementControls,
-    Container,
     Draggable
-    
   }
 };
 </script>

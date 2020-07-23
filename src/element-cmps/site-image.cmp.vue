@@ -1,5 +1,5 @@
 <template>
-        <img :src="cmp.content" @dragstart.prevent :style="cmp.style" class="site-image" @click.stop="openEditor" />
+    <img class="site-image" :src="cmp.content" :style="cmp.style" @click.stop="openEditor" @dragstart.prevent/>
 </template>
 
 <script>
@@ -13,6 +13,9 @@ export default {
             eventBus.$emit(EDIT_ELEMENT, this.cmp);
             eventBus.$emit(OPEN_EDITOR, this.cmp.type);
         }
-    }
+    },
+    created() {
+        eventBus.$on(UPDATE_SITE, () => this.$forceUpdate());
+    },
 }
 </script>

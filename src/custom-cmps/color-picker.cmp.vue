@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
     .color-picker {
-        padding: .75rem .25rem;
+        padding: .75rem 0rem;
     }
     .color-picker span {
         display: flex;
@@ -51,13 +51,15 @@ export default {
         border-radius: 50%;
         width: 2rem;
         height: 2rem;
+        transition: .2s;
     }
     .color-picker span:hover {
         opacity: .9;
+        transform: scale(1.2);
+        z-index: 1;
     }
     .color-picker span.show-more {
         color: #0076DF;
-        /* border: 1px solid #717171; */
         font-size: 2.1rem;
     }
     .picked::after {

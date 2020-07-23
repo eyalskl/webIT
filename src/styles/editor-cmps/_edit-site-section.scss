@@ -1,16 +1,16 @@
 .edit-site-section {
     .edit-section {
-        padding: 0 1rem;
+        text-align: center;
+        padding: 0 2rem;
         .img-upload {
             cursor: pointer;
             text-align: center;
             .img-preview {
                 border: 1px solid #bbb;
                 background-size: contain !important;
-                width: 100%;
-                // object-fit: contain;
+                background-position: center !important;
+                object-fit: cover;
                 height: 10rem;
-                margin: 0 auto;
             }
             label {
                 cursor: pointer;
@@ -26,6 +26,11 @@
         .search-image {
             img {
                 height: 200px;
+            }
+        }
+        .border-edit {
+            .el-slider {
+                width: 100%;
             }
         }
     }
