@@ -11,7 +11,7 @@
 @import './components/element-picker';
 @import './components/element-controls';
 @import './components/element-edit';
-@import './components/samples-list';
+@import './components/sample-list';
 @import './components/element-dashboard';
 // EDITOR CMPS
 @import './editor-cmps/edit-site-image';
@@ -22,6 +22,8 @@
 @import './editor-cmps/edit-site-form';
 // SAMPLES CMPS
 @import './samples-cmps/sample-section';
+@import './samples-cmps/sample-gallery';
+@import './samples-cmps/sample-header';
 // SITE COMPONENTS
 @import './site-cmps/site-section';
 @import './site-cmps/site-div';

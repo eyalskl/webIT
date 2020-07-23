@@ -1,5 +1,5 @@
 <template>
-  <div v-if="editMode" class="site-div"  :style="cmp.style" @click.stop="openEditor"  >
+  <div v-if="editMode" class="site-div" :class="cmp.class" :style="cmp.style" @click.stop="openEditor">
     <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"></component>
     <element-controls v-show="showControls" />
   </div>

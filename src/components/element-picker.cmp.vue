@@ -12,7 +12,7 @@ export default {
   name: 'element-picker',
   data() {
     return {
-      elementNames: ['section','text', 'image', 'button']
+      elementNames: ['header','navbar','gallery', 'cards', 'contact form','map','video','footer']
     };
   },
   computed: {},

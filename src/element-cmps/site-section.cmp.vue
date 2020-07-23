@@ -38,7 +38,6 @@ export default {
     
     };
   },
-
   computed:{
     getOrientation(){
        return (this.cmp.style.flexDirection === 'column' ? 'vertical' : 'horizontal') 
@@ -72,7 +71,7 @@ export default {
     eventBus.$on(UPDATE_SITE, () => {
         this.$forceUpdate();
       })
-      
+    console.log(JSON.stringify())
   },
   components: {
     siteDiv,
