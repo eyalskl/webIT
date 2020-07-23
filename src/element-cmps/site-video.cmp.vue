@@ -4,7 +4,7 @@
 					<button class="video-btn" v-if="editMode" v-show="showControls" @click.stop="openEditor" >
 			<i class="fas fa-link"></i>
         	</button>
-            <iframe width="100%" height="100%" :src="formattedUrl" frameborder="0"  allowfullscreen></iframe>
+            <iframe width="100%" height="60%" :src="formattedUrl" frameborder="0"  allowfullscreen></iframe>
 		</div>	  
 
 </template>

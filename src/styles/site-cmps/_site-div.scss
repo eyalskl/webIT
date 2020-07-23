@@ -6,15 +6,23 @@
     word-break: break-word;
 }
 
-.input-container {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .site-video{
     height: 100%;
 .video-btn{
     position: absolute;
 }
+}
+
+.site-form{
+    .edit-form-btn{
+        position: absolute;
+    }
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 }

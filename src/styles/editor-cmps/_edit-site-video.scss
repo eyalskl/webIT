@@ -1,10 +1,12 @@
 .edit-site-video {
   i {
-    font-size: 1.25rem;
-    margin-inline-start: 0.4rem;
+    font-size: 1.15rem;
+    margin: 0 .2rem;
+    color: $clr3;
   }
   p{
       text-align: center;
+      cursor: default;
   }
   .edit-video {
     padding: 0 1rem;
