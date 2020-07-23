@@ -6,7 +6,7 @@
 import googleMap from '@/custom-cmps/google-map.cmp.vue'
 export default {
     name:'site-map',
-    components:{
+    components: {
         googleMap
     }
 }
