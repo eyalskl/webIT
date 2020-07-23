@@ -11,9 +11,7 @@
     }
 }
 
-.site-text {
-    word-break: break-word;
-}
+
 
 .section-drag {
     transform: scale(0.7);
@@ -24,14 +22,11 @@
     cursor: grabbing;
 }
 
-.input-container {
-    display: flex;
-    flex-direction: column;
-}
 
-.site-div {
-    z-index: 1;
-}
+
+
+
+
 
 @media (max-width: 780px) {
     .text-logo-text{
