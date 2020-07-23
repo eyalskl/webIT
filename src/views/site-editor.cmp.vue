@@ -40,8 +40,16 @@ export default {
   data() {
     return {
       samples: {},
-      
-      
+      // siteToEdit: {
+      //   name: 'Food',
+      //   previewImg:
+      //     'https://i.ibb.co/X5LMRVk/screenshot-localhost-8080-2020-07-21-22-49-51.png',
+      //   createdBy: {
+      //     username: 'eni',
+      //     _id: '5e26e0b718a0891d4c995527',
+      //   },
+      //   cmps: [],
+      // },
     };
   },
   computed: {
