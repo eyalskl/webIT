@@ -1,7 +1,7 @@
 <template>
-  <container class="editor flex column animate__animated animate__fadeIn">
+  <container class="editor-container flex column animate__animated animate__fadeIn">
     <nav-bar />
-    <div class="flex">
+    <div class="editor flex">
       <element-dashboard
         :samples="samples"
         @getSamplesToShow="getSamplesToShow"

@@ -1,15 +1,15 @@
 <template>
   <section>
     <GmapMap
-      :center="center"
+      :center="centerDisplay"
       :zoom="zoom"
       map-type-id="terrain"
     >
       <GmapMarker
-        :position="center"
+        :position="centerDisplay"
         :clickable="true"
         :draggable="true"
-        @click="center = center"
+        @click="center = centerDisplay"
       />
     </GmapMap>
 
@@ -21,7 +21,7 @@ export default {
   name: 'google-map',
   props: ['content'],
   computed: {
-      center() {
+      centerDisplay() {
         return ({ lat: this.content.center.lat, lng: this.content.center.lng })
       },
       zoom() {
