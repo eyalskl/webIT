@@ -62,16 +62,6 @@
     width: fit-content;
 }
 
-.column-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.column-layout>*:not(:last-child) {
-    margin-bottom: 7.5px;
-}
-
 .hide {
     display: none;
 }
@@ -79,7 +69,7 @@
 .back-btn {
     font-size: 1.25rem;
     padding: .5rem .5rem;
-    align-self: flex-start;
+    align-self: flex-end;
     color: $clr3;
     transition: .3s;
     background-color: inherit;

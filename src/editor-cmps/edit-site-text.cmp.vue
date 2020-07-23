@@ -1,13 +1,13 @@
 <template>
     <div class="edit-site-text">
         <h3> {{ (cmp.type  === 'site-text') ? 'Text' : 'Button' }} editor </h3>
-        <section class="edit-text">
-          <div class="flex space-between align-center">
+        <section class="edit-text flex column justify-center">
+          <div class="fonts-n-colors flex align-center">
             <select-box :data="fonts" v-model="cmp.style.fontFamily" placeholder="Pick a font..."></select-box>
-            <el-color-picker show-alpha @active-change="setColor" v-model="cmp.style.color"></el-color-picker>
+            <label> <i class="fas fa-paint-brush" :style="{color: cmp.style.color}"> </i> <input type="color" v-model="cmp.style.color"> </label>
           </div>
           <div class="flex space-between align-center">
-            <label> Font size: </label>
+            <label> Size </label>
             <el-slider @input="setFontSize" v-model="fontSize"> </el-slider>
           </div>
           <div class="align-controls flex">
@@ -20,9 +20,6 @@
             <button @click.stop="toggleItalic" :class="{selected: isItalic}"> <i class="fas fa-italic"></i> </button>
             <button @click.stop="toggleUnderline" :class="{selected: isUnderline}"> <i class="fas fa-underline"></i> </button>
           </div>
-          <div class="text-shadow">
-            <select-box @input="setShadow" :data="shadows" placeholder="Add text shadow...">  </select-box>
-          </div>
           <div class="flex column align-center">
               <label>Line height:</label>
               <el-slider @input="setLineHeight" v-model="lineHeight" :min="1" :max="20"></el-slider>
@@ -31,8 +28,11 @@
             <label>Letter spacing:</label>
             <el-slider @input="setLetterSpacing" v-model="letterSpacing" :max="50"></el-slider>
           </div>
+          <div class="text-shadow">
+            <select-box @input="setShadow" :data="shadows" placeholder="Add text shadow...">  </select-box>
+          </div>
           <div class="flex column justify-center align-center">
-            <h4> Pick a background color </h4>
+            <h4> Background Color </h4>
             <color-picker @input="setBgc" />
           </div>
         </section>
