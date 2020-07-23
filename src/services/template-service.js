@@ -2,61 +2,61 @@ import httpService from './http.service'
 
 const _ = require("lodash");
 const samples = {
-    button:[{
-        tree: {
-            class: 'smp-btn-rect-border',
-            type: 'site-button',
-            style:{
-                color: 'red',
-                fontFamily:'Oswald',
-                fontSize:'1.1rem',
-                width: '6rem',
-                height:'',
-                padding:'0',
-                background: '#ffffff',
-                borderColor:'red',
-                borderStyle:'solid',
-                borderWidth:'3px',
-                borderRadius:'0px',
+    button: [{
+            tree: {
+                class: 'smp-btn-rect-border',
+                type: 'site-button',
+                style: {
+                    color: 'red',
+                    fontFamily: 'Oswald',
+                    fontSize: '1.1rem',
+                    width: '6rem',
+                    height: '',
+                    padding: '0',
+                    background: '#ffffff',
+                    borderColor: 'red',
+                    borderStyle: 'solid',
+                    borderWidth: '3px',
+                    borderRadius: '0px',
+                }
             }
-        }
-    },
-    {
-        tree: {
-            class: 'smp-btn-long-fill',
-            type: 'site-button',
-            style:{
-                color: '#ffffff',
-                fontFamily:'Bitter',
-                fontSize:'2rem',
-                width: '10rem',
-                background: 'rgb(237 187 22)',
-                borderColor:'',
-                borderStyle:'solid',
-                borderWidth:'0',
-                borderRadius:'5px',
+        },
+        {
+            tree: {
+                class: 'smp-btn-long-fill',
+                type: 'site-button',
+                style: {
+                    color: '#ffffff',
+                    fontFamily: 'Bitter',
+                    fontSize: '2rem',
+                    width: '10rem',
+                    background: 'rgb(237 187 22)',
+                    borderColor: '',
+                    borderStyle: 'solid',
+                    borderWidth: '0',
+                    borderRadius: '5px',
+                }
             }
-        }
-    },
-    {
-        tree: {
-            class: 'smp-btn-yellow-circle',
-            type: 'site-button',
-            style:{
-                color: '#ffffff',
-                fontFamily:'Advent Pro',
-                fontSize:'2rem',
-                width: '7rem',
-                height:'7rem',
-                background: 'rgb(96 208 35)',
-                borderColor:'rgb(96 208 35)',
-                borderStyle:'solid',
-                borderWidth:'3px',
-                borderRadius:'50%',
+        },
+        {
+            tree: {
+                class: 'smp-btn-yellow-circle',
+                type: 'site-button',
+                style: {
+                    color: '#ffffff',
+                    fontFamily: 'Advent Pro',
+                    fontSize: '2rem',
+                    width: '7rem',
+                    height: '7rem',
+                    background: 'rgb(96 208 35)',
+                    borderColor: 'rgb(96 208 35)',
+                    borderStyle: 'solid',
+                    borderWidth: '3px',
+                    borderRadius: '50%',
+                }
             }
-        }
-    },
-],
+        },
+    ],
     section: [{
             name: "hero",
             img: "https://i.ibb.co/7KkcVG7/hero-sample-image.png",
