@@ -51,7 +51,7 @@ const samples = {
                     }, 
                     {
                         "type" : "site-text",
-                        "content" : "Dogs",
+                        "content" : "Title",
                         "style" : {
                             "marginBlockStart" : "5rem",
                             "fontFamily" : "Oswald",
@@ -62,7 +62,7 @@ const samples = {
                     }, 
                     {
                         "type" : "site-text",
-                        "content" : "Read All About The Man's Best Friend .",
+                        "content" : "Add Text...",
                         "style" : {
                             "fontFamily" : "Oswald",
                             "color" : "#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b"
@@ -121,7 +121,7 @@ const samples = {
                     }, 
                     {
                         "type" : "site-text",
-                        "content" : "The King Of The Jungle",
+                        "content" : "Title",
                         "style" : {
                             "marginBlockStart" : "5rem",
                             "fontFamily" : "Oswald",
@@ -132,7 +132,7 @@ const samples = {
                     }, 
                     {
                         "type" : "site-text",
-                        "content" : "Read All About The Mighty Lion.",
+                        "content" : "Add Text...",
                         "style" : {
                             "fontFamily" : "Oswald",
                             "color" : "#3d3d3c"
@@ -191,7 +191,7 @@ const samples = {
                     }, 
                     {
                         "type" : "site-text",
-                        "content" : "What Does The Fox Say?!",
+                        "content" : "Title",
                         "style" : {
                             "marginBlockStart" : "5rem",
                             "fontFamily" : "Oswald",
@@ -202,7 +202,7 @@ const samples = {
                     }, 
                     {
                         "type" : "site-text",
-                        "content" : "Read All About The Fox.",
+                        "content" : "Add Text...",
                         "style" : {
                             "fontFamily" : "Oswald",
                             "color" : "#3d3d3c"
@@ -261,7 +261,7 @@ const samples = {
                     }, 
                     {
                         "type" : "site-text",
-                        "content" : "Cats",
+                        "content" : "Title",
                         "style" : {
                             "marginBlockStart" : "5rem",
                             "fontFamily" : "Oswald",
@@ -272,7 +272,7 @@ const samples = {
                     }, 
                     {
                         "type" : "site-text",
-                        "content" : "Read All About Cats.",
+                        "content" : "Add Text...",
                         "style" : {
                             "fontFamily" : "Oswald",
                             "color" : "#434343"
