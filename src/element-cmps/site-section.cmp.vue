@@ -1,8 +1,8 @@
 <template>
     <draggable v-if="editMode">
-      <section @mouseover="displayControls" @mouseout="hideControls" @click.stop="openEditor" class="site-section" :class="cmp.class" :style="cmp.style">
-        <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"> </component>
+      <section class="site-section" :class="cmp.class" :style="cmp.style" @mouseover="displayControls" @mouseout="hideControls" @click.stop="openEditor">
         <element-controls v-show="showControls" :element="cmp" />
+        <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"> </component>
       </section>
     </draggable>
     
@@ -35,8 +35,7 @@ export default {
           animationDuration: '50',
           showOnTop: true
       },
-    
-    };
+    }
   },
   computed:{
     getOrientation(){
@@ -60,6 +59,7 @@ export default {
   },
   created() {
     eventBus.$on(UPDATE_SITE, () => { this.$forceUpdate() })
+    // console.log(this.cmp);
   },
   components: {
     siteDiv,
@@ -70,6 +70,6 @@ export default {
     siteVideo,
     elementControls,
     Draggable
-  }
-};
+  },
+}
 </script>

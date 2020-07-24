@@ -35,6 +35,7 @@ export default {
   },
   created() {
     this.$store.dispatch({ type: 'loadTemplates' });
+    this.$store.commit({ type: 'setSite', site: {} });
   },
   methods: {
     editTemplate(id) {

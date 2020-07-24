@@ -38,6 +38,7 @@ export default {
   created() {
     this.cmpToEdit.type = this.isType
     eventBus.$on(EDIT_ELEMENT, cmp => {
+      console.log('cmp:', cmp)
       this.elementPicked = true;
       this.cmpToEdit = cmp;
       })

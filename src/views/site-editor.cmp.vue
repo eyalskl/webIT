@@ -1,5 +1,5 @@
 <template>
-  <container class="editor-container flex column animate__animated animate__fadeIn">
+  <container v-if="siteToEdit" class="editor-container flex column animate__animated animate__fadeIn">
     <nav-bar />
     <div class="editor flex">
       <element-dashboard
@@ -23,7 +23,6 @@ import elementDashboard from '@/components/element-dashboard.cmp.vue';
 import { templateService } from '@/services/template-service.js';
 import { Container, Draggable } from 'vue-smooth-dnd';
 import { applyDrag, generateItems } from '@/assets/drag-test.js';
-
 import {
   eventBus,
   ADD_SAMPLE,
@@ -39,24 +38,26 @@ export default {
   name: 'site-editor',
   data() {
     return {
-      samples: {}
+      samples: {},
+      siteToEdit: {}
     };
   },
   computed: {
-    siteToEdit(){
-        return this.$store.getters.site;
-    }
+    // siteToEdit(){
+    //     return this.$store.getters.site;
+    // }
   },
   async created() {
     this.$store.commit({ type: 'setEditMode', editMode: true });
-    this.loadSite();
+    await this.loadSite();
+    this.siteToEdit = this.$store.getters.site
     this.samples = templateService.getSamplesOf('section');
     eventBus.$on(ADD_SAMPLE, (sample) => this.addSample(sample));
     eventBus.$on(CLONE_ELEMENT, (element) => this.clone(element));
     eventBus.$on(REMOVE_ELEMENT, (elementId) => this.remove(elementId));
-    eventBus.$on(MOVE_ELEMENT, (elementId, direction) =>
+    eventBus.$on(MOVE_ELEMENT, (elementId, direction) => {
       this.moveElement(elementId, direction)
-    );
+    });
   },
   methods: {
     async loadSite() {
@@ -77,7 +78,8 @@ export default {
     },
     moveElement(elementId, direction) {
       const cmps = this.siteToEdit.cmps;
-      const idx = cmps.findIndex((cmp) => cmp.id === elementId);
+      
+      const idx = cmps.findIndex(cmp => cmp.id === elementId);
       if (direction === 'down' && idx + 1 < cmps.length) {
         const cmp = cmps[idx];
         cmps.splice(idx, 1, cmps[idx + 1]);
@@ -100,7 +102,8 @@ export default {
     },
     remove(elementId) {
       const cmps = this.siteToEdit.cmps;
-      const idx = cmps.findIndex((cmp) => cmp.id === elementId);
+      const idx = cmps.findIndex(cmp => cmp.id === elementId);
+      const cmp = cmps.find(cmp => cmp.id === elementId);
       cmps.splice(idx, 1);
       this.$store.commit({ type: 'setSite', site: this.siteToEdit });
     },
@@ -117,5 +120,8 @@ export default {
     Draggable,
     navBar,
   },
-};
+  destroyed() {
+      this.$store.commit({ type: 'setSite', site: {} });
+  },
+}
 </script>
