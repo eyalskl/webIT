@@ -1,7 +1,5 @@
 <template>
-  <container
-    class="editor-container flex column animate__animated animate__fadeIn"
-  >
+  <container class="editor-container flex column animate__animated animate__fadeIn">
     <nav-bar />
     <div class="editor flex">
       <element-dashboard
@@ -41,9 +39,7 @@ export default {
   name: 'site-editor',
   data() {
     return {
-      samples: {},
-      
-
+      samples: {}
     };
   },
   computed: {
