@@ -63,7 +63,7 @@ props: ['cmp'],
       shadow: 'None',
       textAlign: 'center',
       fonts: ['Arial', 'Nunito Sans', 'Righteous', 'Oswald', 'Bitter', 'Advent Pro', 'Josefin Slab', 'Russo One', 'Inknut Antiqua', 'Mr Dafoe'],
-      shadows: ['Light', 'Medium', 'Heavy'],
+      shadows: ['Light', 'Medium', 'Heavy', 'Titillium Web'],
     };
   },
   computed: {
