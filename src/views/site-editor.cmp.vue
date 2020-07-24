@@ -53,9 +53,7 @@ export default {
   async created() {
     this.$store.commit({ type: 'setEditMode', editMode: true });
     this.loadSite();
-
     this.samples = templateService.getSamplesOf('section');
-
     eventBus.$on(ADD_SAMPLE, (sample) => this.addSample(sample));
     eventBus.$on(CLONE_ELEMENT, (element) => this.clone(element));
     eventBus.$on(REMOVE_ELEMENT, (elementId) => this.remove(elementId));
