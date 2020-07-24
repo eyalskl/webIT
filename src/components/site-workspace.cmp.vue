@@ -21,7 +21,12 @@ const _ = require("lodash")
 
 export default {
   name: 'site-workspace',
-  props:['siteToEdit'],
+  props:{ 
+    'siteToEdit': {
+      type: Object,
+      required: true
+    } 
+  },
   data() {
     return {
       minimize: false,
@@ -59,9 +64,9 @@ export default {
       this.minimize = isMinimized
       })
     eventBus.$on(UPDATE_SITE, () => {
-      this.$forceUpdate();
+        this.$forceUpdate();
         this.$store.commit({type:'setSite', site: this.siteToEdit})
       })
   },
-};
+}
 </script>

@@ -20,9 +20,9 @@ import siteMap from '@/element-cmps/site-map.cmp.vue'
 import siteList from '@/element-cmps/site-list.cmp.vue';
 import siteVideo from '@/element-cmps/site-video.cmp.vue';
 import elementControls from '@/components/element-controls.cmp.vue';
-import { eventBus, EDIT_ELEMENT, UPDATE_SITE, OPEN_EDITOR } from "@/services/event-bus.service.js";
-import { Container, Draggable } from "vue-smooth-dnd";
-import { applyDrag, generateItems } from "@/assets/drag-test.js";
+import { eventBus, EDIT_ELEMENT, UPDATE_SITE, OPEN_EDITOR } from '@/services/event-bus.service.js';
+import { Container, Draggable } from 'vue-smooth-dnd';
+import { applyDrag, generateItems } from '@/assets/drag-test.js';
 
 export default {
   name: 'site-section',
@@ -59,7 +59,6 @@ export default {
   },
   created() {
     eventBus.$on(UPDATE_SITE, () => { this.$forceUpdate() })
-    // console.log(this.cmp);
   },
   components: {
     siteDiv,

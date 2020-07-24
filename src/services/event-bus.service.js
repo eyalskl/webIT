@@ -1,6 +1,5 @@
 import Vue from 'vue'
 
-export const SHOW_MSG = 'show-msg';
 // ELEMENT PICKER
 export const ADD_SAMPLE = 'add-samples';
 // ELEMENT EDIT

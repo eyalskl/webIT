@@ -33,9 +33,9 @@ export default {
       return this.$store.getters.isLoading;
     }
   },
-  created() {
+  async created() {
     this.$store.dispatch({ type: 'loadTemplates' });
-    this.$store.commit({ type: 'setSite', site: {} });
+    this.$store.commit({ type: 'setSite', site: null });
   },
   methods: {
     editTemplate(id) {

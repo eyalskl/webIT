@@ -9,15 +9,18 @@
         </p>
         <input type="file" @change="onUploadImg" />
       </label>
-    <img
-        class="uploading"
-        v-else
-        src="https://i.pinimg.com/originals/3d/1b/73/3d1b739fb2546948f207d2be7ae1b105.gif"
-        alt="Uploading Image..."
-      />
+      <img v-else class="uploading" src="https://i.pinimg.com/originals/3d/1b/73/3d1b739fb2546948f207d2be7ae1b105.gif" alt="Uploading Image..."/>
       <div class="border-edit flex column align-center">
           <label> Round Edges </label>
           <el-slider @input="setBorderRadius" v-model="borderRadius" :max="200"> </el-slider>
+      </div>
+      <div> <button @click.stop="showImgs = true"> Search ONLINE! </button> </div>
+      <div class="search-img" v-if="showImgs">
+        <input type="text"> 
+        <button @click.stop="searchImgs"> Serach </button>
+        <div v-if="imgs" class="images-display">
+          <img v-for="(img, idx) in imgs" :src="img.urls.thumb" :key="idx">
+        </div>
       </div>
     </section>
   </div>
@@ -25,6 +28,7 @@
 
 <script>
 import { uploadImg } from '@/services/img-upload.service.js'
+import { searchImgService } from '@/services/search-img.service.js'
 import { eventBus, UPDATE_SITE } from "@/services/event-bus.service.js";
 
 export default {
@@ -34,6 +38,9 @@ export default {
     return {
       isUploading: false,
       borderRadius: 0,
+      keyword: 'nature',
+      imgs: null,
+      showImgs: false
     };
   },
   methods: {
@@ -50,14 +57,19 @@ export default {
       eventBus.$emit(UPDATE_SITE);
     },
   },
-    created() {
+  created() {
       this.borderRadius = (this.cmp.style.borderRadius) ? parseInt(this.cmp.style.borderRadius) : 0;
+      searchImgService.getImages(this.keyword)
+        .then(imgs => this.imgs = imgs)
+    
+      console.log('imgs:', this.imgs)
   },
   watch: {
     cmp: {
       deep: true,
       handler(newVal , oldVal) {
         this.borderRadius = (newVal.style.borderRadius) ? parseInt(newVal.style.borderRadius) : 0;
+        this.showImgs = false
       }
     }
   }

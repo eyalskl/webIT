@@ -7,7 +7,7 @@ export const siteStore = {
         currSamplesList: 'sections',
         isLoading: false,
         templates: [],
-        site: {},
+        site: null,
     },
     getters: {
         site(state) {
@@ -38,6 +38,7 @@ export const siteStore = {
             templates = templates.map(template => ({ _id: template._id, name: template.name, previewImg: template.previewImg }));
             commit({ type: 'setTemplates', templates });
             commit({ type: 'setIsLoading', isLoading: false });
+            return templates;
         },
         async loadSite({ commit }, { id }) {
             commit({ type: 'setIsLoading', isLoading: true });
@@ -47,7 +48,7 @@ export const siteStore = {
             utilService.addIds(siteToEdit)
             commit({ type: 'setSite', site: siteToEdit });
             commit({ type: 'setIsLoading', isLoading: false });
-            return site
+            return siteToEdit
         },
         async saveSite({ state }) {
             const site = state.site
