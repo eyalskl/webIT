@@ -1,5 +1,7 @@
 <template>
-  <container class="editor-container flex column animate__animated animate__fadeIn">
+  <container
+    class="editor-container flex column animate__animated animate__fadeIn"
+  >
     <nav-bar />
     <div class="editor flex">
       <element-dashboard
@@ -39,7 +41,8 @@ export default {
   name: 'site-editor',
   data() {
     return {
-      samples: {}
+      samples: {},
+      
     };
   },
   computed: {
@@ -50,9 +53,7 @@ export default {
   async created() {
     this.$store.commit({ type: 'setEditMode', editMode: true });
     this.loadSite();
-
     this.samples = templateService.getSamplesOf('section');
-
     eventBus.$on(ADD_SAMPLE, (sample) => this.addSample(sample));
     eventBus.$on(CLONE_ELEMENT, (element) => this.clone(element));
     eventBus.$on(REMOVE_ELEMENT, (elementId) => this.remove(elementId));

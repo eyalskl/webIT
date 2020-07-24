@@ -27,7 +27,8 @@ export default {
   },
   methods: {
     onEdit(ev) {
-      this.cmp.content = ev.target.innerText
+      this.cmp.content = ev.target.innerText;
+      eventBus.$emit(UPDATE_SITE);
     }, 
     openEditor() {
         eventBus.$emit(EDIT_ELEMENT, this.cmp);

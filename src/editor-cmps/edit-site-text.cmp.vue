@@ -4,7 +4,7 @@
         <section class="edit-text flex column justify-center">
           <div class="fonts-n-colors flex align-center">
             <select-box :data="fonts" v-model="cmp.style.fontFamily" placeholder="Pick a font..."></select-box>
-            <label> <i class="fas fa-paint-brush" :style="{color: cmp.style.color}"> </i> <input type="color" v-model="cmp.style.color"> </label>
+            <label> <i class="fas fa-paint-brush" :style="{color: cmp.style.color}"> </i> <input type="color" @input="setColor" v-model="cmp.style.color"> </label>
           </div>
           <div class="flex column justify-center align-center">
             <label> Font Size </label>
@@ -63,7 +63,7 @@ props: ['cmp'],
       shadow: 'None',
       textAlign: 'center',
       fonts: ['Arial', 'Nunito Sans', 'Righteous', 'Oswald', 'Bitter', 'Advent Pro', 'Josefin Slab', 'Russo One', 'Inknut Antiqua', 'Mr Dafoe'],
-      shadows: ['Light', 'Medium', 'Heavy'],
+      shadows: ['Light', 'Medium', 'Heavy', 'Titillium Web'],
     };
   },
   computed: {
@@ -80,8 +80,8 @@ props: ['cmp'],
       this.cmp.style.fontSize = (fontSize / 16) + 'rem';
       eventBus.$emit(UPDATE_SITE);
     },
-    setColor(color) {
-      this.cmp.style.color = color
+    setColor(ev) {
+      this.cmp.style.color = ev.target.value
       eventBus.$emit(UPDATE_SITE);
     },
     setAlign(align) {
