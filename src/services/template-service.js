@@ -296,7 +296,301 @@ const samples = {
             },
         },
         {
-            name: 'Cards Gallery',
+            name: 'Informative Cards',
+            img: 'https://i.gyazo.com/5bb27774793732b8d3983e74ddcbc6c7.png',
+            tree: {
+                type: "site-section",
+                class: "floating-cards-section",
+                style: {
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    alignItems: "center",
+                    flexDirection: "column",
+                    position: "relative",
+                    padding: "3rem 0 8rem",
+                    background: "#fff"
+                },
+                cmps: [{
+                        type: "site-div",
+                        style: {
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            background: "inherit",
+
+                        },
+                        cmps: [{
+                                type: "site-text",
+                                content: "Hello , I Am A Title",
+                                style: {
+                                    color: "#98953e",
+                                    fontFamily: "Oswald",
+                                    fontSize: "1.3125rem",
+                                    letterSpacing: "2.5px"
+                                }
+
+
+                            },
+                            {
+                                type: "site-text",
+                                content: "And I Represent The Section Information",
+                                style: {
+                                    color: "#17255e",
+                                    fontFamily: "Oswald",
+                                    fontSize: "2.5625rem",
+                                    borderBottom: "8px solid #8a8d4a66"
+                                }
+                            }
+                        ],
+                    },
+                    {
+                        type: "site-div",
+                        class: "floating-cards-container",
+                        style: {
+                            display: "flex",
+                            alignItems: "stretch",
+                            justifyContent: "center",
+                            flexWrap: "wrap",
+                            width: "100%",
+                            background: "none"
+                        },
+                        cmps: [{
+                                type: "site-div",
+                                class: "floating-card",
+                                style: {
+                                    position: "relative",
+                                    flex: "1",
+                                    minWidth: "23rem",
+                                    maxWidth: "23rem",
+                                    margin: "3rem 1.5rem 0px 1.5rem",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    border: "1px solid #dedede",
+                                    background: "#fff"
+                                },
+                                cmps: [{
+                                        type: "site-div",
+                                        style: {
+                                            flex: "2",
+                                            background: "url('https://camposcoffee.com/us/wp-content/uploads/2016/09/plunger-335x200.jpg') center center /cover no-repeat",
+                                            minHeight: "230px"
+                                        }
+                                    },
+                                    {
+                                        type: "site-div",
+                                        style: {
+                                            display: "flex",
+                                            flex: "1",
+                                            flexDirection: "column",
+                                            textAlign: "left",
+                                            width: "100%",
+                                            borderTop: "none",
+                                            padding: "1.25rem 2.5rem"
+                                        },
+                                        cmps: [{
+                                                type: "site-button",
+                                                content: { text: "➜", href: "" },
+                                                style: {
+                                                    height: "30px",
+                                                    width: "30px",
+                                                    position: "absolute",
+                                                    right: "0",
+                                                    bottom: "0",
+                                                    background: "none",
+                                                    fontSize: "1.4375rem",
+                                                    color: "#474747",
+                                                    boxSizing: "content-box"
+                                                }
+                                            },
+                                            {
+                                                type: "site-text",
+                                                content: "Card Description 1",
+                                                style: {
+                                                    color: "#000",
+                                                    fontFamily: "Oswald",
+                                                    fontSize: "1.125rem",
+                                                    letterSpacing: "2px",
+                                                    lineHeight: "1.6",
+                                                    margin: "1.5rem 0 1.5rem 0"
+                                                }
+                                            },
+                                            {
+                                                type: "site-text",
+                                                content: "Subtitle 1",
+                                                style: {
+                                                    fontFamily: "Oswald",
+                                                    fontSize: ".75rem",
+                                                    lineHeight: "1.5",
+                                                    letterSpacing: "3px",
+                                                    margin: "0 0 1rem"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+
+                            },
+                            {
+                                type: "site-div",
+                                class: "floating-card",
+                                style: {
+                                    position: "relative",
+                                    flex: "1",
+                                    minWidth: "23rem",
+                                    maxWidth: "23rem",
+                                    margin: "3rem 1.5rem 0px 1.5rem",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    border: "1px solid #dedede",
+                                    background: "#fff"
+                                },
+                                cmps: [{
+                                        type: "site-div",
+                                        style: {
+                                            flex: "2",
+                                            background: "url('https://camposcoffee.com/us/wp-content/uploads/2016/09/aeropress-335x200.jpg') center center /cover no-repeat",
+                                            minHeight: "230px"
+                                        }
+                                    },
+                                    {
+                                        type: "site-div",
+                                        style: {
+                                            display: "flex",
+                                            flex: "1",
+                                            flexDirection: "column",
+                                            textAlign: "left",
+                                            width: "100%",
+                                            borderTop: "none",
+                                            padding: "1.25rem 2.5rem"
+                                        },
+                                        cmps: [{
+                                                type: "site-button",
+                                                content: { text: "➜", href: "" },
+                                                style: {
+                                                    height: "30px",
+                                                    width: "30px",
+                                                    position: "absolute",
+                                                    right: "0",
+                                                    bottom: "0",
+                                                    background: "none",
+                                                    fontSize: "1.4375rem",
+                                                    color: "#474747",
+                                                    boxSizing: "content-box"
+                                                }
+                                            },
+                                            {
+                                                type: "site-text",
+                                                content: "Card Description 2",
+                                                style: {
+                                                    color: "#000",
+                                                    fontFamily: "Oswald",
+                                                    fontSize: "1.125rem",
+                                                    letterSpacing: "2px",
+                                                    lineHeight: "1.6",
+                                                    margin: "1.5rem 0 1.5rem 0"
+                                                }
+                                            },
+                                            {
+                                                type: "site-text",
+                                                content: "Subtitle 2",
+                                                style: {
+                                                    fontFamily: "Oswald",
+                                                    fontSize: ".75rem",
+                                                    lineHeight: "1.5",
+                                                    letterSpacing: "3px",
+                                                    margin: "0 0 1rem"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+
+                            },
+                            {
+                                type: "site-div",
+                                class: "floating-card",
+                                style: {
+                                    position: "relative",
+                                    flex: "1",
+                                    minWidth: "23rem",
+                                    maxWidth: "23rem",
+                                    margin: "3rem 1.5rem 0px 1.5rem",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    border: "1px solid #dedede",
+                                    background: "#fff"
+                                },
+                                cmps: [{
+                                        type: "site-div",
+                                        style: {
+                                            flex: "2",
+                                            background: "url('https://camposcoffee.com/us/wp-content/uploads/2016/09/chemex-335x200.jpg') center center /cover no-repeat",
+                                            minHeight: "230px"
+                                        }
+                                    },
+                                    {
+                                        type: "site-div",
+                                        style: {
+                                            display: "flex",
+                                            flex: "1",
+                                            flexDirection: "column",
+                                            textAlign: "left",
+                                            width: "100%",
+                                            borderTop: "none",
+                                            padding: "1.25rem 2.5rem"
+                                        },
+                                        cmps: [{
+                                                type: "site-button",
+                                                content: { text: "➜", href: "" },
+                                                style: {
+                                                    height: "30px",
+                                                    width: "30px",
+                                                    position: "absolute",
+                                                    right: "0",
+                                                    bottom: "0",
+                                                    background: "none",
+                                                    fontSize: "1.4375rem",
+                                                    color: "#474747",
+                                                    boxSizing: "content-box"
+                                                }
+                                            },
+                                            {
+                                                type: "site-text",
+                                                content: "Card Description 3",
+                                                style: {
+                                                    color: "#000",
+                                                    fontFamily: "Oswald",
+                                                    fontSize: "1.125rem",
+                                                    letterSpacing: "2px",
+                                                    lineHeight: "1.6",
+                                                    margin: "1.5rem 0 1.5rem 0"
+                                                }
+                                            },
+                                            {
+                                                type: "site-text",
+                                                content: "Subtitle 3",
+                                                style: {
+                                                    fontFamily: "Oswald",
+                                                    fontSize: ".75rem",
+                                                    lineHeight: "1.5",
+                                                    letterSpacing: "3px",
+                                                    margin: "0 0 1rem"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+
+                            }
+                        ]
+                    },
+
+                ]
+            },
+        },
+        {
+            name: 'Cards With Author',
             img: 'https://i.gyazo.com/a0cc9c311a000634c5fc18881b9765e7.jpg',
             tree: {
                 type: 'site-section',
@@ -319,7 +613,8 @@ const samples = {
                                     borderRadius: '12px 12px 0px 0px',
                                     objectFit: 'cover',
                                     width: '100%',
-                                }
+                                },
+                                id: '4FINA825D7',
                             },
                             {
                                 type: 'site-image',
@@ -331,106 +626,31 @@ const samples = {
                                     border: '6px white solid',
                                     borderRadius: '50%',
                                     top: '210px',
-                                    zIndex: '1',
-                                    left: 'calc(50% - 50px)',
-                                    objectFit: 'cover',
-                                }
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Dogs',
-                                style: {
-                                    marginBlockStart: '5rem',
-                                    fontFamily: 'Oswald',
-                                    fontSize: '2rem',
-                                    color: '#5aa55e',
-                                }
-                            },
-                            {
-                                type: 'site-text',
-                                content: "Read All About The Man's Best Friend .",
-                                style: {
-                                    fontFamily: 'Oswald',
-                                    color: '#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b',
-                                }
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'READ MORE',
-                                style: {
-                                    fontFamily: 'Oswald',
-                                    color: '#0000000',
-                                    marginBlockStart: '2rem',
-                                    borderBlockStart: '1px solid #e5e5e5',
-                                    width: '100%',
-                                    textAlign: 'center',
-                                }
-                            },
-                        ]
-                    },
-                    {
-                        type: 'site-div',
-                        class: 'card-div',
-                        style: {
-                            background: '#ffffff',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-                                style: {
-                                    height: '260px',
-                                    objectFit: 'cover',
-                                    width: '100%',
-                                    borderRadius: '12px 12px 0px 0px',
-                                }
-                            },
-                            {
-                                type: 'site-image',
-                                content: 'https://ca.slack-edge.com/TTSM5TLP5-U01244K0L9L-60f6bffb36ed-512',
-                                style: {
-                                    height: '100px',
-                                    width: '100px',
-                                    position: 'absolute',
-                                    border: '6px white solid',
-                                    borderRadius: '50%',
-                                    top: '210px',
-                                    zIndex: '1',
+                                    zIndex: '2',
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
                                 },
-                            },
-                            {
-                                type: 'site-image',
-                                content: 'https://ca.slack-edge.com/TTSM5TLP5-U01244JFQ30-cdef3d127aa0-512',
-                                style: {
-                                    height: '100px',
-                                    width: '100px',
-                                    position: 'absolute',
-                                    border: '6px white solid',
-                                    borderRadius: '50%',
-                                    top: '210px',
-                                    zIndex: '1',
-                                    left: 'calc(50% - 50px)',
-                                    objectFit: 'cover',
-                                }
+                                id: '9YryChNg4Y',
                             },
                             {
                                 type: 'site-text',
-                                content: 'Dogs',
+                                content: 'Title',
                                 style: {
                                     marginBlockStart: '5rem',
                                     fontFamily: 'Oswald',
                                     fontSize: '2rem',
                                     color: '#5aa55e',
-                                }
+                                },
+                                id: 'FTg526zun4',
                             },
                             {
                                 type: 'site-text',
-                                content: "Read All About The Man's Best Friend .",
+                                content: "Add Text...",
                                 style: {
                                     fontFamily: 'Oswald',
                                     color: '#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b',
-                                }
+                                },
+                                id: 'cR5cibruZT',
                             },
                             {
                                 type: 'site-text',
@@ -442,10 +662,13 @@ const samples = {
                                     borderBlockStart: '1px solid #e5e5e5',
                                     width: '100%',
                                     textAlign: 'center',
-                                }
+                                },
+                                id: 'sS7JKPThTA',
                             },
-                        ]
+                        ],
+                        id: 'hwNp1jM1sQ',
                     },
+
                     {
                         type: 'site-div',
                         class: 'card-div',
@@ -460,7 +683,8 @@ const samples = {
                                     objectFit: 'cover',
                                     width: '100%',
                                     borderRadius: '12px 12px 0px 0px',
-                                }
+                                },
+                                id: 'A0pMz1QA3m',
                             },
                             {
                                 type: 'site-image',
@@ -472,28 +696,31 @@ const samples = {
                                     border: '6px white solid',
                                     borderRadius: '50%',
                                     top: '210px',
-                                    zIndex: '1',
+                                    zIndex: '2',
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
-                                }
+                                },
+                                id: 'SAtBaMsAwm',
                             },
                             {
                                 type: 'site-text',
-                                content: 'The King Of The Jungle',
+                                content: 'Title',
                                 style: {
                                     marginBlockStart: '5rem',
                                     fontFamily: 'Oswald',
                                     fontSize: '2rem',
                                     color: '#393330',
-                                }
+                                },
+                                id: 'P0h7QNh4iX',
                             },
                             {
                                 type: 'site-text',
-                                content: 'Read All About The Mighty Lion.',
+                                content: 'Add Text...',
                                 style: {
                                     fontFamily: 'Oswald',
                                     color: '#3d3d3c',
-                                }
+                                },
+                                id: 'p8VTpFIQyl',
                             },
                             {
                                 type: 'site-text',
@@ -505,9 +732,11 @@ const samples = {
                                     borderBlockStart: '1px solid #e5e5e5',
                                     width: '100%',
                                     textAlign: 'center',
-                                }
+                                },
+                                id: '1kfQwfMQFk',
                             },
-                        ]
+                        ],
+                        id: 'D1aAi5Pn9v',
                     },
                     {
                         type: 'site-div',
@@ -523,7 +752,8 @@ const samples = {
                                     objectFit: 'cover',
                                     width: '100%',
                                     borderRadius: '12px 12px 0px 0px',
-                                }
+                                },
+                                id: 'A0pMz1QA3m',
                             },
                             {
                                 type: 'site-image',
@@ -535,28 +765,31 @@ const samples = {
                                     border: '6px white solid',
                                     borderRadius: '50%',
                                     top: '210px',
-                                    zIndex: '1',
+                                    zIndex: '2',
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
-                                }
+                                },
+                                id: 'SAtBaMsAwm',
                             },
                             {
                                 type: 'site-text',
-                                content: 'What Does The Fox Say?!',
+                                content: 'Title',
                                 style: {
                                     marginBlockStart: '5rem',
                                     fontFamily: 'Oswald',
                                     fontSize: '2rem',
                                     color: '#f1c647',
-                                }
+                                },
+                                id: 'P0h7QNh4iX',
                             },
                             {
                                 type: 'site-text',
-                                content: 'Read All About The Fox.',
+                                content: 'Add Text...',
                                 style: {
                                     fontFamily: 'Oswald',
                                     color: '#3d3d3c',
-                                }
+                                },
+                                id: 'p8VTpFIQyl',
                             },
                             {
                                 type: 'site-text',
@@ -568,9 +801,11 @@ const samples = {
                                     borderBlockStart: '1px solid #e5e5e5',
                                     width: '100%',
                                     textAlign: 'center',
-                                }
+                                },
+                                id: '1kfQwfMQFk',
                             },
-                        ]
+                        ],
+                        id: 'D1aAi5Pn9v',
                     },
                     {
                         type: 'site-div',
@@ -586,7 +821,8 @@ const samples = {
                                     objectFit: 'cover',
                                     width: '100%',
                                     borderRadius: '12px 12px 0px 0px',
-                                }
+                                },
+                                id: 'kpcait65wW',
                             },
                             {
                                 type: 'site-image',
@@ -598,28 +834,31 @@ const samples = {
                                     border: '6px white solid',
                                     borderRadius: '50%',
                                     top: '210px',
-                                    zIndex: '1',
+                                    zIndex: '2',
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
-                                }
+                                },
+                                id: 'WVVbR4xf5A',
                             },
                             {
                                 type: 'site-text',
-                                content: 'Cats',
+                                content: 'Title',
                                 style: {
                                     marginBlockStart: '5rem',
                                     fontFamily: 'Oswald',
                                     fontSize: '2rem',
                                     color: '#704a26',
-                                }
+                                },
+                                id: 'dA4i0cxJWq',
                             },
                             {
                                 type: 'site-text',
-                                content: 'Read All About Cats.',
+                                content: 'Add Text...',
                                 style: {
                                     fontFamily: 'Oswald',
                                     color: '#434343',
-                                }
+                                },
+                                id: 'fOD3YADgwH',
                             },
                             {
                                 type: 'site-text',
@@ -631,11 +870,14 @@ const samples = {
                                     borderBlockStart: '1px solid #e5e5e5',
                                     width: '100%',
                                     textAlign: 'center',
-                                }
+                                },
+                                id: 'IQOrC39PZa',
                             },
-                        ]
+                        ],
+                        id: 'lGfoBWxvIR',
                     },
-                ]
+                ],
+                id: 'n9zrfdBOSI',
             },
         },
     ],
@@ -649,7 +891,8 @@ const samples = {
                     background: 'url(https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1057&q=80) no-repeat center',
                     backgroundSize: 'cover',
                 },
-                cmps: []
+                cmps: [],
+                id: 'cmEVW9661w',
             },
         },
         {
@@ -662,7 +905,8 @@ const samples = {
                     background: 'url(https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center',
                     backgroundSize: 'cover',
                 },
-                cmps: []
+                cmps: [],
+                id: 'cmEVW70S1w',
             },
         },
         {
@@ -674,7 +918,8 @@ const samples = {
                 style: {
                     background: '#9be0ab',
                 },
-                cmps: []
+                cmps: [],
+                id: 'cmE9633S1w',
             },
         },
         {
@@ -686,7 +931,8 @@ const samples = {
                 style: {
                     background: '#ff4762',
                 },
-                cmps: []
+                cmps: [],
+                id: 'cmE9633S1w',
             },
         },
     ],
@@ -720,7 +966,8 @@ const samples = {
                                 style: {
                                     height: '5rem',
                                     paddingInlineStart: '1.5rem',
-                                }
+                                },
+                                id: 'ZPEkMo7Jl9',
                             },
                             {
                                 type: 'site-list',
@@ -730,7 +977,8 @@ const samples = {
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#000000',
-                                        }
+                                        },
+                                        id: '6C1WKOMviK',
                                     },
                                     {
                                         type: 'site-text',
@@ -738,7 +986,8 @@ const samples = {
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
-                                        }
+                                        },
+                                        id: 'ZnSDUfBnoc',
                                     },
                                     {
                                         type: 'site-text',
@@ -746,7 +995,8 @@ const samples = {
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
-                                        }
+                                        },
+                                        id: 'BI7mwzgJMY',
                                     },
                                     {
                                         type: 'site-text',
@@ -754,7 +1004,8 @@ const samples = {
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
-                                        }
+                                        },
+                                        id: 'apj9ziYJPr',
                                     },
                                     {
                                         type: 'site-text',
@@ -762,16 +1013,19 @@ const samples = {
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
-                                        }
+                                        },
+                                        id: 'jV656FQjzv',
                                     },
                                 ],
                                 style: {
                                     fontFamily: 'Oswald',
                                     color: '#FFF',
                                     display: 'flex',
-                                }
+                                },
+                                id: 'LLyIOQEAlV',
                             },
-                        ]
+                        ],
+                        id: 'kQaLi6AH7K',
                     },
                     {
                         type: 'site-div',
@@ -790,7 +1044,8 @@ const samples = {
                                     fontFamily: 'Oswald',
                                     color: 'white',
                                     textShadow: '0 0 2px black',
-                                }
+                                },
+                                id: 'KmQWFoH66n',
                             },
                             {
                                 type: 'site-text',
@@ -800,7 +1055,8 @@ const samples = {
                                     fontFamily: 'Oswald',
                                     color: 'white',
                                     textShadow: '0 0 1px black',
-                                }
+                                },
+                                id: '6yZaTiUIRI',
                             },
                             {
                                 type: 'site-button',
@@ -815,11 +1071,14 @@ const samples = {
                                     marginTop: '1rem',
                                     fontSize: '1.5rem',
                                     fontWeight: 'bold',
-                                }
+                                },
+                                id: 'fr176TWSCX',
                             },
-                        ]
+                        ],
+                        id: 'eXvBUW7jmc',
                     },
-                ]
+                ],
+                id: 'vfx3i1WSHW',
             },
         },
         {
@@ -841,8 +1100,10 @@ const samples = {
                                 fontFamily: 'Oswald',
                                 fontSize: '1.2rem',
                                 color: '#BA2204',
-                            }
-                        }, ]
+                            },
+                            id: 'ytM2W33h2R',
+                        }, ],
+                        id: 'pyadsGQW0p',
                     },
                     {
                         type: 'site-div',
@@ -851,7 +1112,8 @@ const samples = {
                         cmps: [{
                                 type: 'site-image',
                                 content: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rechargewebs.com%2Fimages%2Ficon%2Fyour-logo.png&f=1&nofb=1',
-                                style: {}
+                                style: {},
+                                id: 'BaBfPbEWrB',
                             },
                             {
                                 type: 'site-text',
@@ -860,9 +1122,11 @@ const samples = {
                                     fontFamily: 'Oswald',
                                     fontSize: '1.2rem',
                                     fontColor: '#000000',
-                                }
+                                },
+                                id: 'VCGgMGGyRv',
                             },
-                        ]
+                        ],
+                        id: 'xojjfdDbCr',
                     },
                     {
                         type: 'site-div',
@@ -874,10 +1138,13 @@ const samples = {
                                 color: '#BA2204',
                                 fontSize: '1.2rem',
                                 fontFamily: 'Oswald',
-                            }
-                        }, ]
+                            },
+                            id: 'ItZcSZGOG2',
+                        }, ],
+                        id: 'dDWe0Frr3S',
                     },
-                ]
+                ],
+                id: 'rEp6fCsC0P',
             },
         },
     ],
@@ -1325,7 +1592,7 @@ const samples = {
                 cmps: [{
                         type: 'site-text',
                         content: `Lago di Braies :
-                In summer, lake Lago di Braies in South Tyrol reflects colours in all shades from green to blue, in winter Lago di Braies is covered with ice and snow. In winter and summer this jewel is the starting point for hikes, ski tours, snowshoe hikes and walks. Book through us and let's explore it together!`,
+                  In summer, lake Lago di Braies in South Tyrol reflects colours in all shades from green to blue, in winter Lago di Braies is covered with ice and snow. In winter and summer this jewel is the starting point for hikes, ski tours, snowshoe hikes and walks. Book through us and let's explore it together!`,
                         style: {
                             fontFamily: 'Righteous',
                             padding: '1rem',
@@ -1374,7 +1641,8 @@ const samples = {
                                     width: '100px',
                                     fontWeigt: 'bold',
                                     fontSize: '1.5rem',
-                                }
+                                },
+                                id: 'jNcCou9kz7',
                             },
                             {
                                 type: 'site-list',
@@ -1391,10 +1659,13 @@ const samples = {
                                         display: 'flex',
                                         flexDirection: 'column',
                                         width: '100px',
-                                    }
-                                }, ]
+                                    },
+                                    id: '9BzPQujz7J',
+                                }, ],
+                                id: 'UmTjOkgDrD',
                             },
-                        ]
+                        ],
+                        id: 'nxO9VyFrrg',
                     },
                     {
                         type: 'site-div',
@@ -1408,7 +1679,8 @@ const samples = {
                                     width: '100px',
                                     fontWeigt: 'bold',
                                     fontSize: '1.5rem',
-                                }
+                                },
+                                id: 'HEQwyRK3yp',
                             },
                             {
                                 type: 'site-list',
@@ -1425,10 +1697,13 @@ const samples = {
                                         display: 'flex',
                                         flexDirection: 'column',
                                         width: '142px',
-                                    }
-                                }, ]
+                                    },
+                                    id: 'gaxvWvVmuh',
+                                }, ],
+                                id: 'uGkjkHJJAW',
                             },
-                        ]
+                        ],
+                        id: 'wfQ9UIKLPb',
                     },
                     {
                         type: 'site-div',
@@ -1442,7 +1717,8 @@ const samples = {
                                     width: '100px',
                                     fontWeigt: 'bold',
                                     fontSize: '1.5rem',
-                                }
+                                },
+                                id: '3YdfYhoJgR',
                             },
                             {
                                 type: 'site-list',
@@ -1459,10 +1735,13 @@ const samples = {
                                         display: 'flex',
                                         flexDirection: 'column',
                                         width: '140px',
-                                    }
-                                }, ]
+                                    },
+                                    id: 'A7g9fFDAcd',
+                                }, ],
+                                id: 'hlkNwHCYHk',
                             },
-                        ]
+                        ],
+                        id: '9GjbmVxZyB',
                     },
                     {
                         type: 'site-div',
@@ -1476,7 +1755,8 @@ const samples = {
                                     width: '100px',
                                     fontWeigt: 'bold',
                                     fontSize: '1.5rem',
-                                }
+                                },
+                                id: '5Jp0YBzQSE',
                             },
                             {
                                 type: 'site-list',
@@ -1493,12 +1773,16 @@ const samples = {
                                         display: 'flex',
                                         flexDirection: 'column',
                                         width: '90px',
-                                    }
-                                }, ]
+                                    },
+                                    id: '5zqfWnwK53',
+                                }, ],
+                                id: 'SdMKEsjhws',
                             },
-                        ]
+                        ],
+                        id: 'bXqIfQsUrt',
                     },
-                ]
+                ],
+                id: 'XXTP3vVV5j',
             },
         },
         {
@@ -1531,7 +1815,8 @@ const samples = {
                                 style: {
                                     height: '5rem',
                                     paddingInlineStart: '1.5rem',
-                                }
+                                },
+                                id: 'ZPEkMo7Jl9',
                             },
                             {
                                 type: 'site-list',
@@ -1541,7 +1826,8 @@ const samples = {
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#000000',
-                                        }
+                                        },
+                                        id: '6C1WKOMviK',
                                     },
                                     {
                                         type: 'site-text',
@@ -1549,7 +1835,8 @@ const samples = {
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
-                                        }
+                                        },
+                                        id: 'ZnSDUfBnoc',
                                     },
                                     {
                                         type: 'site-text',
@@ -1557,7 +1844,8 @@ const samples = {
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
-                                        }
+                                        },
+                                        id: 'BI7mwzgJMY',
                                     },
                                     {
                                         type: 'site-text',
@@ -1565,7 +1853,8 @@ const samples = {
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
-                                        }
+                                        },
+                                        id: 'apj9ziYJPr',
                                     },
                                     {
                                         type: 'site-text',
@@ -1573,16 +1862,19 @@ const samples = {
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
-                                        }
+                                        },
+                                        id: 'jV656FQjzv',
                                     },
                                 ],
                                 style: {
                                     fontFamily: 'Righteous',
                                     color: '#FFF',
                                     display: 'flex',
-                                }
+                                },
+                                id: 'LLyIOQEAlV',
                             },
-                        ]
+                        ],
+                        id: 'kQaLi6AH7K',
                     },
                     {
                         type: 'site-div',
@@ -1601,7 +1893,8 @@ const samples = {
                                     fontFamily: 'Righteous',
                                     color: 'white',
                                     textShadow: '0 0 2px black',
-                                }
+                                },
+                                id: 'KmQWFoH66n',
                             },
                             {
                                 type: 'site-text',
@@ -1611,7 +1904,8 @@ const samples = {
                                     fontFamily: 'Righteous',
                                     color: 'white',
                                     textShadow: '0 0 1px black',
-                                }
+                                },
+                                id: '6yZaTiUIRI',
                             },
                             {
                                 type: 'site-button',
@@ -1628,11 +1922,14 @@ const samples = {
                                     width: '9rem',
                                     color: 'white',
                                     borderRadius: '20px',
-                                }
+                                },
+                                id: 'fr176TWSCX',
                             },
-                        ]
+                        ],
+                        id: 'eXvBUW7jmc',
                     },
-                ]
+                ],
+                id: 'vfx3i1WSHW',
             },
         },
         {
@@ -1670,7 +1967,8 @@ const samples = {
                                     borderRadius: '12px 12px 0px 0px',
                                     objectFit: 'cover',
                                     width: '100%',
-                                }
+                                },
+                                id: '4FINA825D7',
                             },
                             {
                                 type: 'site-image',
@@ -1685,7 +1983,8 @@ const samples = {
                                     zIndex: '1',
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
-                                }
+                                },
+                                id: '9YryChNg4Y',
                             },
                             {
                                 type: 'site-text',
@@ -1695,7 +1994,8 @@ const samples = {
                                     fontFamily: 'Righteous',
                                     fontSize: '2rem',
                                     color: '#5aa55e',
-                                }
+                                },
+                                id: 'FTg526zun4',
                             },
                             {
                                 type: 'site-text',
@@ -1703,7 +2003,8 @@ const samples = {
                                 style: {
                                     fontFamily: 'Righteous',
                                     color: '#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b',
-                                }
+                                },
+                                id: 'cR5cibruZT',
                             },
                             {
                                 type: 'site-text',
@@ -1716,9 +2017,11 @@ const samples = {
                                     width: '100%',
                                     textAlign: 'center',
                                     paddingBlockStart: '1rem',
-                                }
+                                },
+                                id: 'sS7JKPThTA',
                             },
-                        ]
+                        ],
+                        id: 'hwNp1jM1sQ',
                     },
                     {
                         type: 'site-div',
@@ -1741,7 +2044,8 @@ const samples = {
                                     objectFit: 'cover',
                                     width: '100%',
                                     borderRadius: '12px 12px 0px 0px',
-                                }
+                                },
+                                id: 'A0pMz1QA3m',
                             },
                             {
                                 type: 'site-image',
@@ -1756,7 +2060,8 @@ const samples = {
                                     zIndex: '1',
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
-                                }
+                                },
+                                id: 'SAtBaMsAwm',
                             },
                             {
                                 type: 'site-text',
@@ -1766,7 +2071,8 @@ const samples = {
                                     fontFamily: 'Righteous',
                                     fontSize: '2rem',
                                     color: '#53311d',
-                                }
+                                },
+                                id: 'P0h7QNh4iX',
                             },
                             {
                                 type: 'site-text',
@@ -1774,7 +2080,8 @@ const samples = {
                                 style: {
                                     fontFamily: 'Righteous',
                                     color: '#3d3d3c',
-                                }
+                                },
+                                id: 'p8VTpFIQyl',
                             },
                             {
                                 type: 'site-text',
@@ -1787,9 +2094,11 @@ const samples = {
                                     width: '100%',
                                     textAlign: 'center',
                                     paddingBlockStart: '1rem',
-                                }
+                                },
+                                id: '1kfQwfMQFk',
                             },
-                        ]
+                        ],
+                        id: 'D1aAi5Pn9v',
                     },
                     {
                         type: 'site-div',
@@ -1813,7 +2122,8 @@ const samples = {
                                     objectFit: 'cover',
                                     width: '100%',
                                     borderRadius: '12px 12px 0px 0px',
-                                }
+                                },
+                                id: 'S6NuSSqVfH',
                             },
                             {
                                 type: 'site-image',
@@ -1829,7 +2139,8 @@ const samples = {
                                     zIndex: '1',
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
-                                }
+                                },
+                                id: 'qSudjuXd6I',
                             },
                             {
                                 type: 'site-text',
@@ -1839,7 +2150,8 @@ const samples = {
                                     fontFamily: 'Righteous',
                                     fontSize: '2rem',
                                     color: '#3855bc',
-                                }
+                                },
+                                id: 'Z7Emvo4SbG',
                             },
                             {
                                 type: 'site-text',
@@ -1847,7 +2159,8 @@ const samples = {
                                 style: {
                                     fontFamily: 'Righteous',
                                     color: '#527db4',
-                                }
+                                },
+                                id: 'a6VIClalZz',
                             },
                             {
                                 type: 'site-text',
@@ -1860,9 +2173,11 @@ const samples = {
                                     width: '100%',
                                     textAlign: 'center',
                                     paddingBlockStart: '1rem',
-                                }
+                                },
+                                id: 'csRPeUuaHi',
                             },
-                        ]
+                        ],
+                        id: 'D0x2FslItL',
                     },
                     {
                         type: 'site-div',
@@ -1886,7 +2201,8 @@ const samples = {
                                     objectFit: 'cover',
                                     width: '100%',
                                     borderRadius: '12px 12px 0px 0px',
-                                }
+                                },
+                                id: 'kpcait65wW',
                             },
                             {
                                 type: 'site-image',
@@ -1901,7 +2217,8 @@ const samples = {
                                     zIndex: '1',
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
-                                }
+                                },
+                                id: 'WVVbR4xf5A',
                             },
                             {
                                 type: 'site-text',
@@ -1911,7 +2228,8 @@ const samples = {
                                     fontFamily: 'Righteous',
                                     fontSize: '2rem',
                                     color: '#704a26',
-                                }
+                                },
+                                id: 'dA4i0cxJWq',
                             },
                             {
                                 type: 'site-text',
@@ -1919,7 +2237,8 @@ const samples = {
                                 style: {
                                     fontFamily: 'Righteous',
                                     color: '#434343',
-                                }
+                                },
+                                id: 'fOD3YADgwH',
                             },
                             {
                                 type: 'site-text',
@@ -1932,9 +2251,11 @@ const samples = {
                                     width: '100%',
                                     textAlign: 'center',
                                     paddingBlockStart: '1rem',
-                                }
+                                },
+                                id: 'IQOrC39PZa',
                             },
-                        ]
+                        ],
+                        id: 'lGfoBWxvIR',
                     },
                     {
                         type: 'site-div',
@@ -1956,10 +2277,13 @@ const samples = {
                                 width: '50%',
                                 fontSize: '1.2rem',
                                 boxShadow: '0 0 2px black',
-                            }
-                        }, ]
+                            },
+                            id: '6ZD3hkff48',
+                        }, ],
+                        id: 'oOS5N2JH8q',
                     },
-                ]
+                ],
+                id: 'n9zrfdBOSI',
             },
         },
     ],

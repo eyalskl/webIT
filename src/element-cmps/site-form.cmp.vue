@@ -3,6 +3,7 @@
       <label class="input-container" v-for="(item,idx) in content" :key="idx" contenteditable="true" @click.prevent>{{item.tag}}
       <input :type="item.type" :style="item.style"/>
       </label>
+        <button class="form-btn" @click.prevent contenteditable="true" @dragover.prevent :style="cmp.btnStyle">Submit</button>
   </form>
 </template>
 

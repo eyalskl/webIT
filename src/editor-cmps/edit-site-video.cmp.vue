@@ -9,9 +9,9 @@
         </p>
         <label>
         <input @keydown.enter="changeUrl" v-model="url" type="text">
-        <button @click.stop="changeUrl"><i class="fas fa-search"></i></button>
+        <button @click.stop="changeUrl"><i class="fas fa-link"></i></button>
         </label>
-         <iframe width="100%" height="100%" :src="formattedUrl" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <iframe width="100%" height="200" :src="formattedUrl" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>  
   </div>
 </template>
