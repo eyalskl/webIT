@@ -1,10 +1,312 @@
 import httpService from './http.service'
+
+
 // {name: "Logo Horizon",
 //     img:"https://i.ibb.co/D74M0wM/Screenshot-2020-07-23-18-40-58.png",
-//     tree:{}}
+//     tree:{}},
 const _ = require("lodash");
 const samples = {
+    video:[{name: "Video Card Left",
+    img:"https://i.ibb.co/Lrvxs1w/Screenshot-2020-07-24-15-50-18.png",
+    tree:{
+      type: 'site-section',
+      class: 'card-video-above-left',
+      style: {
+        background: '#ffffff',
+      },
+      cmps: [
+        {
+          type: 'site-div',
+          class: 'cards-container',
+          style: '',
+          cmps: [
+            {
+              type: 'site-div',
+              class: 'div-behind-pic',
+              style: {
+                background: '#dcdfe6',
+              },
+              cmps: [
+                {
+                  type: 'site-text',
+                  content: 'Ideas & Inspiration',
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'2rem',
+                    color: '#46d1d5'
+                  },
+                },
+                {
+                  type: 'site-text',
+                  content: 'Your own beautiful words will change the world.',
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'1.2rem',
+                    color: '#666666'
+                  },
+                },
+                {
+                  type: 'site-text',
+                  content: 'You can write anything here. Yes, anything in the world. You can try, Just click on the text and you can start making this card your own.',
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'1rem',
+                    color: '#666666'
+                  },
+                },
+                {
+                  type: 'site-button',
+                  content: { text: 'I am Button', href: '' },
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'1rem',
+                    color: '#ffffff',
+                    background: '#46d1d5'
+                  },
+                },
+              ],
+            },
+            {
+              type: 'site-div',
+              class: 'pic-above-div',
+              style: {},
+              cmps: [
+                {
+                  type: 'site-video',
+                  content:
+                    'https://www.youtube.com/watch?v=h5XKTIZ6nUM',
+                  style: {},
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }},
+      {name: "Video Card Right",
+    img:"https://i.ibb.co/QQ7T7Nq/Screenshot-2020-07-24-15-20-09.png",
+    tree:{
+      type: 'site-section',
+      class: 'card-video-above-right',
+      style: {
+        background: '#ffffff',
+      },
+      cmps: [
+        {
+          type: 'site-div',
+          class: 'cards-container',
+          style: '',
+          cmps: [
+            {
+              type: 'site-div',
+              class: 'div-behind-pic',
+              style: {
+                background: '#dcdfe6',
+              },
+              cmps: [
+                {
+                  type: 'site-text',
+                  content: 'Video to Display',
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'2rem',
+                    color: '#cc333f'
+                  },
+                },
+                {
+                  type: 'site-text',
+                  content: 'Your own beautiful words will change the world.',
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'1.2rem',
+                    color: '#666666'
+                  },
+                },
+                {
+                  type: 'site-text',
+                  content: 'You can write anything here. Yes, anything in the world. You can try, Just click on the text and you can start making this card your own.',
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'1rem',
+                    color: '#666666'
+                  },
+                },
+                {
+                  type: 'site-button',
+                  content: { text: 'I am Button', href: '' },
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'1rem',
+                    color: '#ffffff',
+                    background: '#cc333f'
+                  },
+                },
+              ],
+            },
+            {
+              type: 'site-div',
+              class: 'pic-above-div',
+              style: {},
+              cmps: [
+                {
+                  type: 'site-video',
+                  content:
+                    'https://www.youtube.com/watch?v=BpIaRTSYMTA',
+                  style: {},
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },},
+  ],
     cards:[
+      {name: "Floating Pic Right",
+    img:"https://i.ibb.co/WsX0tv1/Screenshot-2020-07-24-14-49-39.png",
+    tree:{
+      type: 'site-div',
+      class: 'cards-container',
+      style: '',
+      cmps: [
+        {
+          type: 'site-div',
+          class: 'div-behind-pic',
+          style: {
+            background: '#dcdfe6',
+          },
+          cmps: [
+            {
+              type: 'site-text',
+              content: 'Ideas & Inspiration',
+              style: {
+                fontFamily:'Titillium Web',
+                fontSize:'2rem',
+                color: '#af5efd'
+              },
+            },
+            {
+              type: 'site-text',
+              content: 'Your own beautiful words will change the world.',
+              style: {
+                fontFamily:'Titillium Web',
+                fontSize:'1.2rem',
+                color: '#666666'
+              },
+            },
+            {
+              type: 'site-text',
+              content: 'You can write anything here. Yes, anything in the world. You can try, Just click on the text and you can start making this card your own.',
+              style: {
+                fontFamily:'Titillium Web',
+                fontSize:'1rem',
+                color: '#666666'
+              },
+            },
+            {
+              type: 'site-button',
+              content: { text: 'I am Button', href: '' },
+              style: {
+                fontFamily:'Titillium Web',
+                fontSize:'1rem',
+                color: '#ffffff',
+                background: '#af5efd'
+              },
+            },
+          ],
+        },
+        {
+          type: 'site-div',
+          class: 'pic-above-div',
+          style: {},
+          cmps: [
+            {
+              type: 'site-image',
+              content:
+                'https://images.unsplash.com/photo-1503460589709-a01a75418735?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1134&q=80',
+              style: {},
+            },
+          ],
+        },
+      ],
+    }},
+      {name: "Floating Pic Left",
+    img:"https://i.ibb.co/TRK4GWh/Screenshot-2020-07-24-14-12-12.png",
+    tree:{
+      type: 'site-section',
+      class: 'card-photo-above-left',
+      style: {
+        background: '#ffffff',
+      },
+      cmps: [
+        {
+          type: 'site-div',
+          class: 'cards-container',
+          style: '',
+          cmps: [
+            {
+              type: 'site-div',
+              class: 'div-behind-pic',
+              style: {
+                background: '#dcdfe6',
+              },
+              cmps: [
+                {
+                  type: 'site-text',
+                  content: 'Ideas & Inspiration',
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'2rem',
+                    color: '#0076df'
+                  },
+                },
+                {
+                  type: 'site-text',
+                  content: 'Your own beautiful words will change the world.',
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'1.2rem',
+                    color: '#666666'
+                  },
+                },
+                {
+                  type: 'site-text',
+                  content: 'You can write anything here. Yes, anything in the world. You can try, Just click on the text and you can start making this card your own.',
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'1rem',
+                    color: '#666666'
+                  },
+                },
+                {
+                  type: 'site-button',
+                  content: { text: 'I am Button', href: '' },
+                  style: {
+                    fontFamily:'Titillium Web',
+                    fontSize:'1rem',
+                    color: '#ffffff',
+                    background: '#0076df'
+                  },
+                },
+              ],
+            },
+            {
+              type: 'site-div',
+              class: 'pic-above-div',
+              style: {},
+              cmps: [
+                {
+                  type: 'site-image',
+                  content:
+                    'https://images.unsplash.com/photo-1535310172250-0dcb6b63324e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+                  style: {},
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }},
         {name: "Cards Gallery",
     img:"https://i.gyazo.com/a0cc9c311a000634c5fc18881b9765e7.jpg",
     tree:{
