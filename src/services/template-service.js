@@ -349,7 +349,7 @@ const samples = {
 							display: "flex",
 							flexDirection: "column",
 							alignItems:"center",
-							background: "#fff",
+							background: "inherit",
 	
 					 },
 					 cmps:[{
