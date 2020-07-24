@@ -9,7 +9,7 @@
     <div v-show="pickerMode">
 
       <div class="element-picker-container" v-if="!showSamples">
-        <h4> Pick an Element</h4>
+        <!-- <h4> Pick an Element</h4> -->
         <element-picker @showList="showList"/>
       </div>
       <div class="sample-section flex column" v-else>

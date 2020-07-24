@@ -7,6 +7,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/templates">Templates</router-link>
       <router-link to="/about">About</router-link>
+      <button class="publish" @click="saveSite"> Save </button>
       <router-link class="publish" :to="'/' + siteId">Publish</router-link>
     </div>
   </nav>
@@ -20,6 +21,12 @@ export default {
       siteId: '',
     }
   },
+  methods: {
+    saveSite() {
+      console.log('HEY');
+      this.$store.dispatch({type: 'saveSite'});
+    }
+  }, 
   created() {
     this.siteId = this.$route.params.id;
   },

@@ -1,18 +1,17 @@
 .element-edit-container {
     h2 {
-        cursor: default;
         text-align: center;
         line-height: 2;
-        font-size: 1rem;
-        background-color: $clr6;
         padding: 1rem;
-        color: inherit;
-        border: 1px solid $clr5;
         box-shadow: 0px 0px 8px rgba(#000, .26);
         border-radius: 5px;
-        font-family: 'Nunito Sans', sans-serif;
-        font-weight: normal;
         margin: 1rem;
+        font-family: 'Oswald', sans-serif;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 1.1rem;
+        background-color: $clr6;
+        color: $clr3;
     }
     .element-edit {
         font-family: 'Nunito Sans', sans-serif;
