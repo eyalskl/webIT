@@ -43,7 +43,7 @@ const samples = {
                             "border" : "6px white solid",
                             "borderRadius" : "50%",
                             "top" : "210px",
-                            "zIndex" : "1",
+                            "zIndex" : "2",
                             "left" : "calc(50% - 50px)",
                             "objectFit" : "cover"
                         },
@@ -113,7 +113,7 @@ const samples = {
                             "border" : "6px white solid",
                             "borderRadius" : "50%",
                             "top" : "210px",
-                            "zIndex" : "1",
+                            "zIndex" : "2",
                             "left" : "calc(50% - 50px)",
                             "objectFit" : "cover"
                         },
@@ -183,7 +183,7 @@ const samples = {
                             "border" : "6px white solid",
                             "borderRadius" : "50%",
                             "top" : "210px",
-                            "zIndex" : "1",
+                            "zIndex" : "2",
                             "left" : "calc(50% - 50px)",
                             "objectFit" : "cover"
                         },
@@ -253,7 +253,7 @@ const samples = {
                             "border" : "6px white solid",
                             "borderRadius" : "50%",
                             "top" : "210px",
-                            "zIndex" : "1",
+                            "zIndex" : "2",
                             "left" : "calc(50% - 50px)",
                             "objectFit" : "cover"
                         },
