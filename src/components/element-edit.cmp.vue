@@ -1,6 +1,6 @@
 <template>
   <section class="element-edit-container">
-    <h2 v-show="!elementPicked"> Please pick an element on the workspace to enter edit mode.</h2>
+    <h2 v-show="!elementPicked"> Please pick an element on the workspace to enter edit mode. </h2>
     <div class="element-edit" v-show="elementPicked">
       <component v-if="cmpToEdit.type" :is="'edit-' + cmpToEdit.type" :cmp="cmpToEdit"> </component>
     </div>
@@ -26,7 +26,6 @@ export default {
       cmpToEdit: {
         type: this.isType,
         style: {
-          cmpName: '',
           fontSize: 20,
           lineHeight: 1,
           letterSpacing: 0,
@@ -38,7 +37,6 @@ export default {
   created() {
     this.cmpToEdit.type = this.isType
     eventBus.$on(EDIT_ELEMENT, cmp => {
-      console.log('cmp:', cmp)
       this.elementPicked = true;
       this.cmpToEdit = cmp;
       })
