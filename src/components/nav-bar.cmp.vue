@@ -23,8 +23,14 @@ export default {
   },
   methods: {
     saveSite() {
-      console.log('HEY');
-      this.$store.dispatch({type: 'saveSite'});
+      html2canvas(document.querySelector(".site-image"), {
+      onrendered: function(canvas){
+      var img = canvas.toDataURL();
+      console.log(img)
+      // document.querySelector(".site-image").getAttribute('src', img).show();
+      }
+      });
+      // this.$store.dispatch({type: 'saveSite'});
     }
   }, 
   created() {
