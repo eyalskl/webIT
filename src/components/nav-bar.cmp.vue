@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-bar flex space-between align-center">
-    <div class="logo flex" @click="$router.push('/')">
+    <div class="logo flex">
       <h2>web<span>IT</span></h2>
     </div>
     <div class="main-nav">

@@ -1,8 +1,8 @@
 <template>
     <draggable v-if="editMode">
-      <section @mouseover="displayControls" @mouseout="hideControls" @click.stop="openEditor" class="site-section" :class="cmp.class" :style="cmp.style">
-        <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"> </component>
+      <section class="site-section" :class="cmp.class" :style="cmp.style" @mouseover="displayControls" @mouseout="hideControls" @click.stop="openEditor">
         <element-controls v-show="showControls" :element="cmp" />
+        <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"> </component>
       </section>
     </draggable>
     
@@ -20,9 +20,9 @@ import siteMap from '@/element-cmps/site-map.cmp.vue'
 import siteList from '@/element-cmps/site-list.cmp.vue';
 import siteVideo from '@/element-cmps/site-video.cmp.vue';
 import elementControls from '@/components/element-controls.cmp.vue';
-import { eventBus, EDIT_ELEMENT, UPDATE_SITE, OPEN_EDITOR } from "@/services/event-bus.service.js";
-import { Container, Draggable } from "vue-smooth-dnd";
-import { applyDrag, generateItems } from "@/assets/drag-test.js";
+import { eventBus, EDIT_ELEMENT, UPDATE_SITE, OPEN_EDITOR } from '@/services/event-bus.service.js';
+import { Container, Draggable } from 'vue-smooth-dnd';
+import { applyDrag, generateItems } from '@/assets/drag-test.js';
 
 export default {
   name: 'site-section',
@@ -35,8 +35,7 @@ export default {
           animationDuration: '50',
           showOnTop: true
       },
-    
-    };
+    }
   },
   computed:{
     getOrientation(){
@@ -70,6 +69,6 @@ export default {
     siteVideo,
     elementControls,
     Draggable
-  }
-};
+  },
+}
 </script>
