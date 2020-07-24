@@ -1,15 +1,12 @@
 <template>
   <span
-  class="site-text"
+    class="site-text"
     :style="cmp.style"
     :contenteditable="editMode"
-    v-text="cmp.content"
+    v-html="cmp.content"
     @blur="onEdit"
     @click.stop="openEditor"
-    @keydown.enter="endEdit"
     @dragover.prevent
-    @drag.prevent
-    @dragstart.prevent
   >
   </span>
 </template>
@@ -20,29 +17,18 @@ import { eventBus, EDIT_ELEMENT, UPDATE_SITE, OPEN_EDITOR } from "@/services/eve
 export default {
   name: 'site-text',
   props: ['cmp'],
-  data() {
-    return {
-      content: ''
-    };
-  },
   computed: {
     editMode() {
       return this.$store.getters.editMode;
     }
   },
   created() {
-    this.content = this.cmp.content;
     eventBus.$on(UPDATE_SITE, () => this.$forceUpdate());
   },
   methods: {
     onEdit(ev) {
-      var txt = ev.target.innerText;
-      this.content = txt;
-      this.cmp.content = txt
-    },
-    endEdit() {
-      this.$el.blur();
-    },
+      this.cmp.content = ev.target.innerText
+    }, 
     openEditor() {
         eventBus.$emit(EDIT_ELEMENT, this.cmp);
         eventBus.$emit(OPEN_EDITOR, this.cmp.type);

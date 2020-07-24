@@ -1,14 +1,20 @@
 <template>
-  <button
+  <button 
+    class="site-button"
     :style="cmp.style"
-    :contenteditable="editMode"
-    v-text="content.text"
-    :href="content.href"
-    @blur="onEdit"
+    :href="cmp.content.href"
     @click.stop="openEditor"
     @dragover.prevent
-    class="site-button"
-  ></button>
+    >
+  <span
+    class="site-text"
+    :contenteditable="editMode"
+    v-text="cmp.content.text"
+    @blur="onEdit"
+    @dragover.prevent
+  >
+  </span>
+  </button>
 </template>
 
 <script>
@@ -22,11 +28,6 @@ import {
 export default {
   name: 'site-button',
   props: ['cmp'],
-  data() {
-    return {
-      content: { text: ' ', href: '' }
-    };
-  },
   computed: {
     editMode() {
       return this.$store.getters.editMode;
@@ -34,9 +35,7 @@ export default {
   },
   methods: {
     onEdit(ev) {
-      var txt = ev.target.innerText;
-      this.content.text = txt;
-      this.cmp.content.text = txt
+      this.cmp.content.text = ev.target.innerText;
     },
     openEditor() {
       eventBus.$emit(EDIT_ELEMENT, this.cmp);

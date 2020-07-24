@@ -16,8 +16,8 @@
 import siteSection from '@/element-cmps/site-section.cmp.vue';
 import { Container, Draggable } from "vue-smooth-dnd";
 import { applyDrag, generateItems } from "@/assets/drag-test.js";
-const _ = require("lodash")
 import { eventBus, MINIMIZE_DASHBOARD, UPDATE_SITE, ADD_SAMPLE } from '@/services/event-bus.service.js';
+const _ = require("lodash")
 
 export default {
   name: 'site-workspace',
@@ -25,10 +25,10 @@ export default {
   data() {
     return {
       minimize: false,
-        placeHolderOptions: {
-          className: 'drop-preview',
-          animationDuration: '50',
-          showOnTop: true
+      placeHolderOptions: {
+        className: 'drop-preview',
+        animationDuration: '50',
+        showOnTop: true
       }
     }
   },
@@ -40,7 +40,6 @@ export default {
       return '.site-text, .site-button, .site-map'
     }
   },
-
   methods:{
     onDrop(dropResult){
       this.siteToEdit.cmps = applyDrag(this.siteToEdit.cmps,dropResult)
@@ -49,7 +48,6 @@ export default {
     getCmp(index){
       return this.siteToEdit.cmps[index]
     },
-
   },
   components: {
     siteSection,
