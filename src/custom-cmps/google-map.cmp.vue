@@ -37,4 +37,9 @@ export default {
     width: 100%;
     height: 100%;
   }
+  @media(max-width: 720px){
+    .vue-map-container{
+      height: 250px;
+    }
+  }
 </style>
