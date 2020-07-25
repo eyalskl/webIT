@@ -43,6 +43,7 @@ export default {
     return {
       samples: {},
       siteToEdit: null,
+     
     };
   },
   async created() {

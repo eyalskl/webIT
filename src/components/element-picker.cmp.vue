@@ -11,7 +11,7 @@ export default {
   name: 'element-picker',
   data() {
     return {
-      elementNames: ['header','navbar','text','gallery','cards', 'divider','contact form','map','video','footer']
+      elementNames: ['header','text','gallery','cards', 'divider','contact form','map','video','footer']
     };
   },
   methods: {
