@@ -8,10 +8,10 @@
           <p> Select a site to edit or preview it's content. </p>
         </div>
         <div class="right-side">
-          <button> Create new site </button>
+          <button @click="editTemplate('5f1b0b822e78d49fde61fe1e')"> Create new site </button>
         </div>
       </div>
-      <img v-if="isLoading" src="https://i.pinimg.com/originals/58/4b/60/584b607f5c2ff075429dc0e7b8d142ef.gif" />
+      <img class="loader" v-if="isLoading" src="../assets/loadingAnimation.svg" />
       <section v-else class="template-list">
         <div v-for="template in templatesToShow" :key="template._id" @click="editTemplate(template._id)">
           <img :src="template.previewImg" />

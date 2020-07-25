@@ -38,7 +38,7 @@
         .template-list {
             gap: 20px 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             justify-items: center;
             padding: .5rem 2rem;
             padding-top: 20px;
@@ -58,4 +58,12 @@
     & .publish {
         display: none;
     }
+}
+
+.loader {
+    position: absolute;
+    right: 50vw;
+    top: 50vh;
+    transform: translateX(50%) translateY(-50%);
+    height: 30rem;
 }
