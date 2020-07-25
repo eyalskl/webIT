@@ -7,6 +7,164 @@ import httpService from './http.service';
 const _ = require('lodash');
 
 const samples = {
+	map:[
+	{
+	name:'Form With A Map',
+	img:'https://i.gyazo.com/062eabf394a7d1628d66434a38747df0.jpg',
+				tree:{type: "site-section",
+				class:"form-with-map",
+				style: {
+				  width: "100%",
+				  display: "flex",
+				  justifyContent: "space-around",
+				  background:"url(https://images.unsplash.com/photo-1541617219835-3689726fa8e7?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) center center no-repeat scroll",
+				  padding: "3rem 1rem",
+				  alignItems: "stretch",
+				  fontFamily: "Oswald",
+	
+			  },
+			  cmps:[{
+				type:"site-div",
+				style:{
+				  flex:"1",
+				  display:"flex",
+				  flexDirection:"column",
+				  marginInlineStart:"5rem"
+				},
+				cmps:[
+				   {
+				type:"site-div",
+				style:{
+				  textAlign:"center",
+				  paddingBlockEnd:"1rem"
+				},
+				cmps:[
+				  {
+					type:"site-text",
+					content:"Our Location",
+					style:{
+					  color:"#fff",
+					  fontSize:"2rem",
+					  letterSpacing:"2px",
+					  lineHeight:"1"
+					}
+				  }]},
+				  {
+					type:"site-div",
+					style:{
+					  flex:"3"
+					},
+					cmps:[{
+					type:"site-map",
+					content:{
+					  center:{
+						lat:15.870032,
+						lng:100.992538
+						},
+						zoom:4
+				  }
+				  }]
+				  }]
+			  },
+				  
+			  {
+				type:"site-div",
+				style:{
+				  flex:"1",
+				},
+				cmps:[
+				  {
+					type:"site-div",
+					class:"form-with-map-form",
+					style:{
+					  display:"flex",
+					  alignItems:"center",
+					  flexDirection:"column"
+					  
+					},
+					cmps:[
+					  {
+						type:"site-text",
+						content:"Contact Us",
+						style:{
+						  color:"#fff",
+						  fontSize:"2rem",
+						  flex:"1",
+						  paddingBlockEnd:"1rem"
+						}
+					  },
+					  {
+						type:"site-form",
+						style:{
+						  flex:"3",
+						  display:"flex",
+						  flexDirection:"column",
+						  color:"#fff"
+						},
+						btnStyle:{
+						  background:"#e94335",
+						  fontSize:"1.1rem",
+						  color:"#fff"
+						},
+						content:[
+						  {
+							tag:"Name",
+							type:"text"
+						  },
+						  {
+							tag:"Email",
+							type:"email"
+						  },
+						  {
+							tag:"Subject",
+							type:"text"
+						  },
+						  {
+							tag:"Phone Number",
+							type:"tel"
+						  },
+						  
+						]
+					  }
+					]
+				  }
+				]
+			  }
+			  ]
+			  }
+	},
+		{name: "Transverse Map",
+	img: "https://i.ibb.co/ZRsD7ng/full-map.png ",
+	tree: {
+		"type" : "site-section",
+		"class" : "map-section",
+		"style" : {
+			"height" : "30vw",
+			"display" : "flex",
+		},
+		"cmps" : [
+		  {
+				"type" : "site-div",
+				"style" : {
+					"flex" : "1",
+					"height" : "100%"
+				},
+				"cmps" : [ 
+					{
+						"type" : "site-map",
+						"content" : {
+							"center" : {
+								"lat" : 41.902782,
+								"lng" : 12.496365
+							},
+							"zoom" : 6
+						},
+					}
+				],
+			}
+		]
+	}
+  }],
 	text:[
 		{name: "Text on Photo Right",
 			img:"https://i.ibb.co/jZgtZ6v/Screenshot-2020-07-25-10-45-14.png",
@@ -232,7 +390,181 @@ const samples = {
 		},
 
 	],
-	footer:[{
+	footer:[
+		{name: "Big Footer Informer",
+		img:"https://i.ibb.co/8g3wzm6/Screenshot-2020-07-25-16-42-39.png",
+		tree:{
+            type: 'site-section',
+            class: 'huge-info-footer',
+            style: {
+              background: '#ba2204',
+            },
+            cmps: [
+              {
+                type: 'site-div',
+                style: {
+                  display: 'flex',
+                  justifyContent: 'space-around',
+                  marginBottom:'20px'
+                },
+                cmps: [
+                  {
+                    type: 'site-div',
+                    style: {
+                      width: '45%',
+                      textAlign: 'center',
+                      display: 'flex',
+                      flexDirection: 'column',
+                    },
+                    cmps: [
+                      {
+                        type: 'site-text',
+                        content: 'BASTILLE',
+                        style: {
+                          fontSize: '3.5rem',
+                          fontFamily: 'Bitter',
+                          color: '#F7B714',
+                        },
+                      },
+                      {
+                        type: 'site-text',
+                        content:
+                          '9 RUE JACQUES COEUR - 75004 PARIS 01 77 10 67 83',
+                        style: {
+                          fontFamily: 'Bitter',
+                          color: '#ffffff',
+                          fontSize: '1.2‬rem',
+                        },
+                      },
+                    ],
+                  },
+                  {
+                    type: 'site-div',
+                    style: {
+                      width: '45%',
+                      textAlign: 'center',
+                      display: 'flex',
+                      flexDirection: 'column',
+                    },
+                    cmps: [
+                      {
+                        type: 'site-text',
+                        content: 'CONVENTION',
+                        style: {
+                          fontSize: '3.5rem',
+                          fontFamily: 'Bitter',
+                          color: '#F7B714',
+                        },
+                      },
+                      {
+                        type: 'site-text',
+                        content:
+                          '196 RUE DE LA CONVENTION - 75015 PARIS 09 88 38 87 26',
+                        style: {
+                          fontFamily: 'Bitter',
+                          color: '#ffffff',
+                          fontSize: '1.2‬rem',
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                style: {
+                  textAlign: 'center',
+                },
+                cmps: [
+                  {
+                    type: 'site-text',
+                    content:
+                      'NOUVEAUX HORAIRES SUITE A LA CRISE DU COVID 19 : 7/7 - 12H - 16H & 19H - 23H',
+                    style: {
+                      backgroundColor: '#f7b714',
+                      fontSize: '1.1rem',
+                      fontFamily: 'josefin slab',
+                      color: '#000000',
+                      fontWeight: 'bold',
+                      
+                    },
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                style: {
+                  textAlign: 'center',
+                  marginBottom:'20px',
+                },
+                cmps: [
+                  {
+                    type: 'site-text',
+                    content:
+                      'NOTRE PERSONNEL EST FORME AUX NORMES SANITAIRES EN VIGUEUR. ENSEMBLE FAISONS FACE A LA CRISE SANTAIRE.',
+                    style: {
+                      background: '#f7b714',
+                      fontSize: '1.1rem',
+                      fontFamily: 'josefin slab',
+                      color: '#000000',
+                      fontWeight: 'bold',
+                    },
+                  },
+                ],
+              },
+              {
+                type: 'site-div',
+                style: {
+                  display: 'flex',
+                  justifyContent:'center',
+                  alignItems: 'center',
+                },
+                cmps: [
+                  {
+                    type: 'site-div',
+                    style: {
+                      textAlign: 'center',
+                    },
+                    cmps: [
+                      {
+                        type: 'site-image',
+                        content:
+                          'https://i.ibb.co/4d394Sg/logo-holder.png',
+                        style: {
+                          objectFit: 'contain',
+                          maxHeight:'150px',
+                          maxWidth: '250px',
+                          minWidth: '150px',
+                          marginRight:'20px'
+                        },
+                      },
+                    ],
+                  },
+                  {
+                    type: 'site-div',
+                    style: {
+                      width: '70%',
+                      textAlign: 'center',
+                    },
+                    cmps: [
+                      {
+                        type: 'site-text',
+                        content:
+                          "© COPY RIGHTS OF CREATIVE THOUGHTS",
+                        style: {
+                          fontSize: '1.1rem',
+                          fontFamily: 'josefin slab',
+                          color: '#ffffff',
+                          fontWeight: 'bold',
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },},
+		{
 		name:'Headline & Subs Footer',
 		img:'https://i.gyazo.com/0ce95fbfe80480dd56833736c6bad1c4.png',
 		tree: {
@@ -847,6 +1179,323 @@ const samples = {
 		},
 	],
 	cards: [
+		{name: "Post Card Left Pic",
+    img:"https://i.ibb.co/DR6dXnJ/Screenshot-2020-07-25-14-54-55.png",
+    tree:{
+		type: 'site-section',
+		class: 'fixed-post-card',
+		style: {
+		  background: '#ffffff',
+		},
+		cmps: [
+		  {
+			type: 'site-div',
+			class:'post-card-container',
+			style: {
+			  background: '#ffffff',
+			},
+			cmps: [
+			  {
+				type: 'site-div',
+				style: {
+				  background:
+					"url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.businessinsider.com%2Fimage%2F51b206e5eab8eafd63000007%2Fimage.jpg&f=1&nofb=1') no-repeat center center / cover scroll",
+				  width: '100%',
+				},
+				cmps: [],
+			  },
+			  {
+				type: 'site-div',
+				class:'post-card-text',
+				style: {
+				  background: '#ffffff',
+				},
+				cmps: [
+				  {
+					type: 'site-div',
+					style: {
+					  background: '#ffffff',
+					  textAlign: 'center',
+					  width: '100%',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content:
+						  `I'm all yours to make`,
+						style: {
+						  fontSize: '1.4rem',
+						  fontFamily: 'Oswald',
+						  color: '#F7B714',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  background: '#ffffff',
+					  textAlign: 'center',
+					  width: '100%',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content: "From Me",
+						style: {
+						  fontSize: '2.5rem',
+						  textDecoration: 'underline',
+						  fontFamily: 'Mr Dafoe',
+						  color: '#F7B714',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  background: '#ffffff',
+					  textAlign: 'center',
+					  width: '100%',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content: 'My Ideas are here',
+						style: {
+						  fontSize: '0.9rem',
+						  fontFamily: 'Inknut Antiqua',
+						  color: '#F7B714',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  background: '#ffffff',
+					  textAlign: 'center',
+					  width: '100%',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content:
+						  "Sometimes, all you need to break a string of losses is a win. It doesn’t even matter if the win is a small one. On a day where you feel like you can’t do anything right, your brain can be your own worst enemy.",
+						style: {
+						  fontSize: '0.9rem',
+						  fontFamily: 'Josefin Slab',
+						  color: '#000000',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					class:'post-card-text-buttons',
+					style: {
+					  background: '#ffffff',
+					  width: '100%',
+					},
+					cmps: [
+					  {
+						type: 'site-button',
+						content: {
+						  text: 'Click Him',
+						  href: '',
+						},
+						style: {
+						  background: '#ffffff',
+						  fontFamily: 'Righteous',
+						  color: '#F7B714',
+						  border: '3px #F7B714 solid',
+						  borderRadius: '0',
+						  lineHeight:'1',
+						  fontSize: '1rem',
+						},
+					  },
+					  {
+						type: 'site-button',
+						content: {
+						  text: 'Click Me',
+						  href: '',
+						},
+						style: {
+						  background: '#ffffff',
+						  fontFamily: 'Righteous',
+						  color: '#F7B714',
+						  border: '3px #F7B714 solid',
+						  borderRadius: '0',
+						  lineHeight:'1',
+						  fontSize: '1rem',
+						},
+					  },
+					],
+				  },
+				],
+			  },
+			],
+		  },
+		],
+	  }},
+		{name: "Post Card Right Pic",
+    img:"https://i.ibb.co/zxB7Y60/Screenshot-2020-07-25-14-41-58.png",
+    tree:{
+		type: 'site-section',
+		class: 'fixed-post-card',
+		style: {
+		  background: '#ffffff',
+		},
+		cmps: [
+		  {
+			type: 'site-div',
+			class:'post-card-container',
+			style: {
+			  background: '#ffffff',
+			},
+			cmps: [
+			  {
+				type: 'site-div',
+				class:'post-card-text',
+				style: {
+				  background: '#ffffff',
+				},
+				cmps: [
+				  {
+					type: 'site-div',
+					style: {
+					  background: '#ffffff',
+					  textAlign: 'center',
+					  width: '100%',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content:`I'm all yours to make`,
+						style: {
+						  fontSize: '1.4rem',
+						  fontFamily: 'Oswald',
+						  color: '#EF4135',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  background: '#ffffff',
+					  textAlign: 'center',
+					  width: '100%',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content: "From Me",
+						style: {
+						  fontSize: '2.5rem',
+						  textDecoration: 'underline',
+						  fontFamily: 'Mr Dafoe',
+						  color: '#EF4135',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  background: '#ffffff',
+					  textAlign: 'center',
+					  width: '100%',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content: 'My Ideas are here',
+						style: {
+						  fontSize: '0.9rem',
+						  fontFamily: 'Inknut Antiqua',
+						  color: '#EF4135',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  background: '#ffffff',
+					  textAlign: 'center',
+					  width: '100%',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content:
+						  "Sometimes, all you need to break a string of losses is a win. It doesn’t even matter if the win is a small one. On a day where you feel like you can’t do anything right, your brain can be your own worst enemy.",
+						style: {
+						  fontSize: '0.9rem',
+						  fontFamily: 'Josefin Slab',
+						  color: '#000000',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					class:'post-card-text-buttons',
+					style: {
+					  background: '#ffffff',
+					  width: '100%',
+					},
+					cmps: [
+					  {
+						type: 'site-button',
+						content: {
+						  text: 'Click Me',
+						  href: '',
+						},
+						style: {
+						  background: '#ffffff',
+						  fontFamily: 'Righteous',
+						  color: '#EF4135',
+						  border: '3px #EF4135 solid',
+						  borderRadius: '0',
+						  lineHeight:'1',
+						  fontSize: '1rem',
+						},
+					  },
+					  {
+						type: 'site-button',
+						content: {
+						  text: 'Click Him',
+						  href: '',
+						},
+						style: {
+						  background: '#ffffff',
+						  fontFamily: 'Righteous',
+						  color: '#EF4135',
+						  border: '3px #EF4135 solid',
+						  borderRadius: '0',
+						  lineHeight:'1',
+						  fontSize: '1rem',
+						},
+					  },
+					],
+				  },
+				],
+			  },
+			  {
+				type: 'site-div',
+				style: {
+				  background:
+					"url('https://images.unsplash.com/photo-1532465614-6cc8d45f647f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80') no-repeat center center / cover scroll",
+				  width: '100%',
+				},
+				cmps: [],
+			  },
+			],
+		  },
+		],
+	  }},
 		{
 			name: 'Floating Pic Right',
 			img: 'https://i.ibb.co/WsX0tv1/Screenshot-2020-07-24-14-49-39.png',

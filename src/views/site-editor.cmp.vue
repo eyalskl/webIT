@@ -41,8 +41,8 @@ export default {
   data() {
     return {
       samples: {},
-      siteToEdit: {},
-    }
+      siteToEdit: null,
+    };
   },
   created() {
     this.$store.commit({ type: 'setEditMode', editMode: true });
