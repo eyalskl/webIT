@@ -1,13 +1,17 @@
 <template>
   <div class="main-app">
-    <router-view  />
-
+    <login-page />
+    <router-view />
   </div>
 </template>
 
 <script>
+import loginPage from '@/components/login-page.cmp'
 
 export default {
   name: 'main-app',
+  components: {
+    loginPage
+  }
 };
 </script>

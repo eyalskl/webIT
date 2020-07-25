@@ -7,7 +7,8 @@ export const userService = {
     query,
     getById,
     remove,
-    update
+    update,
+    getEmptyUser
 }
 
 function getById(userId) {
@@ -27,12 +28,13 @@ async function login(userCred) {
     return _handleLogin(user)
 }
 async function signup(userCred) {
+    console.log('userCred:', userCred)
     const user = await HttpService.post('auth/signup', userCred)
     return _handleLogin(user)
 }
 async function logout() {
     await HttpService.post('auth/logout');
-    sessionStorage.clear();
+    sessionStorage.removeItem('user');
 }
 
 function query() {
@@ -44,6 +46,13 @@ function _handleLogin(user) {
     return user;
 }
 
+function getEmptyUser() {
+    return {
+        fullname: '',
+        email: '',
+        password: ''
+    }
+}
 
 
 

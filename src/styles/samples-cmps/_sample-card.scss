@@ -177,4 +177,43 @@
 			}
 		}
 	}
+	
+}
+
+
+@media (max-width: 780px) {
+    .text-logo-text {
+        flex-direction: column;
+    }
+    .three-pics-section {
+        flex-direction: column;
+        height: 50vw !important;
+	}
+	.fixed-post-card{
+		height: auto !important;
+		>div:not(.element-controls) {
+			flex-direction: column !important;
+			height: auto;
+			>div {
+			}
+			.post-card-pic{
+				height: 40vw;
+				order: -1;
+			}
+		}
+	}
+    .info-block-section {
+        * {
+            font-size: 0.7rem !important;
+        }
+    }
+    .text-on-photo {
+        height: auto;
+        * {
+            font-size: 0.8rem !important;
+        }
+        div {
+            align-items: 'center' !important;
+        }
+    }
 }

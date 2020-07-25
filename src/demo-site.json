@@ -1,0 +1,137 @@
+{
+    "_id" : "ObjectId('5f1c9eca2401dc3bccfa7dde')",
+    "name" : "webIT Demo",
+    "previewImg" : "https://cdn1.iconfinder.com/data/icons/basic-ui-elements-28/512/1034_Add_new_plus_sign-512.png",
+    "createdBy" : {
+        "username" : "Idov Magal",
+        "_id" : "5e26e0b718a0891d4c995527"
+    },
+    "cmps" : [ 
+        {
+            "type" : "site-section",
+            "class" : "form-with-map",
+            "style" : {
+                "background" : "url(https://images.unsplash.com/photo-1541617219835-3689726fa8e7?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) center center no-repeat scroll",
+                "fontFamily" : "Oswald"
+            },
+            "cmps" : [ 
+                {
+                    "type" : "site-div",
+                    "style" : {
+                        "marginInlineStart" : "5rem"
+                    },
+                    "cmps" : [ 
+                        {
+                            "type" : "site-div",
+                            "style" : {
+                                "textAlign" : "center",
+                                "paddingBlockEnd" : "1rem"
+                            },
+                            "cmps" : [ 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "Our Location",
+                                    "style" : {
+                                        "color" : "#fff",
+                                        "fontSize" : "2rem",
+                                        "letterSpacing" : "2px",
+                                        "lineHeight" : "1"
+                                    },
+                                    "id" : "4lMXFYHAEp"
+                                }
+                            ],
+                            "id" : "VM5bTgTs9I"
+                        }, 
+                        {
+                            "type" : "site-div",
+                            "style" : {
+                                "flex" : "3"
+                            },
+                            "cmps" : [ 
+                                {
+                                    "type" : "site-map",
+                                    "content" : {
+                                        "center" : {
+                                            "lat" : 15.870032,
+                                            "lng" : 100.992538
+                                        },
+                                        "zoom" : 4
+                                    },
+                                    "id" : "NW6i3QG51m"
+                                }
+                            ],
+                            "id" : "uFKHt1WJzG"
+                        }
+                    ],
+                    "id" : "IA8ElZfUCw"
+                }, 
+                {
+                    "type" : "site-div",
+                    "style" : {
+                        "flex" : "1"
+                    },
+                    "cmps" : [ 
+                        {
+                            "type" : "site-div",
+                            "class" : "form-with-map-form",
+                            "style" : {
+                                "display" : "flex",
+                                "alignItems" : "center",
+                                "flexDirection" : "column"
+                            },
+                            "cmps" : [ 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "Contact Us",
+                                    "style" : {
+                                        "color" : "#fff",
+                                        "fontSize" : "2rem",
+                                        "flex" : "1",
+                                        "paddingBlockEnd" : "1rem"
+                                    },
+                                    "id" : "Wdt5hJKO5S"
+                                }, 
+                                {
+                                    "type" : "site-form",
+                                    "style" : {
+                                        "flex" : "3",
+                                        "display" : "flex",
+                                        "flexDirection" : "column",
+                                        "color" : "#fff"
+                                    },
+                                    "btnStyle" : {
+                                        "background" : "#e94335",
+                                        "fontSize" : "1.1rem",
+                                        "color" : "#fff"
+                                    },
+                                    "content" : [ 
+                                        {
+                                            "tag" : "Name",
+                                            "type" : "text"
+                                        }, 
+                                        {
+                                            "tag" : "Email",
+                                            "type" : "email"
+                                        }, 
+                                        {
+                                            "tag" : "Subject",
+                                            "type" : "text"
+                                        }, 
+                                        {
+                                            "tag" : "Phone Number",
+                                            "type" : "tel"
+                                        }
+                                    ],
+                                    "id" : "ZJGoQMVUAu"
+                                }
+                            ],
+                            "id" : "Lk7TkF6dwY"
+                        }
+                    ],
+                    "id" : "gVNnigC2Sb"
+                }
+            ],
+            "id" : "lF6bATxmKG"
+        }
+    ]
+}

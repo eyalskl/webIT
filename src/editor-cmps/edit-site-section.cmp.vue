@@ -20,7 +20,7 @@
         <img
           class="uploading"
           v-else
-          src="https://i.pinimg.com/originals/3d/1b/73/3d1b739fb2546948f207d2be7ae1b105.gif"
+          src="../assets/loadingAnimation.svg"
           alt="Uploading Image..."
         />
       </div>

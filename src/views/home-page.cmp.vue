@@ -4,7 +4,7 @@
       <div class="hero">
         <div class="text-container flex column justify-center align-center">
           <h1 class="tc-header">Create a Website You’re Proud Of, Simply.</h1>
-          <button @click.stop="$router.push('/templates')" class="start-btn" >
+          <button @click.stop="$router.push('/templates')" class="start-btn text-box btn btn-white btn-animate" >
              Build your website
           </button>
         </div>

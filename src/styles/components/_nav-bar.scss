@@ -40,9 +40,28 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
+            background-color: inherit;
         }
         >*.router-link-exact-active {
             color: $clr1;
+        }
+    }
+    .user-section {
+        background-color: inherit;
+        padding: 0;
+        button {
+            background-color: inherit;
+            font-size: 1.05rem;
+            height: 100%;
+        }
+        >* {
+            cursor: pointer;
+        }
+        >*:last-child {
+            transition: .3s;
+            &:hover {
+                filter: brightness(102.5%);
+            }
         }
     }
 }

@@ -2,14 +2,18 @@
   <section class="templates-page">
     <nav-bar />
     <div class="templates-preview">
-      <h2>Our Templates</h2>
-      <img
-        v-if="isLoading"
-        src="https://i.pinimg.com/originals/58/4b/60/584b607f5c2ff075429dc0e7b8d142ef.gif"
-        alt="Loading..."
-      />
+      <div class="templates-header flex space-between align-center">
+        <div class="left-side flex column">
+          <h2> Our Sites </h2>
+          <p> Select a site to edit or preview it's content. </p>
+        </div>
+        <div class="right-side">
+          <button @click="editTemplate('5f1b0b822e78d49fde61fe1e')"> Create new site </button>
+        </div>
+      </div>
+      <img class="loader" v-if="isLoading" src="../assets/loadingAnimation.svg" />
       <section v-else class="template-list">
-        <div v-for="template in templates" :key="template._id" @click="editTemplate(template._id)">
+        <div v-for="template in templatesToShow" :key="template._id" @click="editTemplate(template._id)">
           <img :src="template.previewImg" />
         </div>
       </section>
@@ -23,18 +27,19 @@ import navBar from '@/components/nav-bar.cmp.vue';
 export default {
   name: 'templates-page',
   data() {
-    return {};
+    return {
+      templatesToShow: null
+    };
   },
   computed: {
-    templates() {
-      return this.$store.getters.templates;
-    },
+
     isLoading() {
       return this.$store.getters.isLoading;
     }
   },
   async created() {
-    this.$store.dispatch({ type: 'loadTemplates' });
+    const templates = await this.$store.dispatch({ type: 'loadTemplates' });
+    this.templatesToShow = templates.filter(template => !template.createdBy)
     this.$store.commit({ type: 'setSite', site: null });
   },
   methods: {

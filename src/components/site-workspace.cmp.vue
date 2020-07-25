@@ -1,13 +1,10 @@
 <template>
   <container class="site-container" :class="minimized"> 
-    <container class="site-workspace flex column" :get-child-payload="getCmp" :drop-placeholder="placeHolderOptions" :non-drag-area-selector="nonDrags" drag-class="section-drag" auto-scroll-enabled  @drop="onDrop" group-name="1" lock-axis="y" :class="minimized">
-      <component
-        v-for="(cmp, idx) in siteToEdit.cmps"
-        :is="cmp.type"
-        :cmp="cmp"
-        :key="idx"
-      >
+    <container class="site-workspace flex column" @drop="onDrop" :class="minimized" drag-class="section-drag" :get-child-payload="getCmp" :drop-placeholder="placeHolderOptions" :non-drag-area-selector="nonDrags" auto-scroll-enabled  group-name="1" lock-axis="y">
+      
+      <component v-for="(cmp, idx) in siteToEdit.cmps" :is="cmp.type" :cmp="cmp" :key="idx">
       </component>
+
     </container>
   </container>
 </template>

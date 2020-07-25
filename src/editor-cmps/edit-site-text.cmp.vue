@@ -35,6 +35,10 @@
             <label> Letter Spacing </label>
             <el-slider @input="setLetterSpacing" v-model="letterSpacing" :max="50"></el-slider>
           </div>
+          <div v-if="cmp.type  === 'site-button'" class="flex column align-center">
+            <label> Round Edges </label>
+            <el-slider @input="setBorderRadius" v-model="borderRadius" :max="50"></el-slider>
+          </div>
           <div class="text-shadow">
             <select-box @input="setShadow" :data="shadows" type="shadow" placeholder="Add text shadow...">  </select-box>
           </div>
@@ -42,10 +46,7 @@
             <h4> Background Color </h4>
             <color-picker @input="setBgc" />
           </div>
-          <div v-if="cmp.type  === 'site-button'" class="flex column align-center">
-            <label> Round Edges </label>
-            <el-slider @input="setBorderRadius" v-model="borderRadius" :max="50"></el-slider>
-          </div>
+          
         </section>
     </div>
 </template>
