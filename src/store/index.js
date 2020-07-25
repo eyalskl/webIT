@@ -7,10 +7,9 @@ import { userStore } from './user.store.js';
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-    // strict: true,
     state: {
         editMode: '',
-        showLogin: true
+        showLogin: false
     },
     getters: {
         editMode(state) {
@@ -23,7 +22,10 @@ export default new Vuex.Store({
     mutations: {
         setEditMode(state, { editMode }) {
             state.editMode = editMode;
-        }
+        },
+        setShowLogin(state, { showLogin }) {
+            state.showLogin = showLogin;
+        },
     },
     actions: {},
     modules: {

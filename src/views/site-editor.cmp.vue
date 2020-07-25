@@ -109,11 +109,6 @@ export default {
       this.$store.commit({ type: 'setSite', site: this.siteToEdit });
     },
   },
-  watch: {
-    "$route.params.id"() {
-      this.loadSite();
-    },
-  },
   components: {
     siteWorkspace,
     elementDashboard,
@@ -121,8 +116,8 @@ export default {
     Draggable,
     navBar,
   },
-  destroyed() {
-    this.$store.commit({ type: 'setSite', site: null });
-  },
+  // destroyed() {
+  //   this.$store.commit({ type: 'setSite', site: null });
+  // },
 };
 </script>
