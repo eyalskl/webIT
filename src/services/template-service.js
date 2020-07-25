@@ -9,7 +9,7 @@ const _ = require('lodash');
 const samples = {
 	'contact form':[{
 
-		name:'Form with Map Right',
+		name:'Contact with Map Right',
 		img:'https://i.gyazo.com/084948f731c65f21b0591840d5ccb591.png',
 		tree:{
 					type: "site-section",
@@ -277,7 +277,7 @@ const samples = {
 	map: [
 		{
 
-			name:'Form with Map Right',
+			name:'Contact with Map Right',
 			img:'https://i.gyazo.com/084948f731c65f21b0591840d5ccb591.png',
 			tree:{
 						type: "site-section",
