@@ -74,12 +74,20 @@
         .form-with-map-form{
             padding-top: 2rem;
         }
-        .map-container-form-div{
+        .map-container-form-div-right, .map-container-form-div-left{
             margin-inline-end: 1rem;
             margin-inline-start: 1rem;
         }
     }
 }
-.map-container-form-div{
+.map-container-form-div-right{
     margin-inline-end: 5rem;
+}
+.map-container-form-div-left{
+    margin-inline-start: 5rem;
+}
+@media(max-width:820px){
+.simple-card-image-section{
+    flex-direction:column;
+}
 }

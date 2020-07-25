@@ -28,7 +28,7 @@ const samples = {
 				  },
 				  cmps:[{
 					type:"site-div",
-					class:"map-container-form-div",
+					class:"map-container-form-div-right",
 					style:{
 					  flex:"1",
 					  display:"flex",
@@ -163,11 +163,11 @@ const samples = {
 			cmps: [
 				{
 					type: 'site-div',
+					class:"map-container-form-div-left",
 					style: {
 						flex: '1',
 						display: 'flex',
 						flexDirection: 'column',
-						marginInlineStart: '5rem',
 					},
 					cmps: [
 						{
@@ -296,7 +296,7 @@ const samples = {
 					  },
 					  cmps:[{
 						type:"site-div",
-						class:"map-container-form-div",
+						class:"map-container-form-div-right",
 						style:{
 						  flex:"1",
 						  display:"flex",
@@ -431,11 +431,11 @@ const samples = {
 				cmps: [
 					{
 						type: 'site-div',
+						class:"map-container-form-div-left",
 						style: {
 							flex: '1',
 							display: 'flex',
 							flexDirection: 'column',
-							marginInlineStart: '5rem',
 						},
 						cmps: [
 							{
@@ -577,6 +577,142 @@ const samples = {
 		},
 	],
 	text: [
+		{
+			name:'Text With Photo Right	',
+			img:'https://i.gyazo.com/97cd58f1c315c44dd71c32205dc9f825.png',
+			tree:        {
+				"type" : "site-section",
+				"class" : "simple-card-image-section",
+				"style" : {
+					"minHeight":"300px",
+					"display" : "flex"
+				},
+				"cmps" : [ 
+					{
+						"type" : "site-div",
+						"style" : {
+							"display" : "flex",
+							"flexDirection" : "column",
+							"flex" : "1",
+							"padding":"2rem"
+						},
+						"cmps" : [ 
+							{
+								"type" : "site-text",
+								"content" : "HELLO , I AM A TITLE",
+								"style" : {
+									"fontFamily" : "Oswald",
+									"textAlign" : "center",
+									"lineHeight" : "2rem",
+									"fontSize" : "2rem",
+									"fontWeight" : "bold"
+								},
+							}, 
+							{
+								"type" : "site-text",
+								"content" : `I was created long ago by webIT creators ,
+	I would like you to enter some content here to decribe your card photo,
+	Enjoy and remember , creativity is key!`,
+								"style" : {
+									"fontFamily" : "Oswald",
+									"padding" : "1rem",
+									"textAlign" : "center",
+									"lineHeight" : "2rem",
+									"fontSize" : "1rem"
+								},
+							}
+						],
+					}, 
+					{
+						"type" : "site-div",
+						"style" : {
+							"flex" : "1"
+						},
+						"cmps" : [ 
+							{
+								"type" : "site-image",
+								"content" : "https://images.unsplash.com/photo-1521102761523-b268f61473e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1549&q=80",
+								"style" : {
+									"height" : "100%",
+									"width" : "100%",
+									"objectFit" : "cover",
+									"borderRadius" : "8px"
+								},
+							}
+						],
+					}
+				],
+			}
+		},
+		{
+			name:'Text With Photo Left',
+			img:'https://i.gyazo.com/19bd9cfd3d6af2f8503d470dc47b093d.png',
+			tree:        {
+				"type" : "site-section",
+				"class" : "simple-card-image-section",
+				"style" : {
+					"minHeight":"300px",
+					"display" : "flex",
+					"direction" : "rtl"
+				},
+				"cmps" : [ 
+					{
+						"type" : "site-div",
+						"style" : {
+							"display" : "flex",
+							"flexDirection" : "column",
+							"flex" : "1",
+							"padding":"2rem",
+							"direction" : "ltr"
+						},
+						"cmps" : [ 
+							{
+								"type" : "site-text",
+								"content" : "HELLO , I AM A TITLE",
+								"style" : {
+									"fontFamily" : "Oswald",
+									"textAlign" : "center",
+									"lineHeight" : "2rem",
+									"fontSize" : "2rem",
+									"fontWeight" : "bold"
+								},
+							}, 
+							{
+								"type" : "site-text",
+								"content" : `I was created long ago by webIT creators ,
+	I would like you to enter some content here to decribe your card photo,
+	Enjoy and remember , creativity is key!`,
+								"style" : {
+									"fontFamily" : "Oswald",
+									"padding" : "1rem",
+									"textAlign" : "center",
+									"lineHeight" : "2rem",
+									"fontSize" : "1rem"
+								},
+							}
+						],
+					}, 
+					{
+						"type" : "site-div",
+						"style" : {
+							"flex" : "1"
+						},
+						"cmps" : [ 
+							{
+								"type" : "site-image",
+								"content" : "https://images.unsplash.com/photo-1521102761523-b268f61473e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1549&q=80",
+								"style" : {
+									"height" : "100%",
+									"width" : "100%",
+									"objectFit" : "cover",
+									"borderRadius" : "8px"
+								},
+							}
+						],
+					}
+				],
+			}
+		},
 		{
 			name: 'Text on Photo Right',
 			img: 'https://i.ibb.co/jZgtZ6v/Screenshot-2020-07-25-10-45-14.png',
@@ -2643,16 +2779,14 @@ const samples = {
 	],
 	header: [
 		{
-			name: 'Hero',
-			img: 'https://i.ibb.co/F5zGjtR/header-lion-2.png',
+			name: 'Hero & Button',
+			img: 'https://i.gyazo.com/b7ee7702c1a84354751432e6023ab015.jpg',
 			tree: {
 				type: 'site-section',
 				style: {
 					background:
 						'url(https://images.unsplash.com/photo-1588878497864-24269ed778ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80) no-repeat center center scroll',
 					backgroundSize: 'cover',
-					height: '100vh',
-					padding: '10px 10px 10px 10px',
 					display: 'flex',
 					flexDirection: 'column',
 					alignItems: 'center',
@@ -2667,14 +2801,15 @@ const samples = {
 							justifyContent: 'space-between',
 							backgroundColor: '#d9ccc959',
 							alignItems: 'center',
+							fontSize:"1.25rem"
 						},
 						cmps: [
 							{
 								type: 'site-image',
 								content:
-									'https://pluspng.com/img-png/national-geographic-logo-png-logo-natgeo-png-pluspng-com-logo-national-geographic-png-1000.png',
+									'https://www.churchtrac.com/articles/apple/uploads/2017/09/Antu_insert-image.svg_-1184x1184.png',
 								style: {
-									height: '5rem',
+									height: '6rem',
 									paddingInlineStart: '1.5rem',
 								},
 							},
@@ -2733,16 +2868,16 @@ const samples = {
 					{
 						type: 'site-div',
 						style: {
-							height: '700px',
 							display: 'flex',
 							alignItems: 'center',
 							justifyContent: 'center',
 							flexDirection: 'column',
+							padding:"18rem 0rem"
 						},
 						cmps: [
 							{
 								type: 'site-text',
-								content: 'ANIMAL GEOGRAPHIC',
+								content: 'I AM A TITLE',
 								style: {
 									fontSize: '4rem',
 									fontFamily: 'Oswald',
@@ -2752,7 +2887,7 @@ const samples = {
 							},
 							{
 								type: 'site-text',
-								content: 'We Bring You The Best Articles',
+								content: 'AND I AM A SUBTITLE',
 								style: {
 									fontSize: '1.875rem',
 									fontFamily: 'Oswald',
@@ -2763,7 +2898,7 @@ const samples = {
 							{
 								type: 'site-button',
 								content: {
-									text: 'SUBSCRIBE',
+									text: 'MY NAME IS BUTTON',
 									href: '',
 								},
 								style: {
@@ -2775,6 +2910,135 @@ const samples = {
 									fontWeight: 'bold',
 								},
 							},
+						],
+					},
+				],
+			},
+		},
+		{
+			name: 'Hero & Text Only',
+			img: 'https://i.gyazo.com/ae243087166f0b5a1ba958a0035625d1.jpg',
+			tree: {
+				type: 'site-section',
+				style: {
+					background:
+						'url(https://images.unsplash.com/photo-1506104489822-562ca25152fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80) no-repeat center center scroll',
+					backgroundSize: 'cover',
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+				},
+				cmps: [
+					{
+						type: 'site-div',
+						style: {
+							height: '6rem',
+							width: '100%',
+							display: 'flex',
+							justifyContent: 'space-between',
+							backgroundColor: '#d9ccc959',
+							alignItems: 'center',
+							fontSize:"1.25rem",
+						},
+						cmps: [
+							{
+								type: 'site-image',
+								content:
+									'https://www.churchtrac.com/articles/apple/uploads/2017/09/Antu_insert-image.svg_-1184x1184.png',
+								style: {
+									height: '6rem',
+									paddingInlineStart: '1.5rem',
+								},
+							},
+							{
+								type: 'site-list',
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'HOME',
+										style: {
+											marginInlineEnd: '1rem',
+											color: '#6393bf',
+											fontSize:"1.25rem",
+											fontWeight:"bold"
+										},
+									},
+									{
+										type: 'site-text',
+										content: 'ARTICLES',
+										style: {
+											marginInlineEnd: '1rem',
+											color: '#171717',
+										},
+									},
+									{
+										type: 'site-text',
+										content: 'MEMBERS',
+										style: {
+											marginInlineEnd: '1rem',
+											color: '#171717',
+										},
+									},
+									{
+										type: 'site-text',
+										content: 'ABOUT',
+										style: {
+											marginInlineEnd: '1rem',
+											color: '#171717',
+										},
+									},
+									{
+										type: 'site-text',
+										content: 'CONTACT US',
+										style: {
+											marginInlineEnd: '1rem',
+											color: '#171717',
+										},
+									},
+								],
+								style: {
+									fontFamily: 'Oswald',
+									color: '#FFF',
+									display: 'flex',
+								},
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							flexDirection: 'column',
+							padding:"18rem 0rem"
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'I AM YOUR TITLE',
+								style: {
+									fontSize: '4rem',
+									fontFamily: 'Oswald',
+									color: '#000',
+									textShadow: '0 0 2px black',
+									letterSpacing:"7.5px",
+									fontWeight:"bold"
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'I AM YOUR SUBTITLE',
+								style: {
+									fontSize: '2.1875rem',
+									fontFamily: 'Oswald',
+									color: '#fff',
+									textShadow: '1 1 1px black',
+									letterSpacing:"2.5px",
+									fontWeight:"bold"
+								},
+							},
+
 						],
 					},
 				],
