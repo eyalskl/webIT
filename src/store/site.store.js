@@ -39,7 +39,7 @@ export const siteStore = {
         async loadTemplates({ commit }) {
             commit({ type: 'setIsLoading', isLoading: true });
             let templates = await templateService.query();
-            templates = templates.map(template => ({ _id: template._id, name: template.name, previewImg: template.previewImg }));
+            templates = templates.map(template => ({ _id: template._id, name: template.name, previewImg: template.previewImg, createdBy: template.createdBy }));
             commit({ type: 'setTemplates', templates });
             commit({ type: 'setIsLoading', isLoading: false });
             return templates;
@@ -57,6 +57,13 @@ export const siteStore = {
         },
         async saveSite({ state }) {
             const site = state.site
+            if (sessionStorage.user) {
+                const user = JSON.parse(sessionStorage.user)
+                site.createdBy = {
+                    _id: user._id,
+                    username: user.fullname
+                }
+            }
             const savedTemplate = await templateService.save(site)
             return savedTemplate;
         }

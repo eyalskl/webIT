@@ -6,12 +6,12 @@
     <div class="main-nav">
       <router-link to="/">Home</router-link>
       <router-link to="/templates">Templates</router-link>
+      <button class="publish" @click="saveSite">Save</button>
+      <router-link class="publish" :to="'/' + siteId">Publish</router-link>
       <div class="user-section">
         <button @click="openLogin"> {{ (this.loggedInUser) ? 'Logout' : 'Login' }} </button>
         <avatar v-if="loggedInUser" :size="35" :username="loggedInUser.fullname" @click.native="$router.push('/user').catch(()=>{})"> </avatar>
       </div>
-      <button class="publish" @click="saveSite">Save</button>
-      <router-link class="publish" :to="'/' + siteId">Publish</router-link>
     </div>
   </nav>
 </template>
