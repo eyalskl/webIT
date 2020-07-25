@@ -5,7 +5,7 @@ if (sessionStorage.user) localLoggedinUser = JSON.parse(sessionStorage.user);
 
 export const userStore = {
     state: {
-        loggedinUser: localLoggedinUser,
+        loggedInUser: localLoggedinUser,
         users: []
     },
     getters: {
@@ -13,12 +13,12 @@ export const userStore = {
             return state.users;
         },
         loggedInUser(state) {
-            return state.loggedinUser
+            return state.loggedInUser
         }
     },
     mutations: {
         setUser(state, { user }) {
-            state.loggedinUser = user;
+            state.loggedInUser = user;
         },
         setUsers(state, { users }) {
             state.users = users;
