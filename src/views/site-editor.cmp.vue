@@ -42,7 +42,7 @@ export default {
     return {
       samples: {},
       siteToEdit: null,
-     
+      
     };
   },
   created() {

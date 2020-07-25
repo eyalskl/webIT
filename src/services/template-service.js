@@ -276,6 +276,56 @@ const samples = {
 	},],
 	map: [
 		{
+			name: "Map with Image",
+			img: "https://i.ibb.co/1XJvgVc/mapwithimg.png",
+				tree:
+				  {
+				  "type" : "site-section",
+				  "class" : "map-n-img-section",
+				  "style" : {
+					  "height" : "30vw",
+					  "display" : "flex",
+					  "alignItems" : "center",
+					  "background": "#313131"
+				  },
+				  "cmps" : [ 
+					  {
+						  "type" : "site-div",
+						  "style" : {
+							  "display" : "flex",
+							  "background" : "url(https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) no-repeat center center / cover scroll",
+							  "flex" : "1",
+							  "margin" : "1.5rem",
+							  "justifyContent" : "space-around",
+							  "height" : "85%",
+							  "borderRadius": "10px"
+						  },
+						  "cmps" : [],
+					  }, 
+					  {
+						  "type" : "site-div",
+						  "style" : {
+							  "flex" : "2",
+							  "height" : "85%",
+							  "marginInlineEnd": "1.5rem"
+						  },
+						  "cmps" : [ 
+							  {
+								  "type" : "site-map",
+								  "content" : {
+									  "center" : {
+										  "lat" : 19.0359089,
+										  "lng" : -69.4357479
+									  },
+									  "zoom" : 5
+								  },
+							  }
+						  ],
+					  }
+				  ],
+				}
+			},
+		{
 
 			name:'Contact with Map Right',
 			img:'https://i.gyazo.com/084948f731c65f21b0591840d5ccb591.png',
@@ -577,6 +627,75 @@ const samples = {
 		},
 	],
 	text: [
+		{
+			name: 'Title',
+			img: 'https://i.ibb.co/GVbgfzh/Screenshot-2020-07-25-20-28-02.png',
+			tree: {
+				type: 'site-section',
+				class: 'text-divider-title',
+				style: {
+				  background: '#ffffff',
+				  textAlign: 'center',
+				  display: 'flex',
+				  flexDirection: 'column',
+				  justifyContent:'center',
+				  padding: '1rem'
+				},
+				cmps: [{
+				  type:'site-text',
+				  content:'Make me yours',
+				  style:{
+					width: '100%',
+					color:'black',
+					fontSize: '3rem',
+					fontWeight: 'bolder',
+					fontFamily: 'Oswald',
+				  }
+				},
+				
+			],
+			  },
+		},
+		{
+			name: 'Title & Paragraph',
+			img: 'https://i.ibb.co/JrXkggg/Screenshot-2020-07-25-21-32-24.png',
+			tree:{
+				type: 'site-section',
+				class: 'text-divider-title',
+				style: {
+				  background: '#ffffff',
+				  textAlign: 'center',
+				  display: 'flex',
+				  flexDirection: 'column',
+				  justifyContent: 'center',
+				  padding: '1rem',
+				},
+				cmps: [
+				  {
+					type: 'site-text',
+					content: 'Make me yours',
+					style: {
+					  width: '100%',
+					  color: 'black',
+					  fontSize: '3rem',
+					  fontWeight: 'bolder',
+					  fontFamily: 'Oswald',
+					},
+				  },
+				  {
+					type: 'site-text',
+					content: 'He had three simple rules by which he lived. The first was to never eat blue food. There was nothing in nature that was edible that was blue. People often asked about blueberries, but everyone knows those are actually purple. He understood it was one of the stranger rules to live by, but it had served him well thus far in the 50+ years of his life. He had three simple rules by which he lived. The first was to never eat blue food. There was nothing in nature that was edible that was blue. People often asked about blueberries, but everyone knows those are actually purple. He understood it was one of the stranger rules to live by, but it had served him well thus far in the 50+ years of his life. He had three simple rules by which he lived. The first was to never eat blue food. There was nothing in nature that was edible that was blue. People often asked about blueberries, but everyone knows those are actually purple. He understood it was one of the stranger rules to live by, but it had served him well thus far in the 50+ years of his life. Do you think you\'re living an ordinary life? You are so mistaken it\'s difficult to even explain. The mere fact that you exist makes you extraordinary. The odds of you existing are less than winning the lottery, but here you are. Are you going to let this extraordinary opportunity pass?',
+					style: {
+					  width: '100%',
+					  color: 'black',
+					  fontSize: '1rem',
+					  fontWeight: 'bolder',
+					  fontFamily: 'Oswald',
+					},
+				  },
+				],
+			  },
+		},
 		{
 			name: 'Text on Photo Right',
 			img: 'https://i.ibb.co/jZgtZ6v/Screenshot-2020-07-25-10-45-14.png',
@@ -1559,6 +1678,7 @@ const samples = {
 						cmps: [
 							{
 								type: 'site-div',
+								class:'post-card-pic',
 								style: {
 									background:
 										"url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.businessinsider.com%2Fimage%2F51b206e5eab8eafd63000007%2Fimage.jpg&f=1&nofb=1') no-repeat center center / cover scroll",
@@ -1838,6 +1958,7 @@ const samples = {
 							},
 							{
 								type: 'site-div',
+								class:'post-card-pic',
 								style: {
 									background:
 										"url('https://images.unsplash.com/photo-1532465614-6cc8d45f647f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80') no-repeat center center / cover scroll",
@@ -2640,6 +2761,46 @@ const samples = {
 				cmps: [],
 			},
 		},
+		{
+			name: 'Line',
+			img: 'https://i.ibb.co/3F774F8/line.png',
+			tree: {
+				type: 'site-section',
+				class: 'color-line',
+				style: {
+				  background: '#a7dbd8',
+				},
+				cmps: [],
+			  },
+		},
+		{
+			name: 'Title',
+			img: 'https://i.ibb.co/GVbgfzh/Screenshot-2020-07-25-20-28-02.png',
+			tree: {
+				type: 'site-section',
+				class: 'text-divider-title',
+				style: {
+				  background: '#ffffff',
+				  textAlign: 'center',
+				  display: 'flex',
+				  flexDirection: 'column',
+				  justifyContent:'center',
+				  padding: '1rem'
+				},
+				cmps: [{
+				  type:'site-text',
+				  content:'Make me yours',
+				  style:{
+					width: '100%',
+					color:'black',
+					fontSize: '3rem',
+					fontWeight: 'bolder',
+					fontFamily: 'Oswald',
+				  }
+				}],
+			  },
+		},
+		
 	],
 	header: [
 		{
