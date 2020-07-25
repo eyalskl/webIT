@@ -7,6 +7,231 @@ import httpService from './http.service';
 const _ = require('lodash');
 
 const samples = {
+	text:[
+		{name: "Text on Photo Right",
+			img:"https://i.ibb.co/jZgtZ6v/Screenshot-2020-07-25-10-45-14.png",
+			tree:{
+				type: 'site-section',
+				class: 'text-on-photo-right',
+				style: {
+				  background:
+					'url("https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30") center center no-repeat scroll',
+				},
+				cmps: [
+				  {
+					type: 'site-div',
+					style: {
+					  width: '30%',
+					  textAlign: 'center',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content:
+						  'Be yourself; everyone else is already taken.',
+						style: {
+						  backgroundColor: '#ffffff',
+						  fontFamily: 'Bitter',
+						  color: '#446e88',
+						  fontSize: '1rem',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  width: '30%',
+					  textAlign: 'center',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content:
+						  `You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nobody listening, And live like it's heaven on earth.`,
+						style: {
+						  backgroundColor: '#ffffff',
+						  fontSize: '1rem',
+						  fontFamily: 'Bitter',
+						  color: '#446e88',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  width: '30%',
+					  textAlign: 'center',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content: 'Be the change that you wish to see in the world.',
+						style: {
+						  backgroundColor: '#ffffff',
+						  fontSize: '1rem',
+						  fontFamily: 'Bitter',
+						  color: '#446e88',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  width: '30%',
+					  textAlign: 'center',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content:
+						  'No one can make you feel inferior without your consent.',
+						style: {
+						  backgroundColor: '#ffffff',
+						  fontFamily: 'Bitter',
+						  color: '#446e88',
+						  fontSize: '1rem',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  width: '30%',
+					  textAlign: 'center',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
+						style: {
+						  backgroundColor: '#ffffff',
+						  fontSize: '1rem',
+						  fontFamily: 'Bitter',
+						  color: '#446e88',
+						},
+					  },
+					],
+				  },
+				],
+			  },},
+
+		{name: "Text on Photo Left",
+			img:"https://i.ibb.co/T4xqJF7/Screenshot-2020-07-25-10-29-15.png",
+			tree:{
+				type: 'site-section',
+				class: 'text-on-photo-left',
+				style: {
+				  background:
+					'url(https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80) no-repeat',
+				},
+				cmps: [
+				  {
+					type: 'site-div',
+					style: {
+					  width: '30%',
+					  textAlign: 'center',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content:
+						  'Be yourself everyone else is already taken.',
+						style: {
+						  backgroundColor: '#d95b43',
+						  fontFamily: 'Bitter',
+						  color: '#80eaa9',
+						  fontSize: '1rem',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  width: '30%',
+					  textAlign: 'center',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content:
+						  `You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nobody listening, And live like it's heaven on earth.`,
+						style: {
+						  backgroundColor: '#d95b43',
+						  fontSize: '1rem',
+						  fontFamily: 'Bitter',
+						  color: '#80eaa9',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  width: '30%',
+					  textAlign: 'center',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content: 'Be the change that you wish to see in the world.',
+						style: {
+						  backgroundColor: '#d95b43',
+						  fontSize: '1rem',
+						  fontFamily: 'Bitter',
+						  color: '#80eaa9',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  width: '30%',
+					  textAlign: 'center',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content:
+						  'No one can make you feel inferior without your consent.',
+						style: {
+						  backgroundColor: '#d95b43',
+						  fontFamily: 'Bitter',
+						  color: '#80eaa9',
+						  fontSize: '1rem',
+						},
+					  },
+					],
+				  },
+				  {
+					type: 'site-div',
+					style: {
+					  width: '30%',
+					  textAlign: 'center',
+					},
+					cmps: [
+					  {
+						type: 'site-text',
+						content: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
+						style: {
+						  backgroundColor: '#d95b43',
+						  fontSize: '1rem',
+						  fontFamily: 'Bitter',
+						  color: '#80eaa9',
+						},
+					  },
+					],
+				  },
+				],
+			  },
+		},
+
+	],
 	footer:[{
 		name:'Headline & Subs Footer',
 		img:'https://i.gyazo.com/0ce95fbfe80480dd56833736c6bad1c4.png',
@@ -1103,7 +1328,6 @@ Sitemap`,
 									objectFit: 'cover',
 									width: '100%',
 								},
-								id: '4FINA825D7',
 							},
 							{
 								type: 'site-image',
@@ -1119,7 +1343,6 @@ Sitemap`,
 									left: 'calc(50% - 50px)',
 									objectFit: 'cover',
 								},
-								id: '9YryChNg4Y',
 							},
 							{
 								type: 'site-text',
@@ -1130,7 +1353,6 @@ Sitemap`,
 									fontSize: '2rem',
 									color: '#5aa55e',
 								},
-								id: 'FTg526zun4',
 							},
 							{
 								type: 'site-text',
@@ -1140,7 +1362,6 @@ Sitemap`,
 									color:
 										'#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b',
 								},
-								id: 'cR5cibruZT',
 							},
 							{
 								type: 'site-text',
@@ -1153,10 +1374,8 @@ Sitemap`,
 									width: '100%',
 									textAlign: 'center',
 								},
-								id: 'sS7JKPThTA',
 							},
 						],
-						id: 'hwNp1jM1sQ',
 					},
 					
 					{
@@ -1176,7 +1395,6 @@ Sitemap`,
 									width: '100%',
 									borderRadius: '12px 12px 0px 0px',
 								},
-								id: 'A0pMz1QA3m',
 							},
 							{
 								type: 'site-image',
@@ -1192,7 +1410,6 @@ Sitemap`,
 									left: 'calc(50% - 50px)',
 									objectFit: 'cover',
 								},
-								id: 'SAtBaMsAwm',
 							},
 							{
 								type: 'site-text',
@@ -1203,7 +1420,6 @@ Sitemap`,
 									fontSize: '2rem',
 									color: '#393330',
 								},
-								id: 'P0h7QNh4iX',
 							},
 							{
 								type: 'site-text',
@@ -1212,7 +1428,6 @@ Sitemap`,
 									fontFamily: 'Oswald',
 									color: '#3d3d3c',
 								},
-								id: 'p8VTpFIQyl',
 							},
 							{
 								type: 'site-text',
@@ -1225,10 +1440,8 @@ Sitemap`,
 									width: '100%',
 									textAlign: 'center',
 								},
-								id: '1kfQwfMQFk',
 							},
 						],
-						id: 'D1aAi5Pn9v',
 					},
 					{
 						type: 'site-div',
@@ -1247,7 +1460,6 @@ Sitemap`,
 									width: '100%',
 									borderRadius: '12px 12px 0px 0px',
 								},
-								id: 'A0pMz1QA3m',
 							},
 							{
 								type: 'site-image',
@@ -1264,7 +1476,6 @@ Sitemap`,
 									left: 'calc(50% - 50px)',
 									objectFit: 'cover',
 								},
-								id: 'SAtBaMsAwm',
 							},
 							{
 								type: 'site-text',
@@ -1275,7 +1486,6 @@ Sitemap`,
 									fontSize: '2rem',
 									color: '#f1c647',
 								},
-								id: 'P0h7QNh4iX',
 							},
 							{
 								type: 'site-text',
@@ -1284,7 +1494,6 @@ Sitemap`,
 									fontFamily: 'Oswald',
 									color: '#3d3d3c',
 								},
-								id: 'p8VTpFIQyl',
 							},
 							{
 								type: 'site-text',
@@ -1297,10 +1506,8 @@ Sitemap`,
 									width: '100%',
 									textAlign: 'center',
 								},
-								id: '1kfQwfMQFk',
 							},
 						],
-						id: 'D1aAi5Pn9v',
 					},
 					{
 						type: 'site-div',
@@ -1318,7 +1525,6 @@ Sitemap`,
 									width: '100%',
 									borderRadius: '12px 12px 0px 0px',
 								},
-								id: 'kpcait65wW',
 							},
 							{
 								type: 'site-image',
@@ -1334,7 +1540,6 @@ Sitemap`,
 									left: 'calc(50% - 50px)',
 									objectFit: 'cover',
 								},
-								id: 'WVVbR4xf5A',
 							},
 							{
 								type: 'site-text',
@@ -1345,7 +1550,6 @@ Sitemap`,
 									fontSize: '2rem',
 									color: '#704a26',
 								},
-								id: 'dA4i0cxJWq',
 							},
 							{
 								type: 'site-text',
@@ -1354,7 +1558,6 @@ Sitemap`,
 									fontFamily: 'Oswald',
 									color: '#434343',
 								},
-								id: 'fOD3YADgwH',
 							},
 							{
 								type: 'site-text',
@@ -1367,13 +1570,10 @@ Sitemap`,
 									width: '100%',
 									textAlign: 'center',
 								},
-								id: 'IQOrC39PZa',
 							},
 						],
-						id: 'lGfoBWxvIR',
 					},
 				],
-				id: 'n9zrfdBOSI',
 			},
 		},
 	],
@@ -1390,7 +1590,6 @@ Sitemap`,
 					backgroundSize: 'cover',
 				},
 				cmps: [],
-				id: 'cmEVW9661w',
 			},
 		},
 		{
@@ -1405,7 +1604,6 @@ Sitemap`,
 					backgroundSize: 'cover',
 				},
 				cmps: [],
-				id: 'cmEVW70S1w',
 			},
 		},
 		{
@@ -1418,7 +1616,6 @@ Sitemap`,
 					background: '#9be0ab',
 				},
 				cmps: [],
-				id: 'cmE9633S1w',
 			},
 		},
 		{
@@ -1431,7 +1628,6 @@ Sitemap`,
 					background: '#ff4762',
 				},
 				cmps: [],
-				id: 'cmE9633S1w',
 			},
 		},
 	],
@@ -1471,7 +1667,6 @@ Sitemap`,
 									height: '5rem',
 									paddingInlineStart: '1.5rem',
 								},
-								id: 'ZPEkMo7Jl9',
 							},
 							{
 								type: 'site-list',
@@ -1483,7 +1678,6 @@ Sitemap`,
 											marginInlineEnd: '1rem',
 											color: '#000000',
 										},
-										id: '6C1WKOMviK',
 									},
 									{
 										type: 'site-text',
@@ -1492,7 +1686,6 @@ Sitemap`,
 											marginInlineEnd: '1rem',
 											color: '#fff',
 										},
-										id: 'ZnSDUfBnoc',
 									},
 									{
 										type: 'site-text',
@@ -1501,7 +1694,6 @@ Sitemap`,
 											marginInlineEnd: '1rem',
 											color: '#fff',
 										},
-										id: 'BI7mwzgJMY',
 									},
 									{
 										type: 'site-text',
@@ -1510,7 +1702,6 @@ Sitemap`,
 											marginInlineEnd: '1rem',
 											color: '#fff',
 										},
-										id: 'apj9ziYJPr',
 									},
 									{
 										type: 'site-text',
@@ -1519,7 +1710,6 @@ Sitemap`,
 											marginInlineEnd: '1rem',
 											color: '#fff',
 										},
-										id: 'jV656FQjzv',
 									},
 								],
 								style: {
@@ -1527,10 +1717,8 @@ Sitemap`,
 									color: '#FFF',
 									display: 'flex',
 								},
-								id: 'LLyIOQEAlV',
 							},
 						],
-						id: 'kQaLi6AH7K',
 					},
 					{
 						type: 'site-div',
@@ -1551,7 +1739,6 @@ Sitemap`,
 									color: 'white',
 									textShadow: '0 0 2px black',
 								},
-								id: 'KmQWFoH66n',
 							},
 							{
 								type: 'site-text',
@@ -1562,7 +1749,6 @@ Sitemap`,
 									color: 'white',
 									textShadow: '0 0 1px black',
 								},
-								id: '6yZaTiUIRI',
 							},
 							{
 								type: 'site-button',
@@ -1578,13 +1764,10 @@ Sitemap`,
 									fontSize: '1.5rem',
 									fontWeight: 'bold',
 								},
-								id: 'fr176TWSCX',
 							},
 						],
-						id: 'eXvBUW7jmc',
 					},
 				],
-				id: 'vfx3i1WSHW',
 			},
 		},
 		{
@@ -1609,10 +1792,8 @@ Sitemap`,
 									fontSize: '1.2rem',
 									color: '#BA2204',
 								},
-								id: 'ytM2W33h2R',
 							},
 						],
-						id: 'pyadsGQW0p',
 					},
 					{
 						type: 'site-div',
@@ -1624,7 +1805,6 @@ Sitemap`,
 								content:
 									'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rechargewebs.com%2Fimages%2Ficon%2Fyour-logo.png&f=1&nofb=1',
 								style: {},
-								id: 'BaBfPbEWrB',
 							},
 							{
 								type: 'site-text',
@@ -1634,10 +1814,8 @@ Sitemap`,
 									fontSize: '1.2rem',
 									fontColor: '#000000',
 								},
-								id: 'VCGgMGGyRv',
 							},
 						],
-						id: 'xojjfdDbCr',
 					},
 					{
 						type: 'site-div',
@@ -1651,17 +1829,54 @@ Sitemap`,
 									fontSize: '1.2rem',
 									fontFamily: 'Oswald',
 								},
-								id: 'ItZcSZGOG2',
 							},
 						],
-						id: 'dDWe0Frr3S',
 					},
 				],
-				id: 'rEp6fCsC0P',
 			},
 		},
 	],
 	gallery: [
+		{name: "Poster 3 pics",
+    	img:"https://i.ibb.co/PjkXLrT/Screenshot-2020-07-25-12-09-24.png",
+    	tree:{
+            type: 'site-section',
+            class: 'three-pics-poster',
+            style: {
+
+            },
+            cmps: [
+              {
+                type: 'site-div',
+                style: {
+                  background:
+                    "url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg1.wikia.nocookie.net%2F__cb20150722183849%2Fmarvel_dc%2Fimages%2F8%2F87%2FWonder_Woman_Vol_4_42_Textless.jpg&f=1&nofb=1) no-repeat center center / cover scroll",
+
+                  width: '100%',
+                },
+                cmps: [],
+              },
+              {
+                type: 'site-div',
+                style: {
+                  background:
+                    'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F01%2F188460-Spider-Man-Marvel_Comics.jpg&f=1&nofb=1) no-repeat center center / cover scroll',
+
+                  width: '100%',
+                },
+                cmps: [],
+              },
+              {
+                type: 'site-div',
+                style: {
+                  background:
+                    "url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F4a%2Fbc%2Fa8%2F4abca8abdfda6359581be1153434266f.jpg&f=1&nofb=1) no-repeat center center / cover scroll",
+                  width: '100%',
+                },
+                cmps: [],
+              },
+            ],
+          },},
 		{
 			name: '4 Pics Gallery',
 			img: 'https://i.ibb.co/hXDGrmV/Screenshot-2020-07-23-16-52-46.png',
@@ -2276,7 +2491,6 @@ Sitemap`,
                                     fontWeigt: 'bold',
                                     fontSize: '1.5rem',
                                 },
-                                id: 'jNcCou9kz7',
                             },
                             {
                                 type: 'site-list',
@@ -2294,12 +2508,9 @@ Sitemap`,
                                         flexDirection: 'column',
                                         width: '100px',
                                     },
-                                    id: '9BzPQujz7J',
                                 }, ],
-                                id: 'UmTjOkgDrD',
                             },
                         ],
-                        id: 'nxO9VyFrrg',
                     },
                     {
                         type: 'site-div',
@@ -2314,7 +2525,6 @@ Sitemap`,
                                     fontWeigt: 'bold',
                                     fontSize: '1.5rem',
                                 },
-                                id: 'HEQwyRK3yp',
                             },
                             {
                                 type: 'site-list',
@@ -2332,12 +2542,9 @@ Sitemap`,
                                         flexDirection: 'column',
                                         width: '142px',
                                     },
-                                    id: 'gaxvWvVmuh',
                                 }, ],
-                                id: 'uGkjkHJJAW',
                             },
                         ],
-                        id: 'wfQ9UIKLPb',
                     },
                     {
                         type: 'site-div',
@@ -2352,7 +2559,6 @@ Sitemap`,
                                     fontWeigt: 'bold',
                                     fontSize: '1.5rem',
                                 },
-                                id: '3YdfYhoJgR',
                             },
                             {
                                 type: 'site-list',
@@ -2370,12 +2576,9 @@ Sitemap`,
                                         flexDirection: 'column',
                                         width: '140px',
                                     },
-                                    id: 'A7g9fFDAcd',
                                 }, ],
-                                id: 'hlkNwHCYHk',
                             },
                         ],
-                        id: '9GjbmVxZyB',
                     },
                     {
                         type: 'site-div',
@@ -2390,7 +2593,6 @@ Sitemap`,
                                     fontWeigt: 'bold',
                                     fontSize: '1.5rem',
                                 },
-                                id: '5Jp0YBzQSE',
                             },
                             {
                                 type: 'site-list',
@@ -2408,15 +2610,11 @@ Sitemap`,
                                         flexDirection: 'column',
                                         width: '90px',
                                     },
-                                    id: '5zqfWnwK53',
                                 }, ],
-                                id: 'SdMKEsjhws',
                             },
                         ],
-                        id: 'bXqIfQsUrt',
                     },
                 ],
-                id: 'XXTP3vVV5j',
             },
         },
         {
@@ -2450,7 +2648,6 @@ Sitemap`,
                                     height: '5rem',
                                     paddingInlineStart: '1.5rem',
                                 },
-                                id: 'ZPEkMo7Jl9',
                             },
                             {
                                 type: 'site-list',
@@ -2461,7 +2658,6 @@ Sitemap`,
                                             marginInlineEnd: '1rem',
                                             color: '#000000',
                                         },
-                                        id: '6C1WKOMviK',
                                     },
                                     {
                                         type: 'site-text',
@@ -2470,7 +2666,6 @@ Sitemap`,
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
                                         },
-                                        id: 'ZnSDUfBnoc',
                                     },
                                     {
                                         type: 'site-text',
@@ -2479,7 +2674,6 @@ Sitemap`,
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
                                         },
-                                        id: 'BI7mwzgJMY',
                                     },
                                     {
                                         type: 'site-text',
@@ -2488,7 +2682,6 @@ Sitemap`,
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
                                         },
-                                        id: 'apj9ziYJPr',
                                     },
                                     {
                                         type: 'site-text',
@@ -2497,7 +2690,6 @@ Sitemap`,
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
                                         },
-                                        id: 'jV656FQjzv',
                                     },
                                 ],
                                 style: {
@@ -2505,10 +2697,8 @@ Sitemap`,
                                     color: '#FFF',
                                     display: 'flex',
                                 },
-                                id: 'LLyIOQEAlV',
                             },
                         ],
-                        id: 'kQaLi6AH7K',
                     },
                     {
                         type: 'site-div',
@@ -2528,7 +2718,6 @@ Sitemap`,
                                     color: 'white',
                                     textShadow: '0 0 2px black',
                                 },
-                                id: 'KmQWFoH66n',
                             },
                             {
                                 type: 'site-text',
@@ -2539,7 +2728,6 @@ Sitemap`,
                                     color: 'white',
                                     textShadow: '0 0 1px black',
                                 },
-                                id: '6yZaTiUIRI',
                             },
                             {
                                 type: 'site-button',
@@ -2557,13 +2745,10 @@ Sitemap`,
                                     color: 'white',
                                     borderRadius: '20px',
                                 },
-                                id: 'fr176TWSCX',
                             },
                         ],
-                        id: 'eXvBUW7jmc',
                     },
                 ],
-                id: 'vfx3i1WSHW',
             },
         },
         {
@@ -2602,7 +2787,6 @@ Sitemap`,
                                     objectFit: 'cover',
                                     width: '100%',
                                 },
-                                id: '4FINA825D7',
                             },
                             {
                                 type: 'site-image',
@@ -2618,7 +2802,6 @@ Sitemap`,
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
                                 },
-                                id: '9YryChNg4Y',
                             },
                             {
                                 type: 'site-text',
@@ -2629,7 +2812,6 @@ Sitemap`,
                                     fontSize: '2rem',
                                     color: '#5aa55e',
                                 },
-                                id: 'FTg526zun4',
                             },
                             {
                                 type: 'site-text',
@@ -2638,7 +2820,6 @@ Sitemap`,
                                     fontFamily: 'Righteous',
                                     color: '#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b',
                                 },
-                                id: 'cR5cibruZT',
                             },
                             {
                                 type: 'site-text',
@@ -2652,10 +2833,8 @@ Sitemap`,
                                     textAlign: 'center',
                                     paddingBlockStart: '1rem',
                                 },
-                                id: 'sS7JKPThTA',
                             },
                         ],
-                        id: 'hwNp1jM1sQ',
                     },
                     {
                         type: 'site-div',
@@ -2679,7 +2858,6 @@ Sitemap`,
                                     width: '100%',
                                     borderRadius: '12px 12px 0px 0px',
                                 },
-                                id: 'A0pMz1QA3m',
                             },
                             {
                                 type: 'site-image',
@@ -2695,7 +2873,6 @@ Sitemap`,
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
                                 },
-                                id: 'SAtBaMsAwm',
                             },
                             {
                                 type: 'site-text',
@@ -2706,7 +2883,6 @@ Sitemap`,
                                     fontSize: '2rem',
                                     color: '#53311d',
                                 },
-                                id: 'P0h7QNh4iX',
                             },
                             {
                                 type: 'site-text',
@@ -2715,7 +2891,6 @@ Sitemap`,
                                     fontFamily: 'Righteous',
                                     color: '#3d3d3c',
                                 },
-                                id: 'p8VTpFIQyl',
                             },
                             {
                                 type: 'site-text',
@@ -2729,10 +2904,8 @@ Sitemap`,
                                     textAlign: 'center',
                                     paddingBlockStart: '1rem',
                                 },
-                                id: '1kfQwfMQFk',
                             },
                         ],
-                        id: 'D1aAi5Pn9v',
                     },
                     {
                         type: 'site-div',
@@ -2757,7 +2930,6 @@ Sitemap`,
                                     width: '100%',
                                     borderRadius: '12px 12px 0px 0px',
                                 },
-                                id: 'S6NuSSqVfH',
                             },
                             {
                                 type: 'site-image',
@@ -2774,7 +2946,6 @@ Sitemap`,
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
                                 },
-                                id: 'qSudjuXd6I',
                             },
                             {
                                 type: 'site-text',
@@ -2785,7 +2956,6 @@ Sitemap`,
                                     fontSize: '2rem',
                                     color: '#3855bc',
                                 },
-                                id: 'Z7Emvo4SbG',
                             },
                             {
                                 type: 'site-text',
@@ -2794,7 +2964,6 @@ Sitemap`,
                                     fontFamily: 'Righteous',
                                     color: '#527db4',
                                 },
-                                id: 'a6VIClalZz',
                             },
                             {
                                 type: 'site-text',
@@ -2808,10 +2977,8 @@ Sitemap`,
                                     textAlign: 'center',
                                     paddingBlockStart: '1rem',
                                 },
-                                id: 'csRPeUuaHi',
                             },
                         ],
-                        id: 'D0x2FslItL',
                     },
                     {
                         type: 'site-div',
@@ -2836,7 +3003,6 @@ Sitemap`,
                                     width: '100%',
                                     borderRadius: '12px 12px 0px 0px',
                                 },
-                                id: 'kpcait65wW',
                             },
                             {
                                 type: 'site-image',
@@ -2852,7 +3018,6 @@ Sitemap`,
                                     left: 'calc(50% - 50px)',
                                     objectFit: 'cover',
                                 },
-                                id: 'WVVbR4xf5A',
                             },
                             {
                                 type: 'site-text',
@@ -2863,7 +3028,6 @@ Sitemap`,
                                     fontSize: '2rem',
                                     color: '#704a26',
                                 },
-                                id: 'dA4i0cxJWq',
                             },
                             {
                                 type: 'site-text',
@@ -2872,7 +3036,6 @@ Sitemap`,
                                     fontFamily: 'Righteous',
                                     color: '#434343',
                                 },
-                                id: 'fOD3YADgwH',
                             },
                             {
                                 type: 'site-text',
@@ -2886,10 +3049,8 @@ Sitemap`,
                                     textAlign: 'center',
                                     paddingBlockStart: '1rem',
                                 },
-                                id: 'IQOrC39PZa',
                             },
                         ],
-                        id: 'lGfoBWxvIR',
                     },
                     {
                         type: 'site-div',
@@ -2912,12 +3073,9 @@ Sitemap`,
                                 fontSize: '1.2rem',
                                 boxShadow: '0 0 2px black',
                             },
-                            id: '6ZD3hkff48',
                         }, ],
-                        id: 'oOS5N2JH8q',
                     },
                 ],
-                id: 'n9zrfdBOSI',
             },
         },
     ],
@@ -2994,1236 +3152,3 @@ function _update(template) {
 function _add(template) {
     return httpService.post(`template`, template);
 }
-
-// const templates = [{
-//     _id: "5e28393890dd7201a06d4e44",
-//     name: "new site",
-//     previewImg: "https://i.ibb.co/7WNJ84F/travel.png",
-//     createdBy: {
-//         username: "eni",
-//         _id: "5e26e0b718a0891d4c995527",
-//     },
-//     cmps: [{
-//             type: "site-section",
-//             style: {
-//                 background: "url(https://images.unsplash.com/photo-1506104489822-562ca25152fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80) no-repeat center center scroll",
-//                 backgroundSize: "cover",
-//                 height: "620px",
-//                 padding: "10px 10px 10px 10px",
-//                 display: "flex",
-//                 flexDirection: "column",
-//                 alignItems: "center",
-//             },
-//             cmps: [{
-//                     type: "site-div",
-//                     style: {
-//                         height: "6rem",
-//                         width: "100%",
-//                         display: "flex",
-//                         justifyContent: "space-between",
-//                         backgroundColor: "#b0c3c266",
-//                         alignItems: "center",
-//                     },
-//                     cmps: [{
-//                             type: "site-image",
-//                             content: "https://i1.sndcdn.com/avatars-000214595785-kgx9qu-t500x500.jpg",
-//                             style: {
-//                                 height: "5rem",
-//                                 objectFit: "cover",
-//                                 borderRadius: "16px",
-//                                 paddingInlineStart: ".1rem"
-//                             },
-//                         },
-//                         {
-//                             type: "site-list",
-//                             cmps: [{
-//                                     type: "site-text",
-//                                     content: "HOME",
-//                                     style: {
-//                                         marginInlineEnd: "1rem",
-//                                         color: "#000000",
-//                                     },
-//                                 },
-//                                 {
-//                                     type: "site-text",
-//                                     content: "ABOUT",
-//                                     style: {
-//                                         marginInlineEnd: "1rem",
-//                                         color: "#000000",
-//                                     },
-//                                 },
-//                                 {
-//                                     type: "site-text",
-//                                     content: "SERVICES",
-//                                     style: {
-//                                         marginInlineEnd: "1rem",
-//                                         color: "#000000",
-//                                     },
-//                                 },
-//                                 {
-//                                     type: "site-text",
-//                                     content: "DESTINATIONS",
-//                                     style: {
-//                                         marginInlineEnd: "1rem",
-//                                         color: "#000000",
-//                                     },
-//                                 },
-//                                 {
-//                                     type: "site-text",
-//                                     content: "CONTACT US",
-//                                     style: {
-//                                         marginInlineEnd: "1rem",
-//                                         color: "#000000",
-//                                     },
-//                                 },
-//                             ],
-
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 color: "#FFF",
-//                                 display: "flex",
-//                             },
-//                         },
-//                     ],
-//                 },
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         height: "500px",
-//                         display: "flex",
-//                         alignItems: "center",
-//                         flexDirection: "column",
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "Explore Amazing Places",
-//                             style: {
-//                                 fontSize: "5rem",
-//                                 fontFamily: "Righteous",
-//                                 color: "white",
-//                                 textShadow: "0 0 2px black"
-//                             },
-//                         },
-//                         {
-//                             type: "site-button",
-//                             content: { text: "BOOK NOW", href: "" },
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 backgroundColor: "#5ba8b3",
-//                                 padding: "1rem",
-//                                 textTransform: "uppercase",
-//                                 boxShadow: "4px 4px #000",
-//                                 width: "9rem",
-//                                 boxShadow: "#0000008c",
-//                                 color: "white",
-//                                 borderRadius: "20px",
-//                             },
-//                         },
-//                     ],
-//                 },
-//             ],
-//         },
-//         {
-//             type: "site-section",
-//             style: {
-//                 height: "500px",
-//                 width: "100%",
-//                 padding: "2rem",
-//                 display: "flex",
-//                 flexDirection: "column",
-//                 textAlign: "center",
-//                 alignItems: "center",
-
-//             },
-//             cmps: [{
-//                 type: "site-div",
-//                 style: {
-//                     textAlign: "center",
-//                     display: "flex",
-//                     flexDirection: "column",
-//                     alignItems: "center",
-//                     padding: "3rem",
-
-//                 },
-//                 cmps: [{
-//                         type: "site-text",
-//                         content: "About Us",
-//                         style: {
-//                             fontSize: "1rem",
-//                             fontWeight: "bold",
-//                         },
-//                     },
-//                     {
-//                         type: "site-text",
-//                         content: `On earth there is no heaven,
-//            but there are pieces of it and we will get you there`,
-//                         style: {
-//                             fontSize: "2.5rem",
-//                             fontWeight: "bolder",
-//                             width: "45%",
-//                             fontFamily: "Righteous"
-//                         },
-//                     },
-//                     {
-//                         type: "site-button",
-//                         content: { text: "Learn More", href: "" },
-//                         style: {
-//                             fontFamily: "Righteous",
-//                             backgroundColor: "#5ba8b3",
-//                             padding: "1rem",
-//                             textTransform: "uppercase",
-//                             width: "9rem",
-//                             borderRadius: "20px",
-//                             color: "white",
-//                             boxShadow: "2px 2px 2px #0000008c",
-//                             marginBlockStart: "1rem",
-//                         },
-//                     },
-//                 ],
-//             }, ],
-//         },
-//         {
-//             type: "site-section",
-//             style: {
-//                 height: "500px",
-//                 width: "100%",
-//                 padding: "2rem",
-//                 display: "flex",
-//                 justifyContent: "space-around",
-//                 alignItems: "center",
-//             },
-//             cmps: [{
-//                     type: "site-div",
-//                     style: {
-//                         display: "flex",
-//                         flexDirection: "column",
-//                         padding: "1rem",
-//                         height: "450px",
-//                         width: "55%",
-//                         marginInlineStart: "100px"
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: `Lago Di Braies, Italy`,
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 textAlign: "center",
-//                                 lineHeight: "2rem",
-//                                 fontSize: "2rem",
-//                                 fontWeight: "bold",
-
-//                             },
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: `In summer, lake Lago di Braies in South Tyrol reflects colours in all shades from green to blue, in winter Lago di Braies is covered with ice and snow. In winter and summer this jewel is the starting point for hikes, ski tours, snowshoe hikes and walks. Book through us and let's explore it together!`,
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 padding: "1rem",
-//                                 textAlign: "center",
-//                                 lineHeight: "2rem",
-//                                 fontSize: "1rem",
-//                                 marginBlockStart: "1rem"
-
-//                             },
-//                         },
-//                     ],
-//                 },
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         height: "450px",
-//                         width: "45%"
-
-//                     },
-//                     cmps: [{
-//                         type: "site-image",
-//                         content: "https://images.unsplash.com/photo-1521102761523-b268f61473e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1549&q=80",
-//                         style: {
-//                             height: "100%",
-//                             width: "100%"
-
-//                         }
-//                     }]
-//                 }
-//             ],
-//         },
-
-//         {
-//             type: "site-section",
-//             style: {
-//                 height: "500px",
-//                 width: "100%",
-//                 padding: "2rem",
-//                 display: "flex",
-//                 justifyContent: "space-around",
-//                 alignItems: "center",
-//             },
-
-//             cmps: [{
-//                     type: "site-div",
-//                     style: {
-//                         height: "450px",
-//                         width: "50%",
-//                         marginInlineStart: "120px"
-//                     },
-//                     cmps: [{
-//                         type: "site-image",
-//                         content: "https://images.unsplash.com/photo-1565609537938-14d88e26cdf5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80",
-//                         style: {
-//                             width: "100%",
-//                             height: "100%"
-//                         }
-//                     }]
-//                 },
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         display: "flex",
-//                         flexDirection: "column",
-//                         padding: "1rem",
-//                         width: "50%",
-//                         height: "450px",
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: `The Cordillera Huayhuash Trek, Peru`,
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 textAlign: "center",
-//                                 lineHeight: "2rem",
-//                                 fontSize: "2rem",
-//                                 fontWeight: "bold"
-//                             },
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: `Possibly the best alpine trek in the entire world, the Cordillera Huayhuash trek has become well-known among outdoors enthusiasts for its sheer mountain peaks, pristine glacial lakes, and encounters with traditional Andean culture. Are you ready for it ?`,
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 padding: "1rem",
-//                                 textAlign: "center",
-//                                 lineHeight: "2rem",
-//                                 fontSize: "1rem",
-//                                 marginBlockStart: "1rem"
-
-//                             },
-//                         },
-//                     ],
-//                 },
-
-//             ],
-//         },
-
-//         {
-//             type: "site-section",
-//             style: {
-//                 height: "500px",
-//                 width: "100%",
-//                 display: "flex",
-//                 justifyContent: "space-between",
-//                 alignItems: "center",
-//             },
-//             cmps: [{
-//                     type: "site-div",
-//                     style: {
-//                         display: "flex",
-//                         flexDirection: "column",
-//                         alignItems: "center",
-//                         backgroundColor: "#ffffc47d",
-//                         height: "100%",
-//                         width: "50%"
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "CONTACT US",
-//                             style: {
-//                                 fontSize: "3rem",
-//                                 fontFamily: "Righteous",
-//                                 textShadow: "0 0 1px black"
-
-//                             }
-//                         },
-//                         {
-//                             type: "site-form",
-//                             style: {
-//                                 display: "flex",
-//                                 flexDirection: "column",
-//                                 width: "180px",
-//                                 color: "#313b3f",
-//                                 paddingBlockStart: "2rem"
-
-//                             },
-//                             btnStyle: {
-//                                 marginBlockStart: "1rem",
-//                                 backgroundColor: "#202020",
-//                                 width: "190px",
-//                                 fontSize: "1.1rem",
-//                                 color: "white",
-//                                 borderRadius: "8px"
-
-//                             },
-//                             content: [{
-//                                     type: "text",
-//                                     tag: "Full Name"
-//                                 },
-//                                 {
-//                                     type: "email",
-//                                     tag: "Email"
-//                                 },
-//                                 {
-//                                     type: "tel",
-//                                     tag: "Phone"
-//                                 }
-//                             ]
-
-//                         }
-//                     ]
-//                 },
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         height: "100%",
-//                         width: "50%"
-//                     },
-
-//                     cmps: [{
-//                         type: "site-map",
-
-//                     }]
-//                 }
-//             ]
-//         },
-//         {
-//             type: "site-section",
-//             style: {
-//                 height: "250px",
-//                 width: "100%",
-//                 display: "flex",
-//                 justifyContent: "space-around",
-//                 alignItems: "center",
-//                 backgroundColor: "#5ba8b3cc",
-//                 color: "white",
-//                 paddingBlockStart: "2rem"
-//             },
-//             cmps: [{
-//                     type: "site-div",
-//                     style: {
-//                         height: "100%"
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "DESTINATIONS",
-//                             style: {
-//                                 width: "100px",
-//                                 fontWeigt: "bold",
-//                                 fontSize: "1.5rem",
-//                             },
-//                         },
-//                         {
-//                             type: "site-list",
-//                             style: {
-//                                 display: "flex",
-//                                 flexDirection: "column",
-//                                 color: "#fff",
-//                                 marginTop: "1rem",
-//                             },
-//                             cmps: [
-
-//                                 {
-//                                     type: "site-text",
-//                                     content: `New-Zealand Australia Argentina Bolivia More...`,
-//                                     style: {
-//                                         display: "flex",
-//                                         flexDirection: "column",
-//                                         width: "100px"
-//                                     },
-//                                 },
-
-//                             ],
-//                         }
-//                     ],
-//                 },
-
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         height: "100%"
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "SHOP",
-//                             style: {
-//                                 width: "100px",
-//                                 fontWeigt: "bold",
-//                                 fontSize: "1.5rem",
-//                             },
-//                         },
-//                         {
-//                             type: "site-list",
-//                             style: {
-//                                 display: "flex",
-//                                 flexDirection: "column",
-//                                 color: "#fff",
-//                                 marginTop: "1rem",
-//                             },
-//                             cmps: [
-
-//                                 {
-//                                     type: "site-text",
-//                                     content: `Non English Guides Delivery Times Special Offers FAQs`,
-//                                     style: {
-//                                         display: "flex",
-//                                         flexDirection: "column",
-//                                         width: "142px"
-//                                     },
-//                                 },
-
-//                             ],
-//                         }
-//                     ],
-//                 }, {
-//                     type: "site-div",
-//                     style: {
-//                         height: "100%",
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "FORUMS",
-//                             style: {
-//                                 width: "100px",
-//                                 fontWeigt: "bold",
-//                                 fontSize: "1.5rem",
-//                             },
-//                         },
-//                         {
-//                             type: "site-list",
-//                             style: {
-//                                 display: "flex",
-//                                 flexDirection: "column",
-//                                 color: "#fff",
-//                                 marginTop: "1rem",
-//                             },
-//                             cmps: [
-
-//                                 {
-//                                     type: "site-text",
-//                                     content: `Country Forums Interest Forums Talk To Us`,
-//                                     style: {
-//                                         display: "flex",
-//                                         flexDirection: "column",
-//                                         width: "140px"
-//                                     },
-//                                 },
-
-//                             ],
-//                         }
-//                     ],
-//                 }, {
-//                     type: "site-div",
-//                     style: {
-//                         height: "100%"
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "TRAVEL BOOKING",
-//                             style: {
-//                                 width: "100px",
-//                                 fontWeigt: "bold",
-//                                 fontSize: "1.5rem",
-//                             },
-//                         },
-//                         {
-//                             type: "site-list",
-//                             style: {
-//                                 display: "flex",
-//                                 flexDirection: "column",
-//                                 color: "#fff",
-//                                 marginTop: "1rem",
-//                             },
-//                             cmps: [
-
-//                                 {
-//                                     type: "site-text",
-//                                     content: `Hotels Flights Insurance`,
-//                                     style: {
-//                                         display: "flex",
-//                                         flexDirection: "column",
-//                                         width: "90px"
-//                                     },
-//                                 },
-
-//                             ],
-//                         }
-//                     ],
-//                 },
-//             ],
-//         },
-
-//     ],
-// },
-
-//site 2
-
-// {
-//     _id: "5e28393890dd7201a06d4e45",
-//     name: "new site",
-//     previewImg: "https://i.ibb.co/0QCRYzb/nathional.png",
-//     createdBy: {
-//         username: "eni",
-//         _id: "5e26e0b718a0891d4c995527",
-//     },
-//     cmps: [{
-//             type: "site-section",
-//             style: {
-//                 background: "url(https://images.unsplash.com/photo-1551439237-dd457099b104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center scroll",
-//                 backgroundSize: "cover",
-//                 height: "100vh",
-//                 padding: "10px 10px 10px 10px",
-//                 display: "flex",
-//                 flexDirection: "column",
-//                 alignItems: "center",
-//             },
-//             cmps: [{
-//                     type: "site-div",
-//                     style: {
-//                         height: "6rem",
-//                         width: "100%",
-//                         display: "flex",
-//                         justifyContent: "space-between",
-//                         backgroundColor: "#d9ccc959",
-//                         alignItems: "center",
-//                     },
-//                     cmps: [{
-//                             type: "site-image",
-//                             content: require("../assets/imgs/dog-logo.png"),
-//                             style: {
-//                                 height: "5rem",
-//                                 paddingInlineStart: "1.5rem"
-//                             },
-//                         },
-//                         {
-//                             type: "site-list",
-//                             cmps: [{
-//                                     type: "site-text",
-//                                     content: "HOME",
-//                                     style: {
-//                                         marginInlineEnd: "1rem",
-//                                         color: "#000000",
-//                                     },
-//                                 },
-//                                 {
-//                                     type: "site-text",
-//                                     content: "ARTICLES",
-//                                     style: {
-//                                         marginInlineEnd: "1rem",
-//                                         color: "#000000",
-//                                     },
-//                                 },
-//                                 {
-//                                     type: "site-text",
-//                                     content: "MEMBERS",
-//                                     style: {
-//                                         marginInlineEnd: "1rem",
-//                                         color: "#000000",
-//                                     },
-//                                 },
-//                                 {
-//                                     type: "site-text",
-//                                     content: "ABOUT",
-//                                     style: {
-//                                         marginInlineEnd: "1rem",
-//                                         color: "#000000",
-//                                     },
-//                                 },
-//                                 {
-//                                     type: "site-text",
-//                                     content: "CONTACT US",
-//                                     style: {
-//                                         marginInlineEnd: "1rem",
-//                                         color: "#000000",
-//                                     },
-//                                 },
-//                             ],
-
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 color: "#FFF",
-//                                 display: "flex",
-//                             },
-//                         },
-//                     ],
-//                 },
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         height: "700px",
-//                         display: "flex",
-//                         alignItems: "center",
-//                         justifyContent: "center",
-//                         flexDirection: "column",
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "ANIMAL GEOGRAPHIC",
-//                             style: {
-//                                 fontSize: "4rem",
-//                                 fontFamily: "Righteous",
-//                                 color: "white",
-//                                 textShadow: "0 0 2px black"
-//                             },
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "We Bring You The Best Articles",
-//                             style: {
-//                                 fontSize: "1.875rem",
-//                                 fontFamily: "Righteous",
-//                                 color: "white",
-//                                 textShadow: "0 0 1px black"
-//                             },
-//                         },
-//                         {
-//                             type: "site-button",
-//                             content: { text: "SUBSCRIBE", href: "" },
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 backgroundColor: "#cb965b",
-//                                 padding: "1rem",
-//                                 textTransform: "uppercase",
-//                                 boxShadow: "4px 4px #000",
-//                                 width: "9rem",
-//                                 boxShadow: "#0000008c",
-//                                 color: "white",
-//                                 borderRadius: "20px",
-//                             },
-//                         },
-//                     ],
-//                 },
-//             ],
-//         },
-//         {
-//             type: "site-section",
-//             style: {
-//                 width: "100%",
-//                 backgroundColor: "#774a0d1f",
-//                 height: "100px",
-//                 display: "flex",
-//                 alignItems: "center",
-//                 fontFamily: "Righteous"
-//             },
-//             cmps: [{
-//                 type: "site-div",
-//                 style: {
-//                     width: "100%",
-//                     textAlign: "center",
-//                 },
-//                 cmps: [{
-//                     type: "site-text",
-//                     content: "ARTICLES",
-//                     style: {
-//                         fontSize: "3rem"
-//                     }
-//                 }]
-//             }]
-//         },
-//         {
-//             type: "site-section",
-//             style: {
-//                 backgroundColor: "#f3eee9",
-//                 height: "1400px",
-//                 display: "flex",
-//                 width: "100%",
-//                 justifyContent: "space-between",
-//                 flexWrap: "wrap",
-//                 padding: "4rem 11rem",
-
-//             },
-//             cmps: [{
-//                     type: "site-div",
-//                     style: {
-//                         height: "500px",
-//                         width: "45%",
-//                         display: "flex",
-//                         flexDirection: "center",
-//                         backgroundColor: "#ffffff",
-//                         borderRadius: "12px",
-//                         position: "relative",
-//                         flexDirection: "column",
-//                         alignItems: "center",
-//                         boxShadow: "0 0 3px black"
-//                     },
-//                     cmps: [{
-//                             type: "site-image",
-//                             content: "https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80",
-//                             style: {
-//                                 height: "260px",
-//                                 borderRadius: "12px 12px 0px 0px",
-//                                 objectFit: "cover",
-//                                 width: "100%",
-//                             }
-//                         },
-//                         {
-//                             type: "site-image",
-//                             content: "https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80",
-//                             style: {
-//                                 height: "100px",
-//                                 width: "100px",
-//                                 position: "absolute",
-//                                 border: "6px white solid",
-//                                 borderRadius: "50%",
-//                                 bottom: "38%",
-//                                 zIndex: "1",
-//                                 left: "calc(50% - 50px)",
-//                                 objectFit: "cover"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "Dogs",
-//                             style: {
-//                                 marginBlockStart: "5rem",
-//                                 fontFamily: "Righteous",
-//                                 fontSize: "2rem",
-//                                 color: "#5aa55e"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "Read All About The Man's Best Friend .",
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 color: "#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "READ MORE",
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 color: "#0000000",
-//                                 marginBlockStart: "2rem",
-//                                 borderBlockStart: "1px solid black",
-//                                 width: "100%",
-//                                 textAlign: "center",
-//                                 paddingBlockStart: "1rem"
-//                             }
-//                         }
-
-//                     ]
-//                 },
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         height: "500px",
-//                         width: "45%",
-//                         display: "flex",
-//                         flexDirection: "column",
-//                         backgroundColor: "#fff",
-//                         borderRadius: "12px",
-//                         position: "relative",
-//                         alignItems: "center",
-//                         boxShadow: "0 0 3px black"
-
-//                     },
-//                     cmps: [{
-//                             type: "site-image",
-//                             content: "https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-//                             style: {
-//                                 height: "260px",
-//                                 objectFit: "cover",
-//                                 width: "100%",
-//                                 borderRadius: "12px 12px 0px 0px",
-//                             }
-//                         },
-//                         {
-//                             type: "site-image",
-//                             content: "https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-//                             style: {
-//                                 height: "100px",
-//                                 width: "100px",
-//                                 position: "absolute",
-//                                 border: "6px white solid",
-//                                 borderRadius: "50%",
-//                                 bottom: "38%",
-//                                 zIndex: "1",
-//                                 left: "calc(50% - 50px)",
-//                                 objectFit: "cover"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "The King Of The Jungle",
-//                             style: {
-//                                 marginBlockStart: "5rem",
-//                                 fontFamily: "Righteous",
-//                                 fontSize: "2rem",
-//                                 color: "#53311d"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "Read All About The Mighty Lion.",
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 color: "#3d3d3c"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "READ MORE",
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 color: "#0000000",
-//                                 marginBlockStart: "2rem",
-//                                 borderBlockStart: "1px solid black",
-//                                 width: "100%",
-//                                 textAlign: "center",
-//                                 paddingBlockStart: "1rem"
-//                             }
-//                         }
-//                     ]
-//                 },
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         height: "500px",
-//                         width: "45%",
-//                         display: "flex",
-//                         flexDirection: "column",
-//                         backgroundColor: "#fff",
-//                         borderRadius: "12px",
-//                         position: "relative",
-//                         alignItems: "center",
-//                         marginBlockStart: "7rem",
-//                         boxShadow: "0 0 3px black"
-
-//                     },
-//                     cmps: [{
-//                             type: "site-image",
-//                             content: "https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80",
-//                             style: {
-//                                 height: "260px",
-//                                 objectFit: "cover",
-//                                 width: "100%",
-//                                 borderRadius: "12px 12px 0px 0px",
-
-//                             }
-//                         },
-//                         {
-//                             type: "site-image",
-//                             content: "https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80",
-//                             style: {
-//                                 height: "100px",
-//                                 width: "100px",
-//                                 position: "absolute",
-//                                 backgroundSize: "cover",
-//                                 border: "6px white solid",
-//                                 borderRadius: "50%",
-//                                 bottom: "38%",
-//                                 zIndex: "1",
-//                                 left: "calc(50% - 50px)",
-//                                 objectFit: "cover"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "JAWS",
-//                             style: {
-//                                 marginBlockStart: "5rem",
-//                                 fontFamily: "Righteous",
-//                                 fontSize: "2rem",
-//                                 color: "#3855bc"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "Read All About Sharks.",
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 color: "#527db4"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "READ MORE",
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 color: "#0000000",
-//                                 marginBlockStart: "2rem",
-//                                 borderBlockStart: "1px solid black",
-//                                 width: "100%",
-//                                 textAlign: "center",
-//                                 paddingBlockStart: "1rem"
-//                             }
-//                         }
-//                     ]
-//                 },
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         height: "500px",
-//                         width: "45%",
-//                         display: "flex",
-//                         flexDirection: "center",
-//                         backgroundColor: "#ffffff",
-//                         borderRadius: "12px",
-//                         position: "relative",
-//                         flexDirection: "column",
-//                         alignItems: "center",
-//                         marginBlockStart: "7rem",
-//                         boxShadow: "0 0 3px black"
-
-//                     },
-//                     cmps: [{
-//                             type: "site-image",
-//                             content: "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg",
-//                             style: {
-//                                 height: "260px",
-//                                 objectFit: "cover",
-//                                 width: "100%",
-//                                 borderRadius: "12px 12px 0px 0px",
-
-//                             }
-//                         },
-//                         {
-//                             type: "site-image",
-//                             content: "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg",
-//                             style: {
-//                                 height: "100px",
-//                                 width: "100px",
-//                                 position: "absolute",
-//                                 border: "6px white solid",
-//                                 borderRadius: "50%",
-//                                 bottom: "38%",
-//                                 zIndex: "1",
-//                                 left: "calc(50% - 50px)",
-//                                 objectFit: "cover"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "Cats",
-//                             style: {
-//                                 marginBlockStart: "5rem",
-//                                 fontFamily: "Righteous",
-//                                 fontSize: "2rem",
-//                                 color: "#704a26"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "Read All About Cats.",
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 color: "#434343"
-//                             }
-//                         },
-//                         {
-//                             type: "site-text",
-//                             content: "READ MORE",
-//                             style: {
-//                                 fontFamily: "Righteous",
-//                                 color: "#0000000",
-//                                 marginBlockStart: "2rem",
-//                                 borderBlockStart: "1px solid black",
-//                                 width: "100%",
-//                                 textAlign: "center",
-//                                 paddingBlockStart: "1rem"
-//                             }
-//                         }
-//                     ]
-//                 },
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         width: "100%",
-//                         textAlign: "center"
-//                     },
-//                     cmps: [{
-//                         type: "site-button",
-//                         content: { text: "MORE ARTICLES...", href: "" },
-//                         style: {
-//                             backgroundColor: "#cfaf8987",
-//                             borderRadius: "20px",
-//                             padding: "1rem",
-//                             marginBlockStart: "3rem",
-//                             width: "50%",
-//                             fontSize: "1.2rem",
-//                             boxShadow: "0 0 2px black"
-//                         }
-
-//                     }]
-//                 }
-//             ]
-//         },
-
-//         {
-//             type: "site-section",
-//             style: {
-//                 height: "250px",
-//                 width: "100%",
-//                 display: "flex",
-//                 justifyContent: "space-around",
-//                 alignItems: "center",
-//                 backgroundColor: "#9f611580",
-//                 color: "white",
-//                 paddingBlockStart: "2rem"
-//             },
-//             cmps: [{
-//                     type: "site-div",
-//                     style: {
-//                         height: "100%"
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "DESTINATIONS",
-//                             style: {
-//                                 width: "100px",
-//                                 fontWeigt: "bold",
-//                                 fontSize: "1.5rem",
-//                             },
-//                         },
-//                         {
-//                             type: "site-list",
-//                             style: {
-//                                 display: "flex",
-//                                 flexDirection: "column",
-//                                 color: "#fff",
-//                                 marginTop: "1rem",
-//                             },
-//                             cmps: [
-
-//                                 {
-//                                     type: "site-text",
-//                                     content: `New-Zealand Australia Argentina Bolivia More...`,
-//                                     style: {
-//                                         display: "flex",
-//                                         flexDirection: "column",
-//                                         width: "100px"
-//                                     },
-//                                 },
-
-//                             ],
-//                         }
-//                     ],
-//                 },
-
-//                 {
-//                     type: "site-div",
-//                     style: {
-//                         height: "100%"
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "SHOP",
-//                             style: {
-//                                 width: "100px",
-//                                 fontWeigt: "bold",
-//                                 fontSize: "1.5rem",
-//                             },
-//                         },
-//                         {
-//                             type: "site-list",
-//                             style: {
-//                                 display: "flex",
-//                                 flexDirection: "column",
-//                                 color: "#fff",
-//                                 marginTop: "1rem",
-//                             },
-//                             cmps: [
-
-//                                 {
-//                                     type: "site-text",
-//                                     content: `Non English Guides Delivery Times Special Offers FAQs`,
-//                                     style: {
-//                                         display: "flex",
-//                                         flexDirection: "column",
-//                                         width: "142px"
-//                                     },
-//                                 },
-
-//                             ],
-//                         }
-//                     ],
-//                 }, {
-//                     type: "site-div",
-//                     style: {
-//                         height: "100%",
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "FORUMS",
-//                             style: {
-//                                 width: "100px",
-//                                 fontWeigt: "bold",
-//                                 fontSize: "1.5rem",
-//                             },
-//                         },
-//                         {
-//                             type: "site-list",
-//                             style: {
-//                                 display: "flex",
-//                                 flexDirection: "column",
-//                                 color: "#fff",
-//                                 marginTop: "1rem",
-//                             },
-//                             cmps: [
-
-//                                 {
-//                                     type: "site-text",
-//                                     content: `Country Forums Interest Forums Talk To Us`,
-//                                     style: {
-//                                         display: "flex",
-//                                         flexDirection: "column",
-//                                         width: "140px"
-//                                     },
-//                                 },
-
-//                             ],
-//                         }
-//                     ],
-//                 }, {
-//                     type: "site-div",
-//                     style: {
-//                         height: "100%"
-//                     },
-//                     cmps: [{
-//                             type: "site-text",
-//                             content: "TRAVEL BOOKING",
-//                             style: {
-//                                 width: "100px",
-//                                 fontWeigt: "bold",
-//                                 fontSize: "1.5rem",
-//                             },
-//                         },
-//                         {
-//                             type: "site-list",
-//                             style: {
-//                                 display: "flex",
-//                                 flexDirection: "column",
-//                                 color: "#fff",
-//                                 marginTop: "1rem",
-//                             },
-//                             cmps: [
-
-//                                 {
-//                                     type: "site-text",
-//                                     content: `Hotels Flights Insurance`,
-//                                     style: {
-//                                         display: "flex",
-//                                         flexDirection: "column",
-//                                         width: "90px"
-//                                     },
-//                                 },
-
-//                             ],
-//                         }
-//                     ],
-//                 },
-//             ],
-//         },
-
-//     ]
-// }
-// ]
