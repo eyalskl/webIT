@@ -7,38 +7,32 @@
       <router-link to="/">Home</router-link>
       <router-link to="/templates">Templates</router-link>
       <router-link to="/about">About</router-link>
-      <button class="publish" @click="saveSite"> Save </button>
+      <button class="publish" @click="saveSite">Save</button>
       <router-link class="publish" :to="'/' + siteId">Publish</router-link>
     </div>
   </nav>
 </template>
 
 <script>
+
 export default {
   name: 'nav-bar',
   data() {
     return {
       siteId: '',
-    }
+    };
   },
   methods: {
     saveSite() {
-      html2canvas(document.querySelector(".site-image"), {
-      onrendered: function(canvas){
-      var img = canvas.toDataURL();
-      console.log(img)
-      // document.querySelector(".site-image").getAttribute('src', img).show();
-      }
-      });
-      // this.$store.dispatch({type: 'saveSite'});
-    }
-  }, 
+
+      this.$store.dispatch({type: 'saveSite'});
+    },
+    },
   created() {
     this.siteId = this.$route.params.id;
   },
-}
+};
 </script>
 
 <style>
-
 </style>
