@@ -19,13 +19,13 @@
 </template>
 
 <script>
-import navBar from "@/components/nav-bar.cmp.vue";
-import siteWorkspace from "../components/site-workspace.cmp.vue";
-import elementDashboard from "@/components/element-dashboard.cmp.vue";
-import { templateService } from "@/services/template-service.js";
-import { Container, Draggable } from "vue-smooth-dnd";
-import { applyDrag, generateItems } from "@/assets/drag-test.js";
-
+import navBar from '@/components/nav-bar.cmp.vue';
+import siteWorkspace from '../components/site-workspace.cmp.vue';
+import elementDashboard from '@/components/element-dashboard.cmp.vue';
+import { templateService } from '@/services/template-service.js';
+import { utilService } from '@/services/util.service.js';
+import { Container, Draggable } from 'vue-smooth-dnd';
+import { applyDrag, generateItems } from '@/assets/drag-test.js';
 import {
   eventBus,
   ADD_SAMPLE,
@@ -33,9 +33,8 @@ import {
   CLONE_ELEMENT,
   REMOVE_ELEMENT,
   MOVE_ELEMENT,
-} from "@/services/event-bus.service.js";
-
-const _ = require("lodash");
+} from '@/services/event-bus.service.js';
+const _ = require('lodash');
 
 export default {
   name: "site-editor",
@@ -43,15 +42,8 @@ export default {
   data() {
     return {
       samples: {},
-
-      }
-      
-    
-  },
-  computed: {
-    siteToEdit(){
-        return this.$store.getters.site;
-    }
+      siteToEdit: null,
+    };
   },
   async created() {
     this.$store.commit({ type: "setEditMode", editMode: true });
@@ -59,17 +51,21 @@ export default {
     this.samples = templateService.getSamplesOf("section");
     eventBus.$on(ADD_SAMPLE, (sample) => this.addSample(sample));
     eventBus.$on(CLONE_ELEMENT, (element) => this.clone(element));
-    eventBus.$on(REMOVE_ELEMENT, (elementId) => this.remove(elementId));
-    eventBus.$on(MOVE_ELEMENT, (elementId, direction) =>
-      this.moveElement(elementId, direction)
-    );
+    eventBus.$on(REMOVE_ELEMENT, (elementId) => {
+      this.remove(elementId);
+    });
+    eventBus.$on(MOVE_ELEMENT, (elementId, direction) => {
+      this.moveElement(elementId, direction);
+    });
   },
   methods: {
     async loadSite() {
+      const templateId = this.$route.params.id;
       const site = await this.$store.dispatch({
-        type: "loadSite",
-        id: this.$route.params.id,
+        type: 'loadSite',
+        id: templateId,
       });
+      this.siteToEdit = site;
     },
     getSamplesToShow(listName) {
       this.samples = templateService.getSamplesOf(listName);
@@ -82,10 +78,11 @@ export default {
       this.samples = templateService.getSamplesOf(element);
     },
     moveElement(elementId, direction) {
-      const cmps = this.siteToEdit.cmps;
-      const idx = cmps.findIndex((cmp) => cmp.id === elementId);
-      if (direction === "down" && idx + 1 < cmps.length) {
-        const cmp = cmps[idx];
+      let cmps = this.siteToEdit.cmps;
+      let idx = cmps.findIndex((cmp) => cmp.id === elementId);
+      if (idx === -1) return;
+      if (direction === 'down' && idx + 1 < cmps.length) {
+        let cmp = cmps[idx];
         cmps.splice(idx, 1, cmps[idx + 1]);
         cmps.splice(idx + 1, 1, cmp);
       } else if (direction === "up" && idx !== 0) {
@@ -96,8 +93,8 @@ export default {
       this.$store.commit({ type: "setSite", site: this.siteToEdit });
     },
     clone(element) {
-      const cmps = this.siteToEdit.cmps;
-      const idx = cmps.findIndex((cmp) => cmp.id === element.id);
+      let idx = this.siteToEdit.cmps.findIndex((cmp) => cmp.id === element.id);
+      if (idx === -1) return;
       let clone = _.cloneDeep(element);
       clone.id = templateService.makeId();
       clone = templateService.addIds(clone);
@@ -105,10 +102,10 @@ export default {
       this.$store.commit({ type: "setSite", site: this.siteToEdit });
     },
     remove(elementId) {
-      const cmps = this.siteToEdit.cmps;
-      const idx = cmps.findIndex((cmp) => cmp.id === elementId);
-      cmps.splice(idx, 1);
-      this.$store.commit({ type: "setSite", site: this.siteToEdit });
+      let idx = this.siteToEdit.cmps.findIndex((cmp) => cmp.id === elementId);
+      if (idx === -1) return;
+      this.siteToEdit.cmps.splice(idx, 1);
+      this.$store.commit({ type: 'setSite', site: this.siteToEdit });
     },
   },
   watch: {
@@ -122,6 +119,9 @@ export default {
     Container,
     Draggable,
     navBar,
+  },
+  destroyed() {
+    this.$store.commit({ type: 'setSite', site: null });
   },
 };
 </script>

@@ -13,7 +13,7 @@
             <button @click="cmp.content.zoom--"> 
                 <i class="fas fa-minus"> </i> 
             </button>
-            <input type="text" @keydown.enter="getLocation" v-model="cmp.content.zoom"/>
+            <input disabled type="text" @keydown.enter="getLocation" v-model="cmp.content.zoom"/>
             <button @click="cmp.content.zoom++"> 
                 <i class="fas fa-plus"> </i> 
             </button>

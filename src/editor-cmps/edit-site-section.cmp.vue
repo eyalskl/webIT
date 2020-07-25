@@ -84,7 +84,8 @@ export default {
     },
     setImgSrc(idx) {
       const imgUrl = this.imgs[idx].urls.full;
-      this.cmp.style.background = `url(${imgUrl}) no-repeat center center scroll`;
+      this.cmp.style.background = `url(${imgUrl}) no-repeat center center / cover scroll`;
+      // this.cmp.style.backgroundSize = 'cover'
       eventBus.$emit(UPDATE_SITE);
     }
   },

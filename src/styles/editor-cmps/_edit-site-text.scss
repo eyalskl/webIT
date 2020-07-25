@@ -1,4 +1,5 @@
 .edit-site-text {
+    direction: ltr;
     .edit-text {
         padding: 0 2rem;
         font-size: 1rem;
@@ -10,6 +11,31 @@
             border-radius: 5px;
             border: 1px solid #bbb;
             padding: 0.75rem;
+        }
+        .link-pick {
+            h4 {
+                font-size: 0.875rem;
+                text-align: center;
+            }
+            .input-container {
+                border: 1px solid $clr3;
+                border-radius: 5px;
+                overflow: hidden;
+                background-color: white;
+                >* {
+                    background-color: inherit;
+                }
+                i {
+                    cursor: pointer;
+                }
+                margin: 1rem 0;
+            }
+            input {
+                direction: ltr;
+                border: none;
+                width: 90%;
+                padding: .75rem;
+            }
         }
         .el-slider {
             width: 80%;
@@ -26,10 +52,10 @@
                 i {
                     cursor: pointer;
                     position: absolute;
-                    right: -39px;
-                    top: -4.5px;
+                    right: -27.5px;
+                    top: -0.5px;
                     z-index: 1;
-                    font-size: 1.9rem;
+                    font-size: 1.6rem;
                     text-shadow: 1px 1px 2px rgb(194, 194, 194);
                     transition: .3s;
                     &:hover {

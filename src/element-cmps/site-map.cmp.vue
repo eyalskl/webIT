@@ -4,12 +4,7 @@
 
 <script>
 import googleMap from '@/custom-cmps/google-map.cmp.vue';
-import {
-  eventBus,
-  EDIT_ELEMENT,
-  UPDATE_SITE,
-  OPEN_EDITOR,
-} from '@/services/event-bus.service.js';
+import { eventBus, EDIT_ELEMENT, UPDATE_SITE, OPEN_EDITOR } from '@/services/event-bus.service.js';
 
 export default {
   name: 'site-map',
