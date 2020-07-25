@@ -66,7 +66,8 @@ export default {
       this.imgs = imgs.results
     },
     setImgSrc(idx) {
-      this.cmp.content = this.imgs[idx].urls.small;
+      this.cmp.content = this.imgs[idx].urls.regular;
+      this.cmp.style.backgroundSize = 'cover'
       eventBus.$emit(UPDATE_SITE);
     }
   },

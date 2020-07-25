@@ -39,6 +39,7 @@ export default {
 
 <style scoped>
     .color-picker {
+        direction: ltr;
         padding: .75rem 0rem;
     }
     .color-picker span {

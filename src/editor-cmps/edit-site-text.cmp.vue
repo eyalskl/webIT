@@ -62,8 +62,8 @@ props: ['cmp'],
       isUnderline: false,
       shadow: 'None',
       textAlign: 'center',
-      fonts: ['Arial', 'Nunito Sans', 'Righteous', 'Oswald', 'Bitter', 'Advent Pro', 'Josefin Slab', 'Russo One', 'Inknut Antiqua', 'Mr Dafoe'],
-      shadows: ['Light', 'Medium', 'Heavy', 'Titillium Web'],
+      fonts: ['Arial', 'Nunito Sans', 'Righteous', 'Titillium Web', 'Oswald', 'Bitter', 'Advent Pro', 'Josefin Slab', 'Russo One', 'Inknut Antiqua', 'Mr Dafoe'],
+      shadows: ['None', 'Light', 'Medium', 'Heavy'],
     };
   },
   computed: {
@@ -106,7 +106,7 @@ props: ['cmp'],
     },
     setShadow(shadow) {
       this.shadow = shadow;
-      this.cmp.style.textShadow = shadow === 'Light' ? '1px 1px 1px black' : shadow === 'Medium' ? '2px 2px 4px black' : '4px 4px 8px black';
+      this.cmp.style.textShadow = shadow === 'None' ? 'none' : shadow === 'Light' ? '1px 1px 1px black' : shadow === 'Medium' ? '2px 2px 4px black' : '4px 4px 8px black';
       eventBus.$emit(UPDATE_SITE);
     },
     setLineHeight(height) {
