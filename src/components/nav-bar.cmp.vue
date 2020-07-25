@@ -7,6 +7,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/templates">Templates</router-link>
       <router-link to="/about">About</router-link>
+      <router-link to="/login"> Login </router-link>
       <button class="publish" @click="saveSite">Save</button>
       <router-link class="publish" :to="'/' + siteId">Publish</router-link>
     </div>

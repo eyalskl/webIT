@@ -42,44 +42,7 @@ export default {
     return {
       samples: {},
       siteToEdit: null,
-      siteToEdit: {
-        name: 'Grilled Cheese Factory',
-        previewImg:
-          'https://i.ibb.co/f0SnZ3T/screenshot-localhost-8080-2020-07-25-16-53-49.png',
-        createdBy: {
-          username: 'system',
-          _id: 'admin',
-        },
-        cmps: [
-          {
-              type: 'site-section',
-              class: 'color-line',
-              style: {
-                background: '#a7dbd8',
-              },
-              cmps: [],
-            },
-          {
-              type: 'site-section',
-              class: 'color-line-tall',
-              style: {
-                background: '#a7dbd8',
-                margin: '0 auto',
-              },
-              cmps: [{
-                type:'site-text',
-                content:'Make me yours',
-                style:{
-                  width: '500px',
-                  fontFamily:'',
-                  fontSize:'',
-                  color:''
-                }
-              }],
-            },
-          
-        ],
-      },
+     
     };
   },
   created() {
