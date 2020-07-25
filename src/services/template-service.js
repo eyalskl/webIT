@@ -7,1016 +7,1377 @@ import httpService from './http.service';
 const _ = require('lodash');
 
 const samples = {
-	map:[
-	{
-	name:'Form With A Map',
-	img:'https://i.gyazo.com/062eabf394a7d1628d66434a38747df0.jpg',
-				tree:{type: "site-section",
-				class:"form-with-map",
-				style: {
-				  width: "100%",
-				  display: "flex",
-				  justifyContent: "space-around",
-				  background:"url(https://images.unsplash.com/photo-1541617219835-3689726fa8e7?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) center center no-repeat scroll",
-				  padding: "3rem 1rem",
-				  alignItems: "stretch",
-				  fontFamily: "Oswald",
-	
-			  },
-			  cmps:[{
-				type:"site-div",
-				style:{
-				  flex:"1",
-				  display:"flex",
-				  flexDirection:"column",
-				  marginInlineStart:"5rem"
-				},
-				cmps:[
-				   {
-				type:"site-div",
-				style:{
-				  textAlign:"center",
-				  paddingBlockEnd:"1rem"
-				},
-				cmps:[
-				  {
-					type:"site-text",
-					content:"Our Location",
-					style:{
-					  color:"#fff",
-					  fontSize:"2rem",
-					  letterSpacing:"2px",
-					  lineHeight:"1"
-					}
-				  }]},
-				  {
+	'contact form':[{
+
+		name:'Form with Map Right',
+		img:'https://i.gyazo.com/084948f731c65f21b0591840d5ccb591.png',
+		tree:{
+					type: "site-section",
+					class:"form-with-map",
+					style: {
+					  width: "100%",
+					  display: "flex",
+					  justifyContent: "space-around",
+					  background:"url(https://images.unsplash.com/photo-1436262513933-a0b06755c784?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80) center center no-repeat scroll",
+					  padding: "3rem 1rem",
+					  alignItems: "stretch",
+					  fontFamily: "Josefin Slab",
+					  fontWeight:"bold",
+					  direction:"rtl"
+		
+				  },
+				  cmps:[{
 					type:"site-div",
+					class:"map-container-form-div",
 					style:{
-					  flex:"3"
-					},
-					cmps:[{
-					type:"site-map",
-					content:{
-					  center:{
-						lat:15.870032,
-						lng:100.992538
-						},
-						zoom:4
-				  }
-				  }]
-				  }]
-			  },
-				  
-			  {
-				type:"site-div",
-				style:{
-				  flex:"1",
-				},
-				cmps:[
-				  {
-					type:"site-div",
-					class:"form-with-map-form",
-					style:{
+					  flex:"1",
 					  display:"flex",
-					  alignItems:"center",
-					  flexDirection:"column"
-					  
+					  flexDirection:"column",
+					  direction:"ltr"
+					},
+					cmps:[
+					   {
+					type:"site-div",
+					style:{
+					  textAlign:"center",
+					  paddingBlockEnd:"1rem"
 					},
 					cmps:[
 					  {
 						type:"site-text",
-						content:"Contact Us",
+						content:"Our Location",
 						style:{
-						  color:"#fff",
+						  color:"#000",
 						  fontSize:"2rem",
-						  flex:"1",
-						  paddingBlockEnd:"1rem"
+						  letterSpacing:"2px",
+						  lineHeight:"1"
 						}
-					  },
+					  }]},
 					  {
-						type:"site-form",
+						type:"site-div",
 						style:{
-						  flex:"3",
+						  flex:"3"
+						},
+						cmps:[{
+						type:"site-map",
+						content:{
+						  center:{
+							lat:15.870032,
+							lng:100.992538
+							},
+							zoom:4
+					  }
+					  }]
+					  }]
+				  },
+					  
+				  {
+					type:"site-div",
+					style:{
+					  flex:"1",
+					},
+					cmps:[
+					  {
+						type:"site-div",
+						class:"form-with-map-form",
+						style:{
 						  display:"flex",
+						  alignItems:"center",
 						  flexDirection:"column",
-						  color:"#fff"
-						},
-						btnStyle:{
-						  background:"#e94335",
-						  fontSize:"1.1rem",
-						  color:"#fff"
-						},
-						content:[
-						  {
-							tag:"Name",
-							type:"text"
-						  },
-						  {
-							tag:"Email",
-							type:"email"
-						  },
-						  {
-							tag:"Subject",
-							type:"text"
-						  },
-						  {
-							tag:"Phone Number",
-							type:"tel"
-						  },
+						  direction:"ltr"
+		
 						  
+						},
+						cmps:[
+						  {
+							type:"site-text",
+							content:"Contact Us",
+							style:{
+							  color:"#fff",
+							  fontSize:"2rem",
+							  flex:"1",
+							  paddingBlockEnd:"1rem",
+							  color:"#000"
+							}
+						  },
+						  {
+							type:"site-form",
+							style:{
+							  flex:"3",
+							  display:"flex",
+							  flexDirection:"column",
+							  color:"#424242",
+							},
+							btnStyle:{
+							  background:"#272727",
+							  fontSize:"1.1rem",
+							  color:"#cacaca",
+							  fontWeight:"bold",
+							  fontFamily:"inherit",
+							  marginBlockStart:"1rem"
+							},
+							content:[
+							  {
+								tag:"Name",
+								type:"text"
+							  },
+							  {
+								tag:"Email",
+								type:"email"
+							  },
+							  {
+								tag:"Subject",
+								type:"text"
+							  },
+							  {
+								tag:"Phone Number",
+								type:"tel"
+							  },
+							  
+							]
+						  }
 						]
 					  }
 					]
 				  }
-				]
-			  }
-			  ]
-			  }
-	},
-		{name: "Transverse Map",
-	img: "https://i.ibb.co/ZRsD7ng/full-map.png ",
-	tree: {
-		"type" : "site-section",
-		"class" : "map-section",
-		"style" : {
-			"height" : "30vw",
-			"display" : "flex",
-		},
-		"cmps" : [
-		  {
-				"type" : "site-div",
-				"style" : {
-					"flex" : "1",
-					"height" : "100%"
-				},
-				"cmps" : [ 
-					{
-						"type" : "site-map",
-						"content" : {
-							"center" : {
-								"lat" : 41.902782,
-								"lng" : 12.496365
+				  ]
+		}     
+			 },
+		
+		{
+		name: 'Contact with Map Left',
+		img: 'https://i.gyazo.com/062eabf394a7d1628d66434a38747df0.jpg',
+		tree: {
+			type: 'site-section',
+			class: 'form-with-map',
+			style: {
+				width: '100%',
+				display: 'flex',
+				justifyContent: 'space-around',
+				background:
+					'url(https://images.unsplash.com/photo-1541617219835-3689726fa8e7?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) center center no-repeat scroll',
+				padding: '3rem 1rem',
+				alignItems: 'stretch',
+				fontFamily: 'Oswald',
+			},
+			cmps: [
+				{
+					type: 'site-div',
+					style: {
+						flex: '1',
+						display: 'flex',
+						flexDirection: 'column',
+						marginInlineStart: '5rem',
+					},
+					cmps: [
+						{
+							type: 'site-div',
+							style: {
+								textAlign: 'center',
+								paddingBlockEnd: '1rem',
 							},
-							"zoom" : 6
+							cmps: [
+								{
+									type: 'site-text',
+									content: 'Our Location',
+									style: {
+										color: '#fff',
+										fontSize: '2rem',
+										letterSpacing: '2px',
+										lineHeight: '1',
+									},
+								},
+							],
 						},
-					}
-				],
-			}
-		]
-	}
-  }],
-	text:[
-		{name: "Text on Photo Right",
-			img:"https://i.ibb.co/jZgtZ6v/Screenshot-2020-07-25-10-45-14.png",
+						{
+							type: 'site-div',
+							style: {
+								flex: '3',
+							},
+							cmps: [
+								{
+									type: 'site-map',
+									content: {
+										center: {
+											lat: 15.870032,
+											lng: 100.992538,
+										},
+										zoom: 4,
+									},
+								},
+							],
+						},
+					],
+				},
+
+				{
+					type: 'site-div',
+					style: {
+						flex: '1',
+					},
+					cmps: [
+						{
+							type: 'site-div',
+							class: 'form-with-map-form',
+							style: {
+								display: 'flex',
+								alignItems: 'center',
+								flexDirection: 'column',
+							},
+							cmps: [
+								{
+									type: 'site-text',
+									content: 'Contact Us',
+									style: {
+										color: '#fff',
+										fontSize: '2rem',
+										flex: '1',
+										paddingBlockEnd: '1rem',
+									},
+								},
+								{
+									type: 'site-form',
+									style: {
+										flex: '3',
+										display: 'flex',
+										flexDirection: 'column',
+										color: '#fff',
+									},
+									btnStyle: {
+										background: '#e94335',
+										fontSize: '1.1rem',
+										color: '#fff',
+									},
+									content: [
+										{
+											tag: 'Name',
+											type: 'text',
+										},
+										{
+											tag: 'Email',
+											type: 'email',
+										},
+										{
+											tag: 'Subject',
+											type: 'text',
+										},
+										{
+											tag: 'Phone Number',
+											type: 'tel',
+										},
+									],
+								},
+							],
+						},
+					],
+				},
+			],
+		},
+	},],
+	map: [
+		{
+
+			name:'Form with Map Right',
+			img:'https://i.gyazo.com/084948f731c65f21b0591840d5ccb591.png',
 			tree:{
+						type: "site-section",
+						class:"form-with-map",
+						style: {
+						  width: "100%",
+						  display: "flex",
+						  justifyContent: "space-around",
+						  background:"url(https://images.unsplash.com/photo-1436262513933-a0b06755c784?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80) center center no-repeat scroll",
+						  padding: "3rem 1rem",
+						  alignItems: "stretch",
+						  fontFamily: "Josefin Slab",
+						  fontWeight:"bold",
+						  direction:"rtl"
+			
+					  },
+					  cmps:[{
+						type:"site-div",
+						class:"map-container-form-div",
+						style:{
+						  flex:"1",
+						  display:"flex",
+						  flexDirection:"column",
+						  direction:"ltr"
+						},
+						cmps:[
+						   {
+						type:"site-div",
+						style:{
+						  textAlign:"center",
+						  paddingBlockEnd:"1rem"
+						},
+						cmps:[
+						  {
+							type:"site-text",
+							content:"Our Location",
+							style:{
+							  color:"#000",
+							  fontSize:"2rem",
+							  letterSpacing:"2px",
+							  lineHeight:"1"
+							}
+						  }]},
+						  {
+							type:"site-div",
+							style:{
+							  flex:"3"
+							},
+							cmps:[{
+							type:"site-map",
+							content:{
+							  center:{
+								lat:15.870032,
+								lng:100.992538
+								},
+								zoom:4
+						  }
+						  }]
+						  }]
+					  },
+						  
+					  {
+						type:"site-div",
+						style:{
+						  flex:"1",
+						},
+						cmps:[
+						  {
+							type:"site-div",
+							class:"form-with-map-form",
+							style:{
+							  display:"flex",
+							  alignItems:"center",
+							  flexDirection:"column",
+							  direction:"ltr"
+			
+							  
+							},
+							cmps:[
+							  {
+								type:"site-text",
+								content:"Contact Us",
+								style:{
+								  color:"#fff",
+								  fontSize:"2rem",
+								  flex:"1",
+								  paddingBlockEnd:"1rem",
+								  color:"#000"
+								}
+							  },
+							  {
+								type:"site-form",
+								style:{
+								  flex:"3",
+								  display:"flex",
+								  flexDirection:"column",
+								  color:"#424242",
+								},
+								btnStyle:{
+								  background:"#272727",
+								  fontSize:"1.1rem",
+								  color:"#cacaca",
+								  fontWeight:"bold",
+								  fontFamily:"inherit",
+								  marginBlockStart:"1rem"
+								},
+								content:[
+								  {
+									tag:"Name",
+									type:"text"
+								  },
+								  {
+									tag:"Email",
+									type:"email"
+								  },
+								  {
+									tag:"Subject",
+									type:"text"
+								  },
+								  {
+									tag:"Phone Number",
+									type:"tel"
+								  },
+								  
+								]
+							  }
+							]
+						  }
+						]
+					  }
+					  ]
+			}     
+				 },
+
+		{
+			name: 'Contact with Map Left',
+			img: 'https://i.gyazo.com/062eabf394a7d1628d66434a38747df0.jpg',
+			tree: {
+				type: 'site-section',
+				class: 'form-with-map',
+				style: {
+					width: '100%',
+					display: 'flex',
+					justifyContent: 'space-around',
+					background:
+						'url(https://images.unsplash.com/photo-1541617219835-3689726fa8e7?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) center center no-repeat scroll',
+					padding: '3rem 1rem',
+					alignItems: 'stretch',
+					fontFamily: 'Oswald',
+				},
+				cmps: [
+					{
+						type: 'site-div',
+						style: {
+							flex: '1',
+							display: 'flex',
+							flexDirection: 'column',
+							marginInlineStart: '5rem',
+						},
+						cmps: [
+							{
+								type: 'site-div',
+								style: {
+									textAlign: 'center',
+									paddingBlockEnd: '1rem',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'Our Location',
+										style: {
+											color: '#fff',
+											fontSize: '2rem',
+											letterSpacing: '2px',
+											lineHeight: '1',
+										},
+									},
+								],
+							},
+							{
+								type: 'site-div',
+								style: {
+									flex: '3',
+								},
+								cmps: [
+									{
+										type: 'site-map',
+										content: {
+											center: {
+												lat: 15.870032,
+												lng: 100.992538,
+											},
+											zoom: 4,
+										},
+									},
+								],
+							},
+						],
+					},
+
+					{
+						type: 'site-div',
+						style: {
+							flex: '1',
+						},
+						cmps: [
+							{
+								type: 'site-div',
+								class: 'form-with-map-form',
+								style: {
+									display: 'flex',
+									alignItems: 'center',
+									flexDirection: 'column',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'Contact Us',
+										style: {
+											color: '#fff',
+											fontSize: '2rem',
+											flex: '1',
+											paddingBlockEnd: '1rem',
+										},
+									},
+									{
+										type: 'site-form',
+										style: {
+											flex: '3',
+											display: 'flex',
+											flexDirection: 'column',
+											color: '#fff',
+										},
+										btnStyle: {
+											background: '#e94335',
+											fontSize: '1.1rem',
+											color: '#fff',
+										},
+										content: [
+											{
+												tag: 'Name',
+												type: 'text',
+											},
+											{
+												tag: 'Email',
+												type: 'email',
+											},
+											{
+												tag: 'Subject',
+												type: 'text',
+											},
+											{
+												tag: 'Phone Number',
+												type: 'tel',
+											},
+										],
+									},
+								],
+							},
+						],
+					},
+				],
+			},
+		},
+		{
+			name: 'Transverse Map',
+			img: 'https://i.ibb.co/ZRsD7ng/full-map.png ',
+			tree: {
+				type: 'site-section',
+				class: 'map-section',
+				style: {
+					height: '30vw',
+					display: 'flex',
+				},
+				cmps: [
+					{
+						type: 'site-div',
+						style: {
+							flex: '1',
+							height: '100%',
+						},
+						cmps: [
+							{
+								type: 'site-map',
+								content: {
+									center: {
+										lat: 41.902782,
+										lng: 12.496365,
+									},
+									zoom: 6,
+								},
+							},
+						],
+					},
+				],
+			},
+		},
+	],
+	text: [
+		{
+			name: 'Text on Photo Right',
+			img: 'https://i.ibb.co/jZgtZ6v/Screenshot-2020-07-25-10-45-14.png',
+			tree: {
 				type: 'site-section',
 				class: 'text-on-photo-right',
 				style: {
-				  background:
-					'url("https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30") center center no-repeat scroll',
+					background:
+						'url("https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30") center center no-repeat scroll',
 				},
 				cmps: [
-				  {
-					type: 'site-div',
-					style: {
-					  width: '30%',
-					  textAlign: 'center',
-					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content:
-						  'Be yourself; everyone else is already taken.',
+					{
+						type: 'site-div',
 						style: {
-						  backgroundColor: '#ffffff',
-						  fontFamily: 'Bitter',
-						  color: '#446e88',
-						  fontSize: '1rem',
+							width: '30%',
+							textAlign: 'center',
 						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  width: '30%',
-					  textAlign: 'center',
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'Be yourself; everyone else is already taken.',
+								style: {
+									backgroundColor: '#ffffff',
+									fontFamily: 'Bitter',
+									color: '#446e88',
+									fontSize: '1rem',
+								},
+							},
+						],
 					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content:
-						  `You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nobody listening, And live like it's heaven on earth.`,
+					{
+						type: 'site-div',
 						style: {
-						  backgroundColor: '#ffffff',
-						  fontSize: '1rem',
-						  fontFamily: 'Bitter',
-						  color: '#446e88',
+							width: '30%',
+							textAlign: 'center',
 						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  width: '30%',
-					  textAlign: 'center',
+						cmps: [
+							{
+								type: 'site-text',
+								content: `You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nobody listening, And live like it's heaven on earth.`,
+								style: {
+									backgroundColor: '#ffffff',
+									fontSize: '1rem',
+									fontFamily: 'Bitter',
+									color: '#446e88',
+								},
+							},
+						],
 					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content: 'Be the change that you wish to see in the world.',
+					{
+						type: 'site-div',
 						style: {
-						  backgroundColor: '#ffffff',
-						  fontSize: '1rem',
-						  fontFamily: 'Bitter',
-						  color: '#446e88',
+							width: '30%',
+							textAlign: 'center',
 						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  width: '30%',
-					  textAlign: 'center',
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'Be the change that you wish to see in the world.',
+								style: {
+									backgroundColor: '#ffffff',
+									fontSize: '1rem',
+									fontFamily: 'Bitter',
+									color: '#446e88',
+								},
+							},
+						],
 					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content:
-						  'No one can make you feel inferior without your consent.',
+					{
+						type: 'site-div',
 						style: {
-						  backgroundColor: '#ffffff',
-						  fontFamily: 'Bitter',
-						  color: '#446e88',
-						  fontSize: '1rem',
+							width: '30%',
+							textAlign: 'center',
 						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  width: '30%',
-					  textAlign: 'center',
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'No one can make you feel inferior without your consent.',
+								style: {
+									backgroundColor: '#ffffff',
+									fontFamily: 'Bitter',
+									color: '#446e88',
+									fontSize: '1rem',
+								},
+							},
+						],
 					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
+					{
+						type: 'site-div',
 						style: {
-						  backgroundColor: '#ffffff',
-						  fontSize: '1rem',
-						  fontFamily: 'Bitter',
-						  color: '#446e88',
+							width: '30%',
+							textAlign: 'center',
 						},
-					  },
-					],
-				  },
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
+								style: {
+									backgroundColor: '#ffffff',
+									fontSize: '1rem',
+									fontFamily: 'Bitter',
+									color: '#446e88',
+								},
+							},
+						],
+					},
 				],
-			  },},
+			},
+		},
 
-		{name: "Text on Photo Left",
-			img:"https://i.ibb.co/T4xqJF7/Screenshot-2020-07-25-10-29-15.png",
-			tree:{
+		{
+			name: 'Text on Photo Left',
+			img: 'https://i.ibb.co/T4xqJF7/Screenshot-2020-07-25-10-29-15.png',
+			tree: {
 				type: 'site-section',
 				class: 'text-on-photo-left',
 				style: {
-				  background:
-					'url(https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80) no-repeat',
+					background:
+						'url(https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80) no-repeat',
 				},
 				cmps: [
-				  {
-					type: 'site-div',
-					style: {
-					  width: '30%',
-					  textAlign: 'center',
-					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content:
-						  'Be yourself everyone else is already taken.',
+					{
+						type: 'site-div',
 						style: {
-						  backgroundColor: '#d95b43',
-						  fontFamily: 'Bitter',
-						  color: '#80eaa9',
-						  fontSize: '1rem',
+							width: '30%',
+							textAlign: 'center',
 						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  width: '30%',
-					  textAlign: 'center',
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'Be yourself everyone else is already taken.',
+								style: {
+									backgroundColor: '#d95b43',
+									fontFamily: 'Bitter',
+									color: '#80eaa9',
+									fontSize: '1rem',
+								},
+							},
+						],
 					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content:
-						  `You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nobody listening, And live like it's heaven on earth.`,
+					{
+						type: 'site-div',
 						style: {
-						  backgroundColor: '#d95b43',
-						  fontSize: '1rem',
-						  fontFamily: 'Bitter',
-						  color: '#80eaa9',
+							width: '30%',
+							textAlign: 'center',
 						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  width: '30%',
-					  textAlign: 'center',
+						cmps: [
+							{
+								type: 'site-text',
+								content: `You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nobody listening, And live like it's heaven on earth.`,
+								style: {
+									backgroundColor: '#d95b43',
+									fontSize: '1rem',
+									fontFamily: 'Bitter',
+									color: '#80eaa9',
+								},
+							},
+						],
 					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content: 'Be the change that you wish to see in the world.',
+					{
+						type: 'site-div',
 						style: {
-						  backgroundColor: '#d95b43',
-						  fontSize: '1rem',
-						  fontFamily: 'Bitter',
-						  color: '#80eaa9',
+							width: '30%',
+							textAlign: 'center',
 						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  width: '30%',
-					  textAlign: 'center',
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'Be the change that you wish to see in the world.',
+								style: {
+									backgroundColor: '#d95b43',
+									fontSize: '1rem',
+									fontFamily: 'Bitter',
+									color: '#80eaa9',
+								},
+							},
+						],
 					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content:
-						  'No one can make you feel inferior without your consent.',
+					{
+						type: 'site-div',
 						style: {
-						  backgroundColor: '#d95b43',
-						  fontFamily: 'Bitter',
-						  color: '#80eaa9',
-						  fontSize: '1rem',
+							width: '30%',
+							textAlign: 'center',
 						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  width: '30%',
-					  textAlign: 'center',
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'No one can make you feel inferior without your consent.',
+								style: {
+									backgroundColor: '#d95b43',
+									fontFamily: 'Bitter',
+									color: '#80eaa9',
+									fontSize: '1rem',
+								},
+							},
+						],
 					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
+					{
+						type: 'site-div',
 						style: {
-						  backgroundColor: '#d95b43',
-						  fontSize: '1rem',
-						  fontFamily: 'Bitter',
-						  color: '#80eaa9',
+							width: '30%',
+							textAlign: 'center',
 						},
-					  },
-					],
-				  },
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
+								style: {
+									backgroundColor: '#d95b43',
+									fontSize: '1rem',
+									fontFamily: 'Bitter',
+									color: '#80eaa9',
+								},
+							},
+						],
+					},
 				],
-			  },
+			},
 		},
-
 	],
-	footer:[
-		{name: "Big Footer Informer",
-		img:"https://i.ibb.co/8g3wzm6/Screenshot-2020-07-25-16-42-39.png",
-		tree:{
-            type: 'site-section',
-            class: 'huge-info-footer',
-            style: {
-              background: '#ba2204',
-            },
-            cmps: [
-              {
-                type: 'site-div',
-                style: {
-                  display: 'flex',
-                  justifyContent: 'space-around',
-                  marginBottom:'20px'
-                },
-                cmps: [
-                  {
-                    type: 'site-div',
-                    style: {
-                      width: '45%',
-                      textAlign: 'center',
-                      display: 'flex',
-                      flexDirection: 'column',
-                    },
-                    cmps: [
-                      {
-                        type: 'site-text',
-                        content: 'BASTILLE',
-                        style: {
-                          fontSize: '3.5rem',
-                          fontFamily: 'Bitter',
-                          color: '#F7B714',
-                        },
-                      },
-                      {
-                        type: 'site-text',
-                        content:
-                          '9 RUE JACQUES COEUR - 75004 PARIS 01 77 10 67 83',
-                        style: {
-                          fontFamily: 'Bitter',
-                          color: '#ffffff',
-                          fontSize: '1.2‬rem',
-                        },
-                      },
-                    ],
-                  },
-                  {
-                    type: 'site-div',
-                    style: {
-                      width: '45%',
-                      textAlign: 'center',
-                      display: 'flex',
-                      flexDirection: 'column',
-                    },
-                    cmps: [
-                      {
-                        type: 'site-text',
-                        content: 'CONVENTION',
-                        style: {
-                          fontSize: '3.5rem',
-                          fontFamily: 'Bitter',
-                          color: '#F7B714',
-                        },
-                      },
-                      {
-                        type: 'site-text',
-                        content:
-                          '196 RUE DE LA CONVENTION - 75015 PARIS 09 88 38 87 26',
-                        style: {
-                          fontFamily: 'Bitter',
-                          color: '#ffffff',
-                          fontSize: '1.2‬rem',
-                        },
-                      },
-                    ],
-                  },
-                ],
-              },
-              {
-                type: 'site-div',
-                style: {
-                  textAlign: 'center',
-                },
-                cmps: [
-                  {
-                    type: 'site-text',
-                    content:
-                      'NOUVEAUX HORAIRES SUITE A LA CRISE DU COVID 19 : 7/7 - 12H - 16H & 19H - 23H',
-                    style: {
-                      backgroundColor: '#f7b714',
-                      fontSize: '1.1rem',
-                      fontFamily: 'josefin slab',
-                      color: '#000000',
-                      fontWeight: 'bold',
-                      
-                    },
-                  },
-                ],
-              },
-              {
-                type: 'site-div',
-                style: {
-                  textAlign: 'center',
-                  marginBottom:'20px',
-                },
-                cmps: [
-                  {
-                    type: 'site-text',
-                    content:
-                      'NOTRE PERSONNEL EST FORME AUX NORMES SANITAIRES EN VIGUEUR. ENSEMBLE FAISONS FACE A LA CRISE SANTAIRE.',
-                    style: {
-                      background: '#f7b714',
-                      fontSize: '1.1rem',
-                      fontFamily: 'josefin slab',
-                      color: '#000000',
-                      fontWeight: 'bold',
-                    },
-                  },
-                ],
-              },
-              {
-                type: 'site-div',
-                style: {
-                  display: 'flex',
-                  justifyContent:'center',
-                  alignItems: 'center',
-                },
-                cmps: [
-                  {
-                    type: 'site-div',
-                    style: {
-                      textAlign: 'center',
-                    },
-                    cmps: [
-                      {
-                        type: 'site-image',
-                        content:
-                          'https://i.ibb.co/4d394Sg/logo-holder.png',
-                        style: {
-                          objectFit: 'contain',
-                          maxHeight:'150px',
-                          maxWidth: '250px',
-                          minWidth: '150px',
-                          marginRight:'20px'
-                        },
-                      },
-                    ],
-                  },
-                  {
-                    type: 'site-div',
-                    style: {
-                      width: '70%',
-                      textAlign: 'center',
-                    },
-                    cmps: [
-                      {
-                        type: 'site-text',
-                        content:
-                          "© COPY RIGHTS OF CREATIVE THOUGHTS",
-                        style: {
-                          fontSize: '1.1rem',
-                          fontFamily: 'josefin slab',
-                          color: '#ffffff',
-                          fontWeight: 'bold',
-                        },
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },},
+	footer: [
 		{
-		name:'Headline & Subs Footer',
-		img:'https://i.gyazo.com/0ce95fbfe80480dd56833736c6bad1c4.png',
-		tree: {
-            type: "site-section",
-            style: {
-                width: "100%",
-                display: "flex",
-                justifyContent: "space-around",
-                background: "#161616",
-                padding: "3rem 1rem",
-                alignItems:"stretch",
-                fontFamily:"Oswald"
-            },
-            cmps: [{
-                    type: "site-div",
-                    style: {
-                      padding:"1rem"
-                    },
-                    cmps: [{
-                            type: "site-text",
-                            content: "DESTINATIONS",
-                            style: {
-                                fontWeight: "bold",
-                                fontSize: "1.25rem",
-                                color:"#fff"
-                            },
-                        },
-                        {
-                            type: "site-list",
-                            style: {
-                                display: "flex",
-                                flexDirection: "column",
-                                color: "#fff",
-                                marginTop: "1rem",
-                            },
-                            cmps: [
+			name: 'Big Footer Informer',
+			img: 'https://i.ibb.co/8g3wzm6/Screenshot-2020-07-25-16-42-39.png',
+			tree: {
+				type: 'site-section',
+				class: 'huge-info-footer',
+				style: {
+					background: '#ba2204',
+				},
+				cmps: [
+					{
+						type: 'site-div',
+						style: {
+							display: 'flex',
+							justifyContent: 'space-around',
+							marginBottom: '20px',
+						},
+						cmps: [
+							{
+								type: 'site-div',
+								style: {
+									width: '45%',
+									textAlign: 'center',
+									display: 'flex',
+									flexDirection: 'column',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'BASTILLE',
+										style: {
+											fontSize: '3.5rem',
+											fontFamily: 'Bitter',
+											color: '#F7B714',
+										},
+									},
+									{
+										type: 'site-text',
+										content: '9 RUE JACQUES COEUR - 75004 PARIS 01 77 10 67 83',
+										style: {
+											fontFamily: 'Bitter',
+											color: '#ffffff',
+											fontSize: '1.2‬rem',
+										},
+									},
+								],
+							},
+							{
+								type: 'site-div',
+								style: {
+									width: '45%',
+									textAlign: 'center',
+									display: 'flex',
+									flexDirection: 'column',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'CONVENTION',
+										style: {
+											fontSize: '3.5rem',
+											fontFamily: 'Bitter',
+											color: '#F7B714',
+										},
+									},
+									{
+										type: 'site-text',
+										content: '196 RUE DE LA CONVENTION - 75015 PARIS 09 88 38 87 26',
+										style: {
+											fontFamily: 'Bitter',
+											color: '#ffffff',
+											fontSize: '1.2‬rem',
+										},
+									},
+								],
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							textAlign: 'center',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'NOUVEAUX HORAIRES SUITE A LA CRISE DU COVID 19 : 7/7 - 12H - 16H & 19H - 23H',
+								style: {
+									backgroundColor: '#f7b714',
+									fontSize: '1.1rem',
+									fontFamily: 'josefin slab',
+									color: '#000000',
+									fontWeight: 'bold',
+								},
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							textAlign: 'center',
+							marginBottom: '20px',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content:
+									'NOTRE PERSONNEL EST FORME AUX NORMES SANITAIRES EN VIGUEUR. ENSEMBLE FAISONS FACE A LA CRISE SANTAIRE.',
+								style: {
+									background: '#f7b714',
+									fontSize: '1.1rem',
+									fontFamily: 'josefin slab',
+									color: '#000000',
+									fontWeight: 'bold',
+								},
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+						},
+						cmps: [
+							{
+								type: 'site-div',
+								style: {
+									textAlign: 'center',
+								},
+								cmps: [
+									{
+										type: 'site-image',
+										content: 'https://i.ibb.co/4d394Sg/logo-holder.png',
+										style: {
+											objectFit: 'contain',
+											maxHeight: '150px',
+											maxWidth: '250px',
+											minWidth: '150px',
+											marginRight: '20px',
+										},
+									},
+								],
+							},
+							{
+								type: 'site-div',
+								style: {
+									width: '70%',
+									textAlign: 'center',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: '© COPY RIGHTS OF CREATIVE THOUGHTS',
+										style: {
+											fontSize: '1.1rem',
+											fontFamily: 'josefin slab',
+											color: '#ffffff',
+											fontWeight: 'bold',
+										},
+									},
+								],
+							},
+						],
+					},
+				],
+			},
+		},
+		{
+			name: 'Headline & Subs Footer',
+			img: 'https://i.gyazo.com/0ce95fbfe80480dd56833736c6bad1c4.png',
+			tree: {
+				type: 'site-section',
+				style: {
+					width: '100%',
+					display: 'flex',
+					justifyContent: 'space-around',
+					background: '#161616',
+					padding: '3rem 1rem',
+					alignItems: 'stretch',
+					fontFamily: 'Oswald',
+				},
+				cmps: [
+					{
+						type: 'site-div',
+						style: {
+							padding: '1rem',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'DESTINATIONS',
+								style: {
+									fontWeight: 'bold',
+									fontSize: '1.25rem',
+									color: '#fff',
+								},
+							},
+							{
+								type: 'site-list',
+								style: {
+									display: 'flex',
+									flexDirection: 'column',
+									color: '#fff',
+									marginTop: '1rem',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: `New-Zealand`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `Australia`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `Argentina`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `Bolivia`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `More...`,
+										style: {},
+									},
+								],
+							},
+						],
+					},
 
-                            
+					{
+						type: 'site-div',
+						style: {
+							padding: '1rem',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'SHOP',
+								style: {
+									fontWeight: 'bold',
+									fontSize: '1.25rem',
+									color: '#fff',
+								},
+							},
+							{
+								type: 'site-list',
+								style: {
+									display: 'flex',
+									flexDirection: 'column',
+									color: '#fff',
+									marginTop: '1rem',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: `Non English Guides`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `Delivery Times`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `Special Offers`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `FAQs`,
+										style: {},
+									},
+								],
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							padding: '1rem',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'FORUMS',
+								style: {
+									fontWeight: 'bold',
+									fontSize: '1.25rem',
+									color: '#fff',
+								},
+							},
+							{
+								type: 'site-list',
+								style: {
+									display: 'flex',
+									flexDirection: 'column',
+									color: '#fff',
+									marginTop: '1rem',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: `Country Forums`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `Interest Forums`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `Talk To Us`,
+										style: {},
+									},
+								],
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							padding: '1rem',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'TRAVEL BOOKING',
+								style: {
+									fontWeight: 'bold',
+									fontSize: '1.25rem',
+									color: '#fff',
+								},
+							},
+							{
+								type: 'site-list',
+								style: {
+									display: 'flex',
+									flexDirection: 'column',
+									color: '#fff',
+									marginTop: '1rem',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: `Hotels`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `Flights`,
+										style: {},
+									},
+									{
+										type: 'site-text',
+										content: `Insurance`,
+										style: {},
+									},
+								],
+							},
+						],
+					},
+				],
+			},
+		},
+		{
+			name: 'Footer & Social Buttons',
+			img: 'https://i.gyazo.com/d6d4b225b8d23bbc721ae110356e23cf.png',
+			tree: {
+				type: 'site-section',
+				style: {
+					width: '100%',
+					display: 'flex',
+					justifyContent: 'center',
+					flexDirection: 'column',
+					background: '#26272b',
+					padding: '35px 0 20px',
+				},
 
-                                                                {
-                                    type: "site-text",
-                                    content: `New-Zealand`,
-                                    style: {
-
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `Australia`,
-                                    style: {
-
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `Argentina`,
-                                    style: {
-
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `Bolivia`,
-                                    style: {
-
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `More...`,
-                                    style: {
-
-                                    },
-                                },
-
-                            ],
-                        }
-                    ],
-                },
-
-                {
-                    type: "site-div",
-                    style: {
-                      padding:"1rem"
-
-                    },
-                    cmps: [{
-                            type: "site-text",
-                            content: "SHOP",
-                            style: {
-                                fontWeight: "bold",
-                                fontSize: "1.25rem",
-                                color:"#fff"
-
-                            },
-                        },
-                        {
-                            type: "site-list",
-                            style: {
-                                display: "flex",
-                                flexDirection: "column",
-                                color: "#fff",
-                                marginTop: "1rem",
-                            },
-                            cmps: [
-
-                                {
-
-                                                                
-                                    type: "site-text",
-                                    content: `Non English Guides`,
-                                    style: {
-                                   
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `Delivery Times`,
-                                    style: {
-                                       
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `Special Offers`,
-                                    style: {
-                                    
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `FAQs`,
-                                    style: {
-                               
-                                    },
-                                }
-
-                            ],
-                        }
-                    ],
-                }, {
-                    type: "site-div",
-                    style: {
-                      padding:"1rem"
-
-                    },
-                    cmps: [{
-                            type: "site-text",
-                            content: "FORUMS",
-                            style: {
-                                fontWeight: "bold",
-                                fontSize: "1.25rem",
-                                color:"#fff"
-
-                            },
-                        },
-                        {
-                            type: "site-list",
-                            style: {
-                                display: "flex",
-                                flexDirection: "column",
-                                color: "#fff",
-                                marginTop: "1rem",
-                            },
-                            cmps: [
-
-                                {
-                                    type: "site-text",
-                                    content: `Country Forums`,
-                                    style: {
-                      
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `Interest Forums`,
-                                    style: {
- 
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `Talk To Us`,
-                                    style: {
-
-                                    },
-                                },
-
-                            ],
-                        }
-                    ],
-                }, {
-                    type: "site-div",
-                    style: {
-                      padding:"1rem"
-
-                    },
-                    cmps: [{
-                            type: "site-text",
-                            content: "TRAVEL BOOKING",
-                            style: {
-                                fontWeight: "bold",
-                                fontSize: "1.25rem",
-                                color:"#fff"
-
-                            },
-                        },
-                        {
-                            type: "site-list",
-                            style: {
-                                display: "flex",
-                                flexDirection: "column",
-                                color: "#fff",
-                                marginTop: "1rem",
-                            },
-                            cmps: [
-
-                                {
-                                    type: "site-text",
-                                    content: `Hotels`,
-                                    style: {
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `Flights`,
-                                    style: {
-                                    },
-                                },
-                                                                {
-                                    type: "site-text",
-                                    content: `Insurance`,
-                                    style: {
-                                    },
-                                },
-
-                            ],
-                        }
-                    ],
-                },
-            ],
-        },
-	},
-	{
-		name:'Footer & Social Buttons',
-		img:'https://i.gyazo.com/d6d4b225b8d23bbc721ae110356e23cf.png',
-		tree:          {
-            type: "site-section",
-            style: {
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              flexDirection:"column",
-              background: "#26272b",
-              padding: "35px 0 20px",
-            },
-
-            cmps: [
-              {
-                type: "site-div",
-                class: "social-footer-container",
-                style: {
-                  marginRight: "auto",
-                  marginLeft: "auto",
-                  display: "flex",
-                  paddingBlockEnd: "1rem",
-                  borderBottom: "1px solid #666666",
-                  flexWrap:"wrap"
-                },
-                cmps: [
-                  {
-                    type: "site-div",
-                    class:"sfs-about",
-                    style: {
-                      padding: "0 15px",
-                      display: "flex",
-                      flexDirection: "column",
-                    },
-                    cmps: [
-                      {
-                        type: "site-text",
-                        content: "ABOUT",
-                        style: {
-                          letterSpacing: "2px",
-                          color: "#fff",
-                        },
-                      },
-                      {
-                        type: "site-text",
-                        content:
-                          "webIT.com is an initiative to help the upcoming website builders with building easy and convient landing sites . webIT focuses on providing the most efficient Sections as the site wants to be clean and simple. We will help website builders build up the best landing sites in a variant of Blocks that Videos, Maps , Forms , Galleries, Navbars, Cards , Footers , Headers and some Dividers.",
-                        style: {
-                          color: "#737373",
-                        },
-                      
-                      },
-                    ]
-                  },
-                  {
-                    type: "site-div",
-                    class:"sfs-about",
-                    style: {
-                      padding: "0 15px",
-                      display: "flex",
-                      justifyContent:"space-between"
-
-                    },
-                    cmps:[{
-                      type:"site-div",
-                      style:{
-                      display: "flex",
-                      flexDirection: "column",
-
-                      },
-                    cmps: [
-                      {
-                        type: "site-text",
-                        content: "CATEGORIES",
-                        style: {
-                          letterSpacing: "2px",
-                          color: "#fff",
-                        },
-                      },
-                      {
-						type: "site-text",
-						content: `C
+				cmps: [
+					{
+						type: 'site-div',
+						class: 'social-footer-container',
+						style: {
+							marginRight: 'auto',
+							marginLeft: 'auto',
+							display: 'flex',
+							paddingBlockEnd: '1rem',
+							borderBottom: '1px solid #666666',
+							flexWrap: 'wrap',
+						},
+						cmps: [
+							{
+								type: 'site-div',
+								class: 'sfs-about',
+								style: {
+									padding: '0 15px',
+									display: 'flex',
+									flexDirection: 'column',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'ABOUT',
+										style: {
+											letterSpacing: '2px',
+											color: '#fff',
+										},
+									},
+									{
+										type: 'site-text',
+										content:
+											'webIT.com is an initiative to help the upcoming website builders with building easy and convient landing sites . webIT focuses on providing the most efficient Sections as the site wants to be clean and simple. We will help website builders build up the best landing sites in a variant of Blocks that Videos, Maps , Forms , Galleries, Navbars, Cards , Footers , Headers and some Dividers.',
+										style: {
+											color: '#737373',
+										},
+									},
+								],
+							},
+							{
+								type: 'site-div',
+								class: 'sfs-about',
+								style: {
+									padding: '0 15px',
+									display: 'flex',
+									justifyContent: 'space-between',
+								},
+								cmps: [
+									{
+										type: 'site-div',
+										style: {
+											display: 'flex',
+											flexDirection: 'column',
+										},
+										cmps: [
+											{
+												type: 'site-text',
+												content: 'CATEGORIES',
+												style: {
+													letterSpacing: '2px',
+													color: '#fff',
+												},
+											},
+											{
+												type: 'site-text',
+												content: `C
 							UI Design
 							PHP
 							Java
 							Android
 							Templates`,
-						style:{
-							
-						}
-                      },
-                    ],
-                  },
-                  {
-                    type: "site-div",
-                    style: {
-                      display: "flex",
-                      flexDirection: "column",
-                    },
-                    cmps: [
-                      {
-                        type: "site-text",
-                        content: "QUICK LINKS",
-                        style: {
-                          letterSpacing: "2px",
-                          color: "#fff",
-                        },
-                      },
-                      {
-                        type: "site-text",
-                        content: `About Us
+												style: {},
+											},
+										],
+									},
+									{
+										type: 'site-div',
+										style: {
+											display: 'flex',
+											flexDirection: 'column',
+										},
+										cmps: [
+											{
+												type: 'site-text',
+												content: 'QUICK LINKS',
+												style: {
+													letterSpacing: '2px',
+													color: '#fff',
+												},
+											},
+											{
+												type: 'site-text',
+												content: `About Us
 						Contact Us
 						Contribute
 						Privacy Policy
 						Sitemap`,
-						style:{
-												
-						}
-                      },
-                    ],
-                  },
-                ],
-              }
-              ]},
-              {
-                type:"site-div",
-                class:"social-footer-container",
-                style:{
-                  marginRight:"auto",
-                  marginLeft:"auto",
-                  paddingBlockStart:"1rem"
-              },
-              cmps:[
-                {
-                type:"site-div",
-                style:{
-                  textAlign:"center"
-                },
-                cmps:[
-                {
-                
-                type:"site-text",
-                content:"Copyright © 2020 All Rights Reserved by webIT.",
-                style:{
-                  fontSize: "1.1rem",
-                  lineHeight: "1.5",
-                  letterSpacing: "1px"
-                }
-              }]
-                }
-              ,
-              {
-                type:"site-div",
-                style:{
-                  display:"flex",
-                  justifyContent:"space-around",
-                  padding:"1rem 7rem .5rem 7rem"
-
-                },
-                cmps:[                {
-                  type:"site-button",
-                  content:{text:'',href:''},
-                  style:{
-                    background:"url(https://image.flaticon.com/icons/png/512/124/124010.png) center center / cover no-repeat",
-                    width:"28px",
-                    height:"28px",
-                    borderRadius:"5px"
-                  }
-                },
-                {
-                  type:"site-button",
-                  content:{text:'',href:''},
-                  style:{
-                    background:"url(https://i.gyazo.com/80639d9cab9b20e4cc2b6d020907aede.png) center center / cover no-repeat",
-                    width:"28px",
-                    height:"28px",
-                    borderRadius:"5px"
-
-                  }
-                },
-                {
-                  type:"site-button",
-                  content:{text:'',href:''},
-                  style:{
-                    background:"url(https://i.gyazo.com/8833c2c42eb3b5ee28e01dc455fa2614.png) center center / cover no-repeat",
-                    width:"28px",
-                    height:"28px",
-                    borderRadius:"5px"
-
-                  }
-                },
-                {
-                  type:"site-button",
-                  content:{text:'',href:''},
-                  style:{
-                    background:"url(https://i.gyazo.com/641e9ec709af1f857fd4ed51bb882e5f.png) center center / cover no-repeat",
-                    width:"28px",
-                    height:"28px",
-                    borderRadius:"5px"
-
-                  }
-                }]
-              }
-              ]
-              }
-            ],
-          },
-	}
+												style: {},
+											},
+										],
+									},
+								],
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						class: 'social-footer-container',
+						style: {
+							marginRight: 'auto',
+							marginLeft: 'auto',
+							paddingBlockStart: '1rem',
+						},
+						cmps: [
+							{
+								type: 'site-div',
+								style: {
+									textAlign: 'center',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'Copyright © 2020 All Rights Reserved by webIT.',
+										style: {
+											fontSize: '1.1rem',
+											lineHeight: '1.5',
+											letterSpacing: '1px',
+										},
+									},
+								],
+							},
+							{
+								type: 'site-div',
+								style: {
+									display: 'flex',
+									justifyContent: 'space-around',
+									padding: '1rem 7rem .5rem 7rem',
+								},
+								cmps: [
+									{
+										type: 'site-button',
+										content: { text: '', href: '' },
+										style: {
+											background:
+												'url(https://image.flaticon.com/icons/png/512/124/124010.png) center center / cover no-repeat',
+											width: '28px',
+											height: '28px',
+											borderRadius: '5px',
+										},
+									},
+									{
+										type: 'site-button',
+										content: { text: '', href: '' },
+										style: {
+											background:
+												'url(https://i.gyazo.com/80639d9cab9b20e4cc2b6d020907aede.png) center center / cover no-repeat',
+											width: '28px',
+											height: '28px',
+											borderRadius: '5px',
+										},
+									},
+									{
+										type: 'site-button',
+										content: { text: '', href: '' },
+										style: {
+											background:
+												'url(https://i.gyazo.com/8833c2c42eb3b5ee28e01dc455fa2614.png) center center / cover no-repeat',
+											width: '28px',
+											height: '28px',
+											borderRadius: '5px',
+										},
+									},
+									{
+										type: 'site-button',
+										content: { text: '', href: '' },
+										style: {
+											background:
+												'url(https://i.gyazo.com/641e9ec709af1f857fd4ed51bb882e5f.png) center center / cover no-repeat',
+											width: '28px',
+											height: '28px',
+											borderRadius: '5px',
+										},
+									},
+								],
+							},
+						],
+					},
+				],
+			},
+		},
 	],
 	video: [
 		{
@@ -1179,323 +1540,316 @@ const samples = {
 		},
 	],
 	cards: [
-		{name: "Post Card Left Pic",
-    img:"https://i.ibb.co/DR6dXnJ/Screenshot-2020-07-25-14-54-55.png",
-    tree:{
-		type: 'site-section',
-		class: 'fixed-post-card',
-		style: {
-		  background: '#ffffff',
-		},
-		cmps: [
-		  {
-			type: 'site-div',
-			class:'post-card-container',
-			style: {
-			  background: '#ffffff',
-			},
-			cmps: [
-			  {
-				type: 'site-div',
+		{
+			name: 'Post Card Left Pic',
+			img: 'https://i.ibb.co/DR6dXnJ/Screenshot-2020-07-25-14-54-55.png',
+			tree: {
+				type: 'site-section',
+				class: 'fixed-post-card',
 				style: {
-				  background:
-					"url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.businessinsider.com%2Fimage%2F51b206e5eab8eafd63000007%2Fimage.jpg&f=1&nofb=1') no-repeat center center / cover scroll",
-				  width: '100%',
-				},
-				cmps: [],
-			  },
-			  {
-				type: 'site-div',
-				class:'post-card-text',
-				style: {
-				  background: '#ffffff',
+					background: '#ffffff',
 				},
 				cmps: [
-				  {
-					type: 'site-div',
-					style: {
-					  background: '#ffffff',
-					  textAlign: 'center',
-					  width: '100%',
+					{
+						type: 'site-div',
+						class: 'post-card-container',
+						style: {
+							background: '#ffffff',
+						},
+						cmps: [
+							{
+								type: 'site-div',
+								style: {
+									background:
+										"url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.businessinsider.com%2Fimage%2F51b206e5eab8eafd63000007%2Fimage.jpg&f=1&nofb=1') no-repeat center center / cover scroll",
+									width: '100%',
+								},
+								cmps: [],
+							},
+							{
+								type: 'site-div',
+								class: 'post-card-text',
+								style: {
+									background: '#ffffff',
+								},
+								cmps: [
+									{
+										type: 'site-div',
+										style: {
+											textAlign: 'center',
+											width: '100%',
+										},
+										cmps: [
+											{
+												type: 'site-text',
+												content: `I'm all yours to make`,
+												style: {
+													fontSize: '1.4rem',
+													fontFamily: 'Oswald',
+													color: '#F7B714',
+												},
+											},
+										],
+									},
+									{
+										type: 'site-div',
+										style: {
+											textAlign: 'center',
+											width: '100%',
+										},
+										cmps: [
+											{
+												type: 'site-text',
+												content: 'From Me',
+												style: {
+													fontSize: '2.5rem',
+													textDecoration: 'underline',
+													fontFamily: 'Mr Dafoe',
+													color: '#F7B714',
+												},
+											},
+										],
+									},
+									{
+										type: 'site-div',
+										style: {
+											textAlign: 'center',
+											width: '100%',
+										},
+										cmps: [
+											{
+												type: 'site-text',
+												content: 'My Ideas are here',
+												style: {
+													fontSize: '0.9rem',
+													fontFamily: 'Inknut Antiqua',
+													color: '#F7B714',
+												},
+											},
+										],
+									},
+									{
+										type: 'site-div',
+										style: {
+											textAlign: 'center',
+											width: '100%',
+										},
+										cmps: [
+											{
+												type: 'site-text',
+												content:
+													'Sometimes, all you need to break a string of losses is a win. It doesn’t even matter if the win is a small one. On a day where you feel like you can’t do anything right, your brain can be your own worst enemy.',
+												style: {
+													fontSize: '0.9rem',
+													fontFamily: 'Josefin Slab',
+													color: '#000000',
+												},
+											},
+										],
+									},
+									{
+										type: 'site-div',
+										class: 'post-card-text-buttons',
+										style: {
+											width: '100%',
+										},
+										cmps: [
+											{
+												type: 'site-button',
+												content: {
+													text: 'Click Him',
+													href: '',
+												},
+												style: {
+													background: '#ffffff',
+													fontFamily: 'Righteous',
+													color: '#F7B714',
+													border: '3px #F7B714 solid',
+													borderRadius: '0',
+													lineHeight: '1',
+													fontSize: '1rem',
+												},
+											},
+											{
+												type: 'site-button',
+												content: {
+													text: 'Click Me',
+													href: '',
+												},
+												style: {
+													background: '#ffffff',
+													fontFamily: 'Righteous',
+													color: '#F7B714',
+													border: '3px #F7B714 solid',
+													borderRadius: '0',
+													lineHeight: '1',
+													fontSize: '1rem',
+												},
+											},
+										],
+									},
+								],
+							},
+						],
 					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content:
-						  `I'm all yours to make`,
-						style: {
-						  fontSize: '1.4rem',
-						  fontFamily: 'Oswald',
-						  color: '#F7B714',
-						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  background: '#ffffff',
-					  textAlign: 'center',
-					  width: '100%',
-					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content: "From Me",
-						style: {
-						  fontSize: '2.5rem',
-						  textDecoration: 'underline',
-						  fontFamily: 'Mr Dafoe',
-						  color: '#F7B714',
-						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  background: '#ffffff',
-					  textAlign: 'center',
-					  width: '100%',
-					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content: 'My Ideas are here',
-						style: {
-						  fontSize: '0.9rem',
-						  fontFamily: 'Inknut Antiqua',
-						  color: '#F7B714',
-						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  background: '#ffffff',
-					  textAlign: 'center',
-					  width: '100%',
-					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content:
-						  "Sometimes, all you need to break a string of losses is a win. It doesn’t even matter if the win is a small one. On a day where you feel like you can’t do anything right, your brain can be your own worst enemy.",
-						style: {
-						  fontSize: '0.9rem',
-						  fontFamily: 'Josefin Slab',
-						  color: '#000000',
-						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					class:'post-card-text-buttons',
-					style: {
-					  background: '#ffffff',
-					  width: '100%',
-					},
-					cmps: [
-					  {
-						type: 'site-button',
-						content: {
-						  text: 'Click Him',
-						  href: '',
-						},
-						style: {
-						  background: '#ffffff',
-						  fontFamily: 'Righteous',
-						  color: '#F7B714',
-						  border: '3px #F7B714 solid',
-						  borderRadius: '0',
-						  lineHeight:'1',
-						  fontSize: '1rem',
-						},
-					  },
-					  {
-						type: 'site-button',
-						content: {
-						  text: 'Click Me',
-						  href: '',
-						},
-						style: {
-						  background: '#ffffff',
-						  fontFamily: 'Righteous',
-						  color: '#F7B714',
-						  border: '3px #F7B714 solid',
-						  borderRadius: '0',
-						  lineHeight:'1',
-						  fontSize: '1rem',
-						},
-					  },
-					],
-				  },
 				],
-			  },
-			],
-		  },
-		],
-	  }},
-		{name: "Post Card Right Pic",
-    img:"https://i.ibb.co/zxB7Y60/Screenshot-2020-07-25-14-41-58.png",
-    tree:{
-		type: 'site-section',
-		class: 'fixed-post-card',
-		style: {
-		  background: '#ffffff',
-		},
-		cmps: [
-		  {
-			type: 'site-div',
-			class:'post-card-container',
-			style: {
-			  background: '#ffffff',
 			},
-			cmps: [
-			  {
-				type: 'site-div',
-				class:'post-card-text',
+		},
+		{
+			name: 'Post Card Right Pic',
+			img: 'https://i.ibb.co/zxB7Y60/Screenshot-2020-07-25-14-41-58.png',
+			tree: {
+				type: 'site-section',
+				class: 'fixed-post-card',
 				style: {
-				  background: '#ffffff',
+					background: '#ffffff',
 				},
 				cmps: [
-				  {
-					type: 'site-div',
-					style: {
-					  background: '#ffffff',
-					  textAlign: 'center',
-					  width: '100%',
+					{
+						type: 'site-div',
+						class: 'post-card-container',
+						style: {
+							background: '#ffffff',
+						},
+						cmps: [
+							{
+								type: 'site-div',
+								class: 'post-card-text',
+								style: {
+									background: '#ffffff',
+								},
+								cmps: [
+									{
+										type: 'site-div',
+										style: {
+											textAlign: 'center',
+											width: '100%',
+										},
+										cmps: [
+											{
+												type: 'site-text',
+												content: `I'm all yours to make`,
+												style: {
+													fontSize: '1.4rem',
+													fontFamily: 'Oswald',
+													color: '#EF4135',
+												},
+											},
+										],
+									},
+									{
+										type: 'site-div',
+										style: {
+											textAlign: 'center',
+											width: '100%',
+										},
+										cmps: [
+											{
+												type: 'site-text',
+												content: 'From Me',
+												style: {
+													fontSize: '2.5rem',
+													textDecoration: 'underline',
+													fontFamily: 'Mr Dafoe',
+													color: '#EF4135',
+												},
+											},
+										],
+									},
+									{
+										type: 'site-div',
+										style: {
+											textAlign: 'center',
+											width: '100%',
+										},
+										cmps: [
+											{
+												type: 'site-text',
+												content: 'My Ideas are here',
+												style: {
+													fontSize: '0.9rem',
+													fontFamily: 'Inknut Antiqua',
+													color: '#EF4135',
+												},
+											},
+										],
+									},
+									{
+										type: 'site-div',
+										style: {
+											textAlign: 'center',
+											width: '100%',
+										},
+										cmps: [
+											{
+												type: 'site-text',
+												content:
+													'Sometimes, all you need to break a string of losses is a win. It doesn’t even matter if the win is a small one. On a day where you feel like you can’t do anything right, your brain can be your own worst enemy.',
+												style: {
+													fontSize: '0.9rem',
+													fontFamily: 'Josefin Slab',
+													color: '#000000',
+												},
+											},
+										],
+									},
+									{
+										type: 'site-div',
+										class: 'post-card-text-buttons',
+										style: {
+											width: '100%',
+										},
+										cmps: [
+											{
+												type: 'site-button',
+												content: {
+													text: 'Click Me',
+													href: '',
+												},
+												style: {
+													background: '#ffffff',
+													fontFamily: 'Righteous',
+													color: '#EF4135',
+													border: '3px #EF4135 solid',
+													borderRadius: '0',
+													lineHeight: '1',
+													fontSize: '1rem',
+												},
+											},
+											{
+												type: 'site-button',
+												content: {
+													text: 'Click Him',
+													href: '',
+												},
+												style: {
+													background: '#ffffff',
+													fontFamily: 'Righteous',
+													color: '#EF4135',
+													border: '3px #EF4135 solid',
+													borderRadius: '0',
+													lineHeight: '1',
+													fontSize: '1rem',
+												},
+											},
+										],
+									},
+								],
+							},
+							{
+								type: 'site-div',
+								style: {
+									background:
+										"url('https://images.unsplash.com/photo-1532465614-6cc8d45f647f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80') no-repeat center center / cover scroll",
+									width: '100%',
+								},
+								cmps: [],
+							},
+						],
 					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content:`I'm all yours to make`,
-						style: {
-						  fontSize: '1.4rem',
-						  fontFamily: 'Oswald',
-						  color: '#EF4135',
-						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  background: '#ffffff',
-					  textAlign: 'center',
-					  width: '100%',
-					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content: "From Me",
-						style: {
-						  fontSize: '2.5rem',
-						  textDecoration: 'underline',
-						  fontFamily: 'Mr Dafoe',
-						  color: '#EF4135',
-						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  background: '#ffffff',
-					  textAlign: 'center',
-					  width: '100%',
-					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content: 'My Ideas are here',
-						style: {
-						  fontSize: '0.9rem',
-						  fontFamily: 'Inknut Antiqua',
-						  color: '#EF4135',
-						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					style: {
-					  background: '#ffffff',
-					  textAlign: 'center',
-					  width: '100%',
-					},
-					cmps: [
-					  {
-						type: 'site-text',
-						content:
-						  "Sometimes, all you need to break a string of losses is a win. It doesn’t even matter if the win is a small one. On a day where you feel like you can’t do anything right, your brain can be your own worst enemy.",
-						style: {
-						  fontSize: '0.9rem',
-						  fontFamily: 'Josefin Slab',
-						  color: '#000000',
-						},
-					  },
-					],
-				  },
-				  {
-					type: 'site-div',
-					class:'post-card-text-buttons',
-					style: {
-					  background: '#ffffff',
-					  width: '100%',
-					},
-					cmps: [
-					  {
-						type: 'site-button',
-						content: {
-						  text: 'Click Me',
-						  href: '',
-						},
-						style: {
-						  background: '#ffffff',
-						  fontFamily: 'Righteous',
-						  color: '#EF4135',
-						  border: '3px #EF4135 solid',
-						  borderRadius: '0',
-						  lineHeight:'1',
-						  fontSize: '1rem',
-						},
-					  },
-					  {
-						type: 'site-button',
-						content: {
-						  text: 'Click Him',
-						  href: '',
-						},
-						style: {
-						  background: '#ffffff',
-						  fontFamily: 'Righteous',
-						  color: '#EF4135',
-						  border: '3px #EF4135 solid',
-						  borderRadius: '0',
-						  lineHeight:'1',
-						  fontSize: '1rem',
-						},
-					  },
-					],
-				  },
 				],
-			  },
-			  {
-				type: 'site-div',
-				style: {
-				  background:
-					"url('https://images.unsplash.com/photo-1532465614-6cc8d45f647f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80') no-repeat center center / cover scroll",
-				  width: '100%',
-				},
-				cmps: [],
-			  },
-			],
-		  },
-		],
-	  }},
+			},
+		},
 		{
 			name: 'Floating Pic Right',
 			img: 'https://i.ibb.co/WsX0tv1/Screenshot-2020-07-24-14-49-39.png',
@@ -1657,300 +2011,302 @@ const samples = {
 			},
 		},
 		{
-			name:'Informative Cards',
-			img:'https://i.gyazo.com/5bb27774793732b8d3983e74ddcbc6c7.png',
-			tree:        {
-				type: "site-section",
-				class:"floating-cards-section",
+			name: 'Informative Cards',
+			img: 'https://i.gyazo.com/5bb27774793732b8d3983e74ddcbc6c7.png',
+			tree: {
+				type: 'site-section',
+				class: 'floating-cards-section',
 				style: {
-					width: "100%",
-					display: "flex",
-					justifyContent: "flex-start",
-					alignItems: "center",
-					flexDirection:"column",
-					position:"relative",
-					padding:"3rem 0 8rem",
-					background:"#fff"
+					width: '100%',
+					display: 'flex',
+					justifyContent: 'flex-start',
+					alignItems: 'center',
+					flexDirection: 'column',
+					position: 'relative',
+					padding: '3rem 0 8rem',
+					background: '#fff',
 				},
-				cmps: [{
-						type: "site-div",
+				cmps: [
+					{
+						type: 'site-div',
 						style: {
-							display: "flex",
-							flexDirection: "column",
-							alignItems:"center",
-							background: "inherit",
-	
-					 },
-					 cmps:[{
-					   type:"site-text",
-					   content:"Hello , I Am A Title",
-					   style:{
-						 color:"#98953e",
-						 fontFamily:"Oswald",
-						 fontSize:"1.3125rem",
-						 letterSpacing:"2.5px"
-					   }
-					 
-					 
-					 },
-					 {
-					 type:"site-text",
-					 content:"And I Represent The Section Information",
-					 style:{
-						 color:"#17255e",
-						 fontFamily:"Oswald",
-						 fontSize:"2.5625rem",
-						 borderBottom:"8px solid #8a8d4a66"
-					 }
-					 }
-					 ],
-				},
-				{
-				  type:"site-div",
-				  class:"floating-cards-container",
-				  style:{
-					display:"flex",
-					alignItems:"stretch",
-					justifyContent:"center",
-					flexWrap:"wrap",
-					width:"100%",
-					background:"none"
-				  },
-				  cmps:[{
-					type:"site-div",
-					class:"floating-card",
-					style:{
-					  position:"relative",
-					  flex:"1",
-					  minWidth:"23rem",
-					  maxWidth:"23rem",
-					  margin:"3rem 1.5rem 0px 1.5rem",
-					  display:"flex",
-					  flexDirection:"column",
-					  border:"1px solid #dedede",
-					  background:"#fff"
-					},
-					cmps:[{
-					  type:"site-div",
-					  style:{
-						flex:"2",
-						background:"url('https://camposcoffee.com/us/wp-content/uploads/2016/09/plunger-335x200.jpg') center center /cover no-repeat",
-						minHeight:"230px"
-					  }
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'center',
+							background: 'inherit',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'Hello , I Am A Title',
+								style: {
+									color: '#98953e',
+									fontFamily: 'Oswald',
+									fontSize: '1.3125rem',
+									letterSpacing: '2.5px',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'And I Represent The Section Information',
+								style: {
+									color: '#17255e',
+									fontFamily: 'Oswald',
+									fontSize: '2.5625rem',
+									borderBottom: '8px solid #8a8d4a66',
+								},
+							},
+						],
 					},
 					{
-					type:"site-div",
-					style:{
-					  display:"flex",
-					  flex:"1",
-					  flexDirection:"column",
-					  textAlign:"left",
-					  width:"100%",
-					  borderTop:"none",
-					  padding:"1.25rem 2.5rem"
+						type: 'site-div',
+						class: 'floating-cards-container',
+						style: {
+							display: 'flex',
+							alignItems: 'stretch',
+							justifyContent: 'center',
+							flexWrap: 'wrap',
+							width: '100%',
+							background: 'none',
+						},
+						cmps: [
+							{
+								type: 'site-div',
+								class: 'floating-card',
+								style: {
+									position: 'relative',
+									flex: '1',
+									minWidth: '23rem',
+									maxWidth: '23rem',
+									margin: '3rem 1.5rem 0px 1.5rem',
+									display: 'flex',
+									flexDirection: 'column',
+									border: '1px solid #dedede',
+									background: '#fff',
+								},
+								cmps: [
+									{
+										type: 'site-div',
+										style: {
+											flex: '2',
+											background:
+												"url('https://camposcoffee.com/us/wp-content/uploads/2016/09/plunger-335x200.jpg') center center /cover no-repeat",
+											minHeight: '230px',
+										},
+									},
+									{
+										type: 'site-div',
+										style: {
+											display: 'flex',
+											flex: '1',
+											flexDirection: 'column',
+											textAlign: 'left',
+											width: '100%',
+											borderTop: 'none',
+											padding: '1.25rem 2.5rem',
+										},
+										cmps: [
+											{
+												type: 'site-button',
+												content: { text: '➜', href: '' },
+												style: {
+													height: '30px',
+													width: '30px',
+													position: 'absolute',
+													right: '0',
+													bottom: '0',
+													background: 'none',
+													fontSize: '1.4375rem',
+													color: '#474747',
+													boxSizing: 'content-box',
+												},
+											},
+											{
+												type: 'site-text',
+												content: 'Card Description 1',
+												style: {
+													color: '#000',
+													fontFamily: 'Oswald',
+													fontSize: '1.125rem',
+													letterSpacing: '2px',
+													lineHeight: '1.6',
+													margin: '1.5rem 0 1.5rem 0',
+												},
+											},
+											{
+												type: 'site-text',
+												content: 'Subtitle 1',
+												style: {
+													fontFamily: 'Oswald',
+													fontSize: '.75rem',
+													lineHeight: '1.5',
+													letterSpacing: '3px',
+													margin: '0 0 1rem',
+												},
+											},
+										],
+									},
+								],
+							},
+							{
+								type: 'site-div',
+								class: 'floating-card',
+								style: {
+									position: 'relative',
+									flex: '1',
+									minWidth: '23rem',
+									maxWidth: '23rem',
+									margin: '3rem 1.5rem 0px 1.5rem',
+									display: 'flex',
+									flexDirection: 'column',
+									border: '1px solid #dedede',
+									background: '#fff',
+								},
+								cmps: [
+									{
+										type: 'site-div',
+										style: {
+											flex: '2',
+											background:
+												"url('https://camposcoffee.com/us/wp-content/uploads/2016/09/aeropress-335x200.jpg') center center /cover no-repeat",
+											minHeight: '230px',
+										},
+									},
+									{
+										type: 'site-div',
+										style: {
+											display: 'flex',
+											flex: '1',
+											flexDirection: 'column',
+											textAlign: 'left',
+											width: '100%',
+											borderTop: 'none',
+											padding: '1.25rem 2.5rem',
+										},
+										cmps: [
+											{
+												type: 'site-button',
+												content: { text: '➜', href: '' },
+												style: {
+													height: '30px',
+													width: '30px',
+													position: 'absolute',
+													right: '0',
+													bottom: '0',
+													background: 'none',
+													fontSize: '1.4375rem',
+													color: '#474747',
+													boxSizing: 'content-box',
+												},
+											},
+											{
+												type: 'site-text',
+												content: 'Card Description 2',
+												style: {
+													color: '#000',
+													fontFamily: 'Oswald',
+													fontSize: '1.125rem',
+													letterSpacing: '2px',
+													lineHeight: '1.6',
+													margin: '1.5rem 0 1.5rem 0',
+												},
+											},
+											{
+												type: 'site-text',
+												content: 'Subtitle 2',
+												style: {
+													fontFamily: 'Oswald',
+													fontSize: '.75rem',
+													lineHeight: '1.5',
+													letterSpacing: '3px',
+													margin: '0 0 1rem',
+												},
+											},
+										],
+									},
+								],
+							},
+							{
+								type: 'site-div',
+								class: 'floating-card',
+								style: {
+									position: 'relative',
+									flex: '1',
+									minWidth: '23rem',
+									maxWidth: '23rem',
+									margin: '3rem 1.5rem 0px 1.5rem',
+									display: 'flex',
+									flexDirection: 'column',
+									border: '1px solid #dedede',
+									background: '#fff',
+								},
+								cmps: [
+									{
+										type: 'site-div',
+										style: {
+											flex: '2',
+											background:
+												"url('https://camposcoffee.com/us/wp-content/uploads/2016/09/chemex-335x200.jpg') center center /cover no-repeat",
+											minHeight: '230px',
+										},
+									},
+									{
+										type: 'site-div',
+										style: {
+											display: 'flex',
+											flex: '1',
+											flexDirection: 'column',
+											textAlign: 'left',
+											width: '100%',
+											borderTop: 'none',
+											padding: '1.25rem 2.5rem',
+										},
+										cmps: [
+											{
+												type: 'site-button',
+												content: { text: '➜', href: '' },
+												style: {
+													height: '30px',
+													width: '30px',
+													position: 'absolute',
+													right: '0',
+													bottom: '0',
+													background: 'none',
+													fontSize: '1.4375rem',
+													color: '#474747',
+													boxSizing: 'content-box',
+												},
+											},
+											{
+												type: 'site-text',
+												content: 'Card Description 3',
+												style: {
+													color: '#000',
+													fontFamily: 'Oswald',
+													fontSize: '1.125rem',
+													letterSpacing: '2px',
+													lineHeight: '1.6',
+													margin: '1.5rem 0 1.5rem 0',
+												},
+											},
+											{
+												type: 'site-text',
+												content: 'Subtitle 3',
+												style: {
+													fontFamily: 'Oswald',
+													fontSize: '.75rem',
+													lineHeight: '1.5',
+													letterSpacing: '3px',
+													margin: '0 0 1rem',
+												},
+											},
+										],
+									},
+								],
+							},
+						],
 					},
-					cmps:[
-					  {
-						type:"site-button",
-						content:{text:"➜" , href:""},
-						style:{
-						  height:"30px",
-						  width:"30px",
-						  position:"absolute",
-						  right:"0",
-						  bottom:"0",
-						  background:"none",
-						  fontSize:"1.4375rem",
-						  color:"#474747",
-						  boxSizing: "content-box"
-						}
-					  },
-					 {
-						type:"site-text",
-						content:"Card Description 1",
-						style:{
-						  color:"#000",
-						  fontFamily:"Oswald",
-						  fontSize:"1.125rem",
-						  letterSpacing:"2px",
-						  lineHeight:"1.6",
-						  margin:"1.5rem 0 1.5rem 0"
-						}
-					  },
-					  {
-						type:"site-text",
-						content:"Subtitle 1",
-						style:{
-						  fontFamily:"Oswald",
-						  fontSize:".75rem",
-						  lineHeight:"1.5",
-						  letterSpacing:"3px",
-						  margin:"0 0 1rem"
-						}
-					  }
-					]
-					}
-					]
-	
-				  },
-				  {
-					type:"site-div",
-					class:"floating-card",
-					style:{
-					  position:"relative",
-					  flex:"1",
-					  minWidth:"23rem",
-					  maxWidth:"23rem",
-					  margin:"3rem 1.5rem 0px 1.5rem",
-					  display:"flex",
-					  flexDirection:"column",
-					  border:"1px solid #dedede",
-					  background:"#fff"
-					},
-					cmps:[{
-					  type:"site-div",
-					  style:{
-						flex:"2",
-						background:"url('https://camposcoffee.com/us/wp-content/uploads/2016/09/aeropress-335x200.jpg') center center /cover no-repeat",
-						minHeight:"230px"
-					  }
-					},
-					{
-					type:"site-div",
-					style:{
-					  display:"flex",
-					  flex:"1",
-					  flexDirection:"column",
-					  textAlign:"left",
-					  width:"100%",
-					  borderTop:"none",
-					  padding:"1.25rem 2.5rem"
-					},
-					cmps:[
-					  {
-						type:"site-button",
-						content:{text:"➜" , href:""},
-						style:{
-						  height:"30px",
-						  width:"30px",
-						  position:"absolute",
-						  right:"0",
-						  bottom:"0",
-						  background:"none",
-						  fontSize:"1.4375rem",
-						  color:"#474747",
-						  boxSizing: "content-box"
-						}
-					  },
-					 {
-						type:"site-text",
-						content:"Card Description 2",
-						style:{
-						  color:"#000",
-						  fontFamily:"Oswald",
-						  fontSize:"1.125rem",
-						  letterSpacing:"2px",
-						  lineHeight:"1.6",
-						  margin:"1.5rem 0 1.5rem 0"
-						}
-					  },
-					  {
-						type:"site-text",
-						content:"Subtitle 2",
-						style:{
-						  fontFamily:"Oswald",
-						  fontSize:".75rem",
-						  lineHeight:"1.5",
-						  letterSpacing:"3px",
-						  margin:"0 0 1rem"
-						}
-					  }
-					]
-					}
-					]
-	
-				  },
-				  {
-					type:"site-div",
-					class:"floating-card",
-					style:{
-					  position:"relative",
-					  flex:"1",
-					  minWidth:"23rem",
-					  maxWidth:"23rem",
-					  margin:"3rem 1.5rem 0px 1.5rem",
-					  display:"flex",
-					  flexDirection:"column",
-					  border:"1px solid #dedede",
-					  background:"#fff"
-					},
-					cmps:[{
-					  type:"site-div",
-					  style:{
-						flex:"2",
-						background:"url('https://camposcoffee.com/us/wp-content/uploads/2016/09/chemex-335x200.jpg') center center /cover no-repeat",
-						minHeight:"230px"
-					  }
-					},
-					{
-					type:"site-div",
-					style:{
-					  display:"flex",
-					  flex:"1",
-					  flexDirection:"column",
-					  textAlign:"left",
-					  width:"100%",
-					  borderTop:"none",
-					  padding:"1.25rem 2.5rem"
-					},
-					cmps:[
-					  {
-						type:"site-button",
-						content:{text:"➜" , href:""},
-						style:{
-						  height:"30px",
-						  width:"30px",
-						  position:"absolute",
-						  right:"0",
-						  bottom:"0",
-						  background:"none",
-						  fontSize:"1.4375rem",
-						  color:"#474747",
-						  boxSizing: "content-box"
-						}
-					  },
-					 {
-						type:"site-text",
-						content:"Card Description 3",
-						style:{
-						  color:"#000",
-						  fontFamily:"Oswald",
-						  fontSize:"1.125rem",
-						  letterSpacing:"2px",
-						  lineHeight:"1.6",
-						  margin:"1.5rem 0 1.5rem 0"
-						}
-					  },
-					  {
-						type:"site-text",
-						content:"Subtitle 3",
-						style:{
-						  fontFamily:"Oswald",
-						  fontSize:".75rem",
-						  lineHeight:"1.5",
-						  letterSpacing:"3px",
-						  margin:"0 0 1rem"
-						}
-					  }
-					]
-					}
-					]
-	
-				  }
-				  ]
-				},
-				
-				]
+				],
 			},
 		},
 		{
@@ -2010,7 +2366,7 @@ const samples = {
 							},
 							{
 								type: 'site-text',
-								content: "Add Text...",
+								content: 'Add Text...',
 								style: {
 									fontFamily: 'Oswald',
 									color:
@@ -2031,7 +2387,7 @@ const samples = {
 							},
 						],
 					},
-					
+
 					{
 						type: 'site-div',
 						class: 'card-div',
@@ -2491,46 +2847,46 @@ const samples = {
 		},
 	],
 	gallery: [
-		{name: "Poster 3 pics",
-    	img:"https://i.ibb.co/PjkXLrT/Screenshot-2020-07-25-12-09-24.png",
-    	tree:{
-            type: 'site-section',
-            class: 'three-pics-poster',
-            style: {
+		{
+			name: 'Poster 3 pics',
+			img: 'https://i.ibb.co/PjkXLrT/Screenshot-2020-07-25-12-09-24.png',
+			tree: {
+				type: 'site-section',
+				class: 'three-pics-poster',
+				style: {},
+				cmps: [
+					{
+						type: 'site-div',
+						style: {
+							background:
+								'url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg1.wikia.nocookie.net%2F__cb20150722183849%2Fmarvel_dc%2Fimages%2F8%2F87%2FWonder_Woman_Vol_4_42_Textless.jpg&f=1&nofb=1) no-repeat center center / cover scroll',
 
-            },
-            cmps: [
-              {
-                type: 'site-div',
-                style: {
-                  background:
-                    "url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg1.wikia.nocookie.net%2F__cb20150722183849%2Fmarvel_dc%2Fimages%2F8%2F87%2FWonder_Woman_Vol_4_42_Textless.jpg&f=1&nofb=1) no-repeat center center / cover scroll",
+							width: '100%',
+						},
+						cmps: [],
+					},
+					{
+						type: 'site-div',
+						style: {
+							background:
+								'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F01%2F188460-Spider-Man-Marvel_Comics.jpg&f=1&nofb=1) no-repeat center center / cover scroll',
 
-                  width: '100%',
-                },
-                cmps: [],
-              },
-              {
-                type: 'site-div',
-                style: {
-                  background:
-                    'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F01%2F188460-Spider-Man-Marvel_Comics.jpg&f=1&nofb=1) no-repeat center center / cover scroll',
-
-                  width: '100%',
-                },
-                cmps: [],
-              },
-              {
-                type: 'site-div',
-                style: {
-                  background:
-                    "url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F4a%2Fbc%2Fa8%2F4abca8abdfda6359581be1153434266f.jpg&f=1&nofb=1) no-repeat center center / cover scroll",
-                  width: '100%',
-                },
-                cmps: [],
-              },
-            ],
-          },},
+							width: '100%',
+						},
+						cmps: [],
+					},
+					{
+						type: 'site-div',
+						style: {
+							background:
+								'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F4a%2Fbc%2Fa8%2F4abca8abdfda6359581be1153434266f.jpg&f=1&nofb=1) no-repeat center center / cover scroll',
+							width: '100%',
+						},
+						cmps: [],
+					},
+				],
+			},
+		},
 		{
 			name: '4 Pics Gallery',
 			img: 'https://i.ibb.co/hXDGrmV/Screenshot-2020-07-23-16-52-46.png',
@@ -3096,707 +3452,741 @@ const samples = {
 						type: 'site-text',
 						content: `Lago di Braies :
                   In summer, lake Lago di Braies in South Tyrol reflects colours in all shades from green to blue, in winter Lago di Braies is covered with ice and snow. In winter and summer this jewel is the starting point for hikes, ski tours, snowshoe hikes and walks. Book through us and let's explore it together!`,
-                        style: {
-                            fontFamily: 'Righteous',
-                            padding: '1rem',
-                            textTransform: 'uppercase',
-                            textAlign: 'center',
-                            lineHeight: '2rem',
-                            fontSize: '1.5rem',
-                        },
-                    },
-                    {
-                        type: 'site-image',
-                        content: 'https://images.unsplash.com/photo-1521102761523-b268f61473e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1549&q=80',
-                        style: {
-                            height: '480px',
-                            width: '580px',
-                            objectFit: 'cover',
-                        },
-                    },
-                ],
-            },
-        },
-        {
-            name: 'footer',
-            img: 'https://i.imgur.com/AchuVuN.png',
-            tree: {
-                type: 'site-section',
-                style: {
-                    height: '250px',
-                    width: '100%',
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    alignItems: 'center',
-                    backgroundColor: '#5ba8b3cc',
-                    color: 'white',
-                    paddingBlockStart: '2rem',
-                },
-                cmps: [{
-                        type: 'site-div',
-                        style: {
-                            height: '100%',
-                        },
-                        cmps: [{
-                                type: 'site-text',
-                                content: 'DESTINATIONS',
-                                style: {
-                                    width: '100px',
-                                    fontWeigt: 'bold',
-                                    fontSize: '1.5rem',
-                                },
-                            },
-                            {
-                                type: 'site-list',
-                                style: {
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    color: '#fff',
-                                    marginTop: '1rem',
-                                },
-                                cmps: [{
-                                    type: 'site-text',
-                                    content: 'New-Zealand Australia Argentina Bolivia More...',
-                                    style: {
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        width: '100px',
-                                    },
-                                }, ],
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '100%',
-                        },
-                        cmps: [{
-                                type: 'site-text',
-                                content: 'SHOP',
-                                style: {
-                                    width: '100px',
-                                    fontWeigt: 'bold',
-                                    fontSize: '1.5rem',
-                                },
-                            },
-                            {
-                                type: 'site-list',
-                                style: {
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    color: '#fff',
-                                    marginTop: '1rem',
-                                },
-                                cmps: [{
-                                    type: 'site-text',
-                                    content: 'Non English Guides Delivery Times Special Offers FAQs',
-                                    style: {
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        width: '142px',
-                                    },
-                                }, ],
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '100%',
-                        },
-                        cmps: [{
-                                type: 'site-text',
-                                content: 'FORUMS',
-                                style: {
-                                    width: '100px',
-                                    fontWeigt: 'bold',
-                                    fontSize: '1.5rem',
-                                },
-                            },
-                            {
-                                type: 'site-list',
-                                style: {
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    color: '#fff',
-                                    marginTop: '1rem',
-                                },
-                                cmps: [{
-                                    type: 'site-text',
-                                    content: 'Country Forums Interest Forums Talk To Us',
-                                    style: {
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        width: '140px',
-                                    },
-                                }, ],
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '100%',
-                        },
-                        cmps: [{
-                                type: 'site-text',
-                                content: 'TRAVEL BOOKING',
-                                style: {
-                                    width: '100px',
-                                    fontWeigt: 'bold',
-                                    fontSize: '1.5rem',
-                                },
-                            },
-                            {
-                                type: 'site-list',
-                                style: {
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    color: '#fff',
-                                    marginTop: '1rem',
-                                },
-                                cmps: [{
-                                    type: 'site-text',
-                                    content: 'Hotels Flights Insurance',
-                                    style: {
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        width: '90px',
-                                    },
-                                }, ],
-                            },
-                        ],
-                    },
-                ],
-            },
-        },
-        {
-            name: 'hero',
-            img: 'https://res.cloudinary.com/asantasana/image/upload/v1595403001/herolion_gtjcvl.png',
-            tree: {
-                type: 'site-section',
-                style: {
-                    background: 'url(https://images.unsplash.com/photo-1551439237-dd457099b104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center scroll',
-                    backgroundSize: 'cover',
-                    height: '100vh',
-                    padding: '10px 10px 10px 10px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                },
-                cmps: [{
-                        type: 'site-div',
-                        style: {
-                            height: '6rem',
-                            width: '100%',
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            backgroundColor: '#d9ccc959',
-                            alignItems: 'center',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://pluspng.com/img-png/national-geographic-logo-png-logo-natgeo-png-pluspng-com-logo-national-geographic-png-1000.png',
-                                style: {
-                                    height: '5rem',
-                                    paddingInlineStart: '1.5rem',
-                                },
-                            },
-                            {
-                                type: 'site-list',
-                                cmps: [{
-                                        type: 'site-text',
-                                        content: 'HOME',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#000000',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'ARTICLES',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'MEMBERS',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'ABOUT',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'CONTACT US',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                ],
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#FFF',
-                                    display: 'flex',
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '700px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            flexDirection: 'column',
-                        },
-                        cmps: [{
-                                type: 'site-text',
-                                content: 'ANIMAL GEOGRAPHIC',
-                                style: {
-                                    fontSize: '4rem',
-                                    fontFamily: 'Righteous',
-                                    color: 'white',
-                                    textShadow: '0 0 2px black',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'We Bring You The Best Articles',
-                                style: {
-                                    fontSize: '1.875rem',
-                                    fontFamily: 'Righteous',
-                                    color: 'white',
-                                    textShadow: '0 0 1px black',
-                                },
-                            },
-                            {
-                                type: 'site-button',
-                                content: {
-                                    text: 'SUBSCRIBE',
-                                    href: '',
-                                },
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    backgroundColor: '#cb965b',
-                                    padding: '1rem',
-                                    textTransform: 'uppercase',
-                                    boxShadow: '#0000008c',
-                                    width: '9rem',
-                                    color: 'white',
-                                    borderRadius: '20px',
-                                },
-                            },
-                        ],
-                    },
-                ],
-            },
-        },
-        {
-            name: 'cards',
-            img: 'https://res.cloudinary.com/asantasana/image/upload/v1595402921/cards_p8dgsc.png',
-            tree: {
-                type: 'site-section',
-                style: {
-                    backgroundColor: '#f3eee9',
-                    height: '1400px',
-                    display: 'flex',
-                    width: '100%',
-                    justifyContent: 'space-between',
-                    flexWrap: 'wrap',
-                    padding: '4rem 11rem',
-                },
-                cmps: [{
-                        type: 'site-div',
-                        style: {
-                            height: '500px',
-                            width: '45%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            backgroundColor: '#ffffff',
-                            borderRadius: '12px',
-                            position: 'relative',
-                            alignItems: 'center',
-                            boxShadow: '0 0 3px black',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
-                                style: {
-                                    height: '260px',
-                                    borderRadius: '12px 12px 0px 0px',
-                                    objectFit: 'cover',
-                                    width: '100%',
-                                },
-                            },
-                            {
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
-                                style: {
-                                    height: '100px',
-                                    width: '100px',
-                                    position: 'absolute',
-                                    border: '6px white solid',
-                                    borderRadius: '50%',
-                                    bottom: '38%',
-                                    zIndex: '1',
-                                    left: 'calc(50% - 50px)',
-                                    objectFit: 'cover',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Dogs',
-                                style: {
-                                    marginBlockStart: '5rem',
-                                    fontFamily: 'Righteous',
-                                    fontSize: '2rem',
-                                    color: '#5aa55e',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: "Read All About The Man's Best Friend .",
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'READ MORE',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#0000000',
-                                    marginBlockStart: '2rem',
-                                    borderBlockStart: '1px solid black',
-                                    width: '100%',
-                                    textAlign: 'center',
-                                    paddingBlockStart: '1rem',
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '500px',
-                            width: '45%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            backgroundColor: '#fff',
-                            borderRadius: '12px',
-                            position: 'relative',
-                            alignItems: 'center',
-                            boxShadow: '0 0 3px black',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-                                style: {
-                                    height: '260px',
-                                    objectFit: 'cover',
-                                    width: '100%',
-                                    borderRadius: '12px 12px 0px 0px',
-                                },
-                            },
-                            {
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-                                style: {
-                                    height: '100px',
-                                    width: '100px',
-                                    position: 'absolute',
-                                    border: '6px white solid',
-                                    borderRadius: '50%',
-                                    bottom: '38%',
-                                    zIndex: '1',
-                                    left: 'calc(50% - 50px)',
-                                    objectFit: 'cover',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'The King Of The Jungle',
-                                style: {
-                                    marginBlockStart: '5rem',
-                                    fontFamily: 'Righteous',
-                                    fontSize: '2rem',
-                                    color: '#53311d',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Read All About The Mighty Lion.',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#3d3d3c',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'READ MORE',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#0000000',
-                                    marginBlockStart: '2rem',
-                                    borderBlockStart: '1px solid black',
-                                    width: '100%',
-                                    textAlign: 'center',
-                                    paddingBlockStart: '1rem',
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '500px',
-                            width: '45%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            backgroundColor: '#fff',
-                            borderRadius: '12px',
-                            position: 'relative',
-                            alignItems: 'center',
-                            marginBlockStart: '7rem',
-                            boxShadow: '0 0 3px black',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
-                                style: {
-                                    height: '260px',
-                                    objectFit: 'cover',
-                                    width: '100%',
-                                    borderRadius: '12px 12px 0px 0px',
-                                },
-                            },
-                            {
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
-                                style: {
-                                    height: '100px',
-                                    width: '100px',
-                                    position: 'absolute',
-                                    backgroundSize: 'cover',
-                                    border: '6px white solid',
-                                    borderRadius: '50%',
-                                    bottom: '38%',
-                                    zIndex: '1',
-                                    left: 'calc(50% - 50px)',
-                                    objectFit: 'cover',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'JAWS',
-                                style: {
-                                    marginBlockStart: '5rem',
-                                    fontFamily: 'Righteous',
-                                    fontSize: '2rem',
-                                    color: '#3855bc',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Read All About Sharks.',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#527db4',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'READ MORE',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#0000000',
-                                    marginBlockStart: '2rem',
-                                    borderBlockStart: '1px solid black',
-                                    width: '100%',
-                                    textAlign: 'center',
-                                    paddingBlockStart: '1rem',
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '500px',
-                            width: '45%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            backgroundColor: '#ffffff',
-                            borderRadius: '12px',
-                            position: 'relative',
-                            alignItems: 'center',
-                            marginBlockStart: '7rem',
-                            boxShadow: '0 0 3px black',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg',
-                                style: {
-                                    height: '260px',
-                                    objectFit: 'cover',
-                                    width: '100%',
-                                    borderRadius: '12px 12px 0px 0px',
-                                },
-                            },
-                            {
-                                type: 'site-image',
-                                content: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg',
-                                style: {
-                                    height: '100px',
-                                    width: '100px',
-                                    position: 'absolute',
-                                    border: '6px white solid',
-                                    borderRadius: '50%',
-                                    bottom: '38%',
-                                    zIndex: '1',
-                                    left: 'calc(50% - 50px)',
-                                    objectFit: 'cover',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Cats',
-                                style: {
-                                    marginBlockStart: '5rem',
-                                    fontFamily: 'Righteous',
-                                    fontSize: '2rem',
-                                    color: '#704a26',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Read All About Cats.',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#434343',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'READ MORE',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#0000000',
-                                    marginBlockStart: '2rem',
-                                    borderBlockStart: '1px solid black',
-                                    width: '100%',
-                                    textAlign: 'center',
-                                    paddingBlockStart: '1rem',
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            width: '100%',
-                            textAlign: 'center',
-                        },
-                        cmps: [{
-                            type: 'site-button',
-                            content: {
-                                text: 'MORE ARTICLES...',
-                                href: '',
-                            },
-                            style: {
-                                backgroundColor: '#cfaf8987',
-                                borderRadius: '20px',
-                                padding: '1rem',
-                                marginBlockStart: '3rem',
-                                width: '50%',
-                                fontSize: '1.2rem',
-                                boxShadow: '0 0 2px black',
-                            },
-                        }, ],
-                    },
-                ],
-            },
-        },
-    ],
+						style: {
+							fontFamily: 'Righteous',
+							padding: '1rem',
+							textTransform: 'uppercase',
+							textAlign: 'center',
+							lineHeight: '2rem',
+							fontSize: '1.5rem',
+						},
+					},
+					{
+						type: 'site-image',
+						content:
+							'https://images.unsplash.com/photo-1521102761523-b268f61473e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1549&q=80',
+						style: {
+							height: '480px',
+							width: '580px',
+							objectFit: 'cover',
+						},
+					},
+				],
+			},
+		},
+		{
+			name: 'footer',
+			img: 'https://i.imgur.com/AchuVuN.png',
+			tree: {
+				type: 'site-section',
+				style: {
+					height: '250px',
+					width: '100%',
+					display: 'flex',
+					justifyContent: 'space-around',
+					alignItems: 'center',
+					backgroundColor: '#5ba8b3cc',
+					color: 'white',
+					paddingBlockStart: '2rem',
+				},
+				cmps: [
+					{
+						type: 'site-div',
+						style: {
+							height: '100%',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'DESTINATIONS',
+								style: {
+									width: '100px',
+									fontWeigt: 'bold',
+									fontSize: '1.5rem',
+								},
+							},
+							{
+								type: 'site-list',
+								style: {
+									display: 'flex',
+									flexDirection: 'column',
+									color: '#fff',
+									marginTop: '1rem',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'New-Zealand Australia Argentina Bolivia More...',
+										style: {
+											display: 'flex',
+											flexDirection: 'column',
+											width: '100px',
+										},
+									},
+								],
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							height: '100%',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'SHOP',
+								style: {
+									width: '100px',
+									fontWeigt: 'bold',
+									fontSize: '1.5rem',
+								},
+							},
+							{
+								type: 'site-list',
+								style: {
+									display: 'flex',
+									flexDirection: 'column',
+									color: '#fff',
+									marginTop: '1rem',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'Non English Guides Delivery Times Special Offers FAQs',
+										style: {
+											display: 'flex',
+											flexDirection: 'column',
+											width: '142px',
+										},
+									},
+								],
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							height: '100%',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'FORUMS',
+								style: {
+									width: '100px',
+									fontWeigt: 'bold',
+									fontSize: '1.5rem',
+								},
+							},
+							{
+								type: 'site-list',
+								style: {
+									display: 'flex',
+									flexDirection: 'column',
+									color: '#fff',
+									marginTop: '1rem',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'Country Forums Interest Forums Talk To Us',
+										style: {
+											display: 'flex',
+											flexDirection: 'column',
+											width: '140px',
+										},
+									},
+								],
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							height: '100%',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'TRAVEL BOOKING',
+								style: {
+									width: '100px',
+									fontWeigt: 'bold',
+									fontSize: '1.5rem',
+								},
+							},
+							{
+								type: 'site-list',
+								style: {
+									display: 'flex',
+									flexDirection: 'column',
+									color: '#fff',
+									marginTop: '1rem',
+								},
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'Hotels Flights Insurance',
+										style: {
+											display: 'flex',
+											flexDirection: 'column',
+											width: '90px',
+										},
+									},
+								],
+							},
+						],
+					},
+				],
+			},
+		},
+		{
+			name: 'hero',
+			img: 'https://res.cloudinary.com/asantasana/image/upload/v1595403001/herolion_gtjcvl.png',
+			tree: {
+				type: 'site-section',
+				style: {
+					background:
+						'url(https://images.unsplash.com/photo-1551439237-dd457099b104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center scroll',
+					backgroundSize: 'cover',
+					height: '100vh',
+					padding: '10px 10px 10px 10px',
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+				},
+				cmps: [
+					{
+						type: 'site-div',
+						style: {
+							height: '6rem',
+							width: '100%',
+							display: 'flex',
+							justifyContent: 'space-between',
+							backgroundColor: '#d9ccc959',
+							alignItems: 'center',
+						},
+						cmps: [
+							{
+								type: 'site-image',
+								content:
+									'https://pluspng.com/img-png/national-geographic-logo-png-logo-natgeo-png-pluspng-com-logo-national-geographic-png-1000.png',
+								style: {
+									height: '5rem',
+									paddingInlineStart: '1.5rem',
+								},
+							},
+							{
+								type: 'site-list',
+								cmps: [
+									{
+										type: 'site-text',
+										content: 'HOME',
+										style: {
+											marginInlineEnd: '1rem',
+											color: '#000000',
+										},
+									},
+									{
+										type: 'site-text',
+										content: 'ARTICLES',
+										style: {
+											marginInlineEnd: '1rem',
+											color: '#fff',
+										},
+									},
+									{
+										type: 'site-text',
+										content: 'MEMBERS',
+										style: {
+											marginInlineEnd: '1rem',
+											color: '#fff',
+										},
+									},
+									{
+										type: 'site-text',
+										content: 'ABOUT',
+										style: {
+											marginInlineEnd: '1rem',
+											color: '#fff',
+										},
+									},
+									{
+										type: 'site-text',
+										content: 'CONTACT US',
+										style: {
+											marginInlineEnd: '1rem',
+											color: '#fff',
+										},
+									},
+								],
+								style: {
+									fontFamily: 'Righteous',
+									color: '#FFF',
+									display: 'flex',
+								},
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							height: '700px',
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							flexDirection: 'column',
+						},
+						cmps: [
+							{
+								type: 'site-text',
+								content: 'ANIMAL GEOGRAPHIC',
+								style: {
+									fontSize: '4rem',
+									fontFamily: 'Righteous',
+									color: 'white',
+									textShadow: '0 0 2px black',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'We Bring You The Best Articles',
+								style: {
+									fontSize: '1.875rem',
+									fontFamily: 'Righteous',
+									color: 'white',
+									textShadow: '0 0 1px black',
+								},
+							},
+							{
+								type: 'site-button',
+								content: {
+									text: 'SUBSCRIBE',
+									href: '',
+								},
+								style: {
+									fontFamily: 'Righteous',
+									backgroundColor: '#cb965b',
+									padding: '1rem',
+									textTransform: 'uppercase',
+									boxShadow: '#0000008c',
+									width: '9rem',
+									color: 'white',
+									borderRadius: '20px',
+								},
+							},
+						],
+					},
+				],
+			},
+		},
+		{
+			name: 'cards',
+			img: 'https://res.cloudinary.com/asantasana/image/upload/v1595402921/cards_p8dgsc.png',
+			tree: {
+				type: 'site-section',
+				style: {
+					backgroundColor: '#f3eee9',
+					height: '1400px',
+					display: 'flex',
+					width: '100%',
+					justifyContent: 'space-between',
+					flexWrap: 'wrap',
+					padding: '4rem 11rem',
+				},
+				cmps: [
+					{
+						type: 'site-div',
+						style: {
+							height: '500px',
+							width: '45%',
+							display: 'flex',
+							flexDirection: 'column',
+							backgroundColor: '#ffffff',
+							borderRadius: '12px',
+							position: 'relative',
+							alignItems: 'center',
+							boxShadow: '0 0 3px black',
+						},
+						cmps: [
+							{
+								type: 'site-image',
+								content:
+									'https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
+								style: {
+									height: '260px',
+									borderRadius: '12px 12px 0px 0px',
+									objectFit: 'cover',
+									width: '100%',
+								},
+							},
+							{
+								type: 'site-image',
+								content:
+									'https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
+								style: {
+									height: '100px',
+									width: '100px',
+									position: 'absolute',
+									border: '6px white solid',
+									borderRadius: '50%',
+									bottom: '38%',
+									zIndex: '1',
+									left: 'calc(50% - 50px)',
+									objectFit: 'cover',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'Dogs',
+								style: {
+									marginBlockStart: '5rem',
+									fontFamily: 'Righteous',
+									fontSize: '2rem',
+									color: '#5aa55e',
+								},
+							},
+							{
+								type: 'site-text',
+								content: "Read All About The Man's Best Friend .",
+								style: {
+									fontFamily: 'Righteous',
+									color:
+										'#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'READ MORE',
+								style: {
+									fontFamily: 'Righteous',
+									color: '#0000000',
+									marginBlockStart: '2rem',
+									borderBlockStart: '1px solid black',
+									width: '100%',
+									textAlign: 'center',
+									paddingBlockStart: '1rem',
+								},
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							height: '500px',
+							width: '45%',
+							display: 'flex',
+							flexDirection: 'column',
+							backgroundColor: '#fff',
+							borderRadius: '12px',
+							position: 'relative',
+							alignItems: 'center',
+							boxShadow: '0 0 3px black',
+						},
+						cmps: [
+							{
+								type: 'site-image',
+								content:
+									'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+								style: {
+									height: '260px',
+									objectFit: 'cover',
+									width: '100%',
+									borderRadius: '12px 12px 0px 0px',
+								},
+							},
+							{
+								type: 'site-image',
+								content:
+									'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+								style: {
+									height: '100px',
+									width: '100px',
+									position: 'absolute',
+									border: '6px white solid',
+									borderRadius: '50%',
+									bottom: '38%',
+									zIndex: '1',
+									left: 'calc(50% - 50px)',
+									objectFit: 'cover',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'The King Of The Jungle',
+								style: {
+									marginBlockStart: '5rem',
+									fontFamily: 'Righteous',
+									fontSize: '2rem',
+									color: '#53311d',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'Read All About The Mighty Lion.',
+								style: {
+									fontFamily: 'Righteous',
+									color: '#3d3d3c',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'READ MORE',
+								style: {
+									fontFamily: 'Righteous',
+									color: '#0000000',
+									marginBlockStart: '2rem',
+									borderBlockStart: '1px solid black',
+									width: '100%',
+									textAlign: 'center',
+									paddingBlockStart: '1rem',
+								},
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							height: '500px',
+							width: '45%',
+							display: 'flex',
+							flexDirection: 'column',
+							backgroundColor: '#fff',
+							borderRadius: '12px',
+							position: 'relative',
+							alignItems: 'center',
+							marginBlockStart: '7rem',
+							boxShadow: '0 0 3px black',
+						},
+						cmps: [
+							{
+								type: 'site-image',
+								content:
+									'https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
+								style: {
+									height: '260px',
+									objectFit: 'cover',
+									width: '100%',
+									borderRadius: '12px 12px 0px 0px',
+								},
+							},
+							{
+								type: 'site-image',
+								content:
+									'https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
+								style: {
+									height: '100px',
+									width: '100px',
+									position: 'absolute',
+									backgroundSize: 'cover',
+									border: '6px white solid',
+									borderRadius: '50%',
+									bottom: '38%',
+									zIndex: '1',
+									left: 'calc(50% - 50px)',
+									objectFit: 'cover',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'JAWS',
+								style: {
+									marginBlockStart: '5rem',
+									fontFamily: 'Righteous',
+									fontSize: '2rem',
+									color: '#3855bc',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'Read All About Sharks.',
+								style: {
+									fontFamily: 'Righteous',
+									color: '#527db4',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'READ MORE',
+								style: {
+									fontFamily: 'Righteous',
+									color: '#0000000',
+									marginBlockStart: '2rem',
+									borderBlockStart: '1px solid black',
+									width: '100%',
+									textAlign: 'center',
+									paddingBlockStart: '1rem',
+								},
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							height: '500px',
+							width: '45%',
+							display: 'flex',
+							flexDirection: 'column',
+							backgroundColor: '#ffffff',
+							borderRadius: '12px',
+							position: 'relative',
+							alignItems: 'center',
+							marginBlockStart: '7rem',
+							boxShadow: '0 0 3px black',
+						},
+						cmps: [
+							{
+								type: 'site-image',
+								content: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg',
+								style: {
+									height: '260px',
+									objectFit: 'cover',
+									width: '100%',
+									borderRadius: '12px 12px 0px 0px',
+								},
+							},
+							{
+								type: 'site-image',
+								content: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg',
+								style: {
+									height: '100px',
+									width: '100px',
+									position: 'absolute',
+									border: '6px white solid',
+									borderRadius: '50%',
+									bottom: '38%',
+									zIndex: '1',
+									left: 'calc(50% - 50px)',
+									objectFit: 'cover',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'Cats',
+								style: {
+									marginBlockStart: '5rem',
+									fontFamily: 'Righteous',
+									fontSize: '2rem',
+									color: '#704a26',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'Read All About Cats.',
+								style: {
+									fontFamily: 'Righteous',
+									color: '#434343',
+								},
+							},
+							{
+								type: 'site-text',
+								content: 'READ MORE',
+								style: {
+									fontFamily: 'Righteous',
+									color: '#0000000',
+									marginBlockStart: '2rem',
+									borderBlockStart: '1px solid black',
+									width: '100%',
+									textAlign: 'center',
+									paddingBlockStart: '1rem',
+								},
+							},
+						],
+					},
+					{
+						type: 'site-div',
+						style: {
+							width: '100%',
+							textAlign: 'center',
+						},
+						cmps: [
+							{
+								type: 'site-button',
+								content: {
+									text: 'MORE ARTICLES...',
+									href: '',
+								},
+								style: {
+									backgroundColor: '#cfaf8987',
+									borderRadius: '20px',
+									padding: '1rem',
+									marginBlockStart: '3rem',
+									width: '50%',
+									fontSize: '1.2rem',
+									boxShadow: '0 0 2px black',
+								},
+							},
+						],
+					},
+				],
+			},
+		},
+	],
 };
 export const templateService = {
-    query,
-    save,
-    remove,
-    makeId,
-    addIds,
-    getTemplates,
-    getTemplateById,
-    getSamplesOf,
+	query,
+	save,
+	remove,
+	makeId,
+	addIds,
+	getTemplates,
+	getTemplateById,
+	getSamplesOf,
 };
 
 function getTemplates() {
-    return templates.map(template => {
-        return { _id: template._id, name: template.name, previewImg: template.previewImg };
-    });
+	return templates.map(template => {
+		return { _id: template._id, name: template.name, previewImg: template.previewImg };
+	});
 }
 
 function query() {
-    return httpService.get('template');
+	return httpService.get('template');
 }
 
 function getTemplateById(id) {
-    return httpService.get(`template/${id}`);
+	return httpService.get(`template/${id}`);
 }
 
 function getSamplesOf(element) {
-    return samples[element];
+	return samples[element];
 }
 // console.log(JSON.stringify(addIds()))
 
 function addIds(template) {
-    template.cmps.forEach(cmp => {
-        if (!cmp.id) cmp.id = makeId();
-        if (cmp.cmps && cmp.cmps.length > 0) addIds(cmp);
-    });
-    return template;
+	template.cmps.forEach(cmp => {
+		if (!cmp.id) cmp.id = makeId();
+		if (cmp.cmps && cmp.cmps.length > 0) addIds(cmp);
+	});
+	return template;
 }
 
 function makeId(length = 10) {
-    var txt = '';
-    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    for (var i = 0; i < length; i++) {
-        txt += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-    return txt;
+	var txt = '';
+	var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	for (var i = 0; i < length; i++) {
+		txt += possible.charAt(Math.floor(Math.random() * possible.length));
+	}
+	return txt;
 }
 
 function _getUrl(id = '') {
-    const BASE_URL = process.env.NODE_ENV !== 'development' ? '/api/template' : '//localhost:3030/api/template';
-    return `${BASE_URL}/${id}`;
+	const BASE_URL = process.env.NODE_ENV !== 'development' ? '/api/template' : '//localhost:3030/api/template';
+	return `${BASE_URL}/${id}`;
 }
 
 function remove(id) {
-    return axios.delete(_getUrl(id)).then(res => res.data);
+	return axios.delete(_getUrl(id)).then(res => res.data);
 }
 
 function save(template) {
-    console.log('template:', template);
-    return template._id ? _update(template) : _add(template);
+	console.log('template:', template);
+	return template._id ? _update(template) : _add(template);
 }
 
 function _update(template) {
-    return axios.put(_getUrl(template._id), template).then(res => res.data);
+	return axios.put(_getUrl(template._id), template).then(res => res.data);
 }
 
 // function _add(template) {
@@ -3804,5 +4194,5 @@ function _update(template) {
 // }
 
 function _add(template) {
-    return httpService.post(`template`, template);
+	return httpService.post(`template`, template);
 }
