@@ -19,14 +19,20 @@
             font-size: 1.25rem;
             font-family: 'Nunito Sans', sans-serif;
             flex: 1;
-            transition: .3s;
             border-right: 1px solid rgb(207, 207, 207);
+            transition: .3s;
             border-bottom: 1px solid rgb(207, 207, 207);
             &.selected {
                 background-color: $clr2;
                 color: $clr3;
                 border-bottom: none;
                 text-shadow: 1px 1px #d9dee3;
+                &:first-child {
+                    border-right: 1px solid rgb(207, 207, 207);
+                }
+                &:last-child {
+                    border-right: none;
+                }
             }
         }
     }

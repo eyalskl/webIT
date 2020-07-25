@@ -2,28 +2,26 @@
   <button 
     class="site-button"
     :style="cmp.style"
-    :href="cmp.content.href"
     @click.stop="openEditor"
     @dragover.prevent
     >
-  <span
-    class="site-text"
-    :contenteditable="editMode"
-    v-text="cmp.content.text"
-    @blur="onEdit"
-    @dragover.prevent
-  >
-  </span>
+      <span
+        v-if="editMode"
+        class="site-text"
+        :contenteditable="editMode"
+        v-text="cmp.content.text"
+        @blur="onEdit"
+        @dragover.prevent
+      >
+      </span>
+    <a v-else :href="cmp.content.href" target="_blank">
+      <span class="site-text" v-text="cmp.content.text" @dragover.prevent> </span>
+    </a>
   </button>
 </template>
 
 <script>
-import {
-  eventBus,
-  EDIT_ELEMENT,
-  OPEN_EDITOR,
-  UPDATE_SITE
-} from '@/services/event-bus.service.js';
+import { eventBus, EDIT_ELEMENT, OPEN_EDITOR, UPDATE_SITE } from '@/services/event-bus.service.js';
 
 export default {
   name: 'site-button',
@@ -44,9 +42,8 @@ export default {
     }
   },
   created() {
-    this.content = this.cmp.content;
     eventBus.$on(UPDATE_SITE, () => this.$forceUpdate());
+    if (this.cmp.content.href) if (!this.cmp.content.href.startsWith('h')) this.cmp.content.href = 'http://' + this.cmp.content.href;
   }
 }
-
 </script>
