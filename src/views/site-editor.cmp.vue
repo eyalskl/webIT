@@ -41,7 +41,8 @@ export default {
   data() {
     return {
       samples: {},
-      siteToEdit: null
+      siteToEdit: null,
+
       
     };
   },
