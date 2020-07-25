@@ -2,8 +2,15 @@
     <div class="edit-site-text">
         <h3> {{ (cmp.type  === 'site-text') ? 'Text' : 'Button' }} editor </h3>
         <section class="edit-text flex column justify-center">
+          <div v-if="cmp.type  === 'site-button'" class="link-pick">
+            <h4> Attach an external link to the button </h4>
+            <div class="input-container">
+              <input type="text" v-model="cmp.content.href" placeholder="Insert a link">
+              <i class="fas fa-link"></i>
+            </div>
+          </div>
           <div class="fonts-n-colors flex align-center">
-            <select-box :data="fonts" v-model="cmp.style.fontFamily" placeholder="Pick a font..."></select-box>
+            <select-box :data="fonts" type="fontFamily" v-model="cmp.style.fontFamily" placeholder="Pick a font..."> </select-box>
             <label> <i class="fas fa-paint-brush" :style="{color: cmp.style.color}"> </i> <input type="color" @input="setColor" v-model="cmp.style.color"> </label>
           </div>
           <div class="flex column justify-center align-center">
@@ -29,7 +36,7 @@
             <el-slider @input="setLetterSpacing" v-model="letterSpacing" :max="50"></el-slider>
           </div>
           <div class="text-shadow">
-            <select-box @input="setShadow" :data="shadows" placeholder="Add text shadow...">  </select-box>
+            <select-box @input="setShadow" :data="shadows" type="shadow" placeholder="Add text shadow...">  </select-box>
           </div>
           <div class="flex column justify-center align-center">
             <h4> Background Color </h4>
