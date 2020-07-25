@@ -547,7 +547,6 @@ const samples = {
                       flexDirection: "column",
 
                       },
-                    
                     cmps: [
                       {
                         type: "site-text",
@@ -558,13 +557,16 @@ const samples = {
                         },
                       },
                       {
-                        type: "site-text",
-                        content: `C
-UI Design
-PHP
-Java
-Android
-Templates`,
+						type: "site-text",
+						content: `C
+							UI Design
+							PHP
+							Java
+							Android
+							Templates`,
+						style:{
+							
+						}
                       },
                     ],
                   },
@@ -586,10 +588,13 @@ Templates`,
                       {
                         type: "site-text",
                         content: `About Us
-Contact Us
-Contribute
-Privacy Policy
-Sitemap`,
+						Contact Us
+						Contribute
+						Privacy Policy
+						Sitemap`,
+						style:{
+												
+						}
                       },
                     ],
                   },
