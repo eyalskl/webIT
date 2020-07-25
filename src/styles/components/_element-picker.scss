@@ -12,23 +12,25 @@
         height: 100%;
         padding: 1rem;
         position: relative;
+        justify-content: center;
         .element-name {
             cursor: pointer;
             font-family: 'Raleway', sans-serif;
-            width: 48.25%;
-            height: 4.5rem;
+            width: 8rem;
+            height: 4rem;
             text-transform: capitalize;
-            box-shadow: 0px 0px 6px rgba(#000, .26);
-            margin: .15rem;
+            box-shadow: 0px 1px 5px rgba(#000, .26);
+            margin: .4rem;
             font-size: 1rem;
-            background-color: $clr6;
+            background-color: lighten($clr6, 2.5%);
             color: $clr3;
-            transition: .3s;
+            transition: .1s;
             &:hover {
-                background-color: lighten($clr6, 2.5%);
-                box-shadow: 0px 1px 10px rgba(#000, .26);
+                box-shadow: 0px 0px 3px rgba(#000, .26);
             }
         }
+
+
         .element-list {
             height: 100%;
             >* {

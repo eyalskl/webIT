@@ -1,5 +1,5 @@
 <template>
-  <section class="element-picker flex wrap">
+  <section class="element-picker">
     <button class="element-name" v-for="(name , idx) in elementNames" @click="showList(name)" :key="idx">
       {{ name }}
     </button>
