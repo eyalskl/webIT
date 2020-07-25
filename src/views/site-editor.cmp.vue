@@ -37,7 +37,8 @@ import {
 const _ = require('lodash');
 
 export default {
-  name: 'site-editor',
+  name: "site-editor",
+
   data() {
     return {
       samples: {},
@@ -45,10 +46,10 @@ export default {
       
     };
   },
-  created() {
-    this.$store.commit({ type: 'setEditMode', editMode: true });
+  async created() {
+    this.$store.commit({ type: "setEditMode", editMode: true });
     this.loadSite();
-    this.samples = templateService.getSamplesOf('section');
+    this.samples = templateService.getSamplesOf("section");
     eventBus.$on(ADD_SAMPLE, (sample) => this.addSample(sample));
     eventBus.$on(CLONE_ELEMENT, (element) => this.clone(element));
     eventBus.$on(REMOVE_ELEMENT, (elementId) => {
@@ -72,7 +73,7 @@ export default {
     },
     addSample(sample) {
       this.siteToEdit.cmps.unshift(sample);
-      this.$store.commit({ type: 'setSite', site: this.siteToEdit });
+      this.$store.commit({ type: "setSite", site: this.siteToEdit });
     },
     getElementSamples(element) {
       this.samples = templateService.getSamplesOf(element);
@@ -85,21 +86,21 @@ export default {
         let cmp = cmps[idx];
         cmps.splice(idx, 1, cmps[idx + 1]);
         cmps.splice(idx + 1, 1, cmp);
-      } else if (direction === 'up' && idx !== 0) {
-        let cmp = cmps[idx];
+      } else if (direction === "up" && idx !== 0) {
+        const cmp = cmps[idx];
         cmps.splice(idx, 1, cmps[idx - 1]);
         cmps.splice(idx - 1, 1, cmp);
       }
-      this.$store.commit({ type: 'setSite', site: this.siteToEdit });
+      this.$store.commit({ type: "setSite", site: this.siteToEdit });
     },
     clone(element) {
       let idx = this.siteToEdit.cmps.findIndex((cmp) => cmp.id === element.id);
       if (idx === -1) return;
       let clone = _.cloneDeep(element);
-      clone.id = utilService.makeId();
+      clone.id = templateService.makeId();
       clone = templateService.addIds(clone);
-      this.siteToEdit.cmps.splice(idx, 0, clone);
-      this.$store.commit({ type: 'setSite', site: this.siteToEdit });
+      cmps.splice(idx, 0, clone);
+      this.$store.commit({ type: "setSite", site: this.siteToEdit });
     },
     remove(elementId) {
       let idx = this.siteToEdit.cmps.findIndex((cmp) => cmp.id === elementId);
@@ -109,7 +110,7 @@ export default {
     },
   },
   watch: {
-    '$route.params.id'() {
+    "$route.params.id"() {
       this.loadSite();
     },
   },
