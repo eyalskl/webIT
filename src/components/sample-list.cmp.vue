@@ -1,7 +1,7 @@
 <template>
-     <container behavior="copy" group-name="1" drag-class="sample-drag" class="sample-list flex column align-center" :get-child-payload="getSample">
+     <container behavior="copy" group-name="1" drag-class="sample-drag" class="sample-list" :get-child-payload="getSample">
       <draggable v-for="(sample,idx) in samples" :key="idx">
-          <div class="sample-section-preview flex column adivgn-center" @click.prevent="addSample(sample.tree)" @dragstart.prevent>
+          <div class="sample-section-preview flex column align-center" @click.prevent="addSample(sample.tree)" @dragstart.prevent>
             <h3> {{sample.name}} </h3>
             <img :src="sample.img" class="section-sample-img" />
           </div>
