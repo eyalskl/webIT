@@ -1,7 +1,7 @@
 <template>
   <div class="edit-site-image">
     <h3> Image Editor </h3>
-    <section class="edit-image">
+    <section class="edit-image flex column">
       <label class="img-upload flex column" v-if="!isUploading">
         <img :src="cmp.content">
         <p> 
@@ -14,14 +14,19 @@
           <label> Round Edges </label>
           <el-slider @input="setBorderRadius" v-model="borderRadius" :max="200"> </el-slider>
       </div>
-      <div> <button @click.stop="showImgs = true"> Search ONLINE! </button> </div>
-      <div class="search-img" v-if="showImgs">
-        <input type="text"> 
-        <button @click.stop="searchImgs"> Serach </button>
-        <div v-if="imgs" class="images-display">
-          <img v-for="(img, idx) in imgs" :src="img.urls.thumb" :key="idx">
+      <section class="search-section">
+        <div class="search-img">
+          <div class="input-container">
+            <input type="text" @keydown.enter="searchImgs" v-model="keyword"> 
+            <button @click.stop="searchImgs"> <i class="fas fa-search"></i> </button>
+          </div>
+          <div v-if="imgs" class="images-display">
+            <div v-for="(img, idx) in imgs" :key="idx" >
+              <img :src="img.urls.thumb" @click="setImgSrc(idx)">
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </section>
   </div>
 </template>
@@ -40,7 +45,6 @@ export default {
       borderRadius: 0,
       keyword: 'nature',
       imgs: null,
-      showImgs: false
     };
   },
   methods: {
@@ -56,20 +60,27 @@ export default {
       this.cmp.style.borderRadius = radius + 'px';
       eventBus.$emit(UPDATE_SITE);
     },
+    async searchImgs() {
+      if (!this.keyword) return
+      const imgs = await searchImgService.getImages(this.keyword)
+      this.imgs = imgs.results
+    },
+    setImgSrc(idx) {
+      this.cmp.content = this.imgs[idx].urls.small;
+      eventBus.$emit(UPDATE_SITE);
+    }
   },
-  created() {
+  async created() {
       this.borderRadius = (this.cmp.style.borderRadius) ? parseInt(this.cmp.style.borderRadius) : 0;
-      searchImgService.getImages(this.keyword)
-        .then(imgs => this.imgs = imgs)
-    
-      console.log('imgs:', this.imgs)
+      if (this.imgs) return
+      const imgs = await searchImgService.getImages(this.keyword)
+      this.imgs = imgs.results
   },
   watch: {
     cmp: {
       deep: true,
       handler(newVal , oldVal) {
         this.borderRadius = (newVal.style.borderRadius) ? parseInt(newVal.style.borderRadius) : 0;
-        this.showImgs = false
       }
     }
   }

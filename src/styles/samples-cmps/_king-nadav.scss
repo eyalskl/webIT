@@ -30,4 +30,40 @@
     background: #efefef;
     z-index: 0; 
  }
-    
+
+
+ @media (min-width: 1200px){
+ .social-footer-container{
+     width: 1170px;
+ }
+}
+ @media (min-width: 992px){
+ .social-footer-container {
+     width: 970px;
+ }
+}
+ @media (min-width: 768px){
+ .social-footer-container {
+     width: 700px;
+ }
+ .sfs-about{
+    width: 50%;
+    div{
+        padding: 0 15px;
+    }
+}
+}
+
+@media screen and (max-width: 768px) and (min-width: 300px){
+    .social-footer-container {
+       flex-direction: column;
+    }
+    .sfs-about{
+        width: 100%;
+        div{
+            padding: 15px 0;
+            
+        }
+    }
+
+}

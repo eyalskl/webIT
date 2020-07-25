@@ -1,5 +1,8 @@
 .edit-site-section {
     .edit-section {
+        .first-p {
+            margin: 0;
+        }
         text-align: center;
         padding: 0 2rem;
         .img-upload {
@@ -18,19 +21,64 @@
             input[type="file"] {
                 display: none;
             }
+            p:last-of-type {
+                background-color: $clr6;
+                padding: .5rem;
+            }
         }
         .upload {
             height: 2rem;
             margin: 0 auto;
         }
-        .search-image {
-            img {
-                height: 200px;
-            }
-        }
         .border-edit {
             .el-slider {
                 width: 100%;
+            }
+        }
+    }
+}
+
+.search-section {
+    button {
+        font-family: 'Oswald';
+        font-size: 1rem;
+        background-color: $clr6;
+    }
+    .input-container {
+        border: 1px solid $clr6;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: white;
+        >* {
+            background-color: inherit;
+        }
+        margin: 1rem 0;
+    }
+    input {
+        direction: ltr;
+        text-transform: capitalize;
+        border: none;
+        font-size: 1rem;
+        width: 75%;
+        padding: .5rem;
+    }
+    .images-display {
+        grid-gap: 5px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        div {
+            overflow: hidden;
+            height: 100px;
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                border-radius: 5px;
+                transition: .3s;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.1)
+                }
             }
         }
     }

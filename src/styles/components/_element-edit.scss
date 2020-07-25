@@ -19,6 +19,7 @@
         height: 90vh;
         overflow-y: auto;
         padding-bottom: 5rem;
+        direction: rtl;
         @include niceScrollBar(.75rem, lighten($clr3, 35%));
         h3 {
             background-color: $clr2;

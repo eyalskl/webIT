@@ -7,7 +7,7 @@
     width: 11rem;
     border-left: 2px $clr1 solid;
     border-bottom: 2px $clr1 solid;
-    z-index: 3;
+    z-index: 5;
     >* {
         font-size: .75rem;
         width: 16.66%;
@@ -28,6 +28,7 @@
     }
     &:hover {
         outline: none;
+        z-index: 5;
     }
     .drag-btn {
         &:hover {
