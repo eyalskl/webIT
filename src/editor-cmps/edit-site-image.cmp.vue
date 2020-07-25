@@ -9,7 +9,7 @@
         </p>
         <input type="file" @change="onUploadImg" />
       </label>
-      <img v-else class="uploading" src="https://i.pinimg.com/originals/3d/1b/73/3d1b739fb2546948f207d2be7ae1b105.gif" alt="Uploading Image..."/>
+      <img v-else class="uploading" src="../assets/loadingAnimation.svg" alt="Uploading Image..."/>
       <div class="border-edit flex column align-center">
           <label> Round Edges </label>
           <el-slider @input="setBorderRadius" v-model="borderRadius" :max="200"> </el-slider>
