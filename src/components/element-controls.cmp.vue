@@ -5,7 +5,7 @@
     <button @click.stop="move('down')"> <i class="fas fa-arrow-down"></i> </button>
     <button @click.stop="clone"> <i class="fas fa-clone"></i> </button>
     <button> <i class="fas fa-edit"> </i> </button>
-    <button @click.stop="remove($event)"> <i class="fas fa-trash"> </i> </button>
+    <button @click.stop="remove"> <i class="fas fa-trash"> </i> </button>
   </div>
 </template>
 

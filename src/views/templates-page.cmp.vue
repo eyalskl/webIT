@@ -9,19 +9,8 @@
         alt="Loading..."
       />
       <section v-else class="template-list">
-        <div v-for="template in templates" :key="template._id">
-          <v-hover>
-              <v-img :src="template.previewImg"> </v-img>
-              <v-fade-transition>
-                <v-overlay
-                  v-if="hover"
-                  absolute
-                  color="#036358"
-                >
-                <v-btn @click="editTemplate(template._id)"> Edit </v-btn>
-              </v-overlay>
-            </v-fade-transition>
-          </v-hover>
+        <div v-for="template in templates" :key="template._id" @click="editTemplate(template._id)">
+          <img :src="template.previewImg" />
         </div>
       </section>
     </div>

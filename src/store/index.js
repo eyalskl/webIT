@@ -10,10 +10,14 @@ export default new Vuex.Store({
     // strict: true,
     state: {
         editMode: '',
+        showLogin: true
     },
     getters: {
         editMode(state) {
             return state.editMode;
+        },
+        showLogin(state) {
+            return state.showLogin
         }
     },
     mutations: {
