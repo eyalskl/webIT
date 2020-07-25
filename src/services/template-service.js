@@ -6,6 +6,455 @@ import httpService from './http.service';
 //     tree:{}},
 const _ = require('lodash');
 const samples = {
+	footer:[{
+		name:'Headline & Subs Footer',
+		img:'https://i.gyazo.com/0ce95fbfe80480dd56833736c6bad1c4.png',
+		tree: {
+            type: "site-section",
+            style: {
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-around",
+                background: "#161616",
+                padding: "3rem 1rem",
+                alignItems:"stretch",
+                fontFamily:"Oswald"
+            },
+            cmps: [{
+                    type: "site-div",
+                    style: {
+                      padding:"1rem"
+                    },
+                    cmps: [{
+                            type: "site-text",
+                            content: "DESTINATIONS",
+                            style: {
+                                fontWeight: "bold",
+                                fontSize: "1.25rem",
+                                color:"#fff"
+                            },
+                        },
+                        {
+                            type: "site-list",
+                            style: {
+                                display: "flex",
+                                flexDirection: "column",
+                                color: "#fff",
+                                marginTop: "1rem",
+                            },
+                            cmps: [
+
+                            
+
+                                                                {
+                                    type: "site-text",
+                                    content: `New-Zealand`,
+                                    style: {
+
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `Australia`,
+                                    style: {
+
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `Argentina`,
+                                    style: {
+
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `Bolivia`,
+                                    style: {
+
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `More...`,
+                                    style: {
+
+                                    },
+                                },
+
+                            ],
+                        }
+                    ],
+                },
+
+                {
+                    type: "site-div",
+                    style: {
+                      padding:"1rem"
+
+                    },
+                    cmps: [{
+                            type: "site-text",
+                            content: "SHOP",
+                            style: {
+                                fontWeight: "bold",
+                                fontSize: "1.25rem",
+                                color:"#fff"
+
+                            },
+                        },
+                        {
+                            type: "site-list",
+                            style: {
+                                display: "flex",
+                                flexDirection: "column",
+                                color: "#fff",
+                                marginTop: "1rem",
+                            },
+                            cmps: [
+
+                                {
+
+                                                                
+                                    type: "site-text",
+                                    content: `Non English Guides`,
+                                    style: {
+                                   
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `Delivery Times`,
+                                    style: {
+                                       
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `Special Offers`,
+                                    style: {
+                                    
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `FAQs`,
+                                    style: {
+                               
+                                    },
+                                }
+
+                            ],
+                        }
+                    ],
+                }, {
+                    type: "site-div",
+                    style: {
+                      padding:"1rem"
+
+                    },
+                    cmps: [{
+                            type: "site-text",
+                            content: "FORUMS",
+                            style: {
+                                fontWeight: "bold",
+                                fontSize: "1.25rem",
+                                color:"#fff"
+
+                            },
+                        },
+                        {
+                            type: "site-list",
+                            style: {
+                                display: "flex",
+                                flexDirection: "column",
+                                color: "#fff",
+                                marginTop: "1rem",
+                            },
+                            cmps: [
+
+                                {
+                                    type: "site-text",
+                                    content: `Country Forums`,
+                                    style: {
+                      
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `Interest Forums`,
+                                    style: {
+ 
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `Talk To Us`,
+                                    style: {
+
+                                    },
+                                },
+
+                            ],
+                        }
+                    ],
+                }, {
+                    type: "site-div",
+                    style: {
+                      padding:"1rem"
+
+                    },
+                    cmps: [{
+                            type: "site-text",
+                            content: "TRAVEL BOOKING",
+                            style: {
+                                fontWeight: "bold",
+                                fontSize: "1.25rem",
+                                color:"#fff"
+
+                            },
+                        },
+                        {
+                            type: "site-list",
+                            style: {
+                                display: "flex",
+                                flexDirection: "column",
+                                color: "#fff",
+                                marginTop: "1rem",
+                            },
+                            cmps: [
+
+                                {
+                                    type: "site-text",
+                                    content: `Hotels`,
+                                    style: {
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `Flights`,
+                                    style: {
+                                    },
+                                },
+                                                                {
+                                    type: "site-text",
+                                    content: `Insurance`,
+                                    style: {
+                                    },
+                                },
+
+                            ],
+                        }
+                    ],
+                },
+            ],
+        },
+	},
+	{
+		name:'Footer & Social Buttons',
+		img:'https://i.gyazo.com/d6d4b225b8d23bbc721ae110356e23cf.png',
+		tree:          {
+            type: "site-section",
+            style: {
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              flexDirection:"column",
+              background: "#26272b",
+              padding: "35px 0 20px",
+            },
+
+            cmps: [
+              {
+                type: "site-div",
+                class: "social-footer-container",
+                style: {
+                  marginRight: "auto",
+                  marginLeft: "auto",
+                  display: "flex",
+                  paddingBlockEnd: "1rem",
+                  borderBottom: "1px solid #666666",
+                  flexWrap:"wrap"
+                },
+                cmps: [
+                  {
+                    type: "site-div",
+                    class:"sfs-about",
+                    style: {
+                      padding: "0 15px",
+                      display: "flex",
+                      flexDirection: "column",
+                    },
+                    cmps: [
+                      {
+                        type: "site-text",
+                        content: "ABOUT",
+                        style: {
+                          letterSpacing: "2px",
+                          color: "#fff",
+                        },
+                      },
+                      {
+                        type: "site-text",
+                        content:
+                          "webIT.com is an initiative to help the upcoming website builders with building easy and convient landing sites . webIT focuses on providing the most efficient Sections as the site wants to be clean and simple. We will help website builders build up the best landing sites in a variant of Blocks that Videos, Maps , Forms , Galleries, Navbars, Cards , Footers , Headers and some Dividers.",
+                        style: {
+                          color: "#737373",
+                        },
+                      
+                      },
+                    ]
+                  },
+                  {
+                    type: "site-div",
+                    class:"sfs-about",
+                    style: {
+                      padding: "0 15px",
+                      display: "flex",
+                      justifyContent:"space-between"
+
+                    },
+                    cmps:[{
+                      type:"site-div",
+                      style:{
+                      display: "flex",
+                      flexDirection: "column",
+
+                      },
+                    
+                    cmps: [
+                      {
+                        type: "site-text",
+                        content: "CATEGORIES",
+                        style: {
+                          letterSpacing: "2px",
+                          color: "#fff",
+                        },
+                      },
+                      {
+                        type: "site-text",
+                        content: `C
+UI Design
+PHP
+Java
+Android
+Templates`,
+                      },
+                    ],
+                  },
+                  {
+                    type: "site-div",
+                    style: {
+                      display: "flex",
+                      flexDirection: "column",
+                    },
+                    cmps: [
+                      {
+                        type: "site-text",
+                        content: "QUICK LINKS",
+                        style: {
+                          letterSpacing: "2px",
+                          color: "#fff",
+                        },
+                      },
+                      {
+                        type: "site-text",
+                        content: `About Us
+Contact Us
+Contribute
+Privacy Policy
+Sitemap`,
+                      },
+                    ],
+                  },
+                ],
+              }
+              ]},
+              {
+                type:"site-div",
+                class:"social-footer-container",
+                style:{
+                  marginRight:"auto",
+                  marginLeft:"auto",
+                  paddingBlockStart:"1rem"
+              },
+              cmps:[
+                {
+                type:"site-div",
+                style:{
+                  textAlign:"center"
+                },
+                cmps:[
+                {
+                
+                type:"site-text",
+                content:"Copyright © 2020 All Rights Reserved by webIT.",
+                style:{
+                  fontSize: "1.1rem",
+                  lineHeight: "1.5",
+                  letterSpacing: "1px"
+                }
+              }]
+                }
+              ,
+              {
+                type:"site-div",
+                style:{
+                  display:"flex",
+                  justifyContent:"space-around",
+                  padding:"1rem 7rem .5rem 7rem"
+
+                },
+                cmps:[                {
+                  type:"site-button",
+                  content:{text:'',href:''},
+                  style:{
+                    background:"url(https://image.flaticon.com/icons/png/512/124/124010.png) center center / cover no-repeat",
+                    width:"28px",
+                    height:"28px",
+                    borderRadius:"5px"
+                  }
+                },
+                {
+                  type:"site-button",
+                  content:{text:'',href:''},
+                  style:{
+                    background:"url(https://i.gyazo.com/80639d9cab9b20e4cc2b6d020907aede.png) center center / cover no-repeat",
+                    width:"28px",
+                    height:"28px",
+                    borderRadius:"5px"
+
+                  }
+                },
+                {
+                  type:"site-button",
+                  content:{text:'',href:''},
+                  style:{
+                    background:"url(https://i.gyazo.com/8833c2c42eb3b5ee28e01dc455fa2614.png) center center / cover no-repeat",
+                    width:"28px",
+                    height:"28px",
+                    borderRadius:"5px"
+
+                  }
+                },
+                {
+                  type:"site-button",
+                  content:{text:'',href:''},
+                  style:{
+                    background:"url(https://i.gyazo.com/641e9ec709af1f857fd4ed51bb882e5f.png) center center / cover no-repeat",
+                    width:"28px",
+                    height:"28px",
+                    borderRadius:"5px"
+
+                  }
+                }]
+              }
+              ]
+              }
+            ],
+          },
+	}
+	],
 	video: [
 		{
 			name: 'Video Card Left',
