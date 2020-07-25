@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-bar flex space-between align-center">
-    <div class="logo flex" @click="$router.push('/')">
+    <div class="logo flex">
       <h2>web<span>IT</span></h2>
     </div>
     <div class="main-nav">
@@ -23,9 +23,8 @@ export default {
   },
   methods: {
     saveSite() {
-      console.log('HEY');
       this.$store.dispatch({type: 'saveSite'});
-    }
+    },
   }, 
   created() {
     this.siteId = this.$route.params.id;

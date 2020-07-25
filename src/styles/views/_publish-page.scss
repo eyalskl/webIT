@@ -17,6 +17,10 @@
         &:hover {
             filter: brightness(105%) saturate(105%);
         }
+        cursor: pointer;
+        span {
+            cursor: pointer;
+        }
     }
     span {
         cursor: text;

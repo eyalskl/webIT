@@ -5,6 +5,7 @@ import httpService from './http.service';
 //     img:"https://i.ibb.co/D74M0wM/Screenshot-2020-07-23-18-40-58.png",
 //     tree:{}},
 const _ = require('lodash');
+
 const samples = {
 	footer:[{
 		name:'Headline & Subs Footer',
@@ -2226,799 +2227,764 @@ Sitemap`,
 						type: 'site-text',
 						content: `Lago di Braies :
                   In summer, lake Lago di Braies in South Tyrol reflects colours in all shades from green to blue, in winter Lago di Braies is covered with ice and snow. In winter and summer this jewel is the starting point for hikes, ski tours, snowshoe hikes and walks. Book through us and let's explore it together!`,
-						style: {
-							fontFamily: 'Righteous',
-							padding: '1rem',
-							textTransform: 'uppercase',
-							textAlign: 'center',
-							lineHeight: '2rem',
-							fontSize: '1.5rem',
-						},
-					},
-					{
-						type: 'site-image',
-						content:
-							'https://images.unsplash.com/photo-1521102761523-b268f61473e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1549&q=80',
-						style: {
-							height: '480px',
-							width: '580px',
-							objectFit: 'cover',
-						},
-					},
-				],
-			},
-		},
-		{
-			name: 'footer',
-			img: 'https://i.imgur.com/AchuVuN.png',
-			tree: {
-				type: 'site-section',
-				style: {
-					height: '250px',
-					width: '100%',
-					display: 'flex',
-					justifyContent: 'space-around',
-					alignItems: 'center',
-					backgroundColor: '#5ba8b3cc',
-					color: 'white',
-					paddingBlockStart: '2rem',
-				},
-				cmps: [
-					{
-						type: 'site-div',
-						style: {
-							height: '100%',
-						},
-						cmps: [
-							{
-								type: 'site-text',
-								content: 'DESTINATIONS',
-								style: {
-									width: '100px',
-									fontWeigt: 'bold',
-									fontSize: '1.5rem',
-								},
-								id: 'jNcCou9kz7',
-							},
-							{
-								type: 'site-list',
-								style: {
-									display: 'flex',
-									flexDirection: 'column',
-									color: '#fff',
-									marginTop: '1rem',
-								},
-								cmps: [
-									{
-										type: 'site-text',
-										content: 'New-Zealand Australia Argentina Bolivia More...',
-										style: {
-											display: 'flex',
-											flexDirection: 'column',
-											width: '100px',
-										},
-										id: '9BzPQujz7J',
-									},
-								],
-								id: 'UmTjOkgDrD',
-							},
-						],
-						id: 'nxO9VyFrrg',
-					},
-					{
-						type: 'site-div',
-						style: {
-							height: '100%',
-						},
-						cmps: [
-							{
-								type: 'site-text',
-								content: 'SHOP',
-								style: {
-									width: '100px',
-									fontWeigt: 'bold',
-									fontSize: '1.5rem',
-								},
-								id: 'HEQwyRK3yp',
-							},
-							{
-								type: 'site-list',
-								style: {
-									display: 'flex',
-									flexDirection: 'column',
-									color: '#fff',
-									marginTop: '1rem',
-								},
-								cmps: [
-									{
-										type: 'site-text',
-										content: 'Non English Guides Delivery Times Special Offers FAQs',
-										style: {
-											display: 'flex',
-											flexDirection: 'column',
-											width: '142px',
-										},
-										id: 'gaxvWvVmuh',
-									},
-								],
-								id: 'uGkjkHJJAW',
-							},
-						],
-						id: 'wfQ9UIKLPb',
-					},
-					{
-						type: 'site-div',
-						style: {
-							height: '100%',
-						},
-						cmps: [
-							{
-								type: 'site-text',
-								content: 'FORUMS',
-								style: {
-									width: '100px',
-									fontWeigt: 'bold',
-									fontSize: '1.5rem',
-								},
-								id: '3YdfYhoJgR',
-							},
-							{
-								type: 'site-list',
-								style: {
-									display: 'flex',
-									flexDirection: 'column',
-									color: '#fff',
-									marginTop: '1rem',
-								},
-								cmps: [
-									{
-										type: 'site-text',
-										content: 'Country Forums Interest Forums Talk To Us',
-										style: {
-											display: 'flex',
-											flexDirection: 'column',
-											width: '140px',
-										},
-										id: 'A7g9fFDAcd',
-									},
-								],
-								id: 'hlkNwHCYHk',
-							},
-						],
-						id: '9GjbmVxZyB',
-					},
-					{
-						type: 'site-div',
-						style: {
-							height: '100%',
-						},
-						cmps: [
-							{
-								type: 'site-text',
-								content: 'TRAVEL BOOKING',
-								style: {
-									width: '100px',
-									fontWeigt: 'bold',
-									fontSize: '1.5rem',
-								},
-								id: '5Jp0YBzQSE',
-							},
-							{
-								type: 'site-list',
-								style: {
-									display: 'flex',
-									flexDirection: 'column',
-									color: '#fff',
-									marginTop: '1rem',
-								},
-								cmps: [
-									{
-										type: 'site-text',
-										content: 'Hotels Flights Insurance',
-										style: {
-											display: 'flex',
-											flexDirection: 'column',
-											width: '90px',
-										},
-										id: '5zqfWnwK53',
-									},
-								],
-								id: 'SdMKEsjhws',
-							},
-						],
-						id: 'bXqIfQsUrt',
-					},
-				],
-				id: 'XXTP3vVV5j',
-			},
-		},
-		{
-			name: 'hero',
-			img: 'https://res.cloudinary.com/asantasana/image/upload/v1595403001/herolion_gtjcvl.png',
-			tree: {
-				type: 'site-section',
-				style: {
-					background:
-						'url(https://images.unsplash.com/photo-1551439237-dd457099b104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center scroll',
-					backgroundSize: 'cover',
-					height: '100vh',
-					padding: '10px 10px 10px 10px',
-					display: 'flex',
-					flexDirection: 'column',
-					alignItems: 'center',
-				},
-				cmps: [
-					{
-						type: 'site-div',
-						style: {
-							height: '6rem',
-							width: '100%',
-							display: 'flex',
-							justifyContent: 'space-between',
-							backgroundColor: '#d9ccc959',
-							alignItems: 'center',
-						},
-						cmps: [
-							{
-								type: 'site-image',
-								content:
-									'https://pluspng.com/img-png/national-geographic-logo-png-logo-natgeo-png-pluspng-com-logo-national-geographic-png-1000.png',
-								style: {
-									height: '5rem',
-									paddingInlineStart: '1.5rem',
-								},
-								id: 'ZPEkMo7Jl9',
-							},
-							{
-								type: 'site-list',
-								cmps: [
-									{
-										type: 'site-text',
-										content: 'HOME',
-										style: {
-											marginInlineEnd: '1rem',
-											color: '#000000',
-										},
-										id: '6C1WKOMviK',
-									},
-									{
-										type: 'site-text',
-										content: 'ARTICLES',
-										style: {
-											marginInlineEnd: '1rem',
-											color: '#fff',
-										},
-										id: 'ZnSDUfBnoc',
-									},
-									{
-										type: 'site-text',
-										content: 'MEMBERS',
-										style: {
-											marginInlineEnd: '1rem',
-											color: '#fff',
-										},
-										id: 'BI7mwzgJMY',
-									},
-									{
-										type: 'site-text',
-										content: 'ABOUT',
-										style: {
-											marginInlineEnd: '1rem',
-											color: '#fff',
-										},
-										id: 'apj9ziYJPr',
-									},
-									{
-										type: 'site-text',
-										content: 'CONTACT US',
-										style: {
-											marginInlineEnd: '1rem',
-											color: '#fff',
-										},
-										id: 'jV656FQjzv',
-									},
-								],
-								style: {
-									fontFamily: 'Righteous',
-									color: '#FFF',
-									display: 'flex',
-								},
-								id: 'LLyIOQEAlV',
-							},
-						],
-						id: 'kQaLi6AH7K',
-					},
-					{
-						type: 'site-div',
-						style: {
-							height: '700px',
-							display: 'flex',
-							alignItems: 'center',
-							justifyContent: 'center',
-							flexDirection: 'column',
-						},
-						cmps: [
-							{
-								type: 'site-text',
-								content: 'ANIMAL GEOGRAPHIC',
-								style: {
-									fontSize: '4rem',
-									fontFamily: 'Righteous',
-									color: 'white',
-									textShadow: '0 0 2px black',
-								},
-								id: 'KmQWFoH66n',
-							},
-							{
-								type: 'site-text',
-								content: 'We Bring You The Best Articles',
-								style: {
-									fontSize: '1.875rem',
-									fontFamily: 'Righteous',
-									color: 'white',
-									textShadow: '0 0 1px black',
-								},
-								id: '6yZaTiUIRI',
-							},
-							{
-								type: 'site-button',
-								content: {
-									text: 'SUBSCRIBE',
-									href: '',
-								},
-								style: {
-									fontFamily: 'Righteous',
-									backgroundColor: '#cb965b',
-									padding: '1rem',
-									textTransform: 'uppercase',
-									boxShadow: '#0000008c',
-									width: '9rem',
-									color: 'white',
-									borderRadius: '20px',
-								},
-								id: 'fr176TWSCX',
-							},
-						],
-						id: 'eXvBUW7jmc',
-					},
-				],
-				id: 'vfx3i1WSHW',
-			},
-		},
-		{
-			name: 'cards',
-			img: 'https://res.cloudinary.com/asantasana/image/upload/v1595402921/cards_p8dgsc.png',
-			tree: {
-				type: 'site-section',
-				style: {
-					backgroundColor: '#f3eee9',
-					height: '1400px',
-					display: 'flex',
-					width: '100%',
-					justifyContent: 'space-between',
-					flexWrap: 'wrap',
-					padding: '4rem 11rem',
-				},
-				cmps: [
-					{
-						type: 'site-div',
-						style: {
-							height: '500px',
-							width: '45%',
-							display: 'flex',
-							flexDirection: 'column',
-							backgroundColor: '#ffffff',
-							borderRadius: '12px',
-							position: 'relative',
-							alignItems: 'center',
-							boxShadow: '0 0 3px black',
-						},
-						cmps: [
-							{
-								type: 'site-image',
-								content:
-									'https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
-								style: {
-									height: '260px',
-									borderRadius: '12px 12px 0px 0px',
-									objectFit: 'cover',
-									width: '100%',
-								},
-								id: '4FINA825D7',
-							},
-							{
-								type: 'site-image',
-								content:
-									'https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
-								style: {
-									height: '100px',
-									width: '100px',
-									position: 'absolute',
-									border: '6px white solid',
-									borderRadius: '50%',
-									bottom: '38%',
-									zIndex: '1',
-									left: 'calc(50% - 50px)',
-									objectFit: 'cover',
-								},
-								id: '9YryChNg4Y',
-							},
-							{
-								type: 'site-text',
-								content: 'Dogs',
-								style: {
-									marginBlockStart: '5rem',
-									fontFamily: 'Righteous',
-									fontSize: '2rem',
-									color: '#5aa55e',
-								},
-								id: 'FTg526zun4',
-							},
-							{
-								type: 'site-text',
-								content: "Read All About The Man's Best Friend .",
-								style: {
-									fontFamily: 'Righteous',
-									color:
-										'#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b',
-								},
-								id: 'cR5cibruZT',
-							},
-							{
-								type: 'site-text',
-								content: 'READ MORE',
-								style: {
-									fontFamily: 'Righteous',
-									color: '#0000000',
-									marginBlockStart: '2rem',
-									borderBlockStart: '1px solid black',
-									width: '100%',
-									textAlign: 'center',
-									paddingBlockStart: '1rem',
-								},
-								id: 'sS7JKPThTA',
-							},
-						],
-						id: 'hwNp1jM1sQ',
-					},
-					{
-						type: 'site-div',
-						style: {
-							height: '500px',
-							width: '45%',
-							display: 'flex',
-							flexDirection: 'column',
-							backgroundColor: '#fff',
-							borderRadius: '12px',
-							position: 'relative',
-							alignItems: 'center',
-							boxShadow: '0 0 3px black',
-						},
-						cmps: [
-							{
-								type: 'site-image',
-								content:
-									'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-								style: {
-									height: '260px',
-									objectFit: 'cover',
-									width: '100%',
-									borderRadius: '12px 12px 0px 0px',
-								},
-								id: 'A0pMz1QA3m',
-							},
-							{
-								type: 'site-image',
-								content:
-									'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-								style: {
-									height: '100px',
-									width: '100px',
-									position: 'absolute',
-									border: '6px white solid',
-									borderRadius: '50%',
-									bottom: '38%',
-									zIndex: '1',
-									left: 'calc(50% - 50px)',
-									objectFit: 'cover',
-								},
-								id: 'SAtBaMsAwm',
-							},
-							{
-								type: 'site-text',
-								content: 'The King Of The Jungle',
-								style: {
-									marginBlockStart: '5rem',
-									fontFamily: 'Righteous',
-									fontSize: '2rem',
-									color: '#53311d',
-								},
-								id: 'P0h7QNh4iX',
-							},
-							{
-								type: 'site-text',
-								content: 'Read All About The Mighty Lion.',
-								style: {
-									fontFamily: 'Righteous',
-									color: '#3d3d3c',
-								},
-								id: 'p8VTpFIQyl',
-							},
-							{
-								type: 'site-text',
-								content: 'READ MORE',
-								style: {
-									fontFamily: 'Righteous',
-									color: '#0000000',
-									marginBlockStart: '2rem',
-									borderBlockStart: '1px solid black',
-									width: '100%',
-									textAlign: 'center',
-									paddingBlockStart: '1rem',
-								},
-								id: '1kfQwfMQFk',
-							},
-						],
-						id: 'D1aAi5Pn9v',
-					},
-					{
-						type: 'site-div',
-						style: {
-							height: '500px',
-							width: '45%',
-							display: 'flex',
-							flexDirection: 'column',
-							backgroundColor: '#fff',
-							borderRadius: '12px',
-							position: 'relative',
-							alignItems: 'center',
-							marginBlockStart: '7rem',
-							boxShadow: '0 0 3px black',
-						},
-						cmps: [
-							{
-								type: 'site-image',
-								content:
-									'https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
-								style: {
-									height: '260px',
-									objectFit: 'cover',
-									width: '100%',
-									borderRadius: '12px 12px 0px 0px',
-								},
-								id: 'S6NuSSqVfH',
-							},
-							{
-								type: 'site-image',
-								content:
-									'https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
-								style: {
-									height: '100px',
-									width: '100px',
-									position: 'absolute',
-									backgroundSize: 'cover',
-									border: '6px white solid',
-									borderRadius: '50%',
-									bottom: '38%',
-									zIndex: '1',
-									left: 'calc(50% - 50px)',
-									objectFit: 'cover',
-								},
-								id: 'qSudjuXd6I',
-							},
-							{
-								type: 'site-text',
-								content: 'JAWS',
-								style: {
-									marginBlockStart: '5rem',
-									fontFamily: 'Righteous',
-									fontSize: '2rem',
-									color: '#3855bc',
-								},
-								id: 'Z7Emvo4SbG',
-							},
-							{
-								type: 'site-text',
-								content: 'Read All About Sharks.',
-								style: {
-									fontFamily: 'Righteous',
-									color: '#527db4',
-								},
-								id: 'a6VIClalZz',
-							},
-							{
-								type: 'site-text',
-								content: 'READ MORE',
-								style: {
-									fontFamily: 'Righteous',
-									color: '#0000000',
-									marginBlockStart: '2rem',
-									borderBlockStart: '1px solid black',
-									width: '100%',
-									textAlign: 'center',
-									paddingBlockStart: '1rem',
-								},
-								id: 'csRPeUuaHi',
-							},
-						],
-						id: 'D0x2FslItL',
-					},
-					{
-						type: 'site-div',
-						style: {
-							height: '500px',
-							width: '45%',
-							display: 'flex',
-							flexDirection: 'column',
-							backgroundColor: '#ffffff',
-							borderRadius: '12px',
-							position: 'relative',
-							alignItems: 'center',
-							marginBlockStart: '7rem',
-							boxShadow: '0 0 3px black',
-						},
-						cmps: [
-							{
-								type: 'site-image',
-								content: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg',
-								style: {
-									height: '260px',
-									objectFit: 'cover',
-									width: '100%',
-									borderRadius: '12px 12px 0px 0px',
-								},
-								id: 'kpcait65wW',
-							},
-							{
-								type: 'site-image',
-								content: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg',
-								style: {
-									height: '100px',
-									width: '100px',
-									position: 'absolute',
-									border: '6px white solid',
-									borderRadius: '50%',
-									bottom: '38%',
-									zIndex: '1',
-									left: 'calc(50% - 50px)',
-									objectFit: 'cover',
-								},
-								id: 'WVVbR4xf5A',
-							},
-							{
-								type: 'site-text',
-								content: 'Cats',
-								style: {
-									marginBlockStart: '5rem',
-									fontFamily: 'Righteous',
-									fontSize: '2rem',
-									color: '#704a26',
-								},
-								id: 'dA4i0cxJWq',
-							},
-							{
-								type: 'site-text',
-								content: 'Read All About Cats.',
-								style: {
-									fontFamily: 'Righteous',
-									color: '#434343',
-								},
-								id: 'fOD3YADgwH',
-							},
-							{
-								type: 'site-text',
-								content: 'READ MORE',
-								style: {
-									fontFamily: 'Righteous',
-									color: '#0000000',
-									marginBlockStart: '2rem',
-									borderBlockStart: '1px solid black',
-									width: '100%',
-									textAlign: 'center',
-									paddingBlockStart: '1rem',
-								},
-								id: 'IQOrC39PZa',
-							},
-						],
-						id: 'lGfoBWxvIR',
-					},
-					{
-						type: 'site-div',
-						style: {
-							width: '100%',
-							textAlign: 'center',
-						},
-						cmps: [
-							{
-								type: 'site-button',
-								content: {
-									text: 'MORE ARTICLES...',
-									href: '',
-								},
-								style: {
-									backgroundColor: '#cfaf8987',
-									borderRadius: '20px',
-									padding: '1rem',
-									marginBlockStart: '3rem',
-									width: '50%',
-									fontSize: '1.2rem',
-									boxShadow: '0 0 2px black',
-								},
-								id: '6ZD3hkff48',
-							},
-						],
-						id: 'oOS5N2JH8q',
-					},
-				],
-				id: 'n9zrfdBOSI',
-			},
-		},
-	],
+                        style: {
+                            fontFamily: 'Righteous',
+                            padding: '1rem',
+                            textTransform: 'uppercase',
+                            textAlign: 'center',
+                            lineHeight: '2rem',
+                            fontSize: '1.5rem',
+                        },
+                    },
+                    {
+                        type: 'site-image',
+                        content: 'https://images.unsplash.com/photo-1521102761523-b268f61473e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1549&q=80',
+                        style: {
+                            height: '480px',
+                            width: '580px',
+                            objectFit: 'cover',
+                        },
+                    },
+                ],
+            },
+        },
+        {
+            name: 'footer',
+            img: 'https://i.imgur.com/AchuVuN.png',
+            tree: {
+                type: 'site-section',
+                style: {
+                    height: '250px',
+                    width: '100%',
+                    display: 'flex',
+                    justifyContent: 'space-around',
+                    alignItems: 'center',
+                    backgroundColor: '#5ba8b3cc',
+                    color: 'white',
+                    paddingBlockStart: '2rem',
+                },
+                cmps: [{
+                        type: 'site-div',
+                        style: {
+                            height: '100%',
+                        },
+                        cmps: [{
+                                type: 'site-text',
+                                content: 'DESTINATIONS',
+                                style: {
+                                    width: '100px',
+                                    fontWeigt: 'bold',
+                                    fontSize: '1.5rem',
+                                },
+                                id: 'jNcCou9kz7',
+                            },
+                            {
+                                type: 'site-list',
+                                style: {
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    color: '#fff',
+                                    marginTop: '1rem',
+                                },
+                                cmps: [{
+                                    type: 'site-text',
+                                    content: 'New-Zealand Australia Argentina Bolivia More...',
+                                    style: {
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        width: '100px',
+                                    },
+                                    id: '9BzPQujz7J',
+                                }, ],
+                                id: 'UmTjOkgDrD',
+                            },
+                        ],
+                        id: 'nxO9VyFrrg',
+                    },
+                    {
+                        type: 'site-div',
+                        style: {
+                            height: '100%',
+                        },
+                        cmps: [{
+                                type: 'site-text',
+                                content: 'SHOP',
+                                style: {
+                                    width: '100px',
+                                    fontWeigt: 'bold',
+                                    fontSize: '1.5rem',
+                                },
+                                id: 'HEQwyRK3yp',
+                            },
+                            {
+                                type: 'site-list',
+                                style: {
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    color: '#fff',
+                                    marginTop: '1rem',
+                                },
+                                cmps: [{
+                                    type: 'site-text',
+                                    content: 'Non English Guides Delivery Times Special Offers FAQs',
+                                    style: {
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        width: '142px',
+                                    },
+                                    id: 'gaxvWvVmuh',
+                                }, ],
+                                id: 'uGkjkHJJAW',
+                            },
+                        ],
+                        id: 'wfQ9UIKLPb',
+                    },
+                    {
+                        type: 'site-div',
+                        style: {
+                            height: '100%',
+                        },
+                        cmps: [{
+                                type: 'site-text',
+                                content: 'FORUMS',
+                                style: {
+                                    width: '100px',
+                                    fontWeigt: 'bold',
+                                    fontSize: '1.5rem',
+                                },
+                                id: '3YdfYhoJgR',
+                            },
+                            {
+                                type: 'site-list',
+                                style: {
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    color: '#fff',
+                                    marginTop: '1rem',
+                                },
+                                cmps: [{
+                                    type: 'site-text',
+                                    content: 'Country Forums Interest Forums Talk To Us',
+                                    style: {
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        width: '140px',
+                                    },
+                                    id: 'A7g9fFDAcd',
+                                }, ],
+                                id: 'hlkNwHCYHk',
+                            },
+                        ],
+                        id: '9GjbmVxZyB',
+                    },
+                    {
+                        type: 'site-div',
+                        style: {
+                            height: '100%',
+                        },
+                        cmps: [{
+                                type: 'site-text',
+                                content: 'TRAVEL BOOKING',
+                                style: {
+                                    width: '100px',
+                                    fontWeigt: 'bold',
+                                    fontSize: '1.5rem',
+                                },
+                                id: '5Jp0YBzQSE',
+                            },
+                            {
+                                type: 'site-list',
+                                style: {
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    color: '#fff',
+                                    marginTop: '1rem',
+                                },
+                                cmps: [{
+                                    type: 'site-text',
+                                    content: 'Hotels Flights Insurance',
+                                    style: {
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        width: '90px',
+                                    },
+                                    id: '5zqfWnwK53',
+                                }, ],
+                                id: 'SdMKEsjhws',
+                            },
+                        ],
+                        id: 'bXqIfQsUrt',
+                    },
+                ],
+                id: 'XXTP3vVV5j',
+            },
+        },
+        {
+            name: 'hero',
+            img: 'https://res.cloudinary.com/asantasana/image/upload/v1595403001/herolion_gtjcvl.png',
+            tree: {
+                type: 'site-section',
+                style: {
+                    background: 'url(https://images.unsplash.com/photo-1551439237-dd457099b104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center scroll',
+                    backgroundSize: 'cover',
+                    height: '100vh',
+                    padding: '10px 10px 10px 10px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                },
+                cmps: [{
+                        type: 'site-div',
+                        style: {
+                            height: '6rem',
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            backgroundColor: '#d9ccc959',
+                            alignItems: 'center',
+                        },
+                        cmps: [{
+                                type: 'site-image',
+                                content: 'https://pluspng.com/img-png/national-geographic-logo-png-logo-natgeo-png-pluspng-com-logo-national-geographic-png-1000.png',
+                                style: {
+                                    height: '5rem',
+                                    paddingInlineStart: '1.5rem',
+                                },
+                                id: 'ZPEkMo7Jl9',
+                            },
+                            {
+                                type: 'site-list',
+                                cmps: [{
+                                        type: 'site-text',
+                                        content: 'HOME',
+                                        style: {
+                                            marginInlineEnd: '1rem',
+                                            color: '#000000',
+                                        },
+                                        id: '6C1WKOMviK',
+                                    },
+                                    {
+                                        type: 'site-text',
+                                        content: 'ARTICLES',
+                                        style: {
+                                            marginInlineEnd: '1rem',
+                                            color: '#fff',
+                                        },
+                                        id: 'ZnSDUfBnoc',
+                                    },
+                                    {
+                                        type: 'site-text',
+                                        content: 'MEMBERS',
+                                        style: {
+                                            marginInlineEnd: '1rem',
+                                            color: '#fff',
+                                        },
+                                        id: 'BI7mwzgJMY',
+                                    },
+                                    {
+                                        type: 'site-text',
+                                        content: 'ABOUT',
+                                        style: {
+                                            marginInlineEnd: '1rem',
+                                            color: '#fff',
+                                        },
+                                        id: 'apj9ziYJPr',
+                                    },
+                                    {
+                                        type: 'site-text',
+                                        content: 'CONTACT US',
+                                        style: {
+                                            marginInlineEnd: '1rem',
+                                            color: '#fff',
+                                        },
+                                        id: 'jV656FQjzv',
+                                    },
+                                ],
+                                style: {
+                                    fontFamily: 'Righteous',
+                                    color: '#FFF',
+                                    display: 'flex',
+                                },
+                                id: 'LLyIOQEAlV',
+                            },
+                        ],
+                        id: 'kQaLi6AH7K',
+                    },
+                    {
+                        type: 'site-div',
+                        style: {
+                            height: '700px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flexDirection: 'column',
+                        },
+                        cmps: [{
+                                type: 'site-text',
+                                content: 'ANIMAL GEOGRAPHIC',
+                                style: {
+                                    fontSize: '4rem',
+                                    fontFamily: 'Righteous',
+                                    color: 'white',
+                                    textShadow: '0 0 2px black',
+                                },
+                                id: 'KmQWFoH66n',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'We Bring You The Best Articles',
+                                style: {
+                                    fontSize: '1.875rem',
+                                    fontFamily: 'Righteous',
+                                    color: 'white',
+                                    textShadow: '0 0 1px black',
+                                },
+                                id: '6yZaTiUIRI',
+                            },
+                            {
+                                type: 'site-button',
+                                content: {
+                                    text: 'SUBSCRIBE',
+                                    href: '',
+                                },
+                                style: {
+                                    fontFamily: 'Righteous',
+                                    backgroundColor: '#cb965b',
+                                    padding: '1rem',
+                                    textTransform: 'uppercase',
+                                    boxShadow: '#0000008c',
+                                    width: '9rem',
+                                    color: 'white',
+                                    borderRadius: '20px',
+                                },
+                                id: 'fr176TWSCX',
+                            },
+                        ],
+                        id: 'eXvBUW7jmc',
+                    },
+                ],
+                id: 'vfx3i1WSHW',
+            },
+        },
+        {
+            name: 'cards',
+            img: 'https://res.cloudinary.com/asantasana/image/upload/v1595402921/cards_p8dgsc.png',
+            tree: {
+                type: 'site-section',
+                style: {
+                    backgroundColor: '#f3eee9',
+                    height: '1400px',
+                    display: 'flex',
+                    width: '100%',
+                    justifyContent: 'space-between',
+                    flexWrap: 'wrap',
+                    padding: '4rem 11rem',
+                },
+                cmps: [{
+                        type: 'site-div',
+                        style: {
+                            height: '500px',
+                            width: '45%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            backgroundColor: '#ffffff',
+                            borderRadius: '12px',
+                            position: 'relative',
+                            alignItems: 'center',
+                            boxShadow: '0 0 3px black',
+                        },
+                        cmps: [{
+                                type: 'site-image',
+                                content: 'https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
+                                style: {
+                                    height: '260px',
+                                    borderRadius: '12px 12px 0px 0px',
+                                    objectFit: 'cover',
+                                    width: '100%',
+                                },
+                                id: '4FINA825D7',
+                            },
+                            {
+                                type: 'site-image',
+                                content: 'https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
+                                style: {
+                                    height: '100px',
+                                    width: '100px',
+                                    position: 'absolute',
+                                    border: '6px white solid',
+                                    borderRadius: '50%',
+                                    bottom: '38%',
+                                    zIndex: '1',
+                                    left: 'calc(50% - 50px)',
+                                    objectFit: 'cover',
+                                },
+                                id: '9YryChNg4Y',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'Dogs',
+                                style: {
+                                    marginBlockStart: '5rem',
+                                    fontFamily: 'Righteous',
+                                    fontSize: '2rem',
+                                    color: '#5aa55e',
+                                },
+                                id: 'FTg526zun4',
+                            },
+                            {
+                                type: 'site-text',
+                                content: "Read All About The Man's Best Friend .",
+                                style: {
+                                    fontFamily: 'Righteous',
+                                    color: '#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b',
+                                },
+                                id: 'cR5cibruZT',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'READ MORE',
+                                style: {
+                                    fontFamily: 'Righteous',
+                                    color: '#0000000',
+                                    marginBlockStart: '2rem',
+                                    borderBlockStart: '1px solid black',
+                                    width: '100%',
+                                    textAlign: 'center',
+                                    paddingBlockStart: '1rem',
+                                },
+                                id: 'sS7JKPThTA',
+                            },
+                        ],
+                        id: 'hwNp1jM1sQ',
+                    },
+                    {
+                        type: 'site-div',
+                        style: {
+                            height: '500px',
+                            width: '45%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            backgroundColor: '#fff',
+                            borderRadius: '12px',
+                            position: 'relative',
+                            alignItems: 'center',
+                            boxShadow: '0 0 3px black',
+                        },
+                        cmps: [{
+                                type: 'site-image',
+                                content: 'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+                                style: {
+                                    height: '260px',
+                                    objectFit: 'cover',
+                                    width: '100%',
+                                    borderRadius: '12px 12px 0px 0px',
+                                },
+                                id: 'A0pMz1QA3m',
+                            },
+                            {
+                                type: 'site-image',
+                                content: 'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+                                style: {
+                                    height: '100px',
+                                    width: '100px',
+                                    position: 'absolute',
+                                    border: '6px white solid',
+                                    borderRadius: '50%',
+                                    bottom: '38%',
+                                    zIndex: '1',
+                                    left: 'calc(50% - 50px)',
+                                    objectFit: 'cover',
+                                },
+                                id: 'SAtBaMsAwm',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'The King Of The Jungle',
+                                style: {
+                                    marginBlockStart: '5rem',
+                                    fontFamily: 'Righteous',
+                                    fontSize: '2rem',
+                                    color: '#53311d',
+                                },
+                                id: 'P0h7QNh4iX',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'Read All About The Mighty Lion.',
+                                style: {
+                                    fontFamily: 'Righteous',
+                                    color: '#3d3d3c',
+                                },
+                                id: 'p8VTpFIQyl',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'READ MORE',
+                                style: {
+                                    fontFamily: 'Righteous',
+                                    color: '#0000000',
+                                    marginBlockStart: '2rem',
+                                    borderBlockStart: '1px solid black',
+                                    width: '100%',
+                                    textAlign: 'center',
+                                    paddingBlockStart: '1rem',
+                                },
+                                id: '1kfQwfMQFk',
+                            },
+                        ],
+                        id: 'D1aAi5Pn9v',
+                    },
+                    {
+                        type: 'site-div',
+                        style: {
+                            height: '500px',
+                            width: '45%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            backgroundColor: '#fff',
+                            borderRadius: '12px',
+                            position: 'relative',
+                            alignItems: 'center',
+                            marginBlockStart: '7rem',
+                            boxShadow: '0 0 3px black',
+                        },
+                        cmps: [{
+                                type: 'site-image',
+                                content: 'https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
+                                style: {
+                                    height: '260px',
+                                    objectFit: 'cover',
+                                    width: '100%',
+                                    borderRadius: '12px 12px 0px 0px',
+                                },
+                                id: 'S6NuSSqVfH',
+                            },
+                            {
+                                type: 'site-image',
+                                content: 'https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
+                                style: {
+                                    height: '100px',
+                                    width: '100px',
+                                    position: 'absolute',
+                                    backgroundSize: 'cover',
+                                    border: '6px white solid',
+                                    borderRadius: '50%',
+                                    bottom: '38%',
+                                    zIndex: '1',
+                                    left: 'calc(50% - 50px)',
+                                    objectFit: 'cover',
+                                },
+                                id: 'qSudjuXd6I',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'JAWS',
+                                style: {
+                                    marginBlockStart: '5rem',
+                                    fontFamily: 'Righteous',
+                                    fontSize: '2rem',
+                                    color: '#3855bc',
+                                },
+                                id: 'Z7Emvo4SbG',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'Read All About Sharks.',
+                                style: {
+                                    fontFamily: 'Righteous',
+                                    color: '#527db4',
+                                },
+                                id: 'a6VIClalZz',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'READ MORE',
+                                style: {
+                                    fontFamily: 'Righteous',
+                                    color: '#0000000',
+                                    marginBlockStart: '2rem',
+                                    borderBlockStart: '1px solid black',
+                                    width: '100%',
+                                    textAlign: 'center',
+                                    paddingBlockStart: '1rem',
+                                },
+                                id: 'csRPeUuaHi',
+                            },
+                        ],
+                        id: 'D0x2FslItL',
+                    },
+                    {
+                        type: 'site-div',
+                        style: {
+                            height: '500px',
+                            width: '45%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            backgroundColor: '#ffffff',
+                            borderRadius: '12px',
+                            position: 'relative',
+                            alignItems: 'center',
+                            marginBlockStart: '7rem',
+                            boxShadow: '0 0 3px black',
+                        },
+                        cmps: [{
+                                type: 'site-image',
+                                content: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg',
+                                style: {
+                                    height: '260px',
+                                    objectFit: 'cover',
+                                    width: '100%',
+                                    borderRadius: '12px 12px 0px 0px',
+                                },
+                                id: 'kpcait65wW',
+                            },
+                            {
+                                type: 'site-image',
+                                content: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg',
+                                style: {
+                                    height: '100px',
+                                    width: '100px',
+                                    position: 'absolute',
+                                    border: '6px white solid',
+                                    borderRadius: '50%',
+                                    bottom: '38%',
+                                    zIndex: '1',
+                                    left: 'calc(50% - 50px)',
+                                    objectFit: 'cover',
+                                },
+                                id: 'WVVbR4xf5A',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'Cats',
+                                style: {
+                                    marginBlockStart: '5rem',
+                                    fontFamily: 'Righteous',
+                                    fontSize: '2rem',
+                                    color: '#704a26',
+                                },
+                                id: 'dA4i0cxJWq',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'Read All About Cats.',
+                                style: {
+                                    fontFamily: 'Righteous',
+                                    color: '#434343',
+                                },
+                                id: 'fOD3YADgwH',
+                            },
+                            {
+                                type: 'site-text',
+                                content: 'READ MORE',
+                                style: {
+                                    fontFamily: 'Righteous',
+                                    color: '#0000000',
+                                    marginBlockStart: '2rem',
+                                    borderBlockStart: '1px solid black',
+                                    width: '100%',
+                                    textAlign: 'center',
+                                    paddingBlockStart: '1rem',
+                                },
+                                id: 'IQOrC39PZa',
+                            },
+                        ],
+                        id: 'lGfoBWxvIR',
+                    },
+                    {
+                        type: 'site-div',
+                        style: {
+                            width: '100%',
+                            textAlign: 'center',
+                        },
+                        cmps: [{
+                            type: 'site-button',
+                            content: {
+                                text: 'MORE ARTICLES...',
+                                href: '',
+                            },
+                            style: {
+                                backgroundColor: '#cfaf8987',
+                                borderRadius: '20px',
+                                padding: '1rem',
+                                marginBlockStart: '3rem',
+                                width: '50%',
+                                fontSize: '1.2rem',
+                                boxShadow: '0 0 2px black',
+                            },
+                            id: '6ZD3hkff48',
+                        }, ],
+                        id: 'oOS5N2JH8q',
+                    },
+                ],
+                id: 'n9zrfdBOSI',
+            },
+        },
+    ],
 };
-
 export const templateService = {
-	query,
-	save,
-	remove,
-	makeId,
-	addIds,
-	getTemplates,
-	getTemplateById,
-	getSamplesOf,
+    query,
+    save,
+    remove,
+    makeId,
+    addIds,
+    getTemplates,
+    getTemplateById,
+    getSamplesOf,
 };
 
 function getTemplates() {
-	return templates.map(template => {
-		return { _id: template._id, name: template.name, previewImg: template.previewImg };
-	});
+    return templates.map(template => {
+        return { _id: template._id, name: template.name, previewImg: template.previewImg };
+    });
 }
 
 function query() {
-	return httpService.get('template');
+    return httpService.get('template');
 }
 
 function getTemplateById(id) {
-	return httpService.get(`template/${id}`);
+    return httpService.get(`template/${id}`);
 }
 
 function getSamplesOf(element) {
-	return samples[element];
+    return samples[element];
 }
 // console.log(JSON.stringify(addIds()))
 
 function addIds(template) {
-	template.cmps.forEach(cmp => {
-		if (!cmp.id) cmp.id = makeId();
-		if (cmp.cmps && cmp.cmps.length > 0) addIds(cmp);
-	});
-	return template;
+    template.cmps.forEach(cmp => {
+        if (!cmp.id) cmp.id = makeId();
+        if (cmp.cmps && cmp.cmps.length > 0) addIds(cmp);
+    });
+    return template;
 }
 
 function makeId(length = 10) {
-	var txt = '';
-	var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	for (var i = 0; i < length; i++) {
-		txt += possible.charAt(Math.floor(Math.random() * possible.length));
-	}
-	return txt;
+    var txt = '';
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for (var i = 0; i < length; i++) {
+        txt += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return txt;
 }
 
 function _getUrl(id = '') {
-	const BASE_URL = process.env.NODE_ENV !== 'development' ? '/api/template' : '//localhost:3030/api/template';
-	return `${BASE_URL}/${id}`;
+    const BASE_URL = process.env.NODE_ENV !== 'development' ? '/api/template' : '//localhost:3030/api/template';
+    return `${BASE_URL}/${id}`;
 }
 
 function remove(id) {
-	return axios.delete(_getUrl(id)).then(res => res.data);
+    return axios.delete(_getUrl(id)).then(res => res.data);
 }
 
 function save(template) {
-	console.log('template:', template);
-	return template._id ? _update(template) : _add(template);
+    console.log('template:', template);
+    return template._id ? _update(template) : _add(template);
 }
 
 function _update(template) {
-	return axios.put(_getUrl(template._id), template).then(res => res.data);
+    return axios.put(_getUrl(template._id), template).then(res => res.data);
 }
 
 // function _add(template) {
@@ -3026,7 +2992,7 @@ function _update(template) {
 // }
 
 function _add(template) {
-	return httpService.post(`template`, template);
+    return httpService.post(`template`, template);
 }
 
 // const templates = [{

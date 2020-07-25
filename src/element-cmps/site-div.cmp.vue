@@ -1,8 +1,9 @@
 <template>
   <div v-if="editMode" class="site-div" :class="cmp.class" :style="cmp.style" @click.stop="openEditor">
     <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"></component>
-    <element-controls v-show="showControls" />
   </div>
+
+  
   <div v-else class="site-div" :style="cmp.style" :class="cmp.class">
     <component v-for="(cmp, idx) in cmp.cmps" :is="cmp.type" :cmp="cmp" :key="idx"> </component>
   </div>
@@ -16,7 +17,6 @@ import siteMap from '@/element-cmps/site-map.cmp.vue'
 import siteForm from '@/element-cmps/site-form.cmp.vue';
 import siteList from '@/element-cmps/site-list.cmp.vue';
 import siteVideo from '@/element-cmps/site-video.cmp.vue';
-import elementControls from '@/components/element-controls.cmp.vue';
 import { eventBus, EDIT_ELEMENT, UPDATE_SITE, OPEN_EDITOR } from "@/services/event-bus.service.js";
 import { Container, Draggable } from "vue-smooth-dnd";
 import { applyDrag, generateItems } from "@/assets/drag-test.js";
@@ -53,7 +53,6 @@ export default {
     siteForm,
     siteMap,
     siteVideo,
-    elementControls,
     Container,
     Draggable
   }

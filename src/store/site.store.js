@@ -1,12 +1,13 @@
 const _ = require('lodash');
 import { templateService } from '@/services/template-service.js';
+import { utilService } from '@/services/util.service.js';
 
 export const siteStore = {
     state: {
         currSamplesList: 'sections',
         isLoading: false,
         templates: [],
-        site: {},
+        site: null,
     },
     getters: {
         site(state) {
@@ -37,21 +38,21 @@ export const siteStore = {
             templates = templates.map(template => ({ _id: template._id, name: template.name, previewImg: template.previewImg }));
             commit({ type: 'setTemplates', templates });
             commit({ type: 'setIsLoading', isLoading: false });
+            return templates;
         },
         async loadSite({ commit }, { id }) {
             commit({ type: 'setIsLoading', isLoading: true });
             let site = await templateService.getTemplateById(id);
             const siteToEdit = _.cloneDeep(site)
             delete siteToEdit._id
+            utilService.addIds(siteToEdit)
             commit({ type: 'setSite', site: siteToEdit });
             commit({ type: 'setIsLoading', isLoading: false });
-            return site
+            return siteToEdit
         },
         async saveSite({ state }) {
             const site = state.site
-            console.log('site:', site)
             const savedTemplate = await templateService.save(site)
-            console.log('savedTemplate:', savedTemplate)
             return savedTemplate;
         }
     },
