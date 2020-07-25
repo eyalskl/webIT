@@ -1,69 +1,73 @@
-.gallery-25-pics{
-    padding: 10px;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
-    grid-auto-rows:100px;
-    grid-auto-flow: dense;
+.gallery-25-pics {
+	padding: 10px;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	grid-auto-rows: 100px;
+	grid-auto-flow: dense;
 
-    div{
-        overflow: hidden;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    .horizontal{
-        grid-column: span 2;
-        
-    }
-    .vertical{
-        grid-row: span 2;
-    
-    }
-    .vertical{
-        grid-row: span 2;
-    }
-    .big{
-        grid-column: span 2;
-        grid-row: span 2;
-    
-    }
+	div {
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.horizontal {
+		grid-column: span 2;
+	}
+	.vertical {
+		grid-row: span 2;
+	}
+	.vertical {
+		grid-row: span 2;
+	}
+	.big {
+		grid-column: span 2;
+		grid-row: span 2;
+	}
 }
 
-.gallery-10-pics{
-    padding: 10px;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    grid-auto-rows:200px;
-    grid-auto-flow: dense;
+.gallery-10-pics {
+	padding: 10px;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
 
-    div{
-        overflow: hidden;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+	div {
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 }
 
-.gallery-4-pics{
-    padding: 10px;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-auto-rows:250px;
-    grid-auto-flow: dense;
+.gallery-4-pics {
+	padding: 10px;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 250px;
+	grid-auto-flow: dense;
 
-    div{
-        overflow: hidden;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+	div {
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.three-pics-poster {
+	width: 100%;
+	height: 35vw;
+	display: flex;
+
 }
