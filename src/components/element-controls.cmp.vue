@@ -27,7 +27,7 @@ export default {
     clone() {
       eventBus.$emit(CLONE_ELEMENT, this.element);
     },
-    remove(event) {
+    remove() {
       eventBus.$emit(REMOVE_ELEMENT, this.element.id);
     }
   },

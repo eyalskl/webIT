@@ -4,7 +4,7 @@
       
       <component v-for="(cmp, idx) in siteToEdit.cmps" :is="cmp.type" :cmp="cmp" :key="idx">
       </component>
-
+      <section class="drop-preview-empty" v-show="!siteToEdit.cmps.length"> </section>
     </container>
   </container>
 </template>

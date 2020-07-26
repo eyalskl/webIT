@@ -59,9 +59,6 @@
             font-family: 'Advent Pro';
             content: "<";
         }
-        &:hover {
-            background-color: darken(#f6f6f6, 2);
-        }
         &.minimized {
             div {
                 transform: rotate(180deg);

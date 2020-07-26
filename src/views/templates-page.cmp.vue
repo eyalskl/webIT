@@ -13,8 +13,13 @@
       </div>
       <img class="loader" v-if="isLoading" src="../assets/loadingAnimation.svg" />
       <section v-else class="template-list">
-        <div v-for="template in templatesToShow" :key="template._id" @click="editTemplate(template._id)">
+        <div class="template-preview" v-for="template in templatesToShow" :key="template._id" @click="editTemplate(template._id)">
+          <h3> {{ template.name }} </h3>
           <img :src="template.previewImg" />
+          <div class="template-cover">
+            <button title="Preview Site" @click.stop="$router.push('/' + template._id)"> <i class="far fa-eye"></i> </button>
+            <button title="Edit Site"> <i class="fas fa-pen"></i> </button>
+          </div>
         </div>
       </section>
     </div>
@@ -32,7 +37,6 @@ export default {
     };
   },
   computed: {
-
     isLoading() {
       return this.$store.getters.isLoading;
     }
