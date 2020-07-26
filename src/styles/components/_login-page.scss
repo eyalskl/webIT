@@ -36,6 +36,9 @@
             &:focus {
                 border-color: $clr1;
             }
+            &:hover {
+                border-color: $clr1;
+            }
         }
         .exit-btn {
             position: absolute;

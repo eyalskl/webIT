@@ -31,7 +31,6 @@
     background-color: rgba(150, 150, 200, 0.1);
     outline: 1px dashed #abc;
     display: flex;
-    // align-content: stretch;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -45,6 +44,33 @@
     }
 }
 
-.minimized .drop-preview {
+.drop-preview-empty {
+    z-index: 10;
+    position: absolute;
+    height: 93%;
+    >* {
+        z-index: 6;
+    }
+    background-color: rgba(150, 150, 200, 0.1);
+    outline: 4px dashed #abc;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: calc(100vw - 23.75rem);
+    font-family: 'Oswald';
+    color: rgba(128, 128, 128, 0.397);
+    &::after {
+        content: "Explore our areas and drag items here";
+        font-size: 5rem;
+    }
+    &:hover {
+        outline: 4px dashed #abc;
+    }
+}
+
+.minimized .drop-preview,
+.minimized .drop-preview-empty {
     width: calc(100vw - 3.75rem);
 }
