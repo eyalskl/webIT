@@ -1,5 +1,5 @@
 <template>
-  <container class="site-container" :class="minimized"> 
+  <container v-if="siteToEdit" class="site-container" :class="minimized"> 
     <container class="site-workspace flex column" @drop="onDrop" :class="minimized" drag-class="section-drag" :get-child-payload="getCmp" :drop-placeholder="placeHolderOptions" :non-drag-area-selector="nonDrags" auto-scroll-enabled  group-name="1" lock-axis="y">
       
       <component v-for="(cmp, idx) in siteToEdit.cmps" :is="cmp.type" :cmp="cmp" :key="idx">
@@ -7,6 +7,7 @@
 
     </container>
   </container>
+  <img v-else class="loader" src="../assets/loadingAnimation.svg"/>
 </template>
 
 <script>
@@ -18,11 +19,8 @@ const _ = require("lodash")
 
 export default {
   name: 'site-workspace',
-  props:{ 
-    'siteToEdit': {
-      type: Object,
-      required: true
-    } 
+  props:['siteToEdit' ] 
+    
   },
   data() {
     return {

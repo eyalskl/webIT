@@ -10,7 +10,6 @@
         @shouldAcceptDrop="false"
       />
       <site-workspace
-        v-if="siteToEdit"
         :siteToEdit="siteToEdit"
         @shouldAcceptDrop="true"
       />
@@ -43,6 +42,7 @@ export default {
     return {
       samples: {},
       siteToEdit: null,
+
       
     };
   },
@@ -58,6 +58,11 @@ export default {
     eventBus.$on(MOVE_ELEMENT, (elementId, direction) => {
       this.moveElement(elementId, direction);
     });
+  },
+  computed:{
+    isLoading(){
+      return (this.siteToEdit)? false: true
+    }
   },
   methods: {
     async loadSite() {
