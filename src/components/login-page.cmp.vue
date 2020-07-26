@@ -17,7 +17,7 @@
           </label>
           <label> 
               <span :class="{floating2: float2}"> Password </span> 
-              <input @focus="float2 = true" type="password" v-model="userCreds.password"> 
+              <input @focus="float2 = true" type="password" v-model="userCreds.password" @keydown.enter="signInUp"> 
           </label>
           <button class="login-btn" @click="signInUp"> {{ isLogin ? 'Login' : 'Sign up' }} </button>
           <p v-if="isLogin" @click="toggleLogin"> Don't have an account? <span> Sign Up! </span> </p>
