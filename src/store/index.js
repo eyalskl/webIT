@@ -9,7 +9,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         editMode: '',
-        showLogin: false
+        showLogin: false,
+        showPublish:false,
     },
     getters: {
         editMode(state) {
@@ -17,6 +18,9 @@ export default new Vuex.Store({
         },
         showLogin(state) {
             return state.showLogin
+        },
+        showPublish(state){
+            return state.showPublish
         }
     },
     mutations: {
@@ -25,6 +29,9 @@ export default new Vuex.Store({
         },
         setShowLogin(state, { showLogin }) {
             state.showLogin = showLogin;
+        },
+        setShowPublish(state, { showPublish }) {
+            state.showPublish = showPublish;
         },
     },
     actions: {},

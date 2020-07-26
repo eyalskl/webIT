@@ -7,7 +7,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/templates">Templates</router-link>
       <button class="publish" @click="saveSite">Save</button>
-      <router-link class="publish" :to="'/' + siteId">Publish</router-link>
+      <button class="publish" @click="openPublish">Publish</button>
       <div class="user-section">
         <button @click="openLogin"> {{ (this.loggedInUser) ? 'Logout' : 'Login' }} </button>
         <avatar v-if="loggedInUser" :size="35" :username="loggedInUser.fullname" @click.native="$router.push('/user').catch(()=>{})"> </avatar>
@@ -40,7 +40,12 @@ export default {
       else {
         this.$store.dispatch({type: 'logout'})
       }
-    }
+    },
+    openPublish() {
+       this.$store.commit({type: 'setShowPublish', showPublish: true});
+            
+    },
+    
     },
   created() {
     this.siteId = this.$route.params.id;

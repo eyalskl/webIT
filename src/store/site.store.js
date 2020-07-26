@@ -11,6 +11,7 @@ export const siteStore = {
         isLoading: false,
         templates: [],
         site: localSite,
+        
     },
     getters: {
         site(state) {
@@ -22,6 +23,7 @@ export const siteStore = {
         isLoading(state) {
             return state.isLoading;
         },
+
     },
     mutations: {
         setIsLoading(state, { isLoading }) {
