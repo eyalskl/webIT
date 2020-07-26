@@ -6,7 +6,7 @@
              What is your site's name? </span>
             <label> 
               <span :class="{floating: float}"> Your site name goes here... </span> 
-              <input @focus="float = true" type="email" v-model="siteName"> 
+              <input ref="nameInput" @focus="float = true" type="email" v-model="siteName" @keydown.enter="setSiteName"> 
             </label>
           <button class="login-btn" @click="setSiteName"> Start! </button>
       </div>
@@ -31,6 +31,9 @@ export default {
         closePopup() {
             this.$emit('close-popup');
         }
+    },
+    mounted() {
+        this.$refs.nameInput.focus();
     },
     destroyed() {
         this.float = false

@@ -1,11 +1,9 @@
 <template>
   <section v-if="showPublish" class="publish-popup" @click.capture="closePublish">
       <div class="content-wrapper flex column justify-center align-center">
-       <transition name="slide-fade">
-            <h3 v-if="isPublish"> 
+            <h3> 
              Your Website Link :
             </h3>
-        </transition>
             <div class="publish-input-container flex">
                 <input type="text" v-model="siteUrl"/>
                 <button class="publish-btn" @click="copyToClip"> 
@@ -31,7 +29,6 @@ export default {
     name: 'publish-popup',
     data() {
         return {
-            isPublish: true,
             siteUrl:""
         }
     },
@@ -42,18 +39,15 @@ export default {
      
     },
     methods: {
-
         closePublish(ev) {
-            this.isPublish = !this.isPublish
             if (ev.target.nodeName === 'SECTION' || ev.target.classList.contains('fa-times') || ev.target.classList.contains('exit-btn')) this.$store.commit({type: 'setShowPublish', showPublish: false})
         },
         copyToClip(){
             console.log('hello')
         }
-
     },
     created() {
-        this.siteUrl = window.location.origin + '/' + this.$route.params.id
+        this.siteUrl = window.location.origin + '/#/' + this.$route.params.id
     }
 }
 </script>
