@@ -9,6 +9,7 @@
     "dependencies": {
         "axios": "^0.19.2",
         "core-js": "^3.6.5",
+        "dom-to-image": "^2.6.0",
         "element-ui": "^2.13.2",
         "html-screen-capture-js": "^1.0.47",
         "lodash": "^4.17.19",

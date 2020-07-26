@@ -1,6 +1,6 @@
 <template>
   <container v-if="siteToEdit" class="site-container" :class="minimized"> 
-    <container class="site-workspace flex column" @drop="onDrop" :class="minimized" drag-class="section-drag" :get-child-payload="getCmp" :drop-placeholder="placeHolderOptions" :non-drag-area-selector="nonDrags" auto-scroll-enabled  group-name="1" lock-axis="y">
+    <container class="site-workspace flex column" @drop="onDrop" :class="minimized" drag-class="section-drag" :get-child-payload="getCmp" :drop-placeholder="placeHolderOptions" :non-drag-area-selector="nonDrags" auto-scroll-enabled  group-name="1" lock-axis="y" id="my-node">
       
       <component v-for="(cmp, idx) in siteToEdit.cmps" :is="cmp.type" :cmp="cmp" :key="idx">
       </component>
@@ -19,9 +19,7 @@ const _ = require("lodash")
 
 export default {
   name: 'site-workspace',
-  props:['siteToEdit' ] 
-    
-  },
+  props:['siteToEdit'], 
   data() {
     return {
       minimize: false,

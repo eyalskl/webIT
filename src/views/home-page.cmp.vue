@@ -9,6 +9,25 @@
           </button>
         </div>
       </div>
+      <section class="overview">
+        <section class="responsive">
+          <img src="../assets/imgs/iphone.png"/>
+          <h3>
+            Build Responsive Webpages
+          </h3>
+        </section>
+        
+        <section class="easy-to-use">
+          <h3>
+            Simple and Easy to Use
+          </h3>
+          <img src="../assets/imgs/easyUse.png"/>
+        </section>
+
+        <section class="beautiful">
+        </section>
+
+      </section>
   </div>
 </template>
 

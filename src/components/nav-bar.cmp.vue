@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-bar flex space-between align-center">
-    <div class="logo flex" @click.stop="$router.push('/').catch(()=>{})">
+    <div class="logo flex" @click.stop="$router.push('/').catch(() => {})">
       <h2>web<span>IT</span></h2>
     </div>
     <div class="main-nav flex">
@@ -9,8 +9,17 @@
       <button class="publish" @click="saveSite">Save</button>
       <button class="publish" @click="openPublish">Publish</button>
       <div class="user-section">
-        <button @click="openLogin"> {{ (this.loggedInUser) ? 'Logout' : 'Login' }} </button>
-        <avatar title="Open profile" v-if="loggedInUser" :size="35" :username="loggedInUser.fullname" @click.native="$router.push('/user').catch(()=>{})"> </avatar>
+        <button @click="openLogin">
+          {{ this.loggedInUser ? 'Logout' : 'Login' }}
+        </button>
+        <avatar
+          title="Open profile"
+          v-if="loggedInUser"
+          :size="35"
+          :username="loggedInUser.fullname"
+          @click.native="$router.push('/user').catch(() => {})"
+        >
+        </avatar>
       </div>
     </div>
     <button class="btn-menu" @click="toggleMenu">☰</button>
@@ -18,7 +27,8 @@
 </template>
 
 <script>
-import Avatar from 'vue-avatar'
+import Avatar from 'vue-avatar';
+import domtoimage from 'dom-to-image';
 
 export default {
   name: 'nav-bar',
@@ -30,32 +40,33 @@ export default {
   computed: {
     loggedInUser() {
       return this.$store.getters.loggedInUser;
-    }
+    },
   },
   methods: {
     saveSite() {
-      this.$store.dispatch({type: 'saveSite'});
+
+          this.$store.dispatch({type: 'saveSite'});
     },
     openLogin() {
-      if (!this.loggedInUser) this.$store.commit({type: 'setShowLogin', showLogin: true});
+      if (!this.loggedInUser)
+        this.$store.commit({ type: 'setShowLogin', showLogin: true });
       else {
-        this.$store.dispatch({type: 'logout'})
+        this.$store.dispatch({ type: 'logout' });
       }
     },
     openPublish() {
-       this.$store.commit({type: 'setShowPublish', showPublish: true});
-            
+      this.$store.commit({ type: 'setShowPublish', showPublish: true });
     },
     toggleMenu() {
-      document.body.classList.toggle("menu-open");
-    }
+      document.body.classList.toggle('menu-open');
+    },
   },
   created() {
     this.siteId = this.$route.params.id;
   },
   components: {
-    Avatar
-  }
+    Avatar,
+  },
 };
 </script>
 

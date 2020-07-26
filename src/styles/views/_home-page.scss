@@ -37,3 +37,32 @@
         display: none;
     }
 }
+.responsive{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img{
+        width: 600px;
+    }
+    h3{
+        font-family: advent pro;
+        font-size: 3rem;
+        color: $clr1;
+    }
+}
+.easy-to-use{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+            img{
+                width: 600px;
+            }
+            h3{
+                font-family: advent pro;
+                font-size: 3rem;
+                color: $clr1;
+            }
+
+}

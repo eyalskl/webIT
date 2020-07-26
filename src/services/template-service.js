@@ -4549,6 +4549,7 @@ const samples = {
 		},
 	],
 };
+
 export const templateService = {
 	query,
 	save,
@@ -4606,7 +4607,7 @@ function remove(id) {
 }
 
 function save(template) {
-	console.log('template:', template);
+
 	return template._id ? _update(template) : _add(template);
 }
 
