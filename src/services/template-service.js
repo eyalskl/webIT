@@ -2771,33 +2771,10 @@ const samples = {
                             },
                             {
                                 type: 'site-list',
-                                cmps: [{
-                                        type: 'site-text',
-                                        content: 'HOME',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#000000',
-                                        },
-                                    },
+                                cmps: [
                                     {
                                         type: 'site-text',
-                                        content: 'ARTICLES',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'MEMBERS',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'ABOUT',
+                                        content: 'MENUS',
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
@@ -2806,6 +2783,22 @@ const samples = {
                                     {
                                         type: 'site-text',
                                         content: 'CONTACT US',
+                                        style: {
+                                            marginInlineEnd: '1rem',
+                                            color: '#fff',
+                                        },
+                                    },
+                                    {
+                                        type: 'site-text',
+                                        content: 'GALLERY',
+                                        style: {
+                                            marginInlineEnd: '1rem',
+                                            color: '#fff',
+                                        },
+                                    },
+                                    {
+                                        type: 'site-text',
+                                        content: 'EXTRAS',
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
@@ -2833,10 +2826,12 @@ const samples = {
                                 type: 'site-text',
                                 content: 'I AM A TITLE',
                                 style: {
-                                    fontSize: '4rem',
+                                    fontSize: '5.25rem',
                                     fontFamily: 'Oswald',
-                                    color: 'white',
+                                    color: 'black',
                                     textShadow: '0 0 2px black',
+                                    letterSpacing:"3px",
+                                    fontWeight:"bold"
                                 },
                             },
                             {
@@ -2845,8 +2840,11 @@ const samples = {
                                 style: {
                                     fontSize: '1.875rem',
                                     fontFamily: 'Oswald',
-                                    color: 'white',
+                                    color: '#ffb029',
                                     textShadow: '0 0 1px black',
+                                    fontWeight:"bold",
+                                    letterSpacing:"2.5px",
+
                                 },
                             },
                             {
