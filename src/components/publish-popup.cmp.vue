@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { eventBus, SHOW_MSG } from "@/services/event-bus.service.js";
 
 export default {
     name: 'publish-popup',
@@ -35,15 +36,15 @@ export default {
     computed: {
         showPublish() {
             return this.$store.getters.showPublish
-        },
-     
+        }    
     },
     methods: {
         closePublish(ev) {
             if (ev.target.nodeName === 'SECTION' || ev.target.classList.contains('fa-times') || ev.target.classList.contains('exit-btn')) this.$store.commit({type: 'setShowPublish', showPublish: false})
         },
         copyToClip(){
-            console.log('hello')
+            var promise = navigator.clipboard.writeText(this.siteUrl)
+                .then(res => { eventBus.$emit(SHOW_MSG, { txt: `Copied to clipboard!`,type: 'success'}) })       
         }
     },
     created() {
