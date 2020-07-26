@@ -1,9 +1,8 @@
 <template>
-  <container
-    class="editor-container flex column animate__animated animate__fadeIn"
-  >
+  <container class="editor-container flex column animate__animated animate__fadeIn">
     <nav-bar />
-    <publish-popup> </publish-popup>
+    <publish-popup />
+    <name-popup v-if="showNameModal" @close-popup="showNameModal = false" @set-name="setSiteName" />
     <div class="editor flex">
       <element-dashboard
         :samples="samples"
@@ -15,7 +14,6 @@
         @shouldAcceptDrop="true"
       />
     </div>
-   
   </container>
 </template>
 
@@ -24,6 +22,7 @@ import navBar from '@/components/nav-bar.cmp.vue';
 import siteWorkspace from '../components/site-workspace.cmp.vue';
 import elementDashboard from '@/components/element-dashboard.cmp.vue';
 import publishPopup from '@/components/publish-popup.cmp.vue'
+import namePopup from '@/components/name-popup.cmp.vue'
 import { templateService } from '@/services/template-service.js';
 import { utilService } from '@/services/util.service.js';
 import { Container, Draggable } from 'vue-smooth-dnd';
@@ -44,12 +43,14 @@ export default {
   data() {
     return {
       samples: {},
-      siteToEdit: null
+      siteToEdit: null,
+      showNameModal: false
     };
   },
   async created() {
     this.$store.commit({ type: "setEditMode", editMode: true });
-    this.loadSite();
+    await this.loadSite();
+    if (!this.siteToEdit._id) this.showNameModal = true;
     this.samples = templateService.getSamplesOf("section");
     eventBus.$on(ADD_SAMPLE, (sample) => this.addSample(sample));
     eventBus.$on(CLONE_ELEMENT, (element) => this.clone(element));
@@ -73,6 +74,9 @@ export default {
         id: templateId,
       });
       this.siteToEdit = site;
+    },
+    setSiteName(siteName) {
+      this.siteToEdit.name = siteName;
     },
     getSamplesToShow(listName) {
       this.samples = templateService.getSamplesOf(listName);
@@ -123,7 +127,8 @@ export default {
     Container,
     Draggable,
     navBar,
-    publishPopup
+    publishPopup,
+    namePopup
   },
   // destroyed() {
   //   this.$store.commit({ type: 'setSite', site: null });

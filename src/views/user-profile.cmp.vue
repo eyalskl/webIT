@@ -20,6 +20,7 @@
           <div class="template-cover">
             <button title="Preview Site" @click.stop="$router.push('/' + template._id)"> <i class="far fa-eye"></i> </button>
             <button title="Edit Site"> <i class="fas fa-pen"></i> </button>
+            <button class="remove-btn"> <i class="fas fa-trash"></i> </button>
           </div>
         </div>
       </section>
@@ -54,6 +55,7 @@ export default {
         if (!this.loggedInUser) this.$router.push('/');
         const templates = await this.$store.dispatch({ type: 'loadTemplates' });
         this.templatesToShow = templates.filter(template => template.createdBy && template.createdBy.email === this.loggedInUser.email)
+        this.$store.commit({ type: 'setSite', site: null });
     },
     watch: {
         'loggedInUser'(newVal, oldVal) {

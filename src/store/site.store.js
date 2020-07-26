@@ -11,7 +11,7 @@ export const siteStore = {
         isLoading: false,
         templates: [],
         site: localSite,
-        
+
     },
     getters: {
         site(state) {
@@ -55,14 +55,17 @@ export const siteStore = {
                 return siteToEdit;
             }
             let site = await templateService.getTemplateById(id);
-            const siteToEdit = _.cloneDeep(site)
-            delete siteToEdit._id
-            utilService.addIds(siteToEdit)
+            var siteToEdit;
+            if (!site.createdBy) {
+                siteToEdit = _.cloneDeep(site)
+                delete siteToEdit._id
+                utilService.addIds(siteToEdit)
+            } else siteToEdit = site
             commit({ type: 'setSite', site: siteToEdit });
             commit({ type: 'setIsLoading', isLoading: false });
             return siteToEdit
         },
-        async saveSite({ state }) {
+        async saveSite({ state, commit }) {
             const site = state.site
             if (sessionStorage.user) {
                 const user = JSON.parse(sessionStorage.user)
@@ -73,6 +76,8 @@ export const siteStore = {
                 }
             }
             const savedTemplate = await templateService.save(site)
+            commit({ type: 'setSite', site: savedTemplate });
+            console.log('savedTemplate:', savedTemplate)
             return savedTemplate;
         }
     },

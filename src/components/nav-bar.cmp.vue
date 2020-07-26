@@ -3,7 +3,7 @@
     <div class="logo flex" @click.stop="$router.push('/').catch(() => {})">
       <h2>web<span>IT</span></h2>
     </div>
-    <div class="main-nav flex">
+    <div class="main-nav flex align-center">
       <router-link to="/">Home</router-link>
       <router-link to="/templates">Templates</router-link>
       <button class="publish" @click="saveSite">Save</button>
