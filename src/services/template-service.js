@@ -2243,7 +2243,7 @@ const samples = {
                                 style: {
                                     position: 'relative',
                                     flex: '1',
-                                    minWidth: '23rem',
+                                    minWidth: '22.2rem',
                                     maxWidth: '23rem',
                                     margin: '3rem 1.5rem 0px 1.5rem',
                                     display: 'flex',
@@ -2830,6 +2830,7 @@ const samples = {
             img: 'https://i.gyazo.com/b7ee7702c1a84354751432e6023ab015.jpg',
             tree: {
                 type: 'site-section',
+                class:'hero-with-button',
                 style: {
                     background: 'url(https://images.unsplash.com/photo-1588878497864-24269ed778ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80) no-repeat center center scroll',
                     backgroundSize: 'cover',
@@ -2841,7 +2842,6 @@ const samples = {
                         type: 'site-div',
                         class:"nav-bar-hero",
                         style: {
-                            height: '6rem',
                             width: '100%',
                             display: 'flex',
                             justifyContent: 'space-between',
@@ -2916,28 +2916,31 @@ const samples = {
                     },
                     {
                         type: 'site-div',
+                        class:"hero-button-div",
                         style: {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             flexDirection: 'column',
-                            padding: "18rem 0rem"
                         },
                         cmps: [{
                                 type: 'site-text',
                                 content: 'I AM A TITLE',
+                                class:"title",
+
                                 style: {
                                     fontSize: '5.25rem',
                                     fontFamily: 'Oswald',
                                     color: 'black',
                                     textShadow: '0 0 2px black',
-                                    letterSpacing:"3px",
+                                    letterSpacing:"12.5px",
                                     fontWeight:"bold"
                                 },
                             },
                             {
                                 type: 'site-text',
                                 content: 'AND I AM A SUBTITLE',
+                                class:"subtitle",
                                 style: {
                                     fontSize: '1.875rem',
                                     fontFamily: 'Oswald',
@@ -2995,7 +2998,6 @@ const samples = {
                                 type: 'site-image',
                                 content: 'https://www.churchtrac.com/articles/apple/uploads/2017/09/Antu_insert-image.svg_-1184x1184.png',
                                 style: {
-                                    height: '6rem',
                                     paddingInlineStart: '1.5rem',
                                 },
                             },
@@ -3064,6 +3066,7 @@ const samples = {
                         cmps: [{
                                 type: 'site-text',
                                 content: 'I AM YOUR TITLE',
+                                
                                 style: {
                                     fontSize: '4rem',
                                     fontFamily: 'Oswald',
