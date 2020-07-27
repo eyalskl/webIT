@@ -85,3 +85,52 @@ $baby-blue: #f8faff;
         background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
     }
 }
+
+.btn {
+    color: #fff;
+    cursor: pointer;
+    margin: 0 0 2em;
+    position: relative;
+    width: 100%;
+}
+
+.btn-4 {
+    border: 1px solid $clr4;
+    overflow: hidden;
+    position: relative;
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    span {
+        z-index: 50;
+    }
+    &:after {
+        background: #363636;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .2;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index: -10;
+    }
+}
+
+.btn-4:hover {
+    &:after {
+        animation: kaki .55s;
+        transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+}
+
+@keyframes kaki {
+    from {
+        left: -75px;
+    }
+    to {
+        left: 120%;
+    }
+}

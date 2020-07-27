@@ -52,31 +52,31 @@
         <rect x="47.7" y="626.7" style="fill:#622f18;" width="33" height="6.6" />
       </g>
       <text
-          id="header2"
-          class="tc-header2"
-          x="593.8"
-          y="111.75"
-          text-anchor="middle"
-          font-family="Source Sans Pro"
-          font-size="5rem"
-          fill="#fff"
-          opacity="0"
-          >
-          Create a Website
-          </text>
+        id="header2"
+        class="tc-header2"
+        x="593.8"
+        y="111.75"
+        text-anchor="middle"
+        font-family="Source Sans Pro"
+        font-size="5rem"
+        fill="#fff"
+        opacity="0"
+        >
+        Create a Website
+      </text>
       <text
-          id="header22"
-          class="tc-header2"
-          x="593.8"
-          y="211.75"
-          text-anchor="middle"
-          font-family="Source Sans Pro"
-          font-size="5rem"
-          fill="#fff"
-          opacity="0"
-          >
-          You’re Proud Of
-          </text>
+        id="header22"
+        class="tc-header2"
+        x="593.8"
+        y="211.75"
+        text-anchor="middle"
+        font-family="Source Sans Pro"
+        font-size="5rem"
+        fill="#fff"
+        opacity="0"
+        >
+        You’re Proud Of
+      </text>
       <g id="computer">
         <polygon
           style="fill:#888889;stroke:#050606;stroke-miterlimit:10;"

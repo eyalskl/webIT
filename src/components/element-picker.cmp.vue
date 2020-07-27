@@ -1,8 +1,10 @@
 <template>
   <section class="element-picker">
-    <button class="element-name" v-for="(name , idx) in elementNames" @click="showList(name)" :key="idx">
+    <span> 
+      <button class="element-name btn btn-4" v-for="(name , idx) in elementNames" @click="showList(name)" :key="idx">
       {{ name }}
     </button>
+    </span>
   </section>
 </template>
 
