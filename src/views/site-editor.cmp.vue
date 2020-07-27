@@ -104,9 +104,7 @@ export default {
       this.$store.commit({ type: "setSite", site: this.siteToEdit });
     },
     clone(element) {
-      console.log('element:', element)
       let idx = this.siteToEdit.cmps.findIndex((cmp) => cmp.id === element.id);
-      console.log('idx:', idx)
       if (idx === -1) return;
       let clone = _.cloneDeep(element);
       clone.id = templateService.makeId();

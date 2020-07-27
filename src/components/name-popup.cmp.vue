@@ -1,7 +1,7 @@
 <template>
     <section class="name-popup modal-wrapper">
       <div class="content-wrapper flex column justify-center animate__animated animate__zoomIn">
-            <h2> Hey, Welcome to webIT! <br /> We are exciting to meet you! </h2>
+            <h2> Hey, Welcome to webIT!</h2>
             <span> Let's start building your awasome new Website. <br />
              What is your site's name? </span>
             <label> 

@@ -76,7 +76,6 @@ export const siteStore = {
             }
             const savedTemplate = await templateService.save(site)
             commit({ type: 'setSite', site: savedTemplate });
-            console.log('savedTemplate:', savedTemplate)
             return savedTemplate;
         }
     },
