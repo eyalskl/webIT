@@ -43,7 +43,7 @@ export default {
   },
   async created() {
     const templates = await this.$store.dispatch({ type: 'loadTemplates' });
-    this.templatesToShow = templates.filter(template => template._id !== '5f1b0b822e78d49fde61fe1e' && !template.createdBy )
+    this.templatesToShow = templates.filter(template => template._id !== '5f1b0b822e78d49fde61fe1e') //&& !template.createdBy
     this.$store.commit({ type: 'setSite', site: null });
   },
   methods: {

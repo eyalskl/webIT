@@ -215,5 +215,27 @@
         div {
             align-items: 'center' !important;
         }
-    }
+	}
+	.card-video-above-right, .card-video-above-left , .card-photo-above-left , .card-photo-above-right{
+		height: auto;
+		padding: 15px;
+	.cards-container {
+		position: static;
+		width: 100%;
+		height: auto;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		.div-behind-pic {
+			width: 100%;
+			height: auto;
+			padding: 15px;
+		}
+		.pic-above-div {
+			position: static;
+			width: 100%;
+			min-height: 350px;
+		}
+	}
+	}
 }
