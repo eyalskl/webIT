@@ -36,7 +36,8 @@
     align-items: center;
     margin: 0;
     width: calc(100vw - 23.75rem);
-    font-family: 'Oswald';
+    font-family: 'Source Sans Pro',
+    sans-serif;
     color: rgba(128, 128, 128, 0.397);
     &::after {
         content: "Place Section Here";
@@ -59,7 +60,8 @@
     align-items: center;
     margin: 0;
     width: calc(100vw - 23.75rem);
-    font-family: 'Oswald';
+    font-family: 'Source Sans Pro',
+    sans-serif;
     color: rgba(128, 128, 128, 0.397);
     &::after {
         content: "Explore our areas and drag items here";
