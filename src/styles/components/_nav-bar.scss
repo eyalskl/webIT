@@ -3,8 +3,7 @@
     top: 0;
     width: 100vw;
     z-index: 10;
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: normal;
+    font-family: 'Source Sans Pro', sans-serif;
     padding: 0 1.5rem;
     background-color: $clr2;
     color: $clr1;
@@ -39,6 +38,7 @@
             font-size: 1.05rem;
             color: $clr3;
             display: inline-flex;
+            font-family: 'Source Sans Pro', sans-serif;
             justify-content: center;
             align-items: center;
             background-color: inherit;
@@ -53,6 +53,7 @@
                 background-color: inherit;
                 font-size: 1.05rem;
                 height: 100%;
+                font-family: 'Source Sans Pro', sans-serif;
             }
             >* {
                 cursor: pointer;

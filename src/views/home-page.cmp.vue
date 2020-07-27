@@ -28,14 +28,14 @@
           <rect
             x="47.2"
             y="626.1"
-            style="clip-path:url(#SVGID_2_);fill:#EDCF94;stroke:#0B0B0B;stroke-miterlimit:10;"
+            style="clip-path:url(#SVGID_2_);fill:#74391f;stroke:#0B0B0B;stroke-miterlimit:10;"
             width="34"
             height="56.4"
           />
           <rect
             x="850.5"
             y="626.6"
-            style="clip-path:url(#SVGID_2_);fill:#EDCF94;stroke:#0B0B0B;stroke-miterlimit:10;"
+            style="clip-path:url(#SVGID_2_);fill:#74391f;stroke:#0B0B0B;stroke-miterlimit:10;"
             width="281.4"
             height="49.9"
           />
@@ -44,12 +44,12 @@
       </g>
       <g id="table">
         <path
-          style="fill:#EDCF94;stroke:#0B0B0B;stroke-miterlimit:10;"
+          style="fill:#74391f;stroke:#0B0B0B;stroke-miterlimit:10;"
           d="M1172,626.1H18.4c-2.7,0-5-1.1-5-2.5v-14.3
         c0-1.4,2.2-2.5,5-2.5H1172c2.7,0,5,1.1,5,2.5v14.3C1177,625,1174.8,626.1,1172,626.1z"
         />
-        <rect x="851" y="627.2" style="fill:#D7B476;" width="280.4" height="10.5" />
-        <rect x="47.7" y="626.7" style="fill:#D7B476;" width="33" height="6.6" />
+        <rect x="851" y="627.2" style="fill:#622f18;" width="280.4" height="10.5" />
+        <rect x="47.7" y="626.7" style="fill:#622f18;" width="33" height="6.6" />
       </g>
       <text
           id="header2"
@@ -57,12 +57,25 @@
           x="593.8"
           y="111.75"
           text-anchor="middle"
-          font-family="Oswald"
-          font-size="6rem"
+          font-family="Source Sans Pro"
+          font-size="5rem"
           fill="#fff"
           opacity="0"
           >
-          Create a Website You’re Proud Of
+          Create a Website
+          </text>
+      <text
+          id="header22"
+          class="tc-header2"
+          x="593.8"
+          y="211.75"
+          text-anchor="middle"
+          font-family="Source Sans Pro"
+          font-size="5rem"
+          fill="#fff"
+          opacity="0"
+          >
+          You’re Proud Of
           </text>
       <g id="computer">
         <polygon
@@ -97,7 +110,7 @@
           x="593.8"
           y="411.75"
           text-anchor="middle"
-          font-family="Oswald"
+          font-family="Source Sans Pro"
           font-size="2.5rem"
           fill="white"
           @click.stop="$router.push('/templates')"
@@ -407,12 +420,24 @@
           x="593.8"
           y="111.75"
           text-anchor="middle"
-          font-family="Oswald"
-          font-size="6rem"
-          fill="#f2f2f2"
+          font-family="Source Sans Pro"
+          font-size="5rem"
+          fill="#202021"
           opacity="0"
         >
-        Create a Website
+        Create a Website 
+        </text>
+        <text
+          id="header1"
+          class="tc-header"
+          x="593.8"
+          y="211.75"
+          text-anchor="middle"
+          font-family="Source Sans Pro"
+          font-size="5rem"
+          fill="#202021"
+          opacity="0"
+        >
         You’re Proud Of
         </text>
         <polygon
@@ -487,33 +512,34 @@ export default {
       scale: 0,
       transformOrigin: 'center center',
     })
-    .to(header2, 0.2, { opacity: 1, fill: '#2c3e50' })
-      .staggerFrom(
-        table,
-        0.2,
-        { y: '-=200', opacity: 0, ease: Elastic.easeOut },
-        0.1
-      )
-      .from(lampLeg, 0.2, { opacity: 0, x: '-200', ease: Elastic.easeOut })
-      .from(lampbt, 0.2, {
-        opacity: 0,
-        scale: 0,
-        transformOrigin: 'center center',
-      })
-      .from(lampLineB, 0.3, {
-        opacity: 0,
-        transformOrigin: '100% 100%',
-        rotation: '-180deg',
-      })
-      .from(lampCircle, 0.1, { opacity: 0, x: '-=100', y: '-=100' })
-      .from(lampLineT, 0.3, {
-        opacity: 0,
-        transformOrigin: '0% 100%',
-        rotation: '-180deg',
-      })
-      .from(lampHead, 0.2, { opacity: 0, scale: 0, ease: Elastic.easeOut })
-      .from(lampHeader, 0.5, { transformOrigin: '60% 60%', rotation: '60deg' })
-      .from(lampBody, 0.5, { transformOrigin: '70% 70%', rotation: '-25deg' })
+    // .to(header2, 0.2, { opacity: 1, fill: '#2c3e50' })
+    // .to(header22, 0.2, { opacity: 1, fill: '#2c3e50' })
+    //   .staggerFrom(
+    //     table,
+    //     0.2,
+    //     { y: '-=200', opacity: 0, ease: Elastic.easeOut },
+    //     0.1
+    //   )
+    //   .from(lampLeg, 0.2, { opacity: 0, x: '-200', ease: Elastic.easeOut })
+    //   .from(lampbt, 0.2, {
+    //     opacity: 0,
+    //     scale: 0,
+    //     transformOrigin: 'center center',
+    //   })
+    //   .from(lampLineB, 0.3, {
+    //     opacity: 0,
+    //     transformOrigin: '100% 100%',
+    //     rotation: '-180deg',
+    //   })
+    //   .from(lampCircle, 0.1, { opacity: 0, x: '-=100', y: '-=100' })
+    //   .from(lampLineT, 0.3, {
+    //     opacity: 0,
+    //     transformOrigin: '0% 100%',
+    //     rotation: '-180deg',
+    //   })
+    //   .from(lampHead, 0.2, { opacity: 0, scale: 0, ease: Elastic.easeOut })
+    //   .from(lampHeader, 0.5, { transformOrigin: '60% 60%', rotation: '60deg' })
+    //   .from(lampBody, 0.5, { transformOrigin: '70% 70%', rotation: '-25deg' })
       .staggerFrom(
         computer,
         1,
@@ -525,26 +551,31 @@ export default {
         },
         0.2
       )
-      .staggerFrom(
-        keyboard,
-        0.5,
-        { opacity: 0, y: '-=100', ease: Linear.easeInOut },
-        0.05
-      )
-      .staggerFrom(asset, 0.5, { opacity: 0 }, 0.05)
+      // .staggerFrom(
+      //   keyboard,
+      //   0.5,
+      //   { opacity: 0, y: '-=100', ease: Linear.easeInOut },
+      //   0.05
+      // )
+      // .staggerFrom(asset, 0.5, { opacity: 0 }, 0.05)
       .to(
         lampLight,
         0.2,
         { opacity: 0.8, ease: Elastic.easeOut, delay: 0.5 },
         'a'
       )
+      
       .to(lampLight, 0.1, { opacity: 0 }, 'b')
+      .to(header, 0.2, { opacity: 1, fill: '#202021' })
+      .to(header1, 0.2, { opacity: 1, fill: '#202021' })
       .to(lampLight, 0.1, { opacity: 0.2 }, 'c')
       .to(bgd, 0.2, { opacity: 0.1, delay: 0.5 }, 'a-=0.05')
       .to(bgd, 0.1, { opacity: 1 }, 'b-=0.05')
       .to(bgd, 0.1, { opacity: 0.5 }, 'c-=0.05')
       .to(bgd, 0.2, { opacity: 1, fill: '#e6e6e6' })
-      .to(header, 0.2, { opacity: 1, fill: '#f6f6f6' })
+      .to(header2, 0.2, { opacity: 0, fill: '#2c3e50' })
+      .to(header22, 0.2, { opacity: 0, fill: '#2c3e50' })
+
       .fromTo(
         lampLine,
         0.2,
