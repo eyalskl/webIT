@@ -1,0 +1,26 @@
+.alert {
+    padding: 1rem;
+    font-size: 1.25rem;
+    position: absolute;
+    z-index: 50;
+    top: 4rem;
+    right: 50vw;
+    transform: translateX(50%);
+    border-radius: 0.33rem;
+    text-transform: capitalize;
+    border: 1px solid $clr3;
+    color: $clr3;
+    font-family: 'Oswald';
+}
+
+.alert-success {
+    background-color: $clr2;
+}
+
+.alert-danger {
+    background-color: rgb(255, 107, 107);
+}
+
+.alert-error {
+    background-color: rgb(255, 0, 0);
+}

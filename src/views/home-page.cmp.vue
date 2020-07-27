@@ -3,7 +3,7 @@
     <nav-bar />
       <div class="hero">
         <div class="text-container flex column justify-center align-center">
-          <h1 class="tc-header">Create a Website You’re Proud Of.</h1>
+          <h1 class="tc-header">Create a Website You’re Proud Of</h1>
           <button class="bubbly-button" :class="{animate}" @click.stop="$router.push('/templates')" @mouseover.prevent="animate=true" @mouseout.prevent="animate=false">
           Get Started!
           </button>

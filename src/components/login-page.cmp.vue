@@ -28,6 +28,7 @@
 
 <script>
 import { userService } from '@/services/user.service.js';
+import { eventBus, SHOW_MSG } from "@/services/event-bus.service.js";
 
 export default {
     name: 'login-page',
@@ -46,6 +47,9 @@ export default {
         },
         iconClass() {
             return (this.isLogin) ? 'fa-user' : 'fa-user-plus'
+        },
+        loggedInUser() {
+            return this.$store.getters.loggedInUser 
         }
     },
     methods: {
@@ -64,7 +68,10 @@ export default {
                 type = 'login'
             } else type = 'signup'
             const user = await this.$store.dispatch({type , userCred: this.userCreds})
-            if (user)  this.$store.commit({type: 'setShowLogin', showLogin: false})
+            if (user)  {
+                eventBus.$emit(SHOW_MSG, { txt: `Welcome back ${this.loggedInUser.fullname}` ,type: 'success'})
+                this.$store.commit({type: 'setShowLogin', showLogin: false})
+            }
         }
     },
     created() {

@@ -11,7 +11,6 @@ export const siteStore = {
         isLoading: false,
         templates: [],
         site: localSite,
-
     },
     getters: {
         site(state) {

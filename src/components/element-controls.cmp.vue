@@ -25,6 +25,7 @@ export default {
       eventBus.$emit(MOVE_ELEMENT, this.element.id, direction);
     },
     clone() {
+      return
       eventBus.$emit(CLONE_ELEMENT, this.element);
     },
     remove() {

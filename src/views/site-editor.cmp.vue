@@ -1,7 +1,7 @@
 <template>
   <container class="editor-container flex column animate__animated animate__fadeIn">
     <nav-bar />
-    <publish-popup />
+    <publish-popup :siteToEdit="siteToEdit"/>
     <name-popup v-if="showNameModal" @close-popup="showNameModal = false" @set-name="setSiteName" />
     <div class="editor flex">
       <element-dashboard

@@ -29,6 +29,7 @@
 <script>
 import Avatar from 'vue-avatar';
 import domtoimage from 'dom-to-image';
+import { eventBus, SHOW_MSG } from "@/services/event-bus.service.js";
 
 export default {
   name: 'nav-bar',
@@ -43,9 +44,9 @@ export default {
     },
   },
   methods: {
-    saveSite() {
-
-          this.$store.dispatch({type: 'saveSite'});
+    async saveSite() {
+      const savedSite = await this.$store.dispatch({type: 'saveSite'});
+      if (savedSite) eventBus.$emit(SHOW_MSG, { txt: `Site saved successfully!` ,type: 'success'})
     },
     openLogin() {
       if (!this.loggedInUser)

@@ -980,7 +980,94 @@ const samples = {
             },
         },
     ],
-    footer: [{
+    footer: [
+        {
+            name:'Social Buttons Footer',
+            img:'https://i.gyazo.com/6baff275731d7b55154bbfe1a0facbf8.png',
+            tree:{
+                type:'site-section',
+                class:"social-buttons-footer",
+                style:{
+                    background:'#000',
+                    minHeight:"100px"
+                },
+                cmps:[
+                    {
+                        type:"site-div",
+                        style:{
+                            textAlign:"center",
+                            padding:"1rem",
+
+
+                        },
+                        cmps:[{
+                            type:"site-text",
+                            content:"Copyright © 2020 All Rights Reserved by webIT.",
+                            style:{
+                                color:"#fff",
+                                fontFamily:"oswald",
+                            }
+                        }]
+                    },
+                    
+                    {
+                    type:'site-div',
+                    class:"social-buttons-container",
+                    style:{
+                        display:"flex",
+                        justifyContent:"space-around",
+                        padding:"2rem"
+                    },
+                    cmps:[{
+                        type: 'site-button',
+                        content: { text: '', href: '' },
+                        style: {
+                            background: 'url(https://image.flaticon.com/icons/png/512/124/124010.png) center center / cover no-repeat',
+                            width: '28px',
+                            height: '28px',
+                            borderRadius: '5px',
+                        },
+                    },
+                    {
+                        type: 'site-button',
+                        content: { text: '', href: '' },
+                        style: {
+                            background: 'url(https://i.gyazo.com/80639d9cab9b20e4cc2b6d020907aede.png) center center / cover no-repeat',
+                            width: '28px',
+                            height: '28px',
+                            borderRadius: '5px',
+                        },
+                    },
+                    {
+                        type: 'site-button',
+                        content: { text: '', href: '' },
+                        style: {
+                            background: 'url(https://i.gyazo.com/8833c2c42eb3b5ee28e01dc455fa2614.png) center center / cover no-repeat',
+                            width: '28px',
+                            height: '28px',
+                            borderRadius: '5px',
+                        },
+                    },
+                    {
+                        type: 'site-button',
+                        content: { text: '', href: '' },
+                        style: {
+                            background: 'url(https://i.gyazo.com/ea86c15f1cc3ecbf95349c78da05b8b6.png) center center / cover no-repeat',
+                            width: '28px',
+                            height: '28px',
+                            borderRadius: '5px',
+                        },
+                    },
+
+                    ]
+                }]
+            }
+
+        },
+        
+        
+        
+        {
             name: 'Big Footer Informer',
             img: 'https://i.ibb.co/8g3wzm6/Screenshot-2020-07-25-16-42-39.png',
             tree: {
@@ -2752,6 +2839,7 @@ const samples = {
                 },
                 cmps: [{
                         type: 'site-div',
+                        class:"nav-bar-hero",
                         style: {
                             height: '6rem',
                             width: '100%',
@@ -2770,34 +2858,24 @@ const samples = {
                                 },
                             },
                             {
+                                type: 'site-text',
+                                class:"hamburger-hero",
+                                content: '☰',
+                                style: {
+                                    color: '#fff',
+
+    fontSize: "2.5rem",
+    position: "absolute",
+    right: "25px",
+    top: "20px"
+                                },
+                            },
+                            {
                                 type: 'site-list',
-                                cmps: [{
-                                        type: 'site-text',
-                                        content: 'HOME',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#000000',
-                                        },
-                                    },
+                                cmps: [
                                     {
                                         type: 'site-text',
-                                        content: 'ARTICLES',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'MEMBERS',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'ABOUT',
+                                        content: 'MENUS',
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
@@ -2806,6 +2884,22 @@ const samples = {
                                     {
                                         type: 'site-text',
                                         content: 'CONTACT US',
+                                        style: {
+                                            marginInlineEnd: '1rem',
+                                            color: '#fff',
+                                        },
+                                    },
+                                    {
+                                        type: 'site-text',
+                                        content: 'GALLERY',
+                                        style: {
+                                            marginInlineEnd: '1rem',
+                                            color: '#fff',
+                                        },
+                                    },
+                                    {
+                                        type: 'site-text',
+                                        content: 'EXTRAS',
                                         style: {
                                             marginInlineEnd: '1rem',
                                             color: '#fff',
@@ -2833,10 +2927,12 @@ const samples = {
                                 type: 'site-text',
                                 content: 'I AM A TITLE',
                                 style: {
-                                    fontSize: '4rem',
+                                    fontSize: '5.25rem',
                                     fontFamily: 'Oswald',
-                                    color: 'white',
+                                    color: 'black',
                                     textShadow: '0 0 2px black',
+                                    letterSpacing:"3px",
+                                    fontWeight:"bold"
                                 },
                             },
                             {
@@ -2845,8 +2941,11 @@ const samples = {
                                 style: {
                                     fontSize: '1.875rem',
                                     fontFamily: 'Oswald',
-                                    color: 'white',
+                                    color: '#ffb029',
                                     textShadow: '0 0 1px black',
+                                    fontWeight:"bold",
+                                    letterSpacing:"2.5px",
+
                                 },
                             },
                             {

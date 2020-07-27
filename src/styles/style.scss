@@ -3,6 +3,7 @@
 @import './setup/mixins';
 // BASICS
 @import './basics/base';
+@import './basics/buttons';
 @import './basics/helpers';
 @import './basics/layout';
 // COMPONENTS
@@ -16,6 +17,7 @@
 @import './components/element-edit';
 @import './components/sample-list';
 @import './components/element-dashboard';
+@import './components/user-msg';
 // EDITOR CMPS
 @import './editor-cmps/edit-site-image';
 @import './editor-cmps/edit-site-section';

@@ -91,3 +91,17 @@
     flex-direction:column;
 }
 }
+
+.hamburger-hero{
+    visibility: hidden;
+}
+@media(max-width:520px){
+    .nav-bar-hero{
+        ul{
+            visibility: hidden;
+        }
+        .hamburger-hero{
+            visibility: visible;
+        }
+    }
+}
