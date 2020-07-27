@@ -5,7 +5,7 @@
              Your Website Link :
             </h3>
             <div class="publish-input-container flex">
-                <input type="text" v-model="siteUrl"/>
+                <input id="foo" type="text" v-model="siteUrl" />
                 <button class="publish-btn" @click="copyToClip"> 
                     <img src="https://img.icons8.com/cotton/64/000000/copy--v1.png"/>
                 </button>
@@ -43,12 +43,18 @@ export default {
             if (ev.target.nodeName === 'SECTION' || ev.target.classList.contains('fa-times') || ev.target.classList.contains('exit-btn')) this.$store.commit({type: 'setShowPublish', showPublish: false})
         },
         copyToClip(){
-            var promise = navigator.clipboard.writeText(this.siteUrl)
-                .then(res => { eventBus.$emit(SHOW_MSG, { txt: `Copied to clipboard!`,type: 'success'}) })       
+            var copyText = document.getElementById("foo");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            eventBus.$emit(SHOW_MSG, { txt: `Copied to clipboard!`,type: 'success'})  
         }
     },
     created() {
         this.siteUrl = window.location.origin + '/#/' + this.$route.params.id
-    }
+    },
+    destroyed() {
+        this.$store.commit({type: 'setShowPublish', showPublish: false})
+    },
 }
 </script>

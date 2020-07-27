@@ -474,9 +474,11 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
 import navBar from '@/components/nav-bar.cmp.vue';
 import $ from 'jquery';
 import { TimelineMax, CSSPlugin, Elastic, Back, Linear } from 'gsap/all';
+gsap.registerPlugin(CSSPlugin)
 
 export default {
   name: 'home-page',
