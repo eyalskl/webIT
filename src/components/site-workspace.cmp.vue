@@ -5,8 +5,10 @@
       <component v-for="(cmp, idx) in siteToEdit.cmps" :is="cmp.type" :cmp="cmp" :key="idx">
       </component>
       <section class="drop-preview-empty" v-if="!siteToEdit.cmps.length"> </section>
+      
     </container>
   </container>
+
   <img v-else class="loader" src="../assets/loadingAnimation.svg"/>
 </template>
 
