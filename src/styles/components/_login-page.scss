@@ -15,7 +15,7 @@
         top: calc(50vh - 3rem);
         transform: translateX(-50%) translateY(-50%);
         padding: 0rem 2rem 0 2rem;
-        font-family: 'Advent Pro';
+        font-family: 'Source Sans Pro', sans-serif;
         font-size: 1.25rem;
         transition: .3s;
         label {
@@ -31,7 +31,7 @@
             border-bottom: 1px solid $clr3;
             background-color: inherit;
             transition: .3s;
-            font-family: 'Roboto';
+            font-family: 'Roboto', sans-serif;
             font-size: 1rem;
             &:focus {
                 border-color: $clr1;
@@ -52,7 +52,7 @@
             text-align: center;
             margin: 1rem auto;
             margin-bottom: 0;
-            font-family: 'Advent Pro';
+            font-family: 'Source Sans Pro', sans-serif;
             background-color: $clr1;
             color: $clr2;
             font-weight: bold;
@@ -68,8 +68,10 @@
             position: absolute;
             bottom: -10px;
             left: 50%;
+            font-size: 1rem;
             transform: translateX(-50%);
             color: $clr1;
+            font-family: 'Source Sans Pro', sans-serif;
             transition: .3s;
             cursor: pointer;
             span {
