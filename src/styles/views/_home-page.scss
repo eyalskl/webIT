@@ -1,25 +1,39 @@
 .home-page {
     margin-top: 3.5rem;
+    background-color: $clr2;
     .hero {
-        background: url(~@/assets/imgs/hero-temp.jpg) no-repeat center center / cover fixed;
-        height: calc(100vh - 3.5rem);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // background: url(~@/assets/imgs/hero-temp.jpg) no-repeat center center / cover fixed;
+        // height: calc(100vh - 3.5rem);
+        position: absolute;
+        left: 50vw;
+        top: 20vh;
+        transform: translateX(-50%);
     }
     .text-container {
         font-family: 'Nunito Sans', sans-serif;
     }
-    .tc-header {
-        text-shadow: 1px -1px 5px #000000;
-        color: #ffffff;
-        font-size: 5rem;
-        width: 60rem;
-        text-align: center;
-        cursor: default;
-        line-height: 5rem;
+    .cat-btn-computer {
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        &:hover {
+            fill: lighten($clr1, 5) !important;
+        }
     }
-   
+    .cat-btn {
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        &:hover {
+            font-size: 3.5rem;
+        }
+    }
+    .tc-header {
+        text-shadow: 1px -2px 0px #959595;
+        cursor: default;
+    }
+    .tc-header2 {
+        cursor: default;
+        text-shadow: 1px -2px 0px #959595;
+    }
     & .publish {
         display: none;
     }
@@ -43,16 +57,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-            img{
-                width: 600px;
-            }
-            h3{
-                font-family: advent pro;
-                font-size: 3rem;
-                color: $clr1;
-            }
-
+    img {
+        width: 600px;
+    }
+    h3 {
+        font-family: advent pro;
+        font-size: 3rem;
+        color: $clr1;
+    }
 }
-
-
