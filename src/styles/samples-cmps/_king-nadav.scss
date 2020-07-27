@@ -105,3 +105,40 @@
         }
     }
 }
+
+.hero-button-div{
+    padding:10rem 0rem 20rem 0;
+}
+.nav-bar-hero{
+    height: 6rem;
+    img{
+        height: 5rem;
+    }
+}
+
+.hero-with-button{
+    height: auto;
+}
+
+@media (max-width:500px){
+.hero-with-button{
+    .nav-bar-hero{
+        height: 5rem;
+        img{
+            height: 5rem !important;
+        }
+    }
+    .hero-button-div{
+        padding: 5rem 0rem 20rem 0;;
+    .title{
+        font-size: 3rem !important;
+    }
+    .subtitle{
+        font-size: 1.1rem !important;
+    }
+    button{
+        font-size: 1.1rem !important;
+    }
+}
+}
+}
