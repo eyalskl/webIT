@@ -50,7 +50,7 @@ export default {
   async created() {
     this.$store.commit({ type: "setEditMode", editMode: true });
     await this.loadSite();
-    if (!this.siteToEdit._id) this.showNameModal = true;
+    if (this.siteToEdit.name === 'New') this.showNameModal = true;
     this.samples = templateService.getSamplesOf("section");
     eventBus.$on(ADD_SAMPLE, (sample) => this.addSample(sample));
     eventBus.$on(CLONE_ELEMENT, (element) => this.clone(element));
