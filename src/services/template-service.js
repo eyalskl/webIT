@@ -980,93 +980,92 @@ const samples = {
             },
         },
     ],
-    footer: [
-        {
-            name:'Social Buttons Footer',
-            img:'https://i.gyazo.com/6baff275731d7b55154bbfe1a0facbf8.png',
-            tree:{
-                type:'site-section',
-                class:"social-buttons-footer",
-                style:{
-                    background:'#000',
-                    minHeight:"100px"
+    footer: [{
+            name: 'Social Buttons Footer',
+            img: 'https://i.gyazo.com/6baff275731d7b55154bbfe1a0facbf8.png',
+            tree: {
+                type: 'site-section',
+                class: "social-buttons-footer",
+                style: {
+                    background: '#000',
+                    minHeight: "100px"
                 },
-                cmps:[
-                    {
-                        type:"site-div",
-                        style:{
-                            textAlign:"center",
-                            padding:"1rem",
+                cmps: [{
+                        type: "site-div",
+                        style: {
+                            textAlign: "center",
+                            padding: "1rem",
 
 
                         },
-                        cmps:[{
-                            type:"site-text",
-                            content:"Copyright © 2020 All Rights Reserved by webIT.",
-                            style:{
-                                color:"#fff",
-                                fontFamily:"oswald",
+                        cmps: [{
+                            type: "site-text",
+                            content: "Copyright © 2020 All Rights Reserved by webIT.",
+                            style: {
+                                color: "#fff",
+                                fontFamily: "oswald",
                             }
                         }]
                     },
-                    
-                    {
-                    type:'site-div',
-                    class:"social-buttons-container",
-                    style:{
-                        display:"flex",
-                        justifyContent:"space-around",
-                        padding:"2rem"
-                    },
-                    cmps:[{
-                        type: 'site-button',
-                        content: { text: '', href: '' },
-                        style: {
-                            background: 'url(https://image.flaticon.com/icons/png/512/124/124010.png) center center / cover no-repeat',
-                            width: '28px',
-                            height: '28px',
-                            borderRadius: '5px',
-                        },
-                    },
-                    {
-                        type: 'site-button',
-                        content: { text: '', href: '' },
-                        style: {
-                            background: 'url(https://i.gyazo.com/80639d9cab9b20e4cc2b6d020907aede.png) center center / cover no-repeat',
-                            width: '28px',
-                            height: '28px',
-                            borderRadius: '5px',
-                        },
-                    },
-                    {
-                        type: 'site-button',
-                        content: { text: '', href: '' },
-                        style: {
-                            background: 'url(https://i.gyazo.com/8833c2c42eb3b5ee28e01dc455fa2614.png) center center / cover no-repeat',
-                            width: '28px',
-                            height: '28px',
-                            borderRadius: '5px',
-                        },
-                    },
-                    {
-                        type: 'site-button',
-                        content: { text: '', href: '' },
-                        style: {
-                            background: 'url(https://i.gyazo.com/ea86c15f1cc3ecbf95349c78da05b8b6.png) center center / cover no-repeat',
-                            width: '28px',
-                            height: '28px',
-                            borderRadius: '5px',
-                        },
-                    },
 
-                    ]
-                }]
+                    {
+                        type: 'site-div',
+                        class: "social-buttons-container",
+                        style: {
+                            display: "flex",
+                            justifyContent: "space-around",
+                            padding: "2rem"
+                        },
+                        cmps: [{
+                                type: 'site-button',
+                                content: { text: '', href: '' },
+                                style: {
+                                    background: 'url(https://image.flaticon.com/icons/png/512/124/124010.png) center center / cover no-repeat',
+                                    width: '28px',
+                                    height: '28px',
+                                    borderRadius: '5px',
+                                },
+                            },
+                            {
+                                type: 'site-button',
+                                content: { text: '', href: '' },
+                                style: {
+                                    background: 'url(https://i.gyazo.com/80639d9cab9b20e4cc2b6d020907aede.png) center center / cover no-repeat',
+                                    width: '28px',
+                                    height: '28px',
+                                    borderRadius: '5px',
+                                },
+                            },
+                            {
+                                type: 'site-button',
+                                content: { text: '', href: '' },
+                                style: {
+                                    background: 'url(https://i.gyazo.com/8833c2c42eb3b5ee28e01dc455fa2614.png) center center / cover no-repeat',
+                                    width: '28px',
+                                    height: '28px',
+                                    borderRadius: '5px',
+                                },
+                            },
+                            {
+                                type: 'site-button',
+                                content: { text: '', href: '' },
+                                style: {
+                                    background: 'url(https://i.gyazo.com/ea86c15f1cc3ecbf95349c78da05b8b6.png) center center / cover no-repeat',
+                                    width: '28px',
+                                    height: '28px',
+                                    borderRadius: '5px',
+                                },
+                            },
+
+                        ]
+                    }
+                ]
             }
 
         },
-        
-        
-        
+
+
+
         {
             name: 'Big Footer Informer',
             img: 'https://i.ibb.co/8g3wzm6/Screenshot-2020-07-25-16-42-39.png',
@@ -2830,7 +2829,7 @@ const samples = {
             img: 'https://i.gyazo.com/b7ee7702c1a84354751432e6023ab015.jpg',
             tree: {
                 type: 'site-section',
-                class:'hero-with-button',
+                class: 'hero-with-button',
                 style: {
                     background: 'url(https://images.unsplash.com/photo-1588878497864-24269ed778ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80) no-repeat center center scroll',
                     backgroundSize: 'cover',
@@ -2840,7 +2839,7 @@ const samples = {
                 },
                 cmps: [{
                         type: 'site-div',
-                        class:"nav-bar-hero",
+                        class: "nav-bar-hero",
                         style: {
                             width: '100%',
                             display: 'flex',
@@ -2859,21 +2858,20 @@ const samples = {
                             },
                             {
                                 type: 'site-text',
-                                class:"hamburger-hero",
+                                class: "hamburger-hero",
                                 content: '☰',
                                 style: {
                                     color: '#fff',
 
-    fontSize: "2.5rem",
-    position: "absolute",
-    right: "25px",
-    top: "20px"
+                                    fontSize: "2.5rem",
+                                    position: "absolute",
+                                    right: "25px",
+                                    top: "20px"
                                 },
                             },
                             {
                                 type: 'site-list',
-                                cmps: [
-                                    {
+                                cmps: [{
                                         type: 'site-text',
                                         content: 'MENUS',
                                         style: {
@@ -2916,7 +2914,7 @@ const samples = {
                     },
                     {
                         type: 'site-div',
-                        class:"hero-button-div",
+                        class: "hero-button-div",
                         style: {
                             display: 'flex',
                             alignItems: 'center',
@@ -2926,28 +2924,28 @@ const samples = {
                         cmps: [{
                                 type: 'site-text',
                                 content: 'I AM A TITLE',
-                                class:"title",
+                                class: "title",
 
                                 style: {
                                     fontSize: '5.25rem',
                                     fontFamily: 'Oswald',
                                     color: 'black',
                                     textShadow: '0 0 2px black',
-                                    letterSpacing:"12.5px",
-                                    fontWeight:"bold"
+                                    letterSpacing: "12.5px",
+                                    fontWeight: "bold"
                                 },
                             },
                             {
                                 type: 'site-text',
                                 content: 'AND I AM A SUBTITLE',
-                                class:"subtitle",
+                                class: "subtitle",
                                 style: {
                                     fontSize: '1.875rem',
                                     fontFamily: 'Oswald',
                                     color: '#ffb029',
                                     textShadow: '0 0 1px black',
-                                    fontWeight:"bold",
-                                    letterSpacing:"2.5px",
+                                    fontWeight: "bold",
+                                    letterSpacing: "2.5px",
 
                                 },
                             },
@@ -3066,7 +3064,7 @@ const samples = {
                         cmps: [{
                                 type: 'site-text',
                                 content: 'I AM YOUR TITLE',
-                                
+
                                 style: {
                                     fontSize: '4rem',
                                     fontFamily: 'Oswald',
@@ -3576,6 +3574,296 @@ const samples = {
                 ],
             },
         },
+        {
+            "name": "Travel Gallery",
+            "img": "https://i.ibb.co/hMV3yLL/travel-gallery.png",
+            "tree": {
+                "type": "site-section",
+                "class": "gallery-25-pics",
+                "style": {
+                    "backgroundColor": "white",
+                    "background": "#ffffff"
+                },
+                "cmps": [{
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "borderRadius": "0px",
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "horizontal",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1542397284385-6010376c5337?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1525455392992-382bcb57e923?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "big",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/flagged/photo-1553677969-1d67bbe9d55a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/flagged/photo-1557828823-b5bb7f45d726?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "big",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "horizontal",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1568454537842-d933259bb258?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1525825848744-8ae7d0c65bd1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "big",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1567691467665-4cb17b13fc1d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1541704464183-5e5a716d6a95?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1534777367038-9404f45b869a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "horizontal",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1554062062-e35c29f0f455?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "vertical",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1542221392-53fd0be8bc27?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "vertical",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1554062062-e35c29f0f455?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover",
+                                "borderRadius": "0px"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1552353288-5405ac4846f1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1525455152482-ea196eecbcd0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1474623809196-26c1d33457cc?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "big",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1534008897995-27a23e859048?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "horizontal",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1545167496-47716d8e426e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "horizontal",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1567692634060-87ecde02ace7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1551524559-8af4e6624178?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    },
+                    {
+                        "type": "site-div",
+                        "class": "horizontal",
+                        "cmps": [{
+                            "type": "site-image",
+                            "content": "https://images.unsplash.com/photo-1477894387642-00a731c511b3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1MTExM30",
+                            "style": {
+                                "backgroundSize": "cover"
+                            },
+                        }],
+                    }
+                ],
+            },
+        }
     ],
     section: [{
             name: 'hero',
