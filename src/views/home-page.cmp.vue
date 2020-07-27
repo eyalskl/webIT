@@ -3,9 +3,9 @@
     <nav-bar />
       <div class="hero">
         <div class="text-container flex column justify-center align-center">
-          <h1 class="tc-header">Create a Website You’re Proud Of, Simply.</h1>
-          <button @click.stop="$router.push('/templates')" class="start-btn text-box btn btn-white btn-animate" >
-             Build your website
+          <h1 class="tc-header">Create a Website You’re Proud Of.</h1>
+          <button class="bubbly-button" :class="{animate}" @click.stop="$router.push('/templates')" @mouseover.prevent="animate=true" @mouseout.prevent="animate=false">
+          Get Started!
           </button>
         </div>
       </div>
@@ -34,8 +34,15 @@
 <script>
 import navBar from '@/components/nav-bar.cmp.vue';
 
+
+
 export default {
   name: 'home-page',
+  data(){
+    return{
+      animate: false
+    }
+  },
   components: {
     navBar
   }
