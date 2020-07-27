@@ -587,6 +587,142 @@ const samples = {
                 }, ],
             },
         },
+        {
+            name: 'Contact With Map Right',
+            img: 'https://i.ibb.co/g3qCC8Y/Screenshot-2020-07-27-21-06-19.png',
+            tree: {
+                "type" : "site-section",
+                "class" : "form-with-map",
+                "style" : {
+                    "width" : "100%",
+                    "display" : "flex",
+                    "justifyContent" : "space-around",
+                    "background" : "#ffffff",
+                    "padding" : "3rem 1rem",
+                    "alignItems" : "stretch",
+                    "fontFamily" : "Josefin Slab",
+                    "fontWeight" : "bold",
+                    "direction" : "rtl"
+                },
+                "cmps" : [ 
+                    {
+                        "type" : "site-div",
+                        "class" : "map-container-form-div-right",
+                        "style" : {
+                            "flex" : "1",
+                            "display" : "flex",
+                            "flexDirection" : "column",
+                            "direction" : "ltr"
+                        },
+                        "cmps" : [ 
+                            {
+                                "type" : "site-div",
+                                "style" : {
+                                    "textAlign" : "center",
+                                    "paddingBlockEnd" : "1rem",
+                                    "borderRadius" : "0px"
+                                },
+                                "cmps" : [ 
+                                    {
+                                        "type" : "site-text",
+                                        "content" : "Your Location, Australia",
+                                        "style" : {
+                                            "color" : "#000",
+                                            "fontSize" : "2rem",
+                                            "letterSpacing" : "2px",
+                                            "lineHeight" : 1
+                                        },
+                                    }
+                                ],
+                            }, 
+                            {
+                                "type" : "site-div",
+                                "style" : {
+                                    "flex" : "3"
+                                },
+                                "cmps" : [ 
+                                    {
+                                        "type" : "site-map",
+                                        "content" : {
+                                            "center" : {
+                                                "lat" : 45.4895713,
+                                                "lng" : -73.5917135
+                                            },
+                                            "zoom" : 3
+                                        },
+                                    }
+                                ],
+                            }
+                        ],
+                    }, 
+                    {
+                        "type" : "site-div",
+                        "style" : {
+                            "flex" : "1"
+                        },
+                        "cmps" : [ 
+                            {
+                                "type" : "site-div",
+                                "class" : "form-with-map-form",
+                                "style" : {
+                                    "display" : "flex",
+                                    "alignItems" : "center",
+                                    "flexDirection" : "column",
+                                    "direction" : "ltr",
+                                    "borderRadius" : "0px"
+                                },
+                                "cmps" : [ 
+                                    {
+                                        "type" : "site-text",
+                                        "content" : "Contact Us",
+                                        "style" : {
+                                            "color" : "#000",
+                                            "fontSize" : "2rem",
+                                            "flex" : "1",
+                                            "paddingBlockEnd" : "1rem"
+                                        },
+                                    }, 
+                                    {
+                                        "type" : "site-form",
+                                        "style" : {
+                                            "flex" : "3",
+                                            "display" : "flex",
+                                            "flexDirection" : "column",
+                                            "color" : "#424242"
+                                        },
+                                        "btnStyle" : {
+                                            "background" : "#272727",
+                                            "fontSize" : "1.1rem",
+                                            "color" : "#cacaca",
+                                            "fontWeight" : "bold",
+                                            "fontFamily" : "inherit",
+                                            "marginBlockStart" : "1rem"
+                                        },
+                                        "content" : [ 
+                                            {
+                                                "tag" : "Name",
+                                                "type" : "text"
+                                            }, 
+                                            {
+                                                "tag" : "Email",
+                                                "type" : "email"
+                                            }, 
+                                            {
+                                                "tag" : "Subject",
+                                                "type" : "text"
+                                            }, 
+                                            {
+                                                "tag" : "Phone Number",
+                                                "type" : "tel"
+                                            }
+                                        ],
+                                    }
+                                ],
+                            }
+                        ],
+                    }
+                ],
+            }}
     ],
     text: [{
             name: 'Text With Photo Right	',
@@ -881,7 +1017,6 @@ const samples = {
                 ],
             },
         },
-
         {
             name: 'Text on Photo Left',
             img: 'https://i.ibb.co/T4xqJF7/Screenshot-2020-07-25-10-29-15.png',
@@ -979,6 +1114,7 @@ const samples = {
                 ],
             },
         },
+        
     ],
     footer: [{
             name: 'Social Buttons Footer',
@@ -1753,6 +1889,96 @@ const samples = {
                 }, ],
             },
         },
+        {
+            name: 'Video Card Left',
+            img: 'https://i.ibb.co/VLzqSss/Screenshot-2020-07-27-21-06-28.png',
+            tree: {
+                "type" : "site-section",
+                "class" : "card-video-above-left",
+                "style" : {
+                    "background" : "url(https://images.unsplash.com/flagged/photo-1549874491-97ed9de96e1a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) no-repeat center center / cover scroll"
+                },
+                "cmps" : [ 
+                    {
+                        "type" : "site-div",
+                        "class" : "cards-container",
+                        "style" : "",
+                        "cmps" : [ 
+                            {
+                                "type" : "site-div",
+                                "class" : "div-behind-pic",
+                                "style" : {
+                                    "background" : "#dcdfe6",
+                                    "borderRadius" : "0px"
+                                },
+                                "cmps" : [ 
+                                    {
+                                        "type" : "site-text",
+                                        "content" : "MOUNT EVEREST",
+                                        "style" : {
+                                            "fontFamily" : "Titillium Web",
+                                            "fontSize" : "2rem",
+                                            "color" : "#4db6ea",
+                                            "lineHeight" : 1.5,
+                                            "letterSpacing" : "0px",
+                                            "background" : "transparent"
+                                        },
+                                    }, 
+                                    {
+                                        "type" : "site-text",
+                                        "content" : "Climbing Mount Everest Is One Of The Most Extreme Challenges In Life.",
+                                        "style" : {
+                                            "fontFamily" : "Titillium Web",
+                                            "fontSize" : "1.2rem",
+                                            "color" : "#666666"
+                                        },
+                                    }, 
+                                    {
+                                        "type" : "site-text",
+                                        "content" : "Mount Everest attracts many climbers, some of them highly experienced mountaineers. There are two main climbing routes, one approaching the summit from the southeast in Nepal (known as the \"standard route\") and the other from the north in Tibet.",
+                                        "style" : {
+                                            "fontFamily" : "Titillium Web",
+                                            "fontSize" : "1rem",
+                                            "color" : "#666666",
+                                            "lineHeight" : 1.5,
+                                            "letterSpacing" : "0px"
+                                        },
+                                    }, 
+                                    {
+                                        "type" : "site-button",
+                                        "content" : {
+                                            "text" : "LEARN MORE",
+                                            "href" : ""
+                                        },
+                                        "style" : {
+                                            "fontFamily" : "Titillium Web",
+                                            "fontSize" : "1rem",
+                                            "color" : "#ffffff",
+                                            "background" : "#69d2e7",
+                                            "lineHeight" : 1.5,
+                                            "letterSpacing" : "0px",
+                                            "borderRadius" : "0px"
+                                        },
+                                    }
+                                ],
+                            }, 
+                            {
+                                "type" : "site-div",
+                                "class" : "pic-above-div",
+                                "style" : {},
+                                "cmps" : [ 
+                                    {
+                                        "type" : "site-video",
+                                        "content" : "https://www.youtube.com/watch?v=2R2gb0MKJlo",
+                                        "style" : {},
+                                        "id" : "6llBPmlTiTIrTPl"
+                                    }
+                                ],
+                            }
+                        ],
+                    }
+                ],
+            }}
     ],
     cards: [{
             name: 'Post Card Left Pic',
@@ -2317,7 +2543,7 @@ const samples = {
                                 style: {
                                     position: 'relative',
                                     flex: '1',
-                                    minWidth: '23rem',
+                                    minWidth: '22.2rem',
                                     maxWidth: '23rem',
                                     margin: '3rem 1.5rem 0px 1.5rem',
                                     display: 'flex',
@@ -2392,7 +2618,7 @@ const samples = {
                                 style: {
                                     position: 'relative',
                                     flex: '1',
-                                    minWidth: '23rem',
+                                    minWidth: '22.2rem',
                                     maxWidth: '23rem',
                                     margin: '3rem 1.5rem 0px 1.5rem',
                                     display: 'flex',
@@ -2732,6 +2958,324 @@ const samples = {
                 ],
             },
         },
+        {
+            name: 'Informative Cards',
+            img: 'https://i.ibb.co/9VdMjTS/Screenshot-2020-07-27-21-06-15.png',
+            tree: {
+                "type" : "site-section",
+                "class" : "floating-cards-section",
+                "style" : {
+                    "width" : "100%",
+                    "display" : "flex",
+                    "justifyContent" : "flex-start",
+                    "alignItems" : "center",
+                    "flexDirection" : "column",
+                    "position" : "relative",
+                    "padding" : "3rem 0 8rem",
+                    "background" : "#ffffff"
+                },
+                "cmps" : [ 
+                    {
+                        "type" : "site-div",
+                        "style" : {
+                            "display" : "flex",
+                            "flexDirection" : "column",
+                            "alignItems" : "center",
+                            "background" : "inherit"
+                        },
+                        "cmps" : [ 
+                            {
+                                "type" : "site-text",
+                                "content" : "DESTINATIONS",
+                                "style" : {
+                                    "color" : "#98953e",
+                                    "fontFamily" : "Oswald",
+                                    "fontSize" : "1.3125rem",
+                                    "letterSpacing" : "2.5px"
+                                },
+                            }, 
+                            {
+                                "type" : "site-text",
+                                "content" : "Attractive Destinations For This Month",
+                                "style" : {
+                                    "color" : "#17255e",
+                                    "fontFamily" : "Oswald",
+                                    "fontSize" : "2.5625rem",
+                                    "borderBottom" : "8px solid #8a8d4a66",
+                                    "lineHeight" : 1.5,
+                                    "letterSpacing" : "0px",
+                                    "textAlign" : "center"
+                                },
+                            }
+                        ],
+                    }, 
+                    {
+                        "type" : "site-div",
+                        "class" : "floating-cards-container",
+                        "style" : {
+                            "display" : "flex",
+                            "alignItems" : "stretch",
+                            "justifyContent" : "center",
+                            "flexWrap" : "wrap",
+                            "width" : "100%",
+                            "background" : "none"
+                        },
+                        "cmps" : [ 
+                            {
+                                "type" : "site-div",
+                                "class" : "floating-card",
+                                "style" : {
+                                    "position" : "relative",
+                                    "flex" : "1",
+                                    "minWidth" : "22.2rem",
+                                    "maxWidth" : "23rem",
+                                    "margin" : "3rem 1.5rem 0px 1.5rem",
+                                    "display" : "flex",
+                                    "flexDirection" : "column",
+                                    "border" : "1px solid #dedede",
+                                    "background" : "#fff"
+                                },
+                                "cmps" : [ 
+                                    {
+                                        "type" : "site-div",
+                                        "style" : {
+                                            "flex" : "2",
+                                            "background" : "url(https://images.unsplash.com/photo-1578318099746-8701bb066ceb?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) no-repeat center center / cover scroll",
+                                            "minHeight" : "230px",
+                                            "borderRadius" : "0px"
+                                        },
+                                    }, 
+                                    {
+                                        "type" : "site-div",
+                                        "style" : {
+                                            "display" : "flex",
+                                            "flex" : "1",
+                                            "flexDirection" : "column",
+                                            "textAlign" : "left",
+                                            "width" : "100%",
+                                            "borderTop" : "none",
+                                            "padding" : "1.25rem 2.5rem",
+                                            "borderRadius" : "0px",
+                                            "background" : "#ffffff"
+                                        },
+                                        "cmps" : [ 
+                                            {
+                                                "type" : "site-button",
+                                                "content" : {
+                                                    "text" : "➜",
+                                                    "href" : ""
+                                                },
+                                                "style" : {
+                                                    "height" : "30px",
+                                                    "width" : "30px",
+                                                    "position" : "absolute",
+                                                    "right" : "0",
+                                                    "bottom" : "0",
+                                                    "background" : "none",
+                                                    "fontSize" : "1.4375rem",
+                                                    "color" : "#474747",
+                                                    "boxSizing" : "content-box",
+                                                    "lineHeight" : 1.5,
+                                                    "letterSpacing" : "0px",
+                                                    "borderRadius" : "0px"
+                                                },
+                                            }, 
+                                            {
+                                                "type" : "site-text",
+                                                "content" : "LAGO DI BRAIES",
+                                                "style" : {
+                                                    "color" : "#000",
+                                                    "fontFamily" : "Oswald",
+                                                    "fontSize" : "1.125rem",
+                                                    "letterSpacing" : "2px",
+                                                    "lineHeight" : "1.6",
+                                                    "margin" : "1.5rem 0 1.5rem 0"
+                                                },
+                                            }, 
+                                            {
+                                                "type" : "site-text",
+                                                "content" : "Price : 259$",
+                                                "style" : {
+                                                    "fontFamily" : "Oswald",
+                                                    "fontSize" : ".75rem",
+                                                    "lineHeight" : "1.5",
+                                                    "letterSpacing" : "3px",
+                                                    "margin" : "0 0 1rem"
+                                                },
+                                            }
+                                        ],
+                                    }
+                                ],
+                            }, 
+                            {
+                                "type" : "site-div",
+                                "class" : "floating-card",
+                                "style" : {
+                                    "position" : "relative",
+                                    "flex" : "1",
+                                    "minWidth" : "23rem",
+                                    "maxWidth" : "23rem",
+                                    "margin" : "3rem 1.5rem 0px 1.5rem",
+                                    "display" : "flex",
+                                    "flexDirection" : "column",
+                                    "border" : "1px solid #dedede",
+                                    "background" : "#fff"
+                                },
+                                "cmps" : [ 
+                                    {
+                                        "type" : "site-div",
+                                        "style" : {
+                                            "flex" : "2",
+                                            "background" : "url(https://images.unsplash.com/photo-1535764558463-30f3af596bee?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) no-repeat center center / cover scroll",
+                                            "minHeight" : "230px",
+                                            "borderRadius" : "0px"
+                                        },
+                                    }, 
+                                    {
+                                        "type" : "site-div",
+                                        "style" : {
+                                            "display" : "flex",
+                                            "flex" : "1",
+                                            "flexDirection" : "column",
+                                            "textAlign" : "left",
+                                            "width" : "100%",
+                                            "borderTop" : "none",
+                                            "padding" : "1.25rem 2.5rem",
+                                            "borderRadius" : "0px",
+                                            "background" : "#ffffff"
+                                        },
+                                        "cmps" : [ 
+                                            {
+                                                "type" : "site-button",
+                                                "content" : {
+                                                    "text" : "➜",
+                                                    "href" : ""
+                                                },
+                                                "style" : {
+                                                    "height" : "30px",
+                                                    "width" : "30px",
+                                                    "position" : "absolute",
+                                                    "right" : "0",
+                                                    "bottom" : "0",
+                                                    "background" : "none",
+                                                    "fontSize" : "1.4375rem",
+                                                    "color" : "#474747",
+                                                    "boxSizing" : "content-box"
+                                                },
+                                            }, 
+                                            {
+                                                "type" : "site-text",
+                                                "content" : "MOUNT EVEREST",
+                                                "style" : {
+                                                    "color" : "#000",
+                                                    "fontFamily" : "Oswald",
+                                                    "fontSize" : "1.125rem",
+                                                    "letterSpacing" : "2px",
+                                                    "lineHeight" : 1.6,
+                                                    "margin" : "1.5rem 0 1.5rem 0"
+                                                },
+                                            }, 
+                                            {
+                                                "type" : "site-text",
+                                                "content" : "Price : 739$",
+                                                "style" : {
+                                                    "fontFamily" : "Oswald",
+                                                    "fontSize" : ".75rem",
+                                                    "lineHeight" : "1.5",
+                                                    "letterSpacing" : "3px",
+                                                    "margin" : "0 0 1rem"
+                                                },
+                                            }
+                                        ],
+                                    }
+                                ],
+                            }, 
+                            {
+                                "type" : "site-div",
+                                "class" : "floating-card",
+                                "style" : {
+                                    "position" : "relative",
+                                    "flex" : "1",
+                                    "minWidth" : "23rem",
+                                    "maxWidth" : "23rem",
+                                    "margin" : "3rem 1.5rem 0px 1.5rem",
+                                    "display" : "flex",
+                                    "flexDirection" : "column",
+                                    "border" : "1px solid #dedede",
+                                    "background" : "#fff"
+                                },
+                                "cmps" : [ 
+                                    {
+                                        "type" : "site-div",
+                                        "style" : {
+                                            "flex" : "2",
+                                            "background" : "url(https://images.unsplash.com/photo-1489367753387-4a80734cbc3e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) no-repeat center center / cover scroll",
+                                            "minHeight" : "230px",
+                                            "borderRadius" : "0px"
+                                        },
+                                    }, 
+                                    {
+                                        "type" : "site-div",
+                                        "style" : {
+                                            "display" : "flex",
+                                            "flex" : "1",
+                                            "flexDirection" : "column",
+                                            "textAlign" : "left",
+                                            "width" : "100%",
+                                            "borderTop" : "none",
+                                            "padding" : "1.25rem 2.5rem",
+                                            "background" : "#ffffff"
+                                        },
+                                        "cmps" : [ 
+                                            {
+                                                "type" : "site-button",
+                                                "content" : {
+                                                    "text" : "➜",
+                                                    "href" : ""
+                                                },
+                                                "style" : {
+                                                    "height" : "30px",
+                                                    "width" : "30px",
+                                                    "position" : "absolute",
+                                                    "right" : "0",
+                                                    "bottom" : "0",
+                                                    "background" : "none",
+                                                    "fontSize" : "1.4375rem",
+                                                    "color" : "#474747",
+                                                    "boxSizing" : "content-box"
+                                                },
+                                            }, 
+                                            {
+                                                "type" : "site-text",
+                                                "content" : "SALAR DE UYUNI",
+                                                "style" : {
+                                                    "color" : "#000",
+                                                    "fontFamily" : "Oswald",
+                                                    "fontSize" : "1.125rem",
+                                                    "letterSpacing" : "2px",
+                                                    "lineHeight" : "1.6",
+                                                    "margin" : "1.5rem 0 1.5rem 0"
+                                                },
+                                            }, 
+                                            {
+                                                "type" : "site-text",
+                                                "content" : "Price : 470$",
+                                                "style" : {
+                                                    "fontFamily" : "Oswald",
+                                                    "fontSize" : ".75rem",
+                                                    "lineHeight" : "1.5",
+                                                    "letterSpacing" : "3px",
+                                                    "margin" : "0 0 1rem"
+                                                },
+                                            }
+                                        ],
+                                    }
+                                ],
+                            }
+                        ],
+                    }
+                ],
+            }},
     ],
     divider: [{
             name: 'Tall Photo Divider',
@@ -3150,6 +3694,163 @@ const samples = {
                 ],
             },
         },
+        {name: "Hero & Button",
+    img:"https://i.ibb.co/FH11yjp/Screenshot-2020-07-27-21-06-07.png",
+    tree:{
+            "type" : "site-section",
+            "class" : "hero-with-button",
+            "style" : {
+                "background" : "url(https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MTExM30) no-repeat center center / cover scroll",
+                "backgroundSize" : "cover",
+                "display" : "flex",
+                "flexDirection" : "column",
+                "alignItems" : "center"
+            },
+            "cmps" : [ 
+                {
+                    "type" : "site-div",
+                    "class" : "nav-bar-hero",
+                    "style" : {
+                        "width" : "100%",
+                        "display" : "flex",
+                        "justifyContent" : "space-between",
+                        "backgroundColor" : "#d9ccc959",
+                        "alignItems" : "center",
+                        "fontSize" : "1.25rem"
+                    },
+                    "cmps" : [ 
+                        {
+                            "type" : "site-image",
+                            "content" : "http://res.cloudinary.com/asantasana/image/upload/v1595872083/Antu_insert-image.svg_-1184x1184_qsciyk.png",
+                            "style" : {
+                                "height" : "6rem",
+                                "paddingInlineStart" : "1.5rem",
+                                "borderRadius" : "0px"
+                            },
+                        }, 
+                        {
+                            "type" : "site-text",
+                            "class" : "hamburger-hero",
+                            "content" : "☰",
+                            "style" : {
+                                "color" : "#fff",
+                                "fontSize" : "2.5rem",
+                                "position" : "absolute",
+                                "right" : "25px",
+                                "top" : "20px"
+                            },
+                        }, 
+                        {
+                            "type" : "site-list",
+                            "cmps" : [ 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "MENUS",
+                                    "style" : {
+                                        "marginInlineEnd" : "1rem",
+                                        "color" : "#000000",
+                                        "fontSize" : "1.25rem",
+                                        "lineHeight" : 1.5,
+                                        "letterSpacing" : "0px"
+                                    },
+                                }, 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "CONTACT US",
+                                    "style" : {
+                                        "marginInlineEnd" : "1rem",
+                                        "color" : "#000000"
+                                    },
+                                }, 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "GALLERY",
+                                    "style" : {
+                                        "marginInlineEnd" : "1rem",
+                                        "color" : "#000000"
+                                    },
+                                }, 
+                                {
+                                    "type" : "site-text",
+                                    "content" : "EXTRAS",
+                                    "style" : {
+                                        "marginInlineEnd" : "1rem",
+                                        "color" : "#000000"
+                                    },
+                                }
+                            ],
+                            "style" : {
+                                "fontFamily" : "Oswald",
+                                "color" : "#FFF",
+                                "display" : "flex"
+                            },
+                        }
+                    ],
+                }, 
+                {
+                    "type" : "site-div",
+                    "class" : "hero-button-div",
+                    "style" : {
+                        "display" : "flex",
+                        "alignItems" : "center",
+                        "justifyContent" : "center",
+                        "flexDirection" : "column"
+                    },
+                    "cmps" : [ 
+                        {
+                            "type" : "site-text",
+                            "content" : "DESIGN",
+                            "class" : "title",
+                            "style" : {
+                                "fontSize" : "2.5rem",
+                                "fontFamily" : "Oswald",
+                                "color" : "#f3ef86",
+                                "textShadow" : "1px 1px 1px black",
+                                "letterSpacing" : "0px",
+                                "fontWeight" : "normal",
+                                "lineHeight" : 1.5,
+                                "background" : "transparent"
+                            },
+                        }, 
+                        {
+                            "type" : "site-text",
+                            "content" : "Pencils. Erasers. Ready",
+                            "class" : "subtitle",
+                            "style" : {
+                                "fontSize" : "1.875rem",
+                                "fontFamily" : "Oswald",
+                                "color" : "#ffffff",
+                                "textShadow" : "1px 1px 1px black",
+                                "fontWeight" : "bold",
+                                "letterSpacing" : "2.5px",
+                                "lineHeight" : 1.5
+                            },
+                        }, 
+                        {
+                            "type" : "site-button",
+                            "content" : {
+                                "text" : "BOOK NOW",
+                                "href" : ""
+                            },
+                            "style" : {
+                                "fontFamily" : "Oswald",
+                                "backgroundColor" : "#ffcc00",
+                                "padding" : ".75rem 2rem",
+                                "marginTop" : "1rem",
+                                "fontSize" : "1.125rem",
+                                "fontWeight" : "bold",
+                                "lineHeight" : 2.5,
+                                "letterSpacing" : "1.25px",
+                                "borderRadius" : "11px",
+                                "background" : "#f8ca00",
+                                "color" : "#383838"
+                            },
+                        }
+                    ],
+                }
+            ],
+        }},
+        
     ],
     gallery: [{
             name: 'Poster 3 pics',
@@ -3864,702 +4565,8 @@ const samples = {
                 ],
             },
         }
-    ],
-    section: [{
-            name: 'hero',
-            img: 'https://i.ibb.co/7KkcVG7/hero-sample-image.png',
-            tree: {
-                type: 'site-section',
-                style: {
-                    background: 'url(https://images.unsplash.com/photo-1506104489822-562ca25152fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80) no-repeat center center scroll',
-                    backgroundSize: 'cover',
-                    height: '620px',
-                    padding: '10px 10px 10px 10px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    position: 'relative',
-                },
-                cmps: [{
-                        type: 'site-text',
-                        content: 'Explore Amazing Places',
-                        style: {
-                            fontFamily: 'Righteous',
-                            fontSize: '5rem',
-                            color: '#FFF',
-                            textShadow: '2px 1px 1px #000',
-                        },
-                    },
-                    {
-                        type: 'site-button',
-                        content: { text: 'Book now', href: '' },
-                        style: {
-                            fontFamily: 'Righteous',
-                            backgroundColor: '#fcbf1e',
-                            padding: '1rem',
-                            textTransform: 'uppercase',
-                            boxShadow: '4px 4px #000',
-                        },
-                    },
-                ],
-            },
-        },
-        {
-            name: 'card',
-            img: 'https://i.ibb.co/2y5Fsvb/card1.png',
-            tree: {
-                type: 'site-section',
-                style: {
-                    height: '500px',
-                    width: '100%',
-                    padding: '5rem',
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    alignItems: 'center',
-                },
-                cmps: [{
-                        type: 'site-text',
-                        content: `Lago di Braies :
-                  In summer, lake Lago di Braies in South Tyrol reflects colours in all shades from green to blue, in winter Lago di Braies is covered with ice and snow. In winter and summer this jewel is the starting point for hikes, ski tours, snowshoe hikes and walks. Book through us and let's explore it together!`,
-                        style: {
-                            fontFamily: 'Righteous',
-                            padding: '1rem',
-                            textTransform: 'uppercase',
-                            textAlign: 'center',
-                            lineHeight: '2rem',
-                            fontSize: '1.5rem',
-                        },
-                    },
-                    {
-                        type: 'site-image',
-                        content: 'https://images.unsplash.com/photo-1521102761523-b268f61473e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1549&q=80',
-                        style: {
-                            height: '480px',
-                            width: '580px',
-                            objectFit: 'cover',
-                        },
-                    },
-                ],
-            },
-        },
-        {
-            name: 'footer',
-            img: 'https://i.imgur.com/AchuVuN.png',
-            tree: {
-                type: 'site-section',
-                style: {
-                    height: '250px',
-                    width: '100%',
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    alignItems: 'center',
-                    backgroundColor: '#5ba8b3cc',
-                    color: 'white',
-                    paddingBlockStart: '2rem',
-                },
-                cmps: [{
-                        type: 'site-div',
-                        style: {
-                            height: '100%',
-                        },
-                        cmps: [{
-                                type: 'site-text',
-                                content: 'DESTINATIONS',
-                                style: {
-                                    width: '100px',
-                                    fontWeigt: 'bold',
-                                    fontSize: '1.5rem',
-                                },
-                            },
-                            {
-                                type: 'site-list',
-                                style: {
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    color: '#fff',
-                                    marginTop: '1rem',
-                                },
-                                cmps: [{
-                                    type: 'site-text',
-                                    content: 'New-Zealand Australia Argentina Bolivia More...',
-                                    style: {
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        width: '100px',
-                                    },
-                                }, ],
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '100%',
-                        },
-                        cmps: [{
-                                type: 'site-text',
-                                content: 'SHOP',
-                                style: {
-                                    width: '100px',
-                                    fontWeigt: 'bold',
-                                    fontSize: '1.5rem',
-                                },
-                            },
-                            {
-                                type: 'site-list',
-                                style: {
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    color: '#fff',
-                                    marginTop: '1rem',
-                                },
-                                cmps: [{
-                                    type: 'site-text',
-                                    content: 'Non English Guides Delivery Times Special Offers FAQs',
-                                    style: {
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        width: '142px',
-                                    },
-                                }, ],
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '100%',
-                        },
-                        cmps: [{
-                                type: 'site-text',
-                                content: 'FORUMS',
-                                style: {
-                                    width: '100px',
-                                    fontWeigt: 'bold',
-                                    fontSize: '1.5rem',
-                                },
-                            },
-                            {
-                                type: 'site-list',
-                                style: {
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    color: '#fff',
-                                    marginTop: '1rem',
-                                },
-                                cmps: [{
-                                    type: 'site-text',
-                                    content: 'Country Forums Interest Forums Talk To Us',
-                                    style: {
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        width: '140px',
-                                    },
-                                }, ],
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '100%',
-                        },
-                        cmps: [{
-                                type: 'site-text',
-                                content: 'TRAVEL BOOKING',
-                                style: {
-                                    width: '100px',
-                                    fontWeigt: 'bold',
-                                    fontSize: '1.5rem',
-                                },
-                            },
-                            {
-                                type: 'site-list',
-                                style: {
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    color: '#fff',
-                                    marginTop: '1rem',
-                                },
-                                cmps: [{
-                                    type: 'site-text',
-                                    content: 'Hotels Flights Insurance',
-                                    style: {
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        width: '90px',
-                                    },
-                                }, ],
-                            },
-                        ],
-                    },
-                ],
-            },
-        },
-        {
-            name: 'hero',
-            img: 'https://res.cloudinary.com/asantasana/image/upload/v1595403001/herolion_gtjcvl.png',
-            tree: {
-                type: 'site-section',
-                style: {
-                    background: 'url(https://images.unsplash.com/photo-1551439237-dd457099b104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center scroll',
-                    backgroundSize: 'cover',
-                    height: '100vh',
-                    padding: '10px 10px 10px 10px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                },
-                cmps: [{
-                        type: 'site-div',
-                        style: {
-                            height: '6rem',
-                            width: '100%',
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            backgroundColor: '#d9ccc959',
-                            alignItems: 'center',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://pluspng.com/img-png/national-geographic-logo-png-logo-natgeo-png-pluspng-com-logo-national-geographic-png-1000.png',
-                                style: {
-                                    height: '5rem',
-                                    paddingInlineStart: '1.5rem',
-                                },
-                            },
-                            {
-                                type: 'site-list',
-                                cmps: [{
-                                        type: 'site-text',
-                                        content: 'HOME',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#000000',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'ARTICLES',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'MEMBERS',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'ABOUT',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                    {
-                                        type: 'site-text',
-                                        content: 'CONTACT US',
-                                        style: {
-                                            marginInlineEnd: '1rem',
-                                            color: '#fff',
-                                        },
-                                    },
-                                ],
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#FFF',
-                                    display: 'flex',
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '700px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            flexDirection: 'column',
-                        },
-                        cmps: [{
-                                type: 'site-text',
-                                content: 'ANIMAL GEOGRAPHIC',
-                                style: {
-                                    fontSize: '4rem',
-                                    fontFamily: 'Righteous',
-                                    color: 'white',
-                                    textShadow: '0 0 2px black',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'We Bring You The Best Articles',
-                                style: {
-                                    fontSize: '1.875rem',
-                                    fontFamily: 'Righteous',
-                                    color: 'white',
-                                    textShadow: '0 0 1px black',
-                                },
-                            },
-                            {
-                                type: 'site-button',
-                                content: {
-                                    text: 'SUBSCRIBE',
-                                    href: '',
-                                },
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    backgroundColor: '#cb965b',
-                                    padding: '1rem',
-                                    textTransform: 'uppercase',
-                                    boxShadow: '#0000008c',
-                                    width: '9rem',
-                                    color: 'white',
-                                    borderRadius: '20px',
-                                },
-                            },
-                        ],
-                    },
-                ],
-            },
-        },
-        {
-            name: 'cards',
-            img: 'https://res.cloudinary.com/asantasana/image/upload/v1595402921/cards_p8dgsc.png',
-            tree: {
-                type: 'site-section',
-                style: {
-                    backgroundColor: '#f3eee9',
-                    height: '1400px',
-                    display: 'flex',
-                    width: '100%',
-                    justifyContent: 'space-between',
-                    flexWrap: 'wrap',
-                    padding: '4rem 11rem',
-                },
-                cmps: [{
-                        type: 'site-div',
-                        style: {
-                            height: '500px',
-                            width: '45%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            backgroundColor: '#ffffff',
-                            borderRadius: '12px',
-                            position: 'relative',
-                            alignItems: 'center',
-                            boxShadow: '0 0 3px black',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
-                                style: {
-                                    height: '260px',
-                                    borderRadius: '12px 12px 0px 0px',
-                                    objectFit: 'cover',
-                                    width: '100%',
-                                },
-                            },
-                            {
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1566903026052-36e4e1bd803a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
-                                style: {
-                                    height: '100px',
-                                    width: '100px',
-                                    position: 'absolute',
-                                    border: '6px white solid',
-                                    borderRadius: '50%',
-                                    bottom: '38%',
-                                    zIndex: '1',
-                                    left: 'calc(50% - 50px)',
-                                    objectFit: 'cover',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Dogs',
-                                style: {
-                                    marginBlockStart: '5rem',
-                                    fontFamily: 'Righteous',
-                                    fontSize: '2rem',
-                                    color: '#5aa55e',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: "Read All About The Man's Best Friend .",
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80335b3b',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'READ MORE',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#0000000',
-                                    marginBlockStart: '2rem',
-                                    borderBlockStart: '1px solid black',
-                                    width: '100%',
-                                    textAlign: 'center',
-                                    paddingBlockStart: '1rem',
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '500px',
-                            width: '45%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            backgroundColor: '#fff',
-                            borderRadius: '12px',
-                            position: 'relative',
-                            alignItems: 'center',
-                            boxShadow: '0 0 3px black',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-                                style: {
-                                    height: '260px',
-                                    objectFit: 'cover',
-                                    width: '100%',
-                                    borderRadius: '12px 12px 0px 0px',
-                                },
-                            },
-                            {
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1517649281203-dad836b4abe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-                                style: {
-                                    height: '100px',
-                                    width: '100px',
-                                    position: 'absolute',
-                                    border: '6px white solid',
-                                    borderRadius: '50%',
-                                    bottom: '38%',
-                                    zIndex: '1',
-                                    left: 'calc(50% - 50px)',
-                                    objectFit: 'cover',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'The King Of The Jungle',
-                                style: {
-                                    marginBlockStart: '5rem',
-                                    fontFamily: 'Righteous',
-                                    fontSize: '2rem',
-                                    color: '#53311d',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Read All About The Mighty Lion.',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#3d3d3c',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'READ MORE',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#0000000',
-                                    marginBlockStart: '2rem',
-                                    borderBlockStart: '1px solid black',
-                                    width: '100%',
-                                    textAlign: 'center',
-                                    paddingBlockStart: '1rem',
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '500px',
-                            width: '45%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            backgroundColor: '#fff',
-                            borderRadius: '12px',
-                            position: 'relative',
-                            alignItems: 'center',
-                            marginBlockStart: '7rem',
-                            boxShadow: '0 0 3px black',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
-                                style: {
-                                    height: '260px',
-                                    objectFit: 'cover',
-                                    width: '100%',
-                                    borderRadius: '12px 12px 0px 0px',
-                                },
-                            },
-                            {
-                                type: 'site-image',
-                                content: 'https://images.unsplash.com/photo-1547801939-d3ac28994d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
-                                style: {
-                                    height: '100px',
-                                    width: '100px',
-                                    position: 'absolute',
-                                    backgroundSize: 'cover',
-                                    border: '6px white solid',
-                                    borderRadius: '50%',
-                                    bottom: '38%',
-                                    zIndex: '1',
-                                    left: 'calc(50% - 50px)',
-                                    objectFit: 'cover',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'JAWS',
-                                style: {
-                                    marginBlockStart: '5rem',
-                                    fontFamily: 'Righteous',
-                                    fontSize: '2rem',
-                                    color: '#3855bc',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Read All About Sharks.',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#527db4',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'READ MORE',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#0000000',
-                                    marginBlockStart: '2rem',
-                                    borderBlockStart: '1px solid black',
-                                    width: '100%',
-                                    textAlign: 'center',
-                                    paddingBlockStart: '1rem',
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            height: '500px',
-                            width: '45%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            backgroundColor: '#ffffff',
-                            borderRadius: '12px',
-                            position: 'relative',
-                            alignItems: 'center',
-                            marginBlockStart: '7rem',
-                            boxShadow: '0 0 3px black',
-                        },
-                        cmps: [{
-                                type: 'site-image',
-                                content: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg',
-                                style: {
-                                    height: '260px',
-                                    objectFit: 'cover',
-                                    width: '100%',
-                                    borderRadius: '12px 12px 0px 0px',
-                                },
-                            },
-                            {
-                                type: 'site-image',
-                                content: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/10/PF2015_267_Kittens_Shelter-630.jpg',
-                                style: {
-                                    height: '100px',
-                                    width: '100px',
-                                    position: 'absolute',
-                                    border: '6px white solid',
-                                    borderRadius: '50%',
-                                    bottom: '38%',
-                                    zIndex: '1',
-                                    left: 'calc(50% - 50px)',
-                                    objectFit: 'cover',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Cats',
-                                style: {
-                                    marginBlockStart: '5rem',
-                                    fontFamily: 'Righteous',
-                                    fontSize: '2rem',
-                                    color: '#704a26',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'Read All About Cats.',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#434343',
-                                },
-                            },
-                            {
-                                type: 'site-text',
-                                content: 'READ MORE',
-                                style: {
-                                    fontFamily: 'Righteous',
-                                    color: '#0000000',
-                                    marginBlockStart: '2rem',
-                                    borderBlockStart: '1px solid black',
-                                    width: '100%',
-                                    textAlign: 'center',
-                                    paddingBlockStart: '1rem',
-                                },
-                            },
-                        ],
-                    },
-                    {
-                        type: 'site-div',
-                        style: {
-                            width: '100%',
-                            textAlign: 'center',
-                        },
-                        cmps: [{
-                            type: 'site-button',
-                            content: {
-                                text: 'MORE ARTICLES...',
-                                href: '',
-                            },
-                            style: {
-                                backgroundColor: '#cfaf8987',
-                                borderRadius: '20px',
-                                padding: '1rem',
-                                marginBlockStart: '3rem',
-                                width: '50%',
-                                fontSize: '1.2rem',
-                                boxShadow: '0 0 2px black',
-                            },
-                        }, ],
-                    },
-                ],
-            },
-        },
-    ],
-};
+    ]
+}
 
 export const templateService = {
     query,

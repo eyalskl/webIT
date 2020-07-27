@@ -43,8 +43,8 @@ export default {
   data() {
     return {
       samples: {},
-      siteToEdit: null,
-      showNameModal: false
+      showNameModal: false,
+      siteToEdit: null
     };
   },
   async created() {
