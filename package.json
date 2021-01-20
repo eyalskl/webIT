@@ -12,7 +12,7 @@
         "core-js": "^3.6.5",
         "dom-to-image": "^2.6.0",
         "element-ui": "^2.13.2",
-        "gsap": "^3.4.2",
+        "gsap": "^3.6.0",
         "html-screen-capture-js": "^1.0.47",
         "jquery": "^3.5.1",
         "lodash": "^4.17.19",
