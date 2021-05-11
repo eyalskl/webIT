@@ -15,7 +15,7 @@
         "gsap": "^3.4.2",
         "html-screen-capture-js": "^1.0.47",
         "jquery": "^3.5.1",
-        "lodash": "^4.17.19",
+        "lodash": "^4.17.21",
         "nice-color-palettes": "^3.0.0",
         "register-service-worker": "^1.7.1",
         "vue": "^2.6.11",
